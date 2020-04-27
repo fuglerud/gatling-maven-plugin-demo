@@ -55,7 +55,7 @@ class CMSSimulation extends Simulation{
       .check(status.is(expected = 200))
       .check(regex("<a href=\"/sykdommer/\" class=\"bg-neutral50 has-hover-bg\">Sykdommer</a>")))
 
-    /*
+
     .exec(http(requestName = "sykdommer")
       .get("/sykdommer/")
       .headers(headers_1)
@@ -73,7 +73,7 @@ class CMSSimulation extends Simulation{
       .headers(headers_2)
       .check(status.is(expected = 200))
       .check(regex("${subsokeord}")))
-  */
+
 
   setUp(scn.inject(atOnceUsers(10))).protocols(httpProtocol)
   //setUp(scn.inject(rampUsersPerSec(1) to 5 during (30),constantUsersPerSec(5) during(600)))
