@@ -3,7 +3,7 @@ package magnus
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
 
-class CMSSimulation extends Simulation{
+class CMSimulation extends Simulation{
 
   val httpProtocol = http
     // .baseUrl("https://app-hn-cms-dev.azurewebsites.net")
@@ -44,7 +44,7 @@ class CMSSimulation extends Simulation{
   //  "Host" ->"app-hn-cms-dev.azurewebsites.net"
   )
 
-  val scn = scenario("CMSSimulation")
+  val scn = scenario("CMSimulation")
 
     .exec(flushCookieJar)
     .exec(flushHttpCache)
