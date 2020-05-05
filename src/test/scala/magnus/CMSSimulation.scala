@@ -77,12 +77,11 @@ class CMSSimulation extends Simulation{
 
 
 */
-  //setUp(scn.inject(atOnceUsers(1))).protocols(httpProtocol)
+  setUp(scn.inject(atOnceUsers(1))).protocols(httpProtocol)
   //setUp(scn.inject(rampUsersPerSec(1) to 5 during (30),constantUsersPerSec(5) during(600)))
   //setUp(scn.inject(constantUsersPerSec(60) during(30))).protocols(httpProtocol)
-  setUp(scn.inject(rampConcurrentUsers(5) to(200) during(120)).protocols(httpProtocol))
+  //setUp(scn.inject(rampConcurrentUsers(5) to(200) during(120)).protocols(httpProtocol))
   //setUp(scn.inject(constantConcurrentUsers(10) during (120), rampConcurrentUsers(10) to (100) during (120))).protocols(httpProtocol)
-
   //setUp(scn.inject(incrementUsersPerSec(5).times(5).eachLevelLasting(10).separatedByRampsLasting(10).startingFrom(10)).protocols(httpProtocol))
 
 }
