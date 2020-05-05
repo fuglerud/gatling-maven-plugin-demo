@@ -7,11 +7,11 @@ class CMSSimulation extends Simulation{
 
   val httpProtocol = http
     // .baseUrl("https://app-hn-cms-dev.azurewebsites.net")
-    // .baseUrl("http://app-hn-cms-dev-perftest.azurewebsites.net")
-    // .baseUrl("https://epi-helsenorge-dev.int-hn.nhn.no")
-    //.baseUrl("https://hn-varnish-test.azurewebsites.net")
-   // .baseUrl("https://epi-helsenorge-dev.int-hn.nhn.no")
-    .baseUrl("http://hn-varnish-test.azurewebsites.net")
+   //.baseUrl("http://app-hn-cms-dev-perftest.azurewebsites.net")
+   .baseUrl("http://helsenorge-perftest.azureedge.net/")
+   //.baseUrl("https://hn-varnish-test.azurewebsites.net")
+   //.baseUrl("https://epi-helsenorge-dev.int-hn.nhn.no")
+   //.baseUrl("http://hn-varnish-test.azurewebsites.net")
 
   val headers_0 = Map(
     "Accept" -> "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
@@ -53,8 +53,9 @@ class CMSSimulation extends Simulation{
       .get("/")
       .headers(headers_0)
       .check(status.is(expected = 200))
-      .check(regex("<a href=\"/sykdommer/\" class=\"bg-neutral50 has-hover-bg\">Sykdommer</a>")))
+      .check(regex("<title>Helsenorge</title>")))
 
+/*
 
     .exec(http(requestName = "sykdommer")
       .get("/sykdommer/")
@@ -75,14 +76,13 @@ class CMSSimulation extends Simulation{
       .check(regex("${subsokeord}")))
 
 
-  setUp(scn.inject(atOnceUsers(10))).protocols(httpProtocol)
+*/
+  //setUp(scn.inject(atOnceUsers(1))).protocols(httpProtocol)
   //setUp(scn.inject(rampUsersPerSec(1) to 5 during (30),constantUsersPerSec(5) during(600)))
-  //setUp(scn.inject(constantUsersPerSec(80) during(100))).protocols(httpProtocol)
-  //setUp(scn.inject(rampConcurrentUsers(5) to(1600) during(120)).protocols(httpProtocol))
-  //setUp(scn.inject(constantConcurrentUsers(10) during (60), rampConcurrentUsers(10) to (80) during (60))).protocols(httpProtocol)
+  //setUp(scn.inject(constantUsersPerSec(60) during(30))).protocols(httpProtocol)
+  setUp(scn.inject(rampConcurrentUsers(5) to(200) during(120)).protocols(httpProtocol))
+  //setUp(scn.inject(constantConcurrentUsers(10) during (120), rampConcurrentUsers(10) to (100) during (120))).protocols(httpProtocol)
 
   //setUp(scn.inject(incrementUsersPerSec(5).times(5).eachLevelLasting(10).separatedByRampsLasting(10).startingFrom(10)).protocols(httpProtocol))
-
-
 
 }

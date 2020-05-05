@@ -39,7 +39,6 @@ class NewEPJTicketSimulation extends Simulation{
       println(session("access_token").as[String])
       session})
 
-
     .exec(http("request_epj_ticket")
      //.post("https://api.qa2.kjernejournal-test.no:8000/v1/helseindikator/")
       .post("https://api.st1.kjernejournal-test.no:8000/v1/helseindikator/")
@@ -55,9 +54,6 @@ class NewEPJTicketSimulation extends Simulation{
       println("epj_ticket:")
       println(session("epj_ticket").as[String])
       session})
-
-
-
 
   setUp(scn.inject(atOnceUsers(1))).protocols(httpProtocol)
 

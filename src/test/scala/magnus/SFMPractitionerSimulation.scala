@@ -29,5 +29,14 @@ class SFMPractitionerSimulation extends Simulation {
 			.check(status.is(200))
 			.check(jsonPath("$..id").is("${rekvirent}")))
 
+
+		.exec(http("request_organization")
+			.get("/api/v1/Organization?name=${organizationname}")
+			.check(status.is(200))
+			.check(jsonPath("$..id").is("${organizationid}")))
+
+
+
+
 	setUp(scn.inject(atOnceUsers(1))).protocols(httpProtocol)
 }
