@@ -11,6 +11,7 @@ class NewEPJTicketSimulation extends Simulation{
   val httpProtocol = http
     .inferHtmlResources(BlackList(""".*\.js""", """.*\.css""", """.*\.gif""", """.*\.jpeg""", """.*\.jpg""", """.*\.ico""", """.*\.woff""", """.*\.woff2""", """.*\.(t|o)tf""", """.*\.png""", """.*detectportal\.firefox\.com.*"""), WhiteList())
     .doNotTrackHeader("1")
+    .disableCaching
 
   val headers_0 = Map(
     "Content-Type"->"application/json;charset=UTF-8",

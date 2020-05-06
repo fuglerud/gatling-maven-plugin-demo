@@ -12,6 +12,7 @@ class PaaskeaftenSimulation extends Simulation {
 		.acceptEncodingHeader("gzip, deflate")
 		.contentTypeHeader("application/json")
 		.userAgentHeader("PostmanRuntime/7.24.0")
+		.disableCaching
 
 	val headers_CitizenTokens = Map("Postman-Token" -> "5fc94e73-3507-47b9-9b06-8960f00742e7")
 

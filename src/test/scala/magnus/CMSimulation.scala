@@ -12,6 +12,7 @@ class CMSimulation extends Simulation{
    //.baseUrl("https://hn-varnish-test.azurewebsites.net")
    //.baseUrl("https://epi-helsenorge-dev.int-hn.nhn.no")
    //.baseUrl("http://hn-varnish-test.azurewebsites.net")
+    .disableCaching
 
 
 

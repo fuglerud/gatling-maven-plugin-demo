@@ -13,6 +13,7 @@ class KjerneJournalProveSvarSimulation extends Simulation {
     .acceptLanguageHeader("en-US,en;q=0.5")
     .doNotTrackHeader("1")
     .userAgentHeader("Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:73.0) Gecko/20100101 Firefox/73.0")
+    .disableCaching
 
   val headers_0 = Map(
     "Connection"->"keep-alive",
