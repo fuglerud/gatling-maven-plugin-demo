@@ -7,6 +7,7 @@ class ClosedModelCMS extends Simulation{
 
   val httpProtocol = http
     .baseUrl("http://helsenorge-perftest.azureedge.net/")
+    .disableCaching
 
   val headers_0 = Map(
     "Accept" -> "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
