@@ -23,9 +23,7 @@ class ClosedModelCMS extends Simulation{
 
     .during(300) {
 
-    feed(csv("magnus/CMS.csv").circular)
-
-    .exec(http(requestName = "baseURL")
+    exec(http(requestName = "baseURL")
       .get("/")
       .headers(headers_0)
       .check(status.is(expected = 200))
