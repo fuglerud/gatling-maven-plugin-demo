@@ -31,7 +31,7 @@ class ClosedModelCMS extends Simulation{
       .check(status.is(expected = 200))
       .check(regex("<title>Helsenorge</title>")))
 
-        .pause(2)
+        .pause(1)
     }
 
   setUp(scn. inject(rampUsers(500) during(30)).protocols(httpProtocol))
