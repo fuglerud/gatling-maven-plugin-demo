@@ -34,5 +34,4 @@ class ClosedModelCMS extends Simulation{
     }
 
   setUp(scn. inject(rampUsers(500) during(30)).protocols(httpProtocol))
-
 }
