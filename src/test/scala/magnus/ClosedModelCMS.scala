@@ -22,7 +22,7 @@ class ClosedModelCMS extends Simulation{
     .exec(flushCookieJar)
     .exec(flushHttpCache)
 
-    .during(6) {
+    .during(600) {
 
     exec(http(requestName = "Sykdommer")
       .get("/sykdommer")
@@ -33,5 +33,5 @@ class ClosedModelCMS extends Simulation{
         .pause(3)
     }
 
-  setUp(scn. inject(rampUsers(5) during(30)).protocols(httpProtocol))
+  setUp(scn. inject(rampUsers(500) during(30)).protocols(httpProtocol))
 }
