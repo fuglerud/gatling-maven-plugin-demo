@@ -22,7 +22,7 @@ class ClosedModelCMS extends Simulation{
     .exec(flushCookieJar)
     .exec(flushHttpCache)
 
-    .during(100) {
+    .during(300) {
 
     exec(http(requestName = "Sykdommer")
       .get("/sykdommer")
