@@ -6,14 +6,8 @@ import io.gatling.http.Predef._
 class CMSimulation extends Simulation{
 
   val httpProtocol = http
-    // .baseUrl("https://app-hn-cms-dev.azurewebsites.net")
-   //.baseUrl("http://app-hn-cms-dev-perftest.azurewebsites.net")
-   .baseUrl("https://helsenorge-perftest.azureedge.net")
-   //.baseUrl("https://hn-varnish-test.azurewebsites.net")
-   //.baseUrl("https://epi-helsenorge-dev.int-hn.nhn.no")
-   //.baseUrl("http://hn-varnish-test.azurewebsites.net")
+    .baseUrl("https://helsenorge-perftest.azurefd.net")
     .disableCaching
-
 
 
   val headers_0 = Map(
@@ -21,29 +15,8 @@ class CMSimulation extends Simulation{
     "TE"->"Trailers",
     "User-Agent"->"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0",
     "Connection"->"Connection: keep-alive",
-    "Upgrade-Insecure-Requests"->"1",
-  //  "Host" ->"app-hn-cms-dev.azurewebsites.net"
-  )
+    "Upgrade-Insecure-Requests"->"1")
 
-  val headers_1 = Map(
-    "Accept" -> "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
-    "TE"->"Trailers",
-    "User-Agent"->"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0",
-    "Connection"->"Connection: keep-alive",
-    "Upgrade-Insecure-Requests"->"1",
-   // "Referer"->"https://app-hn-cms-dev.azurewebsites.net/",
-   // "Host" ->"app-hn-cms-dev.azurewebsites.net"
-  )
-
-  val headers_2 = Map(
-    "Accept" -> "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
-    "TE"->"Trailers",
-    "User-Agent"->"Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:74.0) Gecko/20100101 Firefox/74.0",
-    "Connection"->"Connection: keep-alive",
-    "Upgrade-Insecure-Requests"->"1",
-   // "Referer"->"https://app-hn-cms-dev.azurewebsites.net/sykdommer/",
-  //  "Host" ->"app-hn-cms-dev.azurewebsites.net"
-  )
 
   val scn = scenario("CMSimulation")
 
@@ -58,26 +31,25 @@ class CMSimulation extends Simulation{
       .check(status.is(expected = 200))
       .check(regex("Angst")))
 
-/*
 
     .exec(http(requestName = "sykdommer")
       .get("/sykdommer/")
-      .headers(headers_1)
+      .headers(headers_0)
       .check(status.is(expected = 200))
       .check(regex("<a href=\"/sykdommer/hormoner/\" class=\"bg-neutral50 has-hover-bg\">Hormoner</a>")))
 
     .exec(http(requestName = "spesifikk_sykdom")
       .get("/sykdommer/${sokeord}/")
-      .headers(headers_2)
+      .headers(headers_0)
       .check(status.is(expected = 200))
       .check(regex("${sokeord}")))
 
     .exec(http(requestName = "subsok")
       .get("/sykdommer/${sokeord}/${subsokeord}/")
-      .headers(headers_2)
+      .headers(headers_0)
       .check(status.is(expected = 200))
       .check(regex("${subsokeord}")))
-*/
+
 
 
   val selectedProfile = System.getProperty("selectedProfile") match {
@@ -89,7 +61,7 @@ class CMSimulation extends Simulation{
     case "profile6" => scn.inject(incrementUsersPerSec(5).times(5).eachLevelLasting(10).separatedByRampsLasting(10).startingFrom(10))
   }
 
-  //setUp(scn.inject(atOnceUsers(1))).protocols(httpProtocol)
-  setUp(selectedProfile).protocols(httpProtocol)
+  setUp(scn.inject(atOnceUsers(1))).protocols(httpProtocol)
+  //setUp(selectedProfile).protocols(httpProtocol)
 
 }
