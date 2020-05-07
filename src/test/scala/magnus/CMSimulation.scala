@@ -9,7 +9,6 @@ class CMSimulation extends Simulation{
     .baseUrl("https://helsenorge-perftest.azurefd.net")
     .disableCaching
 
-
   val headers_0 = Map(
     "Accept" -> "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
     "TE"->"Trailers",
@@ -25,29 +24,12 @@ class CMSimulation extends Simulation{
 
     .feed(csv("magnus/CMS.csv").circular)
 
-    .exec(http(requestName = "baseURL_sykdommer")
+    .exec(http(requestName = "Sykdommer")
       .get("/sykdommer")
       .headers(headers_0)
       .check(status.is(expected = 200))
       .check(regex("Angst")))
 
-    .exec(http(requestName = "sykdommer")
-      .get("/sykdommer/")
-      .headers(headers_0)
-      .check(status.is(expected = 200))
-      .check(regex("<a href=\"/sykdommer/hormoner/\" class=\"bg-neutral50 has-hover-bg\">Hormoner</a>")))
-
-    .exec(http(requestName = "spesifikk_sykdom")
-      .get("/sykdommer/${sokeord}/")
-      .headers(headers_0)
-      .check(status.is(expected = 200))
-      .check(regex("${sokeord}")))
-
-    .exec(http(requestName = "subsok")
-      .get("/sykdommer/${sokeord}/${subsokeord}/")
-      .headers(headers_0)
-      .check(status.is(expected = 200))
-      .check(regex("${subsokeord}")))
 
   val selectedProfile = System.getProperty("selectedProfile") match {
     case "profile1" => scn.inject(atOnceUsers(1))
@@ -57,6 +39,7 @@ class CMSimulation extends Simulation{
     case "profile5" => scn.inject(constantConcurrentUsers(10) during (120), rampConcurrentUsers(10) to (100) during (120))
     case "profile6" => scn.inject(incrementUsersPerSec(5).times(5).eachLevelLasting(10).separatedByRampsLasting(10).startingFrom(10))
   }
+
 
   //setUp(scn.inject(atOnceUsers(1))).protocols(httpProtocol)
   setUp(selectedProfile).protocols(httpProtocol)
