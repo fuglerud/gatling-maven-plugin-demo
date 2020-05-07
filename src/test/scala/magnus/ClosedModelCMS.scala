@@ -32,7 +32,6 @@ class ClosedModelCMS extends Simulation{
       .check(status.is(expected = 200))
       .check(regex("Angst")))
 
-
       .exec(http(requestName = "Astma-og-allergi")
         .get("/sykdommer/astma-og-allergi/")
         .headers(headers_0)
