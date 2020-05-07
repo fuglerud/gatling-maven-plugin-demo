@@ -7,7 +7,9 @@ class ClosedModelCMS extends Simulation{
 
   val httpProtocol = http
    // .baseUrl("http://helsenorge-perftest.azureedge.net")
-    .baseUrl("https://helsenorge-perftest.azurefd.net")
+    //.baseUrl("https://helsenorge-perftest.azurefd.net")
+    .baseUrl("https://epi-helsenorge-dev.int-hn.nhn.no/")
+
     .disableCaching
 
   val headers_0 = Map(
@@ -33,5 +35,5 @@ class ClosedModelCMS extends Simulation{
         .pause(2)
     }
 
-  setUp(scn. inject(rampUsers(2600) during(30)).protocols(httpProtocol))
+  setUp(scn. inject(rampUsers(2600) during(300)).protocols(httpProtocol))
 }
