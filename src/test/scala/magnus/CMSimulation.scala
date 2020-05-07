@@ -8,7 +8,7 @@ class CMSimulation extends Simulation{
   val httpProtocol = http
     // .baseUrl("https://app-hn-cms-dev.azurewebsites.net")
    //.baseUrl("http://app-hn-cms-dev-perftest.azurewebsites.net")
-   .baseUrl("http://helsenorge-perftest.azureedge.net/")
+   .baseUrl("https://helsenorge-perftest.azureedge.net")
    //.baseUrl("https://hn-varnish-test.azurewebsites.net")
    //.baseUrl("https://epi-helsenorge-dev.int-hn.nhn.no")
    //.baseUrl("http://hn-varnish-test.azurewebsites.net")
@@ -52,11 +52,11 @@ class CMSimulation extends Simulation{
 
     .feed(csv("magnus/CMS.csv").circular)
 
-    .exec(http(requestName = "baseURL")
-      .get("/")
+    .exec(http(requestName = "baseURL_sykdommer")
+      .get("/sykdommer")
       .headers(headers_0)
       .check(status.is(expected = 200))
-      .check(regex("<title>Helsenorge</title>")))
+      .check(regex("Angst")))
 
 /*
 

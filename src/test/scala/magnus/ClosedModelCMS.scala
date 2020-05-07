@@ -6,8 +6,8 @@ import io.gatling.http.Predef._
 class ClosedModelCMS extends Simulation{
 
   val httpProtocol = http
-   // .baseUrl("http://helsenorge-perftest.azureedge.net/")
-    .baseUrl("http://helsenorge-perftest.azurefd.net/")
+   // .baseUrl("http://helsenorge-perftest.azureedge.net")
+    .baseUrl("https://helsenorge-perftest.azureedge.net")
     .disableCaching
 
   val headers_0 = Map(
@@ -22,16 +22,16 @@ class ClosedModelCMS extends Simulation{
     .exec(flushCookieJar)
     .exec(flushHttpCache)
 
-    .during(600) {
+    .during(6) {
 
-    exec(http(requestName = "baseURL")
-      .get("/")
+    exec(http(requestName = "Sykdommer")
+      .get("/sykdommer")
       .headers(headers_0)
       .check(status.is(expected = 200))
-      .check(regex("<title>Helsenorge</title>")))
+      .check(regex("Angst")))
 
         .pause(3)
     }
 
-  setUp(scn. inject(rampUsers(500) during(30)).protocols(httpProtocol))
+  setUp(scn. inject(rampUsers(5) during(30)).protocols(httpProtocol))
 }
