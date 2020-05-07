@@ -7,7 +7,7 @@ class ClosedModelCMS extends Simulation{
 
   val httpProtocol = http
    // .baseUrl("http://helsenorge-perftest.azureedge.net")
-    .baseUrl("https://helsenorge-perftest.azureedge.net")
+    .baseUrl("https://helsenorge-perftest.azurefd.net")
     .disableCaching
 
   val headers_0 = Map(
@@ -22,7 +22,7 @@ class ClosedModelCMS extends Simulation{
     .exec(flushCookieJar)
     .exec(flushHttpCache)
 
-    .during(600) {
+    .during(100) {
 
     exec(http(requestName = "Sykdommer")
       .get("/sykdommer")
@@ -30,8 +30,8 @@ class ClosedModelCMS extends Simulation{
       .check(status.is(expected = 200))
       .check(regex("Angst")))
 
-        .pause(3)
+        .pause(2)
     }
 
-  setUp(scn. inject(rampUsers(500) during(30)).protocols(httpProtocol))
+  setUp(scn. inject(rampUsers(1000) during(30)).protocols(httpProtocol))
 }
