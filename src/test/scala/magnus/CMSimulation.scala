@@ -6,7 +6,8 @@ import io.gatling.http.Predef._
 class CMSimulation extends Simulation{
 
   val httpProtocol = http
-    .baseUrl("https://helsenorge-perftest.azurefd.net")
+    //.baseUrl("https://helsenorge-perftest.azurefd.net")
+    .baseUrl("http://helsenorge-perftest.azureedge.net")
     .disableCaching
 
   val headers_0 = Map(
