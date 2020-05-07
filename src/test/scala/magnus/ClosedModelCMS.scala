@@ -6,7 +6,8 @@ import io.gatling.http.Predef._
 class ClosedModelCMS extends Simulation{
 
   val httpProtocol = http
-    .baseUrl("http://helsenorge-perftest.azureedge.net/")
+   // .baseUrl("http://helsenorge-perftest.azureedge.net/")
+    .baseUrl("http://helsenorge-perftest.azurefd.net/")
     .disableCaching
 
   val headers_0 = Map(
