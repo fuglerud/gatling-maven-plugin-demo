@@ -16,7 +16,6 @@ class CMSimulation extends Simulation{
     "Connection"->"Connection: keep-alive",
     "Upgrade-Insecure-Requests"->"1")
 
-
   val scn = scenario("CMSimulation")
 
     .exec(flushCookieJar)
@@ -30,6 +29,17 @@ class CMSimulation extends Simulation{
       .check(status.is(expected = 200))
       .check(regex("Angst")))
 
+    .exec(http(requestName = "Astma-og-allergi")
+      .get("/sykdommer/astma-og-allergi/")
+      .headers(headers_0)
+      .check(status.is(expected = 200))
+      .check(regex("<title>Astma og allergi</title>")))
+
+    .exec(http(requestName = "Allergisjokk")
+      .get("/sykdommer/astma-og-allergi/allergisjokk/")
+      .headers(headers_0)
+      .check(status.is(expected = 200))
+      .check(regex("<title>Allergisk sjokk</title>")))
 
   val selectedProfile = System.getProperty("selectedProfile") match {
     case "profile1" => scn.inject(atOnceUsers(1))
@@ -37,11 +47,7 @@ class CMSimulation extends Simulation{
     case "profile3" => scn.inject(constantUsersPerSec(500) during(60))
     case "profile4" => scn.inject(rampConcurrentUsers(5) to(200) during(120))
     case "profile5" => scn.inject(constantConcurrentUsers(10) during (120), rampConcurrentUsers(10) to (100) during (120))
-    case "profile6" => scn.inject(incrementUsersPerSec(5).times(5).eachLevelLasting(10).separatedByRampsLasting(10).startingFrom(10))
-  }
+    case "profile6" => scn.inject(incrementUsersPerSec(5).times(5).eachLevelLasting(10).separatedByRampsLasting(10).startingFrom(10))}
 
-
-  //setUp(scn.inject(atOnceUsers(1))).protocols(httpProtocol)
   setUp(selectedProfile).protocols(httpProtocol)
-
 }
