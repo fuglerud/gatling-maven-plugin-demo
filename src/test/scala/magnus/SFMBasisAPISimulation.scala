@@ -6,7 +6,7 @@ import io.gatling.core.Predef._
 import io.gatling.http.Predef._
 import io.gatling.jdbc.Predef._
 
-class SFMPractitionerSimulation extends Simulation {
+class SFMBasisAPISimulation extends Simulation {
 
 	val httpProtocol = http
 		.baseUrl("https://base-fhir.staging.sfm.cloud")
@@ -18,26 +18,30 @@ class SFMPractitionerSimulation extends Simulation {
 		.userAgentHeader("Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:75.0) Gecko/20100101 Firefox/75.0")
 		.disableCaching
 
-	val scn = scenario("RekvirentSimulation")
+	val scn = scenario("SFMBasisAPISimulation")
 
 		.exec(flushCookieJar)
 		.exec(flushHttpCache)
 
-		.feed(csv("magnus/SFMPractitioner.csv").circular)
+		.feed(csv("magnus/SFMBasisAPI.csv").circular)
 
 		.exec(http("request_practitioner")
 			.get("/api/v1/Practitioner/${rekvirent}")
 			.check(status.is(200))
 			.check(jsonPath("$..id").is("${rekvirent}")))
 
-
 		.exec(http("request_organization")
 			.get("/api/v1/Organization?name=${organizationname}")
 			.check(status.is(200))
 			.check(jsonPath("$..id").is("${organizationid}")))
 
+	val selectedProfile = System.getProperty("selectedProfile") match {
+		case "profile1" => scn.inject(atOnceUsers(1))
+		case "profile2" => scn.inject(rampUsersPerSec(1) to 5 during (30),constantUsersPerSec(5) during(600))
+		case "profile3" => scn.inject(constantUsersPerSec(500) during(60))
+		case "profile4" => scn.inject(rampConcurrentUsers(5) to(200) during(120))
+		case "profile5" => scn.inject(constantConcurrentUsers(10) during (120), rampConcurrentUsers(10) to (100) during (120))
+		case "profile6" => scn.inject(incrementUsersPerSec(5).times(5).eachLevelLasting(10).separatedByRampsLasting(10).startingFrom(10))}
 
-
-
-	setUp(scn.inject(atOnceUsers(1))).protocols(httpProtocol)
+	setUp(selectedProfile).protocols(httpProtocol)
 }
