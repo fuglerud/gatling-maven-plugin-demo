@@ -33,7 +33,7 @@ class SFMBasisAPISimulation extends Simulation {
 		.exec(http("request_organization")
 			.get("/api/v1/Organization?name=${organizationname}")
 			.check(status.is(200))
-			.check(jsonPath("$..id").is("${organizationid}")))
+			.check(jsonPath("$..resource.id").is("${organizationid}")))
 
 	val selectedProfile = System.getProperty("selectedProfile") match {
 		case "profile1" => scn.inject(atOnceUsers(1))
@@ -44,4 +44,5 @@ class SFMBasisAPISimulation extends Simulation {
 		case "profile6" => scn.inject(incrementUsersPerSec(5).times(5).eachLevelLasting(10).separatedByRampsLasting(10).startingFrom(10))}
 
 	setUp(selectedProfile).protocols(httpProtocol)
+
 }
