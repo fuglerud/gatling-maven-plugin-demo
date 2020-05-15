@@ -48,7 +48,6 @@ class CMSimulation extends Simulation{
     case "profile4" => scn.inject(rampConcurrentUsers(5) to(200) during(120))
     case "profile5" => scn.inject(constantConcurrentUsers(10) during (120), rampConcurrentUsers(10) to (100) during (120))
     case "profile6" => scn.inject(incrementUsersPerSec(5).times(5).eachLevelLasting(10).separatedByRampsLasting(10).startingFrom(10))
-    case "profile7" => scn.inject(atOnceUsers(3))
   }
 
   setUp(selectedProfile).protocols(httpProtocol)
