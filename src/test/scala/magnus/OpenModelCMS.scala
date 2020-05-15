@@ -8,8 +8,8 @@ class OpenModelCMS extends Simulation{
   val httpProtocol = http
    // .baseUrl("http://helsenorge-perftest.azureedge.net")
     //.baseUrl("https://helsenorge-perftest.azurefd.net")
-    .baseUrl("https://helsenorge-perftest.azurefd.net")
-   // .baseUrl("https://epi-helsenorge-dev.int-hn.nhn.no")
+   // .baseUrl("https://helsenorge-perftest.azurefd.net")
+    .baseUrl("https://epi-helsenorge-dev.int-hn.nhn.no")
 
     .disableCaching
 
@@ -43,7 +43,7 @@ class OpenModelCMS extends Simulation{
         .check(status.is(expected = 200))
         .check(regex("<title>Allergisk sjokk</title>")))
 
-  setUp(scn.inject(atOnceUsers(500))).protocols(httpProtocol)
+  setUp(scn.inject(atOnceUsers(1))).protocols(httpProtocol)
   //setUp(scn.inject(rampUsersPerSec(1) to 5 during (30),constantUsersPerSec(5) during(60))).protocols(httpProtocol)
   //setUp(scn.inject(constantUsersPerSec(500) during(60))).protocols(httpProtocol)
   //setUp(scn.inject(rampConcurrentUsers(5) to(200) during(120))).protocols(httpProtocol)
