@@ -47,5 +47,5 @@ class ClosedModelCMS extends Simulation{
       .pause(2)
     }
 
-  setUp(scn. inject(rampUsers(2600) during(120)).protocols(httpProtocol))
+  setUp(scn. inject(rampUsers(2) during(10)).protocols(httpProtocol))
 }
