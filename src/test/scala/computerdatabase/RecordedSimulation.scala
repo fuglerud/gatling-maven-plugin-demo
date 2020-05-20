@@ -19,8 +19,6 @@ class RecordedSimulation extends Simulation {
 
 	val headers_0 = Map("Origin" -> "https://base-fhir.staging.sfm.cloud")
 
-		.userAgentHeader("Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:75.0) Gecko/20100101 Firefox/75.0")
-
 
 	val scn = scenario("RecordedSimulation")
 		.exec(http("request_0")
