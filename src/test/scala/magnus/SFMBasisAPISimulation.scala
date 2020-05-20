@@ -37,7 +37,7 @@ class SFMBasisAPISimulation extends Simulation {
 
 		.exec(http("request_getMedication")
 			.post("/api/v1/Patient/$getMedication")
-			.body(ElFileBody("magnus/0000_request.json"))
+			.body(ElFileBody("computerdatabase/recordedsimulation/GetMedication_request.json"))
 			.check(status.is(200)))
 
 
