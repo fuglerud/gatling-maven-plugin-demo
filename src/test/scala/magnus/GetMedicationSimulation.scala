@@ -1,12 +1,9 @@
-package computerdatabase
-
-import scala.concurrent.duration._
+package magnus
 
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
-import io.gatling.jdbc.Predef._
 
-class RecordedSimulation extends Simulation {
+class GetMedicationSimulation extends Simulation {
 
 	val httpProtocol = http
 		.baseUrl("https://base-fhir.staging.sfm.cloud")
@@ -19,12 +16,11 @@ class RecordedSimulation extends Simulation {
 
 	val headers_0 = Map("Origin" -> "https://base-fhir.staging.sfm.cloud")
 
-
-	val scn = scenario("RecordedSimulation")
-		.exec(http("request_0")
+	val scn = scenario("GetMedicationSimulation")
+		.exec(http("request_get_medication")
 			.post("/api/v1/Patient/$getMedication")
 			.headers(headers_0)
-			.body(RawFileBody("computerdatabase/recordedsimulation/GetMedication_request.json")))
+			.body(ElFileBody("magnus/GetMedication_request.json")))
 
 	setUp(scn.inject(atOnceUsers(1))).protocols(httpProtocol)
 }
