@@ -17,10 +17,24 @@ class GetMedicationSimulation extends Simulation {
 	val headers_0 = Map("Origin" -> "https://base-fhir.staging.sfm.cloud")
 
 	val scn = scenario("GetMedicationSimulation")
+
+		.exec(flushCookieJar)
+		.exec(flushHttpCache)
+
+		.feed(csv("magnus/GetMedication_testdata.csv").circular)
+
 		.exec(http("request_get_medication")
 			.post("/api/v1/Patient/$getMedication")
 			.headers(headers_0)
-			.body(ElFileBody("magnus/GetMedication_request.json")))
+			.body(ElFileBody("magnus/GetMedication_request_body.json"))
+			.check(bodyString.saveAs("medisiner"))
+		)
 
-	setUp(scn.inject(atOnceUsers(1))).protocols(httpProtocol)
+		.exec(session=>{
+			println("medisiner:")
+			println(session("medisiner").as[String])
+			session})
+
+	//setUp(scn.inject(atOnceUsers(1))).protocols(httpProtocol)
+	setUp(scn.inject(constantUsersPerSec(1) during(30))).protocols(httpProtocol)
 }
