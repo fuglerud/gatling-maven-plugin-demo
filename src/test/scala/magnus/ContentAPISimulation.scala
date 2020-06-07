@@ -38,8 +38,8 @@ class ContentAPISimulation extends Simulation{
 
 
 
-  setUp(scn.inject(atOnceUsers(1))).protocols(httpProtocol)
-  //setUp(scn.inject(rampUsersPerSec(1) to 5 during (30),constantUsersPerSec(5) during(60))).protocols(httpProtocol)
+  //setUp(scn.inject(atOnceUsers(5))).protocols(httpProtocol)
+  setUp(scn.inject(rampUsersPerSec(1) to 5 during (30),constantUsersPerSec(5) during(60))).protocols(httpProtocol)
   //setUp(scn.inject(constantUsersPerSec(500) during(60))).protocols(httpProtocol)
   //setUp(scn.inject(rampConcurrentUsers(5) to(40) during(120))).protocols(httpProtocol)
   //setUp(scn.inject(constantConcurrentUsers(10) during (120), rampConcurrentUsers(10) to (100) during (120))).protocols(httpProtocol) 
