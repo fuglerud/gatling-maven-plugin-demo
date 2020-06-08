@@ -24,12 +24,13 @@ class ContentAPISimulation extends Simulation{
     .exec(flushHttpCache)
 
     .feed(csv("magnus/ContentAPI.csv").circular)
-
+/*
     .exec(http("request_access_token")
       .post("https://eksternapi-hn-mas-01.int-hn.nhn.no/sts/Token")
       .headers(headers_0)
         .body(ElFileBody("magnus/ContentAPITestData.json"))
       .check(regex("access_token\":\"(.*?)\"").saveAs("access_token")))
+    */
 
     .exec(http("Sykdomsinfo")
       .get("https://eksternapi-hn-mas-01.int-hn.nhn.no/contentapi/v1/Sykdomsinfo")
