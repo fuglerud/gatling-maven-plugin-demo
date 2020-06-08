@@ -14,7 +14,9 @@ class ContentAPISimulation extends Simulation{
 
   val headers_1 = Map(
     "Content-Type" -> "application/xml",
-    "Authorization" -> "Bearer ${access_token}")
+   // "Authorization" -> "Bearer ${access_token}",
+    "Authorization" -> "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlciI6MSwidHlwXzIiOiJyZWYifQ.eyJqdGkiOiIwNWMzNzZiYi0zZmQ4LTQ5MzgtOTgzZS04NWZjMDgwYjA0NzciLCJjbGllbnRfaWQiOiIxN2NlODA2My1hYmRjLTQyNjYtYTUyNC1kYzk3ZTBhMzA1ZWEiLCJjbGllbnRfbmFtZSI6IkZlbGxlcyBOZXR0bMO4c25pbmcgRm9yIFNwZXNpYWxpc3RoZWxzZXRqZW5lc3RlbiIsInJlZl90b2tlbiI6InB2eWN1X2M2WE9xYktBOXdfNW9hQ1AzSWt5Und3ZFVWNXNlcklHbXlseDAiLCJyZWZfdG9rZW5fdHlwZSI6IkZ1bGwiLCJ6b25lIjoiZWtzdGVybl9pbnRlcm5ldHQiLCJlbmR1c2VydHlwZSI6InN5c3RlbSIsIm5iZiI6MTU5MTYxMjkxMSwiZXhwIjoxNTkxNjE0NzExLCJpYXQiOjE1OTE2MTI5MTEsImlzcyI6InNpa2tlcmhldC1pbnRlcm4uaGVsc2Vub3JnZS5ubyJ9.sDgFEOM3JsLzbYtHrWxjJpnvrpCE4Z0Uu4SzmvmfqBQ"
+  )
 
   val scn = scenario("ContentAPISimulation")
 
