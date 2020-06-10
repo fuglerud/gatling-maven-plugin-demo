@@ -15,7 +15,7 @@ class ContentAPISimulation extends Simulation{
   val headers_1 = Map(
     "Content-Type" -> "application/xml",
    // "Authorization" -> "Bearer ${access_token}"
-    "Authorization" -> "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlciI6MSwidHlwXzIiOiJyZWYifQ.eyJqdGkiOiJlZDE5MDA2Yi1jMmE1LTRkYjYtYTE0MS1jNzc2Y2I0MDU2MmQiLCJjbGllbnRfaWQiOiIxN2NlODA2My1hYmRjLTQyNjYtYTUyNC1kYzk3ZTBhMzA1ZWEiLCJjbGllbnRfbmFtZSI6IkZlbGxlcyBOZXR0bMO4c25pbmcgRm9yIFNwZXNpYWxpc3RoZWxzZXRqZW5lc3RlbiIsInJlZl90b2tlbiI6IkhsN0U3WXZLTlE5MFVBLWs4NnkzSUVSZEVPVVdhU3NFSUE2c1dtMnVJeDAiLCJyZWZfdG9rZW5fdHlwZSI6IkZ1bGwiLCJ6b25lIjoiZWtzdGVybl9pbnRlcm5ldHQiLCJlbmR1c2VydHlwZSI6InN5c3RlbSIsIm5iZiI6MTU5MTc3Njc2NiwiZXhwIjoxNTkxNzc4NTY2LCJpYXQiOjE1OTE3NzY3NjYsImlzcyI6InNpa2tlcmhldC1pbnRlcm4uaGVsc2Vub3JnZS5ubyJ9.wlBphIvrJ2yzcvPPcpztTUoI3afoG6P3Vm8b_aX9Tb"
+    "Authorization" -> "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlciI6MSwidHlwXzIiOiJyZWYifQ.eyJqdGkiOiJlZDE5MDA2Yi1jMmE1LTRkYjYtYTE0MS1jNzc2Y2I0MDU2MmQiLCJjbGllbnRfaWQiOiIxN2NlODA2My1hYmRjLTQyNjYtYTUyNC1kYzk3ZTBhMzA1ZWEiLCJjbGllbnRfbmFtZSI6IkZlbGxlcyBOZXR0bMO4c25pbmcgRm9yIFNwZXNpYWxpc3RoZWxzZXRqZW5lc3RlbiIsInJlZl90b2tlbiI6IkhsN0U3WXZLTlE5MFVBLWs4NnkzSUVSZEVPVVdhU3NFSUE2c1dtMnVJeDAiLCJyZWZfdG9rZW5fdHlwZSI6IkZ1bGwiLCJ6b25lIjoiZWtzdGVybl9pbnRlcm5ldHQiLCJlbmR1c2VydHlwZSI6InN5c3RlbSIsIm5iZiI6MTU5MTc3Njc2NiwiZXhwIjoxNTkxNzc4NTY2LCJpYXQiOjE1OTE3NzY3NjYsImlzcyI6InNpa2tlcmhldC1pbnRlcm4uaGVsc2Vub3JnZS5ubyJ9.wlBphIvrJ2yzcvPPcpztTUoI3afoG6P3Vm8b_aX9Tb4"
   )
 
   val scn = scenario("ContentAPISimulation")
@@ -40,7 +40,7 @@ class ContentAPISimulation extends Simulation{
       .queryParam("Maalgruppe","${maalgruppe}")
       .check(status.is(expected = 200)))
 
-
+/*
   val selectedProfile = System.getProperty("selectedProfile") match {
     case "profile1" => scn.inject(atOnceUsers(1))
     case "profile2" => scn.inject(rampUsersPerSec(1) to 5 during (30),constantUsersPerSec(5) during(600))
@@ -51,8 +51,8 @@ class ContentAPISimulation extends Simulation{
   }
   setUp(selectedProfile)
 
+*/
 
-
-  //setUp(scn.inject(constantUsersPerSec(1) during(350))).protocols(httpProtocol)
+  setUp(scn.inject(constantUsersPerSec(1) during(1))).protocols(httpProtocol)
   }
 
