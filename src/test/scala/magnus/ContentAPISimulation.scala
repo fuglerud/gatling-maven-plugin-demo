@@ -40,7 +40,7 @@ class ContentAPISimulation extends Simulation{
       .queryParam("Maalgruppe","${maalgruppe}")
       .check(status.is(expected = 200)))
 
-/*
+
   val selectedProfile = System.getProperty("selectedProfile") match {
     case "profile1" => scn.inject(atOnceUsers(1))
     case "profile2" => scn.inject(rampUsersPerSec(1) to 5 during (30),constantUsersPerSec(5) during(600))
@@ -51,8 +51,8 @@ class ContentAPISimulation extends Simulation{
   }
   setUp(selectedProfile)
 
-*/
 
-  setUp(scn.inject(constantUsersPerSec(1) during(1))).protocols(httpProtocol)
+
+  //setUp(scn.inject(constantUsersPerSec(1) during(1))).protocols(httpProtocol)
   }
 
