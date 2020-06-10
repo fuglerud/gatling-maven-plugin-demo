@@ -15,7 +15,7 @@ class ContentAPISimulation extends Simulation{
   val headers_1 = Map(
     "Content-Type" -> "application/xml",
    // "Authorization" -> "Bearer ${access_token}"
-    "Authorization" -> "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlciI6MSwidHlwXzIiOiJyZWYifQ.eyJqdGkiOiJiZjBhZGFlNy1kYzkwLTQ0YmEtOTNiMC0wMDRiM2NlMzFkZDciLCJjbGllbnRfaWQiOiIxN2NlODA2My1hYmRjLTQyNjYtYTUyNC1kYzk3ZTBhMzA1ZWEiLCJjbGllbnRfbmFtZSI6IkZlbGxlcyBOZXR0bMO4c25pbmcgRm9yIFNwZXNpYWxpc3RoZWxzZXRqZW5lc3RlbiIsInJlZl90b2tlbiI6IjdWQWNyUnItdHJ3d0YzNVR2cEhkbGxFV2RyMHdiZGpXZXAySkh6cEtPcnMiLCJyZWZfdG9rZW5fdHlwZSI6IkZ1bGwiLCJ6b25lIjoiZWtzdGVybl9pbnRlcm5ldHQiLCJlbmR1c2VydHlwZSI6InN5c3RlbSIsIm5iZiI6MTU5MTYxNDI0MiwiZXhwIjoxNTkxNjE2MDQyLCJpYXQiOjE1OTE2MTQyNDIsImlzcyI6InNpa2tlcmhldC1pbnRlcm4uaGVsc2Vub3JnZS5ubyJ9.uPkKdIU0ziFw5GXn8F114GLFOKXUnKm0ETfIm40s_4o"
+    "Authorization" -> "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlciI6MSwidHlwXzIiOiJyZWYifQ.eyJqdGkiOiJlZDE5MDA2Yi1jMmE1LTRkYjYtYTE0MS1jNzc2Y2I0MDU2MmQiLCJjbGllbnRfaWQiOiIxN2NlODA2My1hYmRjLTQyNjYtYTUyNC1kYzk3ZTBhMzA1ZWEiLCJjbGllbnRfbmFtZSI6IkZlbGxlcyBOZXR0bMO4c25pbmcgRm9yIFNwZXNpYWxpc3RoZWxzZXRqZW5lc3RlbiIsInJlZl90b2tlbiI6IkhsN0U3WXZLTlE5MFVBLWs4NnkzSUVSZEVPVVdhU3NFSUE2c1dtMnVJeDAiLCJyZWZfdG9rZW5fdHlwZSI6IkZ1bGwiLCJ6b25lIjoiZWtzdGVybl9pbnRlcm5ldHQiLCJlbmR1c2VydHlwZSI6InN5c3RlbSIsIm5iZiI6MTU5MTc3Njc2NiwiZXhwIjoxNTkxNzc4NTY2LCJpYXQiOjE1OTE3NzY3NjYsImlzcyI6InNpa2tlcmhldC1pbnRlcm4uaGVsc2Vub3JnZS5ubyJ9.wlBphIvrJ2yzcvPPcpztTUoI3afoG6P3Vm8b_aX9Tb"
   )
 
   val scn = scenario("ContentAPISimulation")
@@ -50,6 +50,7 @@ class ContentAPISimulation extends Simulation{
     case "profile6" => scn.inject(incrementUsersPerSec(5).times(5).eachLevelLasting(10).separatedByRampsLasting(10).startingFrom(10))
   }
   setUp(selectedProfile)
+
 
 
   //setUp(scn.inject(constantUsersPerSec(1) during(350))).protocols(httpProtocol)
