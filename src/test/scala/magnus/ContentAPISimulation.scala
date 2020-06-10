@@ -14,6 +14,7 @@ class ContentAPISimulation extends Simulation{
 
   val headers_1 = Map(
     "Content-Type" -> "application/xml",
+    "auth"->"6NwzGblbVEag9SVp",
    // "Authorization" -> "Bearer ${access_token}"
     "Authorization" -> "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsInZlciI6MSwidHlwXzIiOiJyZWYifQ.eyJqdGkiOiJlZDE5MDA2Yi1jMmE1LTRkYjYtYTE0MS1jNzc2Y2I0MDU2MmQiLCJjbGllbnRfaWQiOiIxN2NlODA2My1hYmRjLTQyNjYtYTUyNC1kYzk3ZTBhMzA1ZWEiLCJjbGllbnRfbmFtZSI6IkZlbGxlcyBOZXR0bMO4c25pbmcgRm9yIFNwZXNpYWxpc3RoZWxzZXRqZW5lc3RlbiIsInJlZl90b2tlbiI6IkhsN0U3WXZLTlE5MFVBLWs4NnkzSUVSZEVPVVdhU3NFSUE2c1dtMnVJeDAiLCJyZWZfdG9rZW5fdHlwZSI6IkZ1bGwiLCJ6b25lIjoiZWtzdGVybl9pbnRlcm5ldHQiLCJlbmR1c2VydHlwZSI6InN5c3RlbSIsIm5iZiI6MTU5MTc3Njc2NiwiZXhwIjoxNTkxNzc4NTY2LCJpYXQiOjE1OTE3NzY3NjYsImlzcyI6InNpa2tlcmhldC1pbnRlcm4uaGVsc2Vub3JnZS5ubyJ9.wlBphIvrJ2yzcvPPcpztTUoI3afoG6P3Vm8b_aX9Tb4"
   )
@@ -34,7 +35,9 @@ class ContentAPISimulation extends Simulation{
 
 
     .exec(http("Sykdomsinfo")
-      .get("https://eksternapi-hn-mas-01.int-hn.nhn.no/contentapi/v1/Sykdomsinfo")
+      //.get("https://eksternapi-hn-mas-01.int-hn.nhn.no/contentapi/v1/Sykdomsinfo")
+      .get("https://epi-helsenorge-dev.int-hn.nhn.no/contentapi/private/v1/sykdom")
+      //https://epi-helsenorge-dev.int-hn.nhn.no/contentapi/private/v1/sykdom?sykdomtilstand=111
       .headers(headers_1)
       .queryParam("Sykdomtilstand","${sykdomtilstand}")
       .queryParam("Maalgruppe","${maalgruppe}")
