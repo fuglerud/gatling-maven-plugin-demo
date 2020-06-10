@@ -1,0 +1,60 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "patient",
+      "resource": {
+        "resourceType": "Patient",
+        "meta": {
+          "profile": [
+            "http://ehelse.no/fhir/StructureDefinition/sfm-Patient"
+          ]
+        },
+        "identifier": [
+          {
+            "use": "official",
+            "system": "urn:oid:2.16.578.1.12.4.1.4.2",
+            "value": "${identifier}"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.no/fhir/StructureDefinition/no-basis-middlename",
+                "valueString": "${name}"
+              }
+            ],
+            "family": "${family}",
+            "given": [
+              "${given}"
+            ]
+          }
+        ],
+        "gender": "${gender}",
+        "address": [
+          {
+            "use": "${address_use}",
+            "type": "${address_type}",
+            "text": "${address_text}",
+            "city": "${address_city}",
+            "postalCode": "${address_postalcode}"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SamtykkeKjernejournal",
+      "valueCode": "HPMOTTATTSAMTYKKE"
+    },
+    {
+      "name": "SamtykkeSperretLegemidler",
+      "valueCode": "HPMOTTATTSAMTYKKE"
+    },
+    {
+      "name": "SamtykkeLasteResepter",
+      "valueCode": "HPMOTTATTSAMTYKKE"
+    }
+  ]
+}
