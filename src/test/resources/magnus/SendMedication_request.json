@@ -1,0 +1,349 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "medication",
+      "resource":
+      {
+        "resourceType": "Bundle",
+        "id": "1ed9243b-8077-43e9-acd7-dcce61788c15",
+        "meta": {
+          "profile": ["http://ehelse.no/fhir/StructureDefinition/sfm-MedicationBundle"]
+        },
+        "type": "document",
+        "timestamp": "2020-04-07T15:13:51.23462+00:00",
+        "link": [
+          {
+            "relation": "self",
+            "url": "http://localhost:5000/api/v1/Patient/$getMedication"
+          }
+        ],
+        "entry": [
+          {
+            "fullUrl": "http://localhost:5000/v1/Composition/08dbb502-2b07-4210-aac3-e22c164a1fb5",
+            "resource": {
+              "resourceType": "Composition",
+              "id": "08dbb502-2b07-4210-aac3-e22c164a1fb5",
+              "meta": {
+                "profile": [
+                  "http://ehelse.no/fhir/StructureDefinition/sfm-MedicationComposition"
+                ]
+              },
+              "status": "final",
+              "type": {
+                "coding": [
+                  {
+                    "system": "http://loinc.org",
+                    "code": "11503-0",
+                    "display": "Medical records"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "patient"
+              },
+              "date": "2020-04-07T15:13:51+00:00",
+              "author": [
+                {
+                  "reference": "http://localhost:5000/v1/Practitioner/f46035e3-a7e9-494e-778e-08d7beb2be2e"
+                }
+              ],
+              "title": "Medication summary",
+              "confidentiality": "N",
+              "section": [
+                {
+                  "title": "PllInfo",
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://ehelse.no/fhir/CodeSystem/sfm-section-types",
+                        "code": "sectionPLLinfo",
+                        "display": "PLL Info"
+                      }
+                    ]
+                  },
+                  "text": {
+                    "status": "generated",
+                    "div": "<xhtml:div xmlns:xhtml=\"http://www.w3.org/1999/xhtml\">Info reated to M25</xhtml:div>"
+                  },
+                  "entry": [
+                    {
+                      "reference":"pll1"
+                    }
+                  ]
+                },
+                {
+                  "title": "Medication",
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://ehelse.no/fhir/CodeSystem/sfm-section-types",
+                        "code": "sectionMedication",
+                        "display": "List of Medication statements"
+                      }
+                    ]
+                  },
+                  "text": {
+                    "status": "generated",
+                    "div": "<xhtml:div xmlns:xhtml=\"http://www.w3.org/1999/xhtml\">List of medications</xhtml:div>"
+                  },
+                  "entry": [
+                    {
+                      "reference":"medicationStatement1"
+                    },
+                    {
+                      "reference":"medicationStatement2"
+                    },
+                    {
+                      "reference":"medicationStatement3"
+                    }
+                  ]
+                },
+                {
+                  "title": "Other Prescriptions",
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://ehelse.no/fhir/CodeSystem/sfm-section-types",
+                        "code": "sectionOtherPrescriptions",
+                        "display": "List of Medication statements"
+                      }
+                    ]
+                  },
+                  "text": {
+                    "status": "generated",
+                    "div": "<xhtml:div xmlns:xhtml=\"http://www.w3.org/1999/xhtml\">List of non medical prescriptions</xhtml:div>"
+                  }
+                },
+                {
+                  "title": "Allergies",
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://ehelse.no/fhir/CodeSystem/sfm-section-types",
+                        "code": "sectionAllergies",
+                        "display": "Section allergies"
+                      }
+                    ]
+                  },
+                  "text": {
+                    "status": "generated",
+                    "div": "<xhtml:div xmlns:xhtml=\"http://www.w3.org/1999/xhtml\">List of allergies</xhtml:div>"
+                  }
+                },
+                {
+                  "title": "Dispense",
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://ehelse.no/fhir/CodeSystem/sfm-section-types",
+                        "code": "sectionDispense",
+                        "display": "Section dispense"
+                      }
+                    ]
+                  },
+                  "text": {
+                    "status": "generated",
+                    "div": "<xhtml:div xmlns:xhtml=\"http://www.w3.org/1999/xhtml\">List of dispense messages</xhtml:div>"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl":"pll1",
+            "resource": {
+              "resourceType": "Basic",
+              "extension": [
+                {
+                  "extension": [
+                    {
+                      "url": "createPLL",
+                      "valueBoolean": true
+                    }
+                  ],
+                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-pllInformation"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl":"medicationStatement1",
+            "resource": {
+              "resourceType": "MedicationStatement",
+              "meta": {
+                "profile": ["http://ehelse.no/fhir/StructureDefinition/sfm-MedicationStatement"]
+              },
+              "contained": [
+                {
+                  "resourceType": "Medication",
+                  "id": "med0309",
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://ehelse.no/fhir/CodeSystem/FEST",
+                        "code": "FestCode",
+                        "display": "FestCode"
+                      }
+                    ]
+                  },
+                  "form": {
+                    "coding": [
+                      {
+                        "system": "urn:oid:2.16.578.1.12.4.1.1.7448",
+                        "code": "53",
+                        "display": "Tablett"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "resourceType": "Patient",
+                  "id": "patient",
+                  "meta": {
+                    "profile": [ "http://hl7.no/fhir/StructureDefinition/no-basis-Patient" ]
+                  },
+                  "identifier": [
+                    {
+                      "system": "urn:oid:2.16.578.1.12.4.1.4.1",
+                      "value": "10064522650"
+                    }
+                  ],
+                  "active": true,
+                }
+              ],
+              "extension": [
+                {
+                  "extension": [
+                    {
+                      "url": "createeresept",
+                      "valueBoolean": true
+                    },
+                    {
+                      "url": "festUpdate",
+                      "valueDateTime": "2017-01-01T00:00:00.000Z"
+                    },
+                    {
+                      "url": "itemgroup",
+                      "valueCodeableConcept":
+                      {
+                        "coding":
+                        {
+                          "system": "urn:uid:2.16.578.1.12.4.1.1.7402",
+                          "code": "L",
+                          "display": "Legemiddel"
+                        }
+                      }
+                    },
+                    {
+                      "url": "expirationdate",
+                      "valueDate": "2017-01-01"
+                    },
+                  ],
+                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-reseptamendment"
+                }
+              ],
+              "status": "active",
+              "medicationReference": {
+                "reference": "#med0309",
+              },
+              "subject": {
+                "reference": "#patient"
+              },
+              "dosage": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://ehelse.no/fhir/StructureDefinition/sfm-use",
+                      "valueCodeableConcept": {
+                        "coding":
+                        {
+                          "system": "urn:uid:2.16.578.1.12.4.1.1.9101",
+                          "code": "1",
+                          "display": "Fast"
+                        }
+                      }
+                    }
+                  ],
+                  "sequence": 1,
+                  "text": "1-2 tablets",
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "patient",
+            "resource": {
+              "resourceType": "Patient",
+              "meta": {
+                "profile": [
+                  "http://ehelse.no/fhir/StructureDefinition/sfm-Patient"
+                ]
+              },
+              "language": "URI",
+              "extension": [
+                {
+                  "extension": [
+                    {
+                      "url": "code",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "urn:iso:std:iso:3166",
+                            "code": "NO",
+                            "display": "Norge"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "url": "http://hl7.org/fhir/StructureDefinition/patient-citizenship"
+                }
+              ],
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "urn:oid:2.16.578.1.12.4.1.4.1",
+                  "value": "23010176980"
+                },
+                {
+                  "use": "official",
+                  "system": "urn:oid:2.16.578.1.12.4.1.4.14",
+                  "value": "100f7da8-abba-abba-b434-68a3cbb13db3"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.no/fhir/StructureDefinition/no-basis-middlename",
+                      "valueString": "Friðgeir"
+                    }
+                  ],
+                  "use": "official",
+                  "family": "Wiik",
+                  "given": [
+                    "Arne"
+                  ]
+                }
+              ],
+              "gender": "male",
+              "birthDate": "1901-01-23",
+              "deceasedBoolean": false,
+              "address": [
+                {
+                  "use": "work",
+                  "type": "both",
+                  "text": "Sæther Street 85",
+                  "city": "Oslo",
+                  "postalCode": "6001"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
