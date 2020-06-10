@@ -3,7 +3,7 @@ package magnus
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
 
-class GetMedicationSimulation extends Simulation {
+class SendAndGetMedicationSimulation extends Simulation {
 
 	val httpProtocol = http
 		.baseUrl("https://base-fhir.staging.sfm.cloud")
@@ -16,11 +16,19 @@ class GetMedicationSimulation extends Simulation {
 
 	val headers_0 = Map("Origin" -> "https://base-fhir.staging.sfm.cloud")
 
-	val scn = scenario("GetMedicationSimulation")
+	val scn = scenario("SendAndGetMedicationSimulation")
+
 		.exec(http("request_get_medication")
 			.post("/api/v1/Patient/$getMedication")
 			.headers(headers_0)
-			.body(ElFileBody("magnus/GetMedication_request.json")))
+			.body(ElFileBody("magnus/GetMedication_request.json"))
+			.check(bodyString.saveAs("meds")))
+
+		.exec(http("request_send_medication")
+			.post("/api/v1/Patient/$sendMedication")
+			.headers(headers_0)
+			.body(StringBody("${meds}"))
+			.check(status.is(expected = 200)))
 
 	setUp(scn.inject(atOnceUsers(1))).protocols(httpProtocol)
 }
