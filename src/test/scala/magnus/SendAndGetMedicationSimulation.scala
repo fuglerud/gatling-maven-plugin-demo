@@ -6,7 +6,8 @@ import io.gatling.http.Predef._
 class SendAndGetMedicationSimulation extends Simulation {
 
 	val httpProtocol = http
-		.baseUrl("https://base-fhir.staging.sfm.cloud")
+		//.baseUrl("https://base-fhir.staging.sfm.cloud")
+		.baseUrl("https://base-fhir.qa.forskrivning.no")
 		.inferHtmlResources()
 		.acceptHeader("application/json")
 		.acceptEncodingHeader("gzip, deflate")
@@ -14,7 +15,8 @@ class SendAndGetMedicationSimulation extends Simulation {
 		.authorizationHeader("Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IkIyMEFFMzZDMTQ5M0M5MEI0QkJDMEM5NkFENzRBQ0Y1QTZFODg1MTQiLCJ0eXAiOiJKV1QiLCJ4NXQiOiJzZ3JqYkJTVHlRdEx2QXlXclhTczlhYm9oUlEifQ.eyJuYmYiOjE1ODc3MjE2MjYsImV4cCI6MTc0NTQwMTYyNiwiaXNzIjoiaHR0cHM6Ly9oZWxzZWlkLXN0cy50ZXN0Lm5obi5ubyIsImF1ZCI6ImUtaGVsc2UvU0ZNLmFwaSIsImNsaWVudF9pZCI6ImJmNzI0NjAzLTFhOTItNDA1Yi1iOWU2LTVlYmVkZTY5YmExMCIsImhlbHNlaWQ6Ly9jbGFpbXMvY2xpZW50L2tqL29yZ25yIjoiMzIzMjMyMzIzIiwiaGVsc2VpZDovL2NsYWltcy9jbGllbnQvZWMvY29tbW9uX25hbWUiOiJIw7hncm9uZGVuIHRlc3RzeWtlaHVzIiwiaGVsc2VpZDovL2NsYWltcy9jbGllbnQvZWMvZXhwIjoxNjExMDE0MzQwLCJoZWxzZWlkOi8vY2xhaW1zL2NsaWVudC9lYy9vcmducl9wYXJlbnQiOiIzMjMyMzIzMjMiLCJjbGllbnRfYW1yIjoicHJpdmF0ZV9rZXlfand0Iiwic3ViIjoiV0w2RC9JWlVXOGp0SmxSR0ZkcUFWbU02THhrZ1N0VlRoWVVGRlNkK1BxTT0iLCJhdXRoX3RpbWUiOjE1ODc3MjA4MTksImlkcCI6InRlc3RpZHAtb2lkYyIsImhlbHNlaWQ6Ly9jbGFpbXMvaWRlbnRpdHkvc2VjdXJpdHlfbGV2ZWwiOiI0IiwiaGVsc2VpZDovL2NsYWltcy9pZGVudGl0eS9waWQiOiIwODEyODMxNTk3OCIsImhlbHNlaWQ6Ly9jbGFpbXMvaWRlbnRpdHkvYXNzdXJhbmNlX2xldmVsIjoiaGlnaCIsImhlbHNlaWQ6Ly9jbGFpbXMvaHByL2hwcl9udW1iZXIiOiIxMDEwMDM4IiwiaGVsc2VpZDovL2NsYWltcy9jbGllbnQvYW1yIjoicnNhX3ByaXZhdGVfa2V5IiwiaGVsc2VpZDovL2NsYWltcy9jbGllbnQvY2xhaW1zL29yZ25yX3BhcmVudCI6IjMyMzIzMjMyMyIsImp0aSI6Ikg0Yk5qLVB0d2RlWElNQnNGTG9GV2ciLCJzY29wZSI6WyJwcm9maWxlIiwib3BlbmlkIiwiaGVsc2VpZDovL3Njb3Blcy9pZGVudGl0eS9waWQiLCJoZWxzZWlkOi8vc2NvcGVzL2lkZW50aXR5L3NlY3VyaXR5X2xldmVsIiwiaGVsc2VpZDovL3Njb3Blcy9ocHIvaHByX251bWJlciIsImUtaGVsc2Uvc2ZtLmFwaS9zZm0uYXBpIl0sImFtciI6WyJwd2QiXX0.l6mhSI17gvvA0hsy-46ijyNRYgubWmp_zlKElF_jJbyrHJzIhZcXubdwJR7vq0gEnu2965IXfpcN0QavjopzxhrQryDdhRQUMGDre5RUJ55-nyGe8mJH1cTrKp97zSsO4PFV1b99Idf0OQa3Vs11TE5OD3SFkbxTm8-BtA2r-l_9PK-72SQ5tbQKsyTG8JbfT4UDbBh2zljjh2KfmbKdYIyXLndSFy_ybdP8krumh07qmxKZXOr4mDxdypz1JHfPEw7KIbkKo0ShrMnBil3L5M_eNQBqYX2-HON6Zxoc2r2qABGtbLsTRgfpKd04B9hnfIOaFa3Ync-X-ifRTaarsQ")
 		.contentTypeHeader("application/json")
 
-	val headers_0 = Map("Origin" -> "https://base-fhir.staging.sfm.cloud")
+	//val headers_0 = Map("Origin" -> "https://base-fhir.staging.sfm.cloud")
+	val headers_0 = Map("Origin" -> "https://base-fhir.qa.forskrivning.no")
 
 	val scn = scenario("SendAndGetMedicationSimulation")
 
@@ -24,11 +26,14 @@ class SendAndGetMedicationSimulation extends Simulation {
 			.body(ElFileBody("magnus/GetMedication_request.json"))
 			.check(bodyString.saveAs("meds")))
 
+/*
 		.exec(http("request_send_medication")
 			.post("/api/v1/Patient/$sendMedication")
 			.headers(headers_0)
 			.body(StringBody("${meds}"))
 			.check(status.is(expected = 200)))
+
+	*/
 
 	setUp(scn.inject(atOnceUsers(1))).protocols(httpProtocol)
 }
