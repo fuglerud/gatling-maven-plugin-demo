@@ -209,7 +209,7 @@
                       "value": "10064522650"
                     }
                   ],
-                  "active": true,
+                  "active": true
                 }
               ],
               "extension": [
@@ -245,7 +245,7 @@
               ],
               "status": "active",
               "medicationReference": {
-                "reference": "#med0309",
+                "reference": "#med0309"
               },
               "subject": {
                 "reference": "#patient"
@@ -266,7 +266,7 @@
                     }
                   ],
                   "sequence": 1,
-                  "text": "1-2 tablets",
+                  "text": "1-2 tablets"
                 }
               ]
             }

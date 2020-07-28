@@ -12,6 +12,7 @@ class SFMBasisAPISimulation extends Simulation {
 		.baseUrl("https://base-fhir.staging.sfm.cloud")
 		.inferHtmlResources()
 		.acceptHeader("application/json")
+		.header("Content-Type", "application/json")
 		.acceptEncodingHeader("gzip, deflate")
 		.acceptLanguageHeader("en-US,en;q=0.5")
 		.authorizationHeader("Bearer ${token}")
@@ -24,20 +25,21 @@ class SFMBasisAPISimulation extends Simulation {
 		.exec(flushHttpCache)
 
 		.feed(csv("magnus/SFMBasisAPI.csv").circular)
+		.feed(csv("magnus/TestdataSFMBasis.csv").circular)
 
 		.exec(http("request_practitioner")
-			.get("/api/v1/Practitioner/${rekvirent}")
+			.get("/Practitioner/${rekvirent}")
 			.check(status.is(200))
 			.check(jsonPath("$..id").is("${rekvirent}")))
 
 		.exec(http("request_organization")
-			.get("/api/v1/Organization?name=${organizationname}")
+			.get("/Organization?name=${organizationname}")
 			.check(status.is(200))
 			.check(jsonPath("$..resource.id").is("${organizationid}")))
 
 		.exec(http("request_getMedication")
-			.post("/api/v1/Patient/$getMedication")
-			.body(ElFileBody("computerdatabase/recordedsimulation/GetMedication_request.json"))
+			.post("/Patient/$getMedication")
+			.body(ElFileBody("magnus/0000_request.json"))
 			.check(status.is(200)))
 
 
