@@ -1,20 +1,2 @@
-identifier,name,family,given,gender,address_use,address_type,address_text,address_city,address_postalcode,referansenummer
-04021968477,Randi,Nilsen,Anna,female,home,physical,Testveien 1,Oslo,1234,0142245323
-04021968477,Randi,Nilsen,Anna,female,home,physical,Testveien 1,Oslo,1234,0
-22095711298,Randi,Nilsen,Anna,female,home,physical,Testveien 1,Oslo,1234,0
-06011981230,Randi,Nilsen,Anna,female,home,physical,Testveien 1,Oslo,1234,0
-03020573693,Randi,Nilsen,Anna,female,home,physical,Testveien 1,Oslo,1234,0
-19059600446,Randi,Nilsen,Anna,female,home,physical,Testveien 1,Oslo,1234,0
-02031837777,Randi,Nilsen,Anna,female,home,physical,Testveien 1,Oslo,1234,0
-02031825612,Randi,Nilsen,Anna,female,home,physical,Testveien 1,Oslo,1234,0
-02031825612,Randi,Nilsen,Anna,female,home,physical,Testveien 1,Oslo,1234,0
-02031844773,Randi,Nilsen,Anna,female,home,physical,Testveien 1,Oslo,1234,0
-02031826406,Randi,Nilsen,Anna,female,home,physical,Testveien 1,Oslo,1234,0
-12018729510,Randi,Nilsen,Anna,female,home,physical,Testveien 1,Oslo,1234,0
-12018729510,Randi,Nilsen,Anna,female,home,physical,Testveien 1,Oslo,1234,0
-02031824071,Randi,Nilsen,Anna,female,home,physical,Testveien 1,Oslo,1234,0
-02031825965,Randi,Nilsen,Anna,female,home,physical,Testveien 1,Oslo,1234,0
-02031825612,Randi,Nilsen,Anna,female,home,physical,Testveien 1,Oslo,1234,0
-19059600446,Randi,Nilsen,Anna,female,home,physical,Testveien 1,Oslo,1234,0
-12052430451,Randi,Nilsen,Anna,female,home,physical,Testveien 1,Oslo,1234,0
-27102823392,Randi,Nilsen,Anna,female,home,physical,Testveien 1,Oslo,1234,0
+identifier,family,given,gender,address_use,address_type,address_text,address_city,address_postalcode
+22110056781,Iversen,Marcus,male,home,physical,Testveien 10

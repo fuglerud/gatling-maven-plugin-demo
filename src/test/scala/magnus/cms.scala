@@ -1,6 +1,5 @@
 package magnus
 
-
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
 
@@ -20,34 +19,26 @@ class cms extends Simulation  {
     "Content-Type" -> "application/xml",
     "Authorization" -> "Bearer ${bearer_token}")
 
-
   val scn = scenario("ContentAPI")
 
     .exec(http(requestName = "sts-token")
       .post(url = "/sts/Token")
       .headers(headers_token)
       .body(ElFileBody("magnus/sts-token.json"))
-      .check(regex("\"access_token\":\"(.*?)\"").saveAs("bearer_token"))
-    )
+      .check(regex("\"access_token\":\"(.*?)\"").saveAs("bearer_token")))
 
-    .exec {
-        session =>
+    .exec {session =>
           println(session("bearer_token").as[String])
-          session
-      }
+          session}
 
-/*
     .exec(http("Sykdomsinfo")
       .get("/contentapi/v1/Sykdomsinfo")
       .headers(headers_API)
       .queryParam("Sykdomtilstand","35489007")
       .queryParam("Maalgruppe","133936004")
-      .check(status.is(expected = 200))
-    )
-    */
+      .check(status.is(expected = 200)))
 
 
-
-  setUp(scn.inject(atOnceUsers(2))).protocols(httpProtocol)
+  setUp(scn.inject(atOnceUsers(1))).protocols(httpProtocol)
   //setUp(scn.inject(constantUsersPerSec(rate=1) during(3600))).protocols(httpProtocol)
 }
