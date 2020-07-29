@@ -28,17 +28,17 @@ class SFMBasisAPISimulation extends Simulation {
     .feed(csv("magnus/TestdataSFMBasis.csv").circular)
 
 
-    .exec(http("request_practitioner")
+    .exec(http("practitioner")
       .get("/Practitioner/${rekvirent}")
       .check(status.is(200))
       .check(jsonPath("$..id").is("${rekvirent}")))
 
-    .exec(http("request_organization")
+    .exec(http("organization")
       .get("/Organization?name=${organizationname}")
       .check(status.is(200))
       .check(jsonPath("$..resource.id").is("${organizationid}")))
 
-    .exec(http("request_getMedication")
+    .exec(http("getMedication")
       .post("/Patient/$getMedication")
       .body(ElFileBody("magnus/0000_request.json"))
       .check(status.is(200))
