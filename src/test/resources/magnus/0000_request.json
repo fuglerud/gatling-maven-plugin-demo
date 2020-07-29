@@ -25,16 +25,6 @@
               "${given}"
             ]
           }
-        ],
-        "gender": "${gender}",
-        "address": [
-          {
-            "use": "${use}",
-            "type": "${type}",
-            "text": "${text}",
-            "city": "${city}",
-            "postalCode": "${postalCode}"
-          }
         ]
       }
     }

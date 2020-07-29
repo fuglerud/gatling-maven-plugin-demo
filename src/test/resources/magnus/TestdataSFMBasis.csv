@@ -1,2 +1,3 @@
-identifier,family,given,gender,use,type,text,city,postalCode
-22110056781,Iversen,Marcus,male,home,physical,Testveien 10,Oslo,1234
+identifier,family,given
+22110056781,Iversen,Marcus
+23010176980,Wiik,Arne

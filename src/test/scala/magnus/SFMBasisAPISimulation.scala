@@ -57,6 +57,6 @@ class SFMBasisAPISimulation extends Simulation {
   setUp(selectedProfile).protocols(httpProtocol)
   */
 
-  setUp(scn.inject(atOnceUsers(1))).protocols(httpProtocol)
+  setUp(scn.inject(atOnceUsers(2))).protocols(httpProtocol)
 
 }
