@@ -134,7 +134,7 @@ class LoginMinIDSimulation extends Simulation{
       .check(regex("\"__HendelseLoggType__\": \"(.*?)\"").saveAs("HendelseLoggType")))
 
     .exec(session=>{
-      println("AuthenticatedHash:")
+      println("AuthenticatedHash verdi:")
       println(session("AuthenticatedHash").as[String])
       session})
 
