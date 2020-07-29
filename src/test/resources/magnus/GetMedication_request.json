@@ -14,51 +14,29 @@
           {
             "use": "official",
             "system": "urn:oid:2.16.578.1.12.4.1.4.2",
-            "value": "04021968477"
+            "value": "22110056781"
           }
         ],
         "active": true,
         "name": [
           {
-            "extension": [
-              {
-                "url": "http://hl7.no/fhir/StructureDefinition/no-basis-middlename",
-                "valueString": "Randi"
-              }
-            ],
-            "family": "Nilsen",
+            "family": "Iversen",
             "given": [
-              "Anna"
+              "Marcus"
             ]
           }
         ],
-        "gender": "female",
+        "gender": "male",
         "address": [
           {
             "use": "home",
             "type": "physical",
-            "text": "Testveien 1",
+            "text": "Testveien 10",
             "city": "Oslo",
             "postalCode": "1234"
           }
         ]
       }
-    },
-    {
-      "name": "Referansenummer",
-      "valueString": "0142245323"
-    },
-    {
-      "name": "SamtykkeKjernejournal",
-      "valueCode": "HPMOTTATTSAMTYKKE"
-    },
-    {
-      "name": "SamtykkeSperretLegemidler",
-      "valueCode": "HPMOTTATTSAMTYKKE"
-    },
-    {
-      "name": "SamtykkeLasteResepter",
-      "valueCode": "HPMOTTATTSAMTYKKE"
     }
   ]
 }
