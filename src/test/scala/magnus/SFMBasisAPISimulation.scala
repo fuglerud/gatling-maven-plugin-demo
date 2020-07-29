@@ -42,6 +42,8 @@ class SFMBasisAPISimulation extends Simulation {
 			.body(ElFileBody("magnus/0000_request.json"))
 			.check(status.is(200))
 			.check(jsonPath("$..name").is("medication")))
+)
+
 
 
 	/*
