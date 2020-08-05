@@ -42,7 +42,11 @@ class SFMBasisAPISimulation extends Simulation {
       .post("/Patient/$getMedication")
       .body(ElFileBody("magnus/0000_request.json"))
       .check(status.is(200))
-      .check(jsonPath("$..name").is("medication")))
+      .check(jsonPath("$..name").is("medication"))
+      .check(jsonPath("$..[?(@.name==\"RFM912Feilkode\")].valueCodeableConcept.text").is("OK"))
+      .check(jsonPath("$..[?(@.name==\"RFM96Feilkode\")].valueCodeableConcept.text").is("OK"))
+      .check(jsonPath("$..[?(@.name==\"KJFeilkode\")].valueCodeableConcept.text").is("OK"))
+    )
 
 
   /*
