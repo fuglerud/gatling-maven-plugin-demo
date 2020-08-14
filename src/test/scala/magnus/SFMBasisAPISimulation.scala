@@ -10,6 +10,7 @@ class SFMBasisAPISimulation extends Simulation {
 
   val httpProtocol = http
     .baseUrl("https://base-fhir.staging.sfm.cloud")
+    //.baseUrl("https://base-fhir.qa.sfm.cloud")
     .inferHtmlResources()
     .acceptHeader("application/json")
     .header("Content-Type", "application/json")
@@ -32,7 +33,7 @@ class SFMBasisAPISimulation extends Simulation {
       .get("/Practitioner/${rekvirent}")
       .check(status.is(200))
       .check(jsonPath("$..id").is("${rekvirent}")))
-
+/*
     .exec(http("organization")
       .get("/Organization?name=${organizationname}")
       .check(status.is(200))
@@ -45,22 +46,14 @@ class SFMBasisAPISimulation extends Simulation {
       .check(jsonPath("$..name").is("medication"))
       .check(jsonPath("$..[?(@.name==\"RFM912Feilkode\")].valueCodeableConcept.text").is("OK"))
       .check(jsonPath("$..[?(@.name==\"RFM96Feilkode\")].valueCodeableConcept.text").is("OK"))
-      .check(jsonPath("$..[?(@.name==\"KJFeilkode\")].valueCodeableConcept.text").is("OK"))
-    )
+      .check(jsonPath("$..[?(@.name==\"KJFeilkode\")].valueCodeableConcept.text").is("OK")))
 
-
-  /*
-  val selectedProfile = System.getProperty("selectedProfile") match {
-    case "profile1" => scn.inject(atOnceUsers(1))
-    case "profile2" => scn.inject(rampUsersPerSec(1) to 5 during (30),constantUsersPerSec(5) during(600))
-    case "profile3" => scn.inject(constantUsersPerSec(500) during(60))
-    case "profile4" => scn.inject(rampConcurrentUsers(5) to(200) during(120))
-    case "profile5" => scn.inject(constantConcurrentUsers(10) during (120), rampConcurrentUsers(10) to (100) during (120))
-    case "profile6" => scn.inject(incrementUsersPerSec(5).times(5).eachLevelLasting(10).separatedByRampsLasting(10).startingFrom(10))}
-
-  setUp(selectedProfile).protocols(httpProtocol)
-  */
-
-  setUp(scn.inject(atOnceUsers(2))).protocols(httpProtocol)
+   /* .exec(http("sendMedication")
+      .post("/Patient/$sendMedication")
+      .body(ElFileBody("magnus/SendMedication_request.json"))
+      .check(status.is(200))
+    */
+*/
+  setUp(scn.inject(atOnceUsers(1))).protocols(httpProtocol)
 
 }
