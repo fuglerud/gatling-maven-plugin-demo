@@ -41,8 +41,8 @@ class NewEPJTicketSimulation extends Simulation{
       session})
 
     .exec(http("request_epj_ticket")
-     //.post("https://api.qa2.kjernejournal-test.no:8000/v1/helseindikator/")
-      .post("https://api.st1.kjernejournal-test.no:8000/v1/helseindikator/")
+     .post("https://api.qa2.kjernejournal-test.no:8000/v1/helseindikator/")
+      //.post("https://api.st1.kjernejournal-test.no:8000/v1/helseindikator/")
       .header("Authorization", "${authorizationHeader}")
       .headers(headers_0)
       .body(ElFileBody("magnus/epj_ticket_request.json"))

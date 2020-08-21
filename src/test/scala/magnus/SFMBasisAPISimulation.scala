@@ -38,12 +38,15 @@ class SFMBasisAPISimulation extends Simulation {
       .check(status.is(200))
       .check(jsonPath("$..resource.id").is("${organizationid}")))
 
+    /*
     .exec(http("getMedication")
       .post("/Patient/$getMedication")
       .body(ElFileBody("magnus/0000_request.json"))
       .check(status.is(200))
-      .check(jsonPath("$..name").is("medication")))
-
+      .check(jsonPath("$..name").is("medication"))
+      .check(jsonPath("$..valueCodeableConcept.text").is("OK"))
+    )
+*/
 
   /*
   val selectedProfile = System.getProperty("selectedProfile") match {

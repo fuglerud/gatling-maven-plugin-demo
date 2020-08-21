@@ -1,0 +1,42 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "patient",
+      "resource": {
+        "resourceType": "Patient",
+        "meta": {
+          "profile": [
+            "http://ehelse.no/fhir/StructureDefinition/sfm-Patient"
+          ]
+        },
+        "identifier": [
+          {
+            "use": "official",
+            "system": "urn:oid:2.16.578.1.12.4.1.4.1",
+            "value": "27017833176"
+          }
+        ],
+        "active": true,
+        "name": [
+          {
+            "family": "Fuglerud",
+            "given": [
+              "Magnus"
+            ]
+          }
+        ],
+        "gender": "male",
+        "address": [
+          {
+            "use": "home",
+            "type": "physical",
+            "text": "Testveien 10",
+            "city": "Oslo",
+            "postalCode": "1234"
+          }
+        ]
+      }
+    }
+  ]
+}
