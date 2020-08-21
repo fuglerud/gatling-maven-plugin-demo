@@ -59,7 +59,7 @@ class HnKjSimulation extends Simulation{
     .exec(flushCookieJar)
     .exec(flushHttpCache)
 
-    .feed(csv("magnus/HnTestdata.csv").circular)
+    .feed(csv("magnus/HnTestdata.csv").random)
 
     .exec(http("login")
       .get("https://tjenester.hn.test.nhn.no/?pnr=${pnr}")
@@ -141,6 +141,6 @@ class HnKjSimulation extends Simulation{
 
 
   //setUp(scn.inject(atOnceUsers(1))).protocols(httpProtocol)
-  setUp(scn.inject(constantUsersPerSec(1) during(9400))).protocols(httpProtocol)
+  setUp(scn.inject(constantUsersPerSec(1) during(1))).protocols(httpProtocol)
 
 }
