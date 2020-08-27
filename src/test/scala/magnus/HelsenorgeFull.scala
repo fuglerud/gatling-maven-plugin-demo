@@ -1,5 +1,8 @@
 package magnus
 
+import java.io.PrintWriter
+
+import io.gatling.commons.stats.{KO, OK}
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
 
@@ -67,89 +70,64 @@ class HelsenorgeFull extends Simulation {
     "User-Agent" -> "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36")
 
 
-  val feeder1 = sitemap("magnus/HelsenorgeTest01SiteMap.xml").random
-  val feeder2 = sitemap("magnus/HelsenorgeTest01SiteMap.xml").random
-  val feeder3 = sitemap("magnus/HelsenorgeTest01SiteMap.xml").random
+  //val feeder1 = sitemap("magnus/HelsenorgeTest01SiteMap.xml").random
+  //val feeder2 = sitemap("magnus/HelsenorgeTest01SiteMap.xml").random
+  //val feeder3 = sitemap("magnus/HelsenorgeTest01SiteMap.xml").random
+
+
+ /* val writer1: PrintWriter = {
+        val fos = new java.io.FileOutputStream("cmsOK.txt")
+        new java.io.PrintWriter(fos, true)}*/
 
 
   val helsenorgeSiteMap = scenario("helsenorge_page")
 
+    .feed(csv("magnus/sitemapKjoring.csv").circular)
 
     .exec(http(requestName = "Helsenorge.no")
       .get("https://helsenorge.hn.test.nhn.no/")
       .headers(hn)
-      .check(status.is(expected = 200))
-    )
-    /*
-        .exec(http(requestName = "GetEnvironment")
-          .get(url = "https://minhelse.hn.test.nhn.no/api/v1/Portal/GetEnvironment")
-          .headers(hn_GetEnvironment)
-          .check(status.is(expected = 200))
-        )
-
-      .exec(http(requestName = "SecurityFramework_1")
-        .get(url = "https://minhelse.hn.test.nhn.no/proxy/sot/api/v1/UIResource")
-        .headers(hn_helsenorge)
-        .queryParam("Culture", "nb-NO")
-        .queryParam("Filename", "HN.MinHelse.SecurityFramework")
-        .queryParam("Rev", "2014.5.1.1")
-        .check(status.is(expected = 200))
-      )*/
-    .pause(1,4)
-
-
-
-
-    .feed(feeder1)
-
-    .exec(http(requestName = "Feeder 1 "+"${loc}")
-      .get("${loc}")
-      .headers(hn)
-      .check(status.is(expected = 200))
-    )
-    /*
-       .exec(http(requestName = "GetEnvironment")
-         .get(url = "https://minhelse.hn.test.nhn.no/api/v1/Portal/GetEnvironment")
-         .headers(hn_GetEnvironment)
-         .check(status.is(expected = 200))
-       )
-
-       .exec(http(requestName = "SecurityFramework_2")
-        .get(url = "https://minhelse.hn.test.nhn.no/proxy/sot/api/v1/UIResource")
-         .headers(hn_UIResource)
-         .queryParam("Culture", "nb-NO")
-         .queryParam("Filename", "HN.MinHelse.SecurityFramework")
-         .queryParam("Rev", "2014.5.1.1")
-         .check(status.is(expected = 200))
-       )
-    */
-    .pause(1,4)
-
-
-    .feed(feeder2)
-
-    .exec(http(requestName = "Feeder 2 "+"${loc}")
-      .get("${loc}")
-      .headers(hn)
-      .check(status.is(expected = 200))
-    )
+      .check(status.is(expected = 200)))
 
     .pause(1,4)
 
-    .feed(feeder3)
+    //.feed(feeder1)
 
-    .exec(http(requestName = "Feeder 3 "+"${loc}")
-      .get("${loc}")
+    .exec(http(requestName = "Feeder 1 "+"${site}")
+      .get("${site}")
       .headers(hn)
-      .check(status.is(expected = 200))
-    )
+      .check(status.is(expected = 200)))
 
-  //setUp(helsenorgeSiteMap.inject(constantUsersPerSec(rate = 1) during (1)).protocols(httpProtocol))
-  //setUp(helsenorgeSiteMap.inject(atOnceUsers(250)).protocols(httpProtocol))
-  //setUp(helsenorgeSiteMap.inject(rampConcurrentUsers(10) to(200) during(280 seconds)).protocols(httpProtocol))
-  //setUp(helsenorgeSiteMap.inject(rampUsersPerSec(1) to(100) during(1200 seconds)).protocols(httpProtocol))
-  setUp(helsenorgeSiteMap.inject(atOnceUsers(2)).protocols(httpProtocol))
-  //setUp(helsenorgeSiteMap.inject(constantConcurrentUsers(2) during(2500)).protocols(httpProtocol))
-  //setUp(helsenorgeSiteMap.inject(constantConcurrentUsers(1) during(3660)).protocols(httpProtocol))
+   /* .exec((session: io.gatling.core.session.Session) => {
+           if (session.status == OK) {
+             writer1.println(session.attributes("loc"))
+           }
+           session
+        })*/
 
-}
+    .pause(1,4)
+
+    .exec(http(requestName = "Feeder 2 "+"${site}")
+      .get("${site}")
+      .headers(hn)
+      .check(status.is(expected = 200)))
+
+    .pause(1,4)
+
+    //.feed(feeder3)
+
+    .exec(http(requestName = "Feeder 3 "+"${site}")
+      .get("${site}")
+      .headers(hn)
+      .check(status.is(expected = 200)))
+
+  val selectedProfile = System.getProperty("selectedProfile") match {
+    case "profile1" => helsenorgeSiteMap.inject(atOnceUsers(1))
+    case "profile2" => helsenorgeSiteMap.inject(rampUsersPerSec(1) to 5 during (30),constantUsersPerSec(5) during(600))
+    case "profile3" => helsenorgeSiteMap.inject(constantUsersPerSec(500) during(60))
+    case "profile4" => helsenorgeSiteMap.inject(rampConcurrentUsers(5) to(200) during(120))
+    case "profile5" => helsenorgeSiteMap.inject(constantConcurrentUsers(10) during (120), rampConcurrentUsers(10) to (100) during (120))
+    case "profile6" => helsenorgeSiteMap.inject(incrementUsersPerSec(5).times(5).eachLevelLasting(10).separatedByRampsLasting(10).startingFrom(10))
+  }
+
+  setUp(selectedProfile).protocols(httpProtocol)
