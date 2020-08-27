@@ -131,3 +131,4 @@ class HelsenorgeFull extends Simulation {
   }
 
   setUp(selectedProfile).protocols(httpProtocol)
+}
