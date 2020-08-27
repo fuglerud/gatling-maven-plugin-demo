@@ -41,6 +41,8 @@ class CMSimulation extends Simulation{
       .check(status.is(expected = 200))
       .check(regex("<title>Allergisk sjokk</title>")))
 
+
+
   val selectedProfile = System.getProperty("selectedProfile") match {
     case "profile1" => scn.inject(atOnceUsers(1))
     case "profile2" => scn.inject(rampUsersPerSec(1) to 5 during (30),constantUsersPerSec(5) during(600))
@@ -51,4 +53,5 @@ class CMSimulation extends Simulation{
   }
 
   setUp(selectedProfile).protocols(httpProtocol)
+
 }

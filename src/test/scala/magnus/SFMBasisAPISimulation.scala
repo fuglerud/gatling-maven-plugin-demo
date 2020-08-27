@@ -28,7 +28,6 @@ class SFMBasisAPISimulation extends Simulation {
     .feed(csv("magnus/SFMBasisAPI.csv").circular)
     .feed(csv("magnus/TestdataSFMBasis.csv").circular)
 /*
-
     .exec(http("practitioner")
       .get("/Practitioner/${rekvirent}")
       .check(status.is(200))
@@ -40,7 +39,7 @@ class SFMBasisAPISimulation extends Simulation {
       .check(jsonPath("$..resource.id").is("${organizationid}")))
 */
 
-
+/*
     .exec(http("getMedication")
       .post("/Patient/$getMedication")
       .body(ElFileBody("magnus/0000_request.json"))
@@ -49,25 +48,22 @@ class SFMBasisAPISimulation extends Simulation {
       .check(jsonPath("$..[?(@.name==\"RFM912Feilkode\")].valueCodeableConcept.text").is("OK"))
       .check(jsonPath("$..[?(@.name==\"RFM96Feilkode\")].valueCodeableConcept.text").is("OK"))
       .check(jsonPath("$..[?(@.name==\"KJFeilkode\")].valueCodeableConcept.text").is("OK"))
-      //.check(bodyString.saveAs( "RESPONSE_DATA" ))
-    )
+      .check(jsonPath("$..[?(@.use==\"official\")].value").saveAs("official")))
 
-/*
+
     .exec(session=>{
-      println("RESPONSE_DATA:")
-      println(session("RESPONSE_DATA").as[String])
+      println("official:")
+      println(session("official").as[String])
       session})
-
+*/
 
 
     .exec(http("sendMedication")
       .post("/Patient/$sendMedication")
-     // .body(ElFileBody("${RESPONSE_DATA}"))
-      .body(StringBody("""${RESPONSE_DATA}"""))
+      .body(ElFileBody("magnus/SendMedication_request.json"))
       .check(status.is(200)))
 
-*/
 
-  setUp(scn.inject(atOnceUsers(1))).protocols(httpProtocol)
+  setUp(scn.inject(atOnceUsers(2))).protocols(httpProtocol)
 
 }
