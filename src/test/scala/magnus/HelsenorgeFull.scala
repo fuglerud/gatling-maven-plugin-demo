@@ -48,7 +48,7 @@ class HelsenorgeFull extends Simulation {
 
     //.feed(feeder1)
 
-    .exec(http(requestName = "${site}")
+    .exec(http(requestName = "1 "+"${site}")
       .get("${site}")
       .headers(hn)
       .check(status.is(expected = 200)))
@@ -62,7 +62,7 @@ class HelsenorgeFull extends Simulation {
 
     .pause(1,4)
 
-    .exec(http(requestName = "${site}")
+    .exec(http(requestName = "2 "+"${site}")
       .get("${site}")
       .headers(hn)
       .check(status.is(expected = 200)))
@@ -71,7 +71,7 @@ class HelsenorgeFull extends Simulation {
 
     //.feed(feeder3)
 
-    .exec(http(requestName = "${site}")
+    .exec(http(requestName = "3 "+"${site}")
       .get("${site}")
       .headers(hn)
       .check(status.is(expected = 200)))
@@ -88,5 +88,5 @@ class HelsenorgeFull extends Simulation {
   setUp(selectedProfile).protocols(httpProtocol)
 
 
-  //setUp(helsenorgeSiteMap.inject(atOnceUsers(1))).protocols(httpProtocol)
+  //setUp(helsenorgeSiteMap.inject(atOnceUsers(10))).protocols(httpProtocol)
 }
