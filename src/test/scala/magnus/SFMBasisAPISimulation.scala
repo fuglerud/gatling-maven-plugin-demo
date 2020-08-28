@@ -9,8 +9,8 @@ import org.json4s.jackson.Json
 class SFMBasisAPISimulation extends Simulation {
 
   val httpProtocol = http
-    .baseUrl("https://base-fhir.staging.sfm.cloud")
-    //.baseUrl("https://base-fhir.qa.forskrivning.no")
+    //.baseUrl("https://base-fhir.staging.sfm.cloud")
+    .baseUrl("https://base-fhir.qa.forskrivning.no")
     .inferHtmlResources()
     .acceptHeader("application/json")
     .header("Content-Type", "application/json")
@@ -25,7 +25,8 @@ class SFMBasisAPISimulation extends Simulation {
     .exec(flushCookieJar)
     .exec(flushHttpCache)
 
-    .feed(csv("magnus/SFMBasisAPI.csv").circular)
+    .feed(csv("magnus/SFMBasisAPI_QA.csv").circular)
+    //.feed(csv("magnus/SFMBasisAPI.csv").circular)
     .feed(csv("magnus/TestdataSFMBasis.csv").circular)
 /*
     .exec(http("practitioner")
@@ -39,7 +40,7 @@ class SFMBasisAPISimulation extends Simulation {
       .check(jsonPath("$..resource.id").is("${organizationid}")))
 */
 
-/*
+
     .exec(http("getMedication")
       .post("/Patient/$getMedication")
       .body(ElFileBody("magnus/0000_request.json"))
@@ -55,14 +56,13 @@ class SFMBasisAPISimulation extends Simulation {
       println("official:")
       println(session("official").as[String])
       session})
-*/
 
-
+/*
     .exec(http("sendMedication")
       .post("/Patient/$sendMedication")
       .body(ElFileBody("magnus/SendMedication_request.json"))
       .check(status.is(200)))
-
+*/
 
   setUp(scn.inject(atOnceUsers(2))).protocols(httpProtocol)
 
