@@ -53,8 +53,8 @@ class KjerneJournalProveSvarSimulation extends Simulation {
     .exec(flushCookieJar)
     .exec(flushHttpCache)
 
-    .feed(csv("data/VisOmPasientenTestData.csv").circular)
-    .feed(csv("data/unike_fnr.csv").random)
+    .feed(csv("magnus/01_EPJTicketTestData.csv").circular)
+    .feed(csv("magnus/02_EPJTicketTestData.csv").random)
 
     .exec(http("request_hpp-webapp")
       .get("/hpp-webapp/")

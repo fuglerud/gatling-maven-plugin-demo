@@ -85,7 +85,8 @@ class LoginMinIDSimulation extends Simulation{
       .get("/auth/signin")
       .headers(headers_0)
       .check(status.is(expected = 200))
-      .check(regex("ReqID=(.*?)&").saveAs("ReqID")))
+      .check(regex("ReqID=(.*?)&").saveAs("ReqID"))
+    )
 
     .exec(session=>{
       println("ReqID:")
