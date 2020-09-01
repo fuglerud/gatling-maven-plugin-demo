@@ -12,7 +12,7 @@ class HelsenorgeFull extends Simulation {
 
   val httpProtocol = http
     .baseUrl("https://helsenorge.hn.test.nhn.no")
-    //.inferHtmlResources()
+    .inferHtmlResources()
 
   val hn = Map(
     "Accept" -> "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
@@ -26,6 +26,19 @@ class HelsenorgeFull extends Simulation {
     "Sec-Fetch-User" -> "?1",
     "Upgrade-Insecure-Requests" -> "1",
     "User-Agent" -> "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36")
+
+  val hn_UIResource = Map(
+    "Accept" -> "application/json",
+    "content-type" -> "application/json",
+    "hnanonymoushash" -> "undefined",
+    "hnauthenticatedhash" -> "undefined",
+    "hntimestamp" -> "undefined",
+    "hntjeneste" -> "undefined",
+    "Origin" -> "https://helsenorge.hn.test.nhn.no",
+    "Referer" -> "${site}",
+    "Sec-Fetch-Dest" -> "empty",
+    "User-Agent" -> "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.116 Safari/537.36",
+    "x-hn-hendelselogg" -> "undefined")
 
 
   //val feeder1 = sitemap("magnus/HelsenorgeTest01SiteMap.xml").random
@@ -44,6 +57,16 @@ class HelsenorgeFull extends Simulation {
       .headers(hn)
       .check(status.is(expected = 200)))
 
+    .exec(http(requestName = "footer")
+      .get("https://helsenorge.hn.test.nhn.no/contentapi/internal/v1/footer")
+      .headers(hn)
+      .check(status.is(expected = 200)))
+
+    .exec(http(requestName = "sot")
+      .get(url = "https://tjenester.hn.test.nhn.no/proxy/sot/api/v1/UIResource?Culture=nb-no&Filename=HN.CoreFrontend.Micro")
+      .headers(hn_UIResource)
+      .check(status.is(expected = 200)))
+
     .pause(1,4)
 
     //.feed(feeder1)
@@ -51,6 +74,16 @@ class HelsenorgeFull extends Simulation {
     .exec(http(requestName = "1 "+"${site}")
       .get("${site}")
       .headers(hn)
+      .check(status.is(expected = 200)))
+
+    .exec(http(requestName = "footer")
+      .get("https://helsenorge.hn.test.nhn.no/contentapi/internal/v1/footer")
+      .headers(hn)
+      .check(status.is(expected = 200)))
+
+    .exec(http(requestName = "sot")
+      .get(url = "https://tjenester.hn.test.nhn.no/proxy/sot/api/v1/UIResource?Culture=nb-no&Filename=HN.CoreFrontend.Micro")
+      .headers(hn_UIResource)
       .check(status.is(expected = 200)))
 
    /* .exec((session: io.gatling.core.session.Session) => {
@@ -67,6 +100,16 @@ class HelsenorgeFull extends Simulation {
       .headers(hn)
       .check(status.is(expected = 200)))
 
+    .exec(http(requestName = "footer")
+      .get("https://helsenorge.hn.test.nhn.no/contentapi/internal/v1/footer")
+      .headers(hn)
+      .check(status.is(expected = 200)))
+
+    .exec(http(requestName = "sot")
+      .get(url = "https://tjenester.hn.test.nhn.no/proxy/sot/api/v1/UIResource?Culture=nb-no&Filename=HN.CoreFrontend.Micro")
+      .headers(hn_UIResource)
+      .check(status.is(expected = 200)))
+
     .pause(1,4)
 
     //.feed(feeder3)
@@ -76,6 +119,15 @@ class HelsenorgeFull extends Simulation {
       .headers(hn)
       .check(status.is(expected = 200)))
 
+    .exec(http(requestName = "footer")
+      .get("https://helsenorge.hn.test.nhn.no/contentapi/internal/v1/footer")
+      .headers(hn)
+      .check(status.is(expected = 200)))
+
+    .exec(http(requestName = "sot")
+      .get(url = "https://tjenester.hn.test.nhn.no/proxy/sot/api/v1/UIResource?Culture=nb-no&Filename=HN.CoreFrontend.Micro")
+      .headers(hn_UIResource)
+      .check(status.is(expected = 200)))
 
   val selectedProfile = System.getProperty("selectedProfile") match {
     case "profile1" => helsenorgeSiteMap.inject(atOnceUsers(1))
@@ -87,7 +139,5 @@ class HelsenorgeFull extends Simulation {
   }
   setUp(selectedProfile).protocols(httpProtocol)
 
-
-
-  //setUp(helsenorgeSiteMap.inject(atOnceUsers(10))).protocols(httpProtocol)
+  //setUp(helsenorgeSiteMap.inject(atOnceUsers(1))).protocols(httpProtocol)
 }
