@@ -136,6 +136,7 @@ class HelsenorgeFull extends Simulation {
     case "profile4" => helsenorgeSiteMap.inject(rampConcurrentUsers(5) to(200) during(120))
     case "profile5" => helsenorgeSiteMap.inject(constantConcurrentUsers(10) during (120), rampConcurrentUsers(10) to (100) during (120))
     case "profile6" => helsenorgeSiteMap.inject(incrementUsersPerSec(5).times(5).eachLevelLasting(10).separatedByRampsLasting(10).startingFrom(10))
+    case "profile7" => helsenorgeSiteMap.inject(rampUsersPerSec(1) to 15 during (3 minutes),constantUsersPerSec(15) during(5 minutes))
   }
   setUp(selectedProfile).protocols(httpProtocol)
 
