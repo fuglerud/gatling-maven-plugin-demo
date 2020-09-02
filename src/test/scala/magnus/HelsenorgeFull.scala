@@ -139,7 +139,7 @@ class HelsenorgeFull extends Simulation {
     case "profile7" => helsenorgeSiteMap.inject(rampUsersPerSec(1) to 15 during (3 minutes),constantUsersPerSec(15) during(5 minutes))
     case "profile8" => helsenorgeSiteMap.inject(constantUsersPerSec(1) during(1481))
 
-
+  }
   //setUp(helsenorgeSiteMap.inject(atOnceUsers(4))).protocols(httpProtocol)
   //setUp(helsenorgeSiteMap.inject(rampUsersPerSec(1) to 3 during (1 minutes),constantUsersPerSec(3) during(2 minutes)).protocols(httpProtocol))
   //setUp(helsenorgeSiteMap.inject(constantUsersPerSec(1) during(1481)))
