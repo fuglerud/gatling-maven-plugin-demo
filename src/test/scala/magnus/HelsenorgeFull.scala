@@ -131,14 +131,16 @@ class HelsenorgeFull extends Simulation {
 
   val selectedProfile = System.getProperty("selectedProfile") match {
     case "profile1" => helsenorgeSiteMap.inject(atOnceUsers(1))
-    case "profile2" => helsenorgeSiteMap.inject(rampUsersPerSec(1) to 150 during (15 minutes),constantUsersPerSec(150) during(2 hours))
+    case "profile2" => helsenorgeSiteMap.inject(rampUsersPerSec(1) to 150 during (15 minutes),constantUsersPerSec(150) during(48 hours))
     case "profile3" => helsenorgeSiteMap.inject(constantUsersPerSec(500) during(60))
     case "profile4" => helsenorgeSiteMap.inject(rampConcurrentUsers(5) to(200) during(120))
     case "profile5" => helsenorgeSiteMap.inject(constantConcurrentUsers(10) during (120), rampConcurrentUsers(10) to (100) during (120))
     case "profile6" => helsenorgeSiteMap.inject(incrementUsersPerSec(5).times(5).eachLevelLasting(10).separatedByRampsLasting(10).startingFrom(10))
     case "profile7" => helsenorgeSiteMap.inject(rampUsersPerSec(1) to 15 during (3 minutes),constantUsersPerSec(15) during(5 minutes))
-  }
-  setUp(selectedProfile).protocols(httpProtocol)
+    case "profile8" => helsenorgeSiteMap.inject(constantUsersPerSec(1) during(1481))
 
-  //setUp(helsenorgeSiteMap.inject(atOnceUsers(1))).protocols(httpProtocol)
+
+  //setUp(helsenorgeSiteMap.inject(atOnceUsers(4))).protocols(httpProtocol)
+  //setUp(helsenorgeSiteMap.inject(rampUsersPerSec(1) to 3 during (1 minutes),constantUsersPerSec(3) during(2 minutes)).protocols(httpProtocol))
+  //setUp(helsenorgeSiteMap.inject(constantUsersPerSec(1) during(1481)))
 }
