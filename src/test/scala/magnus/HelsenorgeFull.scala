@@ -40,7 +40,6 @@ class HelsenorgeFull extends Simulation {
     "User-Agent" -> "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.116 Safari/537.36",
     "x-hn-hendelselogg" -> "undefined")
 
-
   //val feeder1 = sitemap("magnus/HelsenorgeTest01SiteMap.xml").random
 
  /* val writer1: PrintWriter = {
@@ -62,11 +61,11 @@ class HelsenorgeFull extends Simulation {
       .headers(hn)
       .check(status.is(expected = 200)))
 
- /*   .exec(http(requestName = "startsidesot")
+    .exec(http(requestName = "startsidesot")
       .get(url = "https://tjenester.hn.test.nhn.no/proxy/sot/api/v1/UIResource?Culture=nb-no&Filename=HN.CoreFrontend.Micro")
       .headers(hn_UIResource)
       .check(status.is(expected = 200)))
-    */
+
 
     .pause(1,4)
 
@@ -82,10 +81,10 @@ class HelsenorgeFull extends Simulation {
       .headers(hn)
       .check(status.is(expected = 200)))
 
-   /* .exec(http(requestName = "1sot")
+    .exec(http(requestName = "1sot")
       .get(url = "https://tjenester.hn.test.nhn.no/proxy/sot/api/v1/UIResource?Culture=nb-no&Filename=HN.CoreFrontend.Micro")
       .headers(hn_UIResource)
-      .check(status.is(expected = 200)))*/
+      .check(status.is(expected = 200)))
 
    /* .exec((session: io.gatling.core.session.Session) => {
            if (session.status == OK) {
@@ -106,10 +105,10 @@ class HelsenorgeFull extends Simulation {
       .headers(hn)
       .check(status.is(expected = 200)))
 
-   /* .exec(http(requestName = "2sot")
+    .exec(http(requestName = "2sot")
       .get(url = "https://tjenester.hn.test.nhn.no/proxy/sot/api/v1/UIResource?Culture=nb-no&Filename=HN.CoreFrontend.Micro")
       .headers(hn_UIResource)
-      .check(status.is(expected = 200)))*/
+      .check(status.is(expected = 200)))
 
     .pause(1,4)
 
@@ -125,10 +124,10 @@ class HelsenorgeFull extends Simulation {
       .headers(hn)
       .check(status.is(expected = 200)))
 
-   /* .exec(http(requestName = "3sot")
+    .exec(http(requestName = "3sot")
       .get(url = "https://tjenester.hn.test.nhn.no/proxy/sot/api/v1/UIResource?Culture=nb-no&Filename=HN.CoreFrontend.Micro")
       .headers(hn_UIResource)
-      .check(status.is(expected = 200)))*/
+      .check(status.is(expected = 200)))
 
  /* val selectedProfile = System.getProperty("selectedProfile") match {
     case "profile1" => helsenorgeSiteMap.inject(atOnceUsers(1))
