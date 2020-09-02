@@ -62,10 +62,11 @@ class HelsenorgeFull extends Simulation {
       .headers(hn)
       .check(status.is(expected = 200)))
 
-    .exec(http(requestName = "startsidesot")
+ /*   .exec(http(requestName = "startsidesot")
       .get(url = "https://tjenester.hn.test.nhn.no/proxy/sot/api/v1/UIResource?Culture=nb-no&Filename=HN.CoreFrontend.Micro")
       .headers(hn_UIResource)
       .check(status.is(expected = 200)))
+    */
 
     .pause(1,4)
 
@@ -81,10 +82,10 @@ class HelsenorgeFull extends Simulation {
       .headers(hn)
       .check(status.is(expected = 200)))
 
-    .exec(http(requestName = "1sot")
+   /* .exec(http(requestName = "1sot")
       .get(url = "https://tjenester.hn.test.nhn.no/proxy/sot/api/v1/UIResource?Culture=nb-no&Filename=HN.CoreFrontend.Micro")
       .headers(hn_UIResource)
-      .check(status.is(expected = 200)))
+      .check(status.is(expected = 200)))*/
 
    /* .exec((session: io.gatling.core.session.Session) => {
            if (session.status == OK) {
@@ -105,10 +106,10 @@ class HelsenorgeFull extends Simulation {
       .headers(hn)
       .check(status.is(expected = 200)))
 
-    .exec(http(requestName = "2sot")
+   /* .exec(http(requestName = "2sot")
       .get(url = "https://tjenester.hn.test.nhn.no/proxy/sot/api/v1/UIResource?Culture=nb-no&Filename=HN.CoreFrontend.Micro")
       .headers(hn_UIResource)
-      .check(status.is(expected = 200)))
+      .check(status.is(expected = 200)))*/
 
     .pause(1,4)
 
@@ -124,10 +125,10 @@ class HelsenorgeFull extends Simulation {
       .headers(hn)
       .check(status.is(expected = 200)))
 
-    .exec(http(requestName = "3sot")
+   /* .exec(http(requestName = "3sot")
       .get(url = "https://tjenester.hn.test.nhn.no/proxy/sot/api/v1/UIResource?Culture=nb-no&Filename=HN.CoreFrontend.Micro")
       .headers(hn_UIResource)
-      .check(status.is(expected = 200)))
+      .check(status.is(expected = 200)))*/
 
   val selectedProfile = System.getProperty("selectedProfile") match {
     case "profile1" => helsenorgeSiteMap.inject(atOnceUsers(1))
@@ -140,6 +141,7 @@ class HelsenorgeFull extends Simulation {
     case "profile8" => helsenorgeSiteMap.inject(constantUsersPerSec(1) during(1481))
 
   }
+
   //setUp(helsenorgeSiteMap.inject(atOnceUsers(4))).protocols(httpProtocol)
   //setUp(helsenorgeSiteMap.inject(rampUsersPerSec(1) to 3 during (1 minutes),constantUsersPerSec(3) during(2 minutes)).protocols(httpProtocol))
   //setUp(helsenorgeSiteMap.inject(constantUsersPerSec(1) during(1481)))
