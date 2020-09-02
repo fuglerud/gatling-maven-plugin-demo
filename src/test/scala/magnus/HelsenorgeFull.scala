@@ -55,7 +55,7 @@ class HelsenorgeFull extends Simulation {
       .get("https://helsenorge.hn.test.nhn.no/")
       .headers(hn)
       .check(status.is(expected = 200)))
-
+/*
     .exec(http(requestName = "startsidefooter")
       .get("https://helsenorge.hn.test.nhn.no/contentapi/internal/v1/footer")
       .headers(hn)
@@ -128,6 +128,7 @@ class HelsenorgeFull extends Simulation {
       .get(url = "https://tjenester.hn.test.nhn.no/proxy/sot/api/v1/UIResource?Culture=nb-no&Filename=HN.CoreFrontend.Micro")
       .headers(hn_UIResource)
       .check(status.is(expected = 200)))
+  */
 
  /* val selectedProfile = System.getProperty("selectedProfile") match {
     case "profile1" => helsenorgeSiteMap.inject(atOnceUsers(1))
@@ -141,7 +142,7 @@ class HelsenorgeFull extends Simulation {
 
   }*/
 
-  //setUp(helsenorgeSiteMap.inject(atOnceUsers(4))).protocols(httpProtocol)
-  //setUp(helsenorgeSiteMap.inject(rampUsersPerSec(1) to 3 during (1 minutes),constantUsersPerSec(3) during(2 minutes)).protocols(httpProtocol))
-  setUp(helsenorgeSiteMap.inject(constantUsersPerSec(1) during(1481)))
+  //setUp(helsenorgeSiteMap.inject(atOnceUsers(1))).protocols(httpProtocol)
+  setUp(helsenorgeSiteMap.inject(rampUsersPerSec(1) to 1600 during (15 minutes),constantUsersPerSec(1600) during(1 hours)).protocols(httpProtocol))
+  //setUp(helsenorgeSiteMap.inject(constantUsersPerSec(1) during(1481)))
 }
