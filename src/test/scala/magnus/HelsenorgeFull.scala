@@ -52,17 +52,17 @@ class HelsenorgeFull extends Simulation {
 
     .feed(csv("magnus/sitemapKjoring.csv").circular)
 
-    .exec(http(requestName = "Helsenorge.no")
+    .exec(http(requestName = "startside")
       .get("https://helsenorge.hn.test.nhn.no/")
       .headers(hn)
       .check(status.is(expected = 200)))
 
-    .exec(http(requestName = "footer")
+    .exec(http(requestName = "startsidefooter")
       .get("https://helsenorge.hn.test.nhn.no/contentapi/internal/v1/footer")
       .headers(hn)
       .check(status.is(expected = 200)))
 
-    .exec(http(requestName = "sot")
+    .exec(http(requestName = "startsidesot")
       .get(url = "https://tjenester.hn.test.nhn.no/proxy/sot/api/v1/UIResource?Culture=nb-no&Filename=HN.CoreFrontend.Micro")
       .headers(hn_UIResource)
       .check(status.is(expected = 200)))
@@ -76,12 +76,12 @@ class HelsenorgeFull extends Simulation {
       .headers(hn)
       .check(status.is(expected = 200)))
 
-    .exec(http(requestName = "footer")
+    .exec(http(requestName = "1footer")
       .get("https://helsenorge.hn.test.nhn.no/contentapi/internal/v1/footer")
       .headers(hn)
       .check(status.is(expected = 200)))
 
-    .exec(http(requestName = "sot")
+    .exec(http(requestName = "1sot")
       .get(url = "https://tjenester.hn.test.nhn.no/proxy/sot/api/v1/UIResource?Culture=nb-no&Filename=HN.CoreFrontend.Micro")
       .headers(hn_UIResource)
       .check(status.is(expected = 200)))
@@ -100,12 +100,12 @@ class HelsenorgeFull extends Simulation {
       .headers(hn)
       .check(status.is(expected = 200)))
 
-    .exec(http(requestName = "footer")
+    .exec(http(requestName = "2footer")
       .get("https://helsenorge.hn.test.nhn.no/contentapi/internal/v1/footer")
       .headers(hn)
       .check(status.is(expected = 200)))
 
-    .exec(http(requestName = "sot")
+    .exec(http(requestName = "2sot")
       .get(url = "https://tjenester.hn.test.nhn.no/proxy/sot/api/v1/UIResource?Culture=nb-no&Filename=HN.CoreFrontend.Micro")
       .headers(hn_UIResource)
       .check(status.is(expected = 200)))
@@ -119,12 +119,12 @@ class HelsenorgeFull extends Simulation {
       .headers(hn)
       .check(status.is(expected = 200)))
 
-    .exec(http(requestName = "footer")
+    .exec(http(requestName = "3footer")
       .get("https://helsenorge.hn.test.nhn.no/contentapi/internal/v1/footer")
       .headers(hn)
       .check(status.is(expected = 200)))
 
-    .exec(http(requestName = "sot")
+    .exec(http(requestName = "3sot")
       .get(url = "https://tjenester.hn.test.nhn.no/proxy/sot/api/v1/UIResource?Culture=nb-no&Filename=HN.CoreFrontend.Micro")
       .headers(hn_UIResource)
       .check(status.is(expected = 200)))
