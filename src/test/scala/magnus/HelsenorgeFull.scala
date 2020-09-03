@@ -51,10 +51,16 @@ class HelsenorgeFull extends Simulation {
 
     .feed(csv("magnus/sitemapKjoring.csv").circular)
 
-    .exec(http(requestName = "startside")
+    /*.exec(http(requestName = "startside")
       .get("https://helsenorge.hn.test.nhn.no/")
       .headers(hn)
+      .check(status.is(expected = 200)))*/
+
+    .exec(http(requestName = "koronasjekk")
+      .get("https://helsenorge.hn.test.nhn.no/koronavirus/koronasjekk/")
+      .headers(hn)
       .check(status.is(expected = 200)))
+
 /*
     .exec(http(requestName = "startsidefooter")
       .get("https://helsenorge.hn.test.nhn.no/contentapi/internal/v1/footer")
