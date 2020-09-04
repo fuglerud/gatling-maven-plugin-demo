@@ -51,17 +51,20 @@ class HelsenorgeFull extends Simulation {
 
     .feed(csv("magnus/sitemapKjoring.csv").circular)
 
-    /*.exec(http(requestName = "startside")
-      .get("https://helsenorge.hn.test.nhn.no/")
-      .headers(hn)
-      .check(status.is(expected = 200)))*/
+    .exec(flushCookieJar)
+    .exec(flushHttpCache)
 
-    .exec(http(requestName = "koronasjekk")
-      .get("https://helsenorge.hn.test.nhn.no/koronavirus/koronasjekk/")
+    .exec(http(requestName = "startside")
+      .get("https://helsenorge.hn.test.nhn.no/")
       .headers(hn)
       .check(status.is(expected = 200)))
 
-/*
+   /* .exec(http(requestName = "koronasjekk")
+      .get("https://helsenorge.hn.test.nhn.no/koronavirus/koronasjekk/")
+      .headers(hn)
+      .check(status.is(expected = 200)))*/
+
+
     .exec(http(requestName = "startsidefooter")
       .get("https://helsenorge.hn.test.nhn.no/contentapi/internal/v1/footer")
       .headers(hn)
@@ -134,7 +137,7 @@ class HelsenorgeFull extends Simulation {
       .get(url = "https://tjenester.hn.test.nhn.no/proxy/sot/api/v1/UIResource?Culture=nb-no&Filename=HN.CoreFrontend.Micro")
       .headers(hn_UIResource)
       .check(status.is(expected = 200)))
-  */
+
 
  /* val selectedProfile = System.getProperty("selectedProfile") match {
     case "profile1" => helsenorgeSiteMap.inject(atOnceUsers(1))
@@ -149,6 +152,6 @@ class HelsenorgeFull extends Simulation {
   }*/
 
   //setUp(helsenorgeSiteMap.inject(atOnceUsers(1))).protocols(httpProtocol)
-  setUp(helsenorgeSiteMap.inject(rampUsersPerSec(1) to 300 during (30 minutes),constantUsersPerSec(300) during(1 minutes)).protocols(httpProtocol))
+  setUp(helsenorgeSiteMap.inject(rampUsersPerSec(1) to 25 during (60 minutes),constantUsersPerSec(25) during(1 minutes)).protocols(httpProtocol))
   //setUp(helsenorgeSiteMap.inject(constantUsersPerSec(1) during(1481)))
 }
