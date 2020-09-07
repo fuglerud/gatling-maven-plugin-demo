@@ -1,0 +1,12 @@
+{
+  "Kontakt": {
+    "Navn": "${Navn}",
+    "Telefonnummer": "${Telefonnummer}",
+    "AdresseLinje1": "${AdresseLinje1}",
+    "AdresseLinje2": "${AdresseLinje2}",
+    "AdresseLinje3": "${AdresseLinje3}",
+    "Beskrivelse": "${Beskrivelse}",
+    "Spesifiser": "${Spesifiser}",
+    "Type": "${Type}"
+  }
+}

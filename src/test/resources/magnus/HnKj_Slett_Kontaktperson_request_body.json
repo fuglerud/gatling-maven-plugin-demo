@@ -1,0 +1,18 @@
+{
+  "Kontakt": {
+    "Type": 1,
+    "Spesifiser": "${Spesifiser}",
+    "Navn": "${Navn}",
+    "AdresseLinje1": "${AdresseLinje1}",
+    "AdresseLinje2": "${AdresseLinje2}",
+    "AdresseLinje3": "${AdresseLinje3}",
+    "Telefonnummer": "${Navn}",
+    "Beskrivelse": "${Beskrivelse}",
+    "Donorkontakt": "${Donorkontakt}",
+    "EndretDato": "${EndretDato}",
+    "Versjon": "${Versjon}",
+    "HarVersjonsnummer": "${HarVersjonsnummer}",
+    "Id": "${Id}",
+    "Kode": "${Kode}"
+  }
+}
