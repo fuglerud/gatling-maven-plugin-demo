@@ -48,6 +48,7 @@ class SFMBasisAPISimulation extends Simulation {
       .check(jsonPath("$..[?(@.name==\"RFM912Feilkode\")].valueCodeableConcept.text").is("OK"))
       .check(jsonPath("$..[?(@.name==\"RFM96Feilkode\")].valueCodeableConcept.text").is("OK"))
       .check(jsonPath("$..[?(@.name==\"KJFeilkode\")].valueCodeableConcept.text").is("OK"))
+      .check(jsonPath("$..[?(@.name==\"RFHentetTidspunkt\")].valueDateTime").saveAs("RFHentetTidspunkt"))
       .check(jsonPath("$..[?(@.use==\"official\")].value").saveAs("official")))
 
 
@@ -56,18 +57,25 @@ class SFMBasisAPISimulation extends Simulation {
       println(session("official").as[String])
       session})*/
 
+  /* .exec(session=>{
+   println("RFHentetTidspunkt:")
+   println(session("RFHentetTidspunkt").as[String])
+   session})*/
 
 
 
-   /* .exec(http("sendMedication")
-      .post("/Patient/$sendMedication")
-      .body(ElFileBody("magnus/SendMedication_request.json"))
-      .check(status.is(200)))*/
 
 
-  //setUp(scn.inject(atOnceUsers(2))).protocols(httpProtocol)
+
+  /* .exec(http("sendMedication")
+     .post("/Patient/$sendMedication")
+     .body(ElFileBody("magnus/SendMedication_request.json"))
+     .check(status.is(200)))*/
+
+
+  setUp(scn.inject(atOnceUsers(10))).protocols(httpProtocol)
   //setUp(scn.inject(rampUsersPerSec(1) to 5 during (30),constantUsersPerSec(5) during(60))).protocols(httpProtocol)
-  setUp(scn.inject(constantUsersPerSec(2) during(30))).protocols(httpProtocol)
+  //setUp(scn.inject(constantUsersPerSec(2) during(30))).protocols(httpProtocol)
   //setUp(scn.inject(rampConcurrentUsers(5) to(200) during(120))).protocols(httpProtocol)
   //setUp(scn.inject(constantConcurrentUsers(10) during (120), rampConcurrentUsers(10) to (100) during (120))).protocols(httpProtocol)
   //setUp(scn.inject(incrementUsersPerSec(5).times(5).eachLevelLasting(10).separatedByRampsLasting(10).startingFrom(10))).protocols(httpProtocol)
