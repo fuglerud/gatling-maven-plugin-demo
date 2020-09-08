@@ -143,6 +143,6 @@ class HelsenorgeFull extends Simulation {
   }*/
 
   //setUp(helsenorgeSiteMap.inject(atOnceUsers(1))).protocols(httpProtocol)
-  setUp(helsenorgeSiteMap.inject(rampUsersPerSec(1) to 30 during (30 minutes),constantUsersPerSec(30) during(48 hours)).protocols(httpProtocol))
+  setUp(helsenorgeSiteMap.inject(rampUsersPerSec(1) to 40 during (30 minutes),constantUsersPerSec(40) during(48 hours)).protocols(httpProtocol))
   //setUp(helsenorgeSiteMap.inject(constantUsersPerSec(1) during(1481)))
 }
