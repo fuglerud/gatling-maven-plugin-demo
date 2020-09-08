@@ -56,12 +56,6 @@ class HelsenorgeFull extends Simulation {
       .headers(hn)
       .check(status.is(expected = 200)))
 
-   /* .exec(http(requestName = "koronasjekk")
-      .get("https://helsenorge.hn.test.nhn.no/koronavirus/koronasjekk/")
-      .headers(hn)
-      .check(status.is(expected = 200)))*/
-
-
     .exec(http(requestName = "startsidefooter")
       .get("https://helsenorge.hn.test.nhn.no/contentapi/internal/v1/footer")
       .headers(hn)
