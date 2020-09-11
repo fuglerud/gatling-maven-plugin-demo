@@ -26,18 +26,23 @@ class SFMBasisAPISimulation extends Simulation {
     .exec(flushHttpCache)
 
     .feed(csv("magnus/SFMBasisAPI_QA.csv").circular)
+    //.feed(csv("magnus/SFMBasisAPI.csv").circular)
     .feed(csv("magnus/TestdataSFMBasis.csv").circular)
+    //.feed(csv("magnus/TestdataSFMBasis_Staging.csv").circular)
 /*
     .exec(http("practitioner")
       .get("/Practitioner/${rekvirent}")
       .check(status.is(200))
       .check(jsonPath("$..id").is("${rekvirent}")))
 
+
     .exec(http("organization")
       .get("/Organization?name=${organizationname}")
       .check(status.is(200))
       .check(jsonPath("$..resource.id").is("${organizationid}")))
-*/
+      */
+
+
 
 
     .exec(http("getMedication")
@@ -57,13 +62,15 @@ class SFMBasisAPISimulation extends Simulation {
       session})
 
 
-   /* .exec(http("sendMedication")
+/*
+    .exec(http("sendMedication")
       .post("/Patient/$sendMedication")
       .body(ElFileBody("magnus/SendMedication_request.json"))
-      .check(status.is(200)))*/
+      .check(status.is(200)))
+*/
 
 
-  //setUp(scn.inject(atOnceUsers(3))).protocols(httpProtocol)
+  //setUp(scn.inject(atOnceUsers(1))).protocols(httpProtocol)
   //setUp(scn.inject(rampUsersPerSec(1) to 5 during (30),constantUsersPerSec(5) during(60))).protocols(httpProtocol)
   setUp(scn.inject(constantUsersPerSec(2) during(30))).protocols(httpProtocol)
   //setUp(scn.inject(rampConcurrentUsers(5) to(200) during(120))).protocols(httpProtocol)

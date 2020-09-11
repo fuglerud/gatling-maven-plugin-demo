@@ -1,171 +1,46 @@
 {
-  "Kontakter": [
+  "resourceType": "OperationOutcome",
+  "id": "30930c81-b507-4685-8a47-56938d4402cb",
+  "issue": [
     {
-      "Type": 1,
-      "Spesifiser": "Nurse",
-      "Navn": "Gaylord Focker",
-      "AdresseLinje1": "NADDERUDVEIEN",
-      "AdresseLinje2": "168",
-      "AdresseLinje3": "Norge",
-      "Telefonnummer": "95240601",
-      "Beskrivelse": "Andre leger enn fastlegen",
-      "Donorkontakt": false,
-      "EndretDato": "2020-09-07T16:52:23",
-      "Versjon": 1,
-      "HarVersjonsnummer": true,
-      "Id": "sK1bDPYc1q89conGXeN2QXQSB4dfD60zuBXYRNxbwcxaCgraT7JjDx5xI22jlyJT",
-      "Kode": "ZvsRmlfujVZ1qMJ7M9iS3w"
+      "severity": "error",
+      "code": "invalid",
+      "diagnostics": "Snapshot generation failed for 'http://ehelse.no/fhir/StructureDefinition/sfm-Patient'. Details follow below.",
+      "location": [
+        "Patient.Patient"
+      ]
     },
     {
-      "Type": 1,
-      "Spesifiser": "Lege",
-      "Navn": "Marianne Braaten",
-      "AdresseLinje1": "NADDERUDVEIEN",
-      "AdresseLinje2": "168",
-      "AdresseLinje3": "Norge",
-      "Telefonnummer": "95240601",
-      "Beskrivelse": "Andre leger enn fastlegen",
-      "Donorkontakt": false,
-      "EndretDato": "2020-09-07T16:14:22",
-      "Versjon": 1,
-      "HarVersjonsnummer": true,
-      "Id": "jobthIFZ_or2i67-CKZgXFRKqQnAS92fjUOU5-E6ERzGiqWOhlkFnlVEu247p4KF",
-      "Kode": "ZvsRmlfujVZ1qMJ7M9iS3w"
+      "severity": "error",
+      "code": "invalid",
+      "diagnostics": "Unable to resolve reference to profile 'http://ehelse.no/fhir/StructureDefinition/sfm-reimbursementInfo'",
+      "location": [
+        "Patient."
+      ]
     },
     {
-      "Type": 1,
-      "Spesifiser": "Lege",
-      "Navn": "Nikolai Braaten",
-      "AdresseLinje1": "NADDERUDVEIEN",
-      "AdresseLinje2": "168",
-      "AdresseLinje3": "Norge",
-      "Telefonnummer": "95240601",
-      "Beskrivelse": "Andre leger enn fastlegen",
-      "Donorkontakt": false,
-      "EndretDato": "2020-09-07T17:26:06",
-      "Versjon": 1,
-      "HarVersjonsnummer": true,
-      "Id": "zdudQN-1ZVaFis0OmEzhWZeDULaJxBKTxZUNHzbF2bdrNUp_QSMavO74E90_CXim",
-      "Kode": "ZvsRmlfujVZ1qMJ7M9iS3w"
+      "severity": "error",
+      "code": "invalid",
+      "diagnostics": "Unable to resolve reference to profile 'http://ehelse.no/fhir/StructureDefinition/sfm-reimbursementInfo' for element Patient.extension",
+      "location": [
+        "Patient.Patient.extension"
+      ]
     },
     {
-      "Type": 1,
-      "Spesifiser": "Lege",
-      "Navn": "Nikolai Braaten",
-      "AdresseLinje1": "NADDERUDVEIEN",
-      "AdresseLinje2": "168",
-      "AdresseLinje3": "Norge",
-      "Telefonnummer": "95240601",
-      "Beskrivelse": "Andre leger enn fastlegen",
-      "Donorkontakt": false,
-      "EndretDato": "2020-09-07T17:02:36",
-      "Versjon": 1,
-      "HarVersjonsnummer": true,
-      "Id": "F8KoJkrB6bIBM2Wl6BUhSrx1O7Mpp66ILLGIKMG5qfuu8N5-3iRg3Mzr8DRhzxjr",
-      "Kode": "ZvsRmlfujVZ1qMJ7M9iS3w"
+      "severity": "error",
+      "code": "invalid",
+      "diagnostics": "Element Patient.extension.extension.extension.coding has neither a type nor a nameReference.",
+      "location": [
+        "Patient.Patient.extension.extension.extension.coding"
+      ]
     },
     {
-      "Type": 1,
-      "Spesifiser": "Lege",
-      "Navn": "Nikolai Braaten",
-      "AdresseLinje1": "NADDERUDVEIEN",
-      "AdresseLinje2": "168",
-      "AdresseLinje3": "Norge",
-      "Telefonnummer": "95240601",
-      "Beskrivelse": "Andre leger enn fastlegen",
-      "Donorkontakt": false,
-      "EndretDato": "2020-09-07T16:19:21",
-      "Versjon": 1,
-      "HarVersjonsnummer": true,
-      "Id": "_A68Qz_sDiqqiBYgiQAX2L683LyXsAdZGuflK7h4jIMd2Y3NtjTeje5cGvI0Nz_6",
-      "Kode": "ZvsRmlfujVZ1qMJ7M9iS3w"
-    },
-    {
-      "Type": 1,
-      "Spesifiser": "Lege",
-      "Navn": "Nikolai Braaten",
-      "AdresseLinje1": "NADDERUDVEIEN",
-      "AdresseLinje2": "168",
-      "AdresseLinje3": "Norge",
-      "Telefonnummer": "95240601",
-      "Beskrivelse": "Andre leger enn fastlegen",
-      "Donorkontakt": false,
-      "EndretDato": "2020-09-07T17:02:15",
-      "Versjon": 1,
-      "HarVersjonsnummer": true,
-      "Id": "DUJ0klSJTYpLcPWyBOPT_h6_JoOFfy_8EewHk5RgPhmYJ9O3gJFtidVS_5goGg8P",
-      "Kode": "ZvsRmlfujVZ1qMJ7M9iS3w"
-    },
-    {
-      "Type": 1,
-      "Spesifiser": "Lege",
-      "Navn": "Nikolai Braaten",
-      "AdresseLinje1": "NADDERUDVEIEN",
-      "AdresseLinje2": "168",
-      "AdresseLinje3": "Norge",
-      "Telefonnummer": "95240601",
-      "Beskrivelse": "Andre leger enn fastlegen",
-      "Donorkontakt": false,
-      "EndretDato": "2020-09-07T17:03:11",
-      "Versjon": 1,
-      "HarVersjonsnummer": true,
-      "Id": "1fZAraFwNAiUOpGyQOyJAfZnY8JYRQWobhaKWImm1KmXfRTU68ZGRhcyIoo5Obry",
-      "Kode": "ZvsRmlfujVZ1qMJ7M9iS3w"
-    },
-    {
-      "Type": 1,
-      "Spesifiser": "Lege",
-      "Navn": "Nikolai Braaten",
-      "AdresseLinje1": "NADDERUDVEIEN",
-      "AdresseLinje2": "168",
-      "AdresseLinje3": "Norge",
-      "Telefonnummer": "95240601",
-      "Beskrivelse": "Andre leger enn fastlegen",
-      "Donorkontakt": false,
-      "EndretDato": "2020-09-07T17:34:16",
-      "Versjon": 1,
-      "HarVersjonsnummer": true,
-      "Id": "Dl2aN1FkKz95zfRA2bzShqhtHRtDwfOzyjkM6DszULwFNi-zSQgQ3bE4fzwfdrHM",
-      "Kode": "ZvsRmlfujVZ1qMJ7M9iS3w"
-    },
-    {
-      "Type": 1,
-      "Spesifiser": "Lege",
-      "Navn": "Nikolai Braaten",
-      "AdresseLinje1": "NADDERUDVEIEN",
-      "AdresseLinje2": "168",
-      "AdresseLinje3": "Norge",
-      "Telefonnummer": "95240601",
-      "Beskrivelse": "Andre leger enn fastlegen",
-      "Donorkontakt": false,
-      "EndretDato": "2020-09-07T16:59:23",
-      "Versjon": 1,
-      "HarVersjonsnummer": true,
-      "Id": "WsXYhtCXBCMFyfRtzDOfrAWVP530TwKawNMfz6JqN2V5sG9_GSDFAUZ7tt5mz8XF",
-      "Kode": "ZvsRmlfujVZ1qMJ7M9iS3w"
-    },
-    {
-      "Type": 1,
-      "Spesifiser": "Lege",
-      "Navn": "Nikolai Fuglerud",
-      "AdresseLinje1": "NADDERUDVEIEN",
-      "AdresseLinje2": "168",
-      "AdresseLinje3": "Norge",
-      "Telefonnummer": "95240601",
-      "Beskrivelse": "Andre leger enn fastlegen",
-      "Donorkontakt": false,
-      "EndretDato": "2020-09-07T17:52:26",
-      "Versjon": 1,
-      "HarVersjonsnummer": true,
-      "Id": "LEbpPzDNn0ugQiyhNhGJeXLWpqY6SiozOk1LkGGSv7MFFEo4TrqdlaHQ8lvj9xUz",
-      "Kode": "ZvsRmlfujVZ1qMJ7M9iS3w"
+      "severity": "error",
+      "code": "invalid",
+      "diagnostics": "Element Patient.extension.extension.coding has neither a type nor a nameReference.",
+      "location": [
+        "Patient.Patient.extension.extension.coding"
+      ]
     }
-  ],
-  "TotaltAntall": 10,
-  "MaksAntall": 10,
-  "StatusCode": 200,
-  "InformationMessage": null,
-  "WarningMessage": null,
-  "ErrorMessage": null,
-  "RedirectUrl": null
+  ]
 }
