@@ -35,7 +35,7 @@
               },
               "identifier": {
                 "use": "official",
-                "value": "d78ed774-bd17-4f32-813a-1b94e93e0be8"
+                "value": "0ffa97d3-72de-4c1a-aaff-e0e3b5e4f454"
               },
               "status": "final",
               "type": {
@@ -61,7 +61,7 @@
               "relatesTo": {
                 "code": "replaces",
                 "targetIdentifier": {
-                  "value": "d78ed774-bd17-4f32-813a-1b94e93e0be8"
+                  "value": "0ffa97d3-72de-4c1a-aaff-e0e3b5e4f454"
                 }
               },
               "title": "Medication summary",
