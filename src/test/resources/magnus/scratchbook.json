@@ -5,17 +5,17 @@
       "name": "medication",
       "resource": {
         "resourceType": "Bundle",
-        "id": "7cf1f24c-115f-4e15-97f1-1cb793d92f81",
+        "id": "6b1d079f-35b6-483f-807a-43f37dd00ba9",
         "meta": {
-          "lastUpdated": "2020-09-06T13:47:22.2392048+00:00",
+          "lastUpdated": "2020-09-13T06:21:35.7211739+00:00",
           "source": "http://base-fhir.qa.forskrivning.no/Patient/$getMedication",
           "profile": [
             "http://ehelse.no/fhir/StructureDefinition/sfm-MedicationBundle"
           ]
         },
         "type": "document",
-        "timestamp": "2020-09-06T13:47:22.239156+00:00",
-        "total": 4,
+        "timestamp": "2020-09-13T06:21:35.7211508+00:00",
+        "total": 16,
         "link": [
           {
             "relation": "self",
@@ -24,10 +24,10 @@
         ],
         "entry": [
           {
-            "fullUrl": "urn:uuid:8521c712-7b37-4392-b870-bd5aced38b5f",
+            "fullUrl": "urn:uuid:d6cedfea-6600-4861-ac8f-aa36167a17f4",
             "resource": {
               "resourceType": "Composition",
-              "id": "8521c712-7b37-4392-b870-bd5aced38b5f",
+              "id": "d6cedfea-6600-4861-ac8f-aa36167a17f4",
               "meta": {
                 "profile": [
                   "http://ehelse.no/fhir/StructureDefinition/sfm-MedicationComposition"
@@ -35,7 +35,7 @@
               },
               "identifier": {
                 "use": "official",
-                "value": "d0bc3f06-b910-4c38-bda7-a5dabc333640"
+                "value": "71af3e99-79c3-4915-86df-f945fe15a260"
               },
               "status": "final",
               "type": {
@@ -48,10 +48,10 @@
                 ]
               },
               "subject": {
-                "reference": "urn:uuid:c14a53bf-aea8-46bd-9713-6bd75a0093c3",
+                "reference": "urn:uuid:433c54c2-9516-4f2f-8a78-010c8da44178",
                 "display": "sfm-Patient"
               },
-              "date": "2020-09-06T13:47:22.2338406+00:00",
+              "date": "2020-09-13T06:21:35.6526705+00:00",
               "author": [
                 {
                   "reference": "urn:uuid:1010038",
@@ -74,17 +74,34 @@
                   },
                   "text": {
                     "status": "generated",
-                    "div": "<xhtml:div xmlns:xhtml=\"http://www.w3.org/1999/xhtml\"></xhtml:div>"
+                    "div": "<xhtml:div xmlns:xhtml=\"http://www.w3.org/1999/xhtml\">List of medications</xhtml:div>"
                   },
-                  "emptyReason": {
-                    "coding": [
-                      {
-                        "system": "http://terminology.hl7.org/CodeSystem/list-empty-reason",
-                        "code": "unavailable",
-                        "display": "Unavailable"
-                      }
-                    ]
-                  }
+                  "entry": [
+                    {
+                      "reference": "urn:uuid:cff789ae-c407-4ee4-bd67-15a2a19fd478",
+                      "display": "sfm-MedicationStatement"
+                    },
+                    {
+                      "reference": "urn:uuid:f326ce77-b4e9-418c-91b7-45f4900505e3",
+                      "display": "sfm-MedicationStatement"
+                    },
+                    {
+                      "reference": "urn:uuid:b230684f-beb5-47d5-94a8-fec68e2cedda",
+                      "display": "sfm-MedicationStatement"
+                    },
+                    {
+                      "reference": "urn:uuid:db314f66-ce3b-4480-83b5-883d313988e4",
+                      "display": "sfm-MedicationStatement"
+                    },
+                    {
+                      "reference": "urn:uuid:01b3b34a-362f-4f8f-9938-d1855734aa14",
+                      "display": "sfm-MedicationStatement"
+                    },
+                    {
+                      "reference": "urn:uuid:e7dc6523-e305-4cc8-9351-af2c36145c6a",
+                      "display": "sfm-MedicationStatement"
+                    }
+                  ]
                 },
                 {
                   "title": "PllInfo",
@@ -153,7 +170,7 @@
                   },
                   "entry": [
                     {
-                      "reference": "urn:uuid:0e8c5993-062c-4cfd-9a19-24c4a54a2ecb",
+                      "reference": "urn:uuid:bee37cd8-48c5-4687-ad27-a3f067447c15",
                       "display": "sfm-BandaPrescription"
                     }
                   ]
@@ -162,10 +179,10 @@
             }
           },
           {
-            "fullUrl": "urn:uuid:c14a53bf-aea8-46bd-9713-6bd75a0093c3",
+            "fullUrl": "urn:uuid:433c54c2-9516-4f2f-8a78-010c8da44178",
             "resource": {
               "resourceType": "Patient",
-              "id": "c14a53bf-aea8-46bd-9713-6bd75a0093c3",
+              "id": "433c54c2-9516-4f2f-8a78-010c8da44178",
               "meta": {
                 "profile": [
                   "http://ehelse.no/fhir/StructureDefinition/sfm-Patient"
@@ -175,7 +192,7 @@
                 {
                   "use": "official",
                   "system": "urn:oid:2.16.578.1.12.4.1.4.1",
-                  "value": "02020558515"
+                  "value": "03021972478"
                 }
               ],
               "active": true,
@@ -197,173 +214,6 @@
                   "postalCode": "1234"
                 }
               ]
-            }
-          },
-          {
-            "fullUrl": "urn:uuid:0e8c5993-062c-4cfd-9a19-24c4a54a2ecb",
-            "resource": {
-              "resourceType": "Basic",
-              "id": "0e8c5993-062c-4cfd-9a19-24c4a54a2ecb",
-              "meta": {
-                "profile": [
-                  "http://ehelse.no/fhir/StructureDefinition/sfm-BandaPrescription"
-                ]
-              },
-              "extension": [
-                {
-                  "extension": [
-                    {
-                      "url": "productgroup",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "urn:oid:2.16.578.1.12.4.1.1.7403",
-                            "code": "501",
-                            "display": "Forbruksmateriell ved inkontinens"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-reseptdocbanda"
-                },
-                {
-                  "extension": [
-                    {
-                      "url": "reseptDate",
-                      "valueDate": "2020-08-25"
-                    },
-                    {
-                      "url": "expirationdate",
-                      "valueDate": "2020-09-08"
-                    },
-                    {
-                      "url": "festUpdate",
-                      "valueDateTime": "2009-01-12T10:46:00+00:00"
-                    },
-                    {
-                      "url": "conscription",
-                      "valueBoolean": true
-                    },
-                    {
-                      "url": "helfoapplication",
-                      "valueBoolean": true
-                    },
-                    {
-                      "url": "freecard",
-                      "valueBoolean": true
-                    },
-                    {
-                      "url": "guardiantransparencyreservation",
-                      "valueBoolean": true
-                    },
-                    {
-                      "url": "ownpractice",
-                      "valueBoolean": false
-                    },
-                    {
-                      "url": "indoctorsname",
-                      "valueBoolean": false
-                    },
-                    {
-                      "url": "dssn",
-                      "valueString": "abc"
-                    },
-                    {
-                      "url": "earliestdispence",
-                      "valueDateTime": "2014-06-16T00:00:00+00:00"
-                    },
-                    {
-                      "url": "dischargedhospital",
-                      "valueBoolean": true
-                    },
-                    {
-                      "url": "lockedResept",
-                      "valueBoolean": false
-                    },
-                    {
-                      "url": "numberofpackages",
-                      "valueDecimal": 123.0
-                    },
-                    {
-                      "url": "speciality",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "urn:oid:2.16.578.1.12.4.1.1.7426",
-                            "code": "1",
-                            "display": "asdasd"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "url": "itemgroup",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "urn:oid:2.16.578.1.12.4.1.1.7402",
-                            "code": "L",
-                            "display": "Legemiddel"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "url": "reimbursmentparagraph",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "urn:oid:2.16.578.1.12.4.1.1.7427",
-                            "code": "505",
-                            "display": "40-#!- øÆ®ÁČčĐŊ200ŧŽž年暮れて鞋て暮年1234567890"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "extension": [
-                        {
-                          "url": "status",
-                          "valueCodeableConcept": {
-                            "coding": [
-                              {
-                                "system": "urn:oid:2.16.578.1.12.4.1.1.7408",
-                                "code": "E",
-                                "display": "Ekspederbar"
-                              }
-                            ]
-                          }
-                        }
-                      ],
-                      "url": "rfstatus"
-                    }
-                  ],
-                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-reseptamendment"
-                }
-              ],
-              "identifier": [
-                {
-                  "use": "official",
-                  "type": {
-                    "text": "reseptId"
-                  },
-                  "value": "c544437b-bd9b-4cb9-8d59-85c4e57e5309"
-                }
-              ],
-              "code": {
-                "coding": [
-                  {
-                    "system": "urn:oid:2.16.578.1.12.4.1.1.7402",
-                    "code": "L",
-                    "display": "Legemiddel"
-                  }
-                ]
-              },
-              "subject": {
-                "reference": "urn:uuid:c14a53bf-aea8-46bd-9713-6bd75a0093c3",
-                "display": "sfm-Patient"
-              }
             }
           },
           {
@@ -407,8 +257,2042 @@
                   ]
                 }
               ],
-              "gender": "male",
-              "birthDate": "1983-12-08"
+              "gender": "male"
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:1269040586",
+            "resource": {
+              "resourceType": "Medication",
+              "id": "1269040586",
+              "meta": {
+                "profile": [
+                  "http://ehelse.no/fhir/StructureDefinition/sfm-Medication"
+                ]
+              },
+              "extension": [
+                {
+                  "extension": [
+                    {
+                      "url": "prescriptiongroup",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "urn:oid:2.16.578.1.12.4.1.1.7421",
+                            "code": "C",
+                            "display": "Reseptgruppe C"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "url": "http://hl7.no/fhir/StructureDefinition/no-basis-prescriptiongroup"
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "name",
+                      "valueString": "Cetirizin Tab 10 mg"
+                    },
+                    {
+                      "url": "registreringstype",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://ehelse.no/fhir/CodeSystem/sfm-festregistrationtype",
+                            "code": "1",
+                            "display": "Legemiddelvirkestoff"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-medicationdetails"
+                }
+              ],
+              "identifier": [
+                {
+                  "use": "official",
+                  "type": {
+                    "text": "identifier"
+                  },
+                  "value": "ID_6E3F89D6-152B-4BD4-924B-4C229E45BD04"
+                }
+              ],
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://ehelse.no/fhir/CodeSystem/FEST",
+                    "code": "ID_6E3F89D6-152B-4BD4-924B-4C229E45BD04",
+                    "display": "Cetirizin Tab 10 mg"
+                  },
+                  {
+                    "system": "http://www.whocc.no/atc",
+                    "code": "R06AE07",
+                    "display": "Cetirizin"
+                  }
+                ]
+              },
+              "status": "active",
+              "form": {
+                "coding": [
+                  {
+                    "system": "urn:oid:2.16.578.1.12.4.1.1.7448",
+                    "code": "53",
+                    "display": "Tablett"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:cff789ae-c407-4ee4-bd67-15a2a19fd478",
+            "resource": {
+              "resourceType": "MedicationStatement",
+              "id": "cff789ae-c407-4ee4-bd67-15a2a19fd478",
+              "meta": {
+                "profile": [
+                  "http://ehelse.no/fhir/StructureDefinition/sfm-MedicationStatement"
+                ]
+              },
+              "extension": [
+                {
+                  "extension": [
+                    {
+                      "url": "reseptDate",
+                      "valueDate": "2020-06-26"
+                    },
+                    {
+                      "url": "expirationdate",
+                      "valueDate": "2021-06-26"
+                    },
+                    {
+                      "url": "festUpdate",
+                      "valueDateTime": "2020-02-24T09:33:17+00:00"
+                    },
+                    {
+                      "url": "dssn",
+                      "valueString": "1 tablett morgen"
+                    },
+                    {
+                      "url": "lockedResept",
+                      "valueBoolean": false
+                    },
+                    {
+                      "url": "amount",
+                      "valueQuantity": {
+                        "value": 100.0,
+                        "unit": "stk",
+                        "system": "http://unitsofmeasure.org",
+                        "code": "stk"
+                      }
+                    },
+                    {
+                      "url": "reit",
+                      "valueString": "0"
+                    },
+                    {
+                      "url": "itemgroup",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "urn:oid:2.16.578.1.12.4.1.1.7402",
+                            "code": "L",
+                            "display": "Legemiddel"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "starttime",
+                          "valueDateTime": "2020-06-26T00:00:00+00:00"
+                        },
+                        {
+                          "extension": [
+                            {
+                              "url": "amount",
+                              "valueQuantity": {
+                                "value": 1.0,
+                                "unit": "tablett",
+                                "system": "http://unitsofmeasure.org",
+                                "code": "tablett"
+                              }
+                            },
+                            {
+                              "url": "interval",
+                              "valueCodeableConcept": {
+                                "coding": [
+                                  {
+                                    "system": "urn:oid:2.16.578.1.12.4.1.1.9088",
+                                    "code": "1",
+                                    "display": "Døgn"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "url": "timerange",
+                              "valueCodeableConcept": {
+                                "coding": [
+                                  {
+                                    "system": "urn:oid:2.16.578.1.12.4.1.1.8325",
+                                    "code": "1",
+                                    "display": "Morgen"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "url": "accurate",
+                              "valueBoolean": false
+                            }
+                          ],
+                          "url": "repeatingdosage"
+                        }
+                      ],
+                      "url": "ereseptdosing"
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "status",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "urn:oid:2.16.578.1.12.4.1.1.7408",
+                                "code": "E",
+                                "display": "Ekspederbar"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "url": "rfstatus"
+                    }
+                  ],
+                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-reseptamendment"
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "status",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://ehelse.no/fhir/CodeSystem/sfm-medicationstatement-registration-status",
+                            "code": "3",
+                            "display": "Godkjent"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "url": "type",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://ehelse.no/fhir/CodeSystem/sfm-performer-roles",
+                            "code": "1",
+                            "display": "Forskrevet av"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "url": "helseperson",
+                      "valueReference": {
+                        "reference": "urn:uuid:1010038"
+                      }
+                    },
+                    {
+                      "url": "timestamp",
+                      "valueDateTime": "2020-06-26T08:17:00.1076702+00:00"
+                    }
+                  ],
+                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-regInfo"
+                }
+              ],
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "text": "ReseptId"
+                  },
+                  "value": "735c492e-5ae8-4656-bc30-193ec5738bdc"
+                }
+              ],
+              "status": "active",
+              "medicationReference": {
+                "reference": "urn:uuid:1269040586"
+              },
+              "subject": {
+                "reference": "urn:uuid:433c54c2-9516-4f2f-8a78-010c8da44178",
+                "display": "sfm-Patient"
+              },
+              "dosage": [
+                {
+                  "extension": [
+                    {
+                      "extension": [
+                        {
+                          "url": "text",
+                          "valueString": "MOT ALLERGI"
+                        }
+                      ],
+                      "url": "http://example.org/fhir/StructureDefinition/sfm-application-area"
+                    },
+                    {
+                      "url": "http://ehelse.no/fhir/StructureDefinition/sfm-shortdosage",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "urn:oid:2.16.578.1.12.4.1.1.7478",
+                            "code": "195",
+                            "display": "1+0+0"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "url": "http://ehelse.no/fhir/StructureDefinition/sfm-use",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "urn:oid:2.16.578.1.12.4.1.1.9101",
+                            "code": "3",
+                            "display": "Ved behov"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "sequence": 1,
+                  "text": "1 tablett morgen"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:431000129",
+            "resource": {
+              "resourceType": "Practitioner",
+              "id": "431000129",
+              "meta": {
+                "profile": [
+                  "http://ehelse.no/fhir/StructureDefinition/sfm-Practitioner"
+                ]
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.no/fhir/NamingSystem/HPR",
+                        "code": "HPR-nummer"
+                      }
+                    ]
+                  },
+                  "system": "urn:oid:2.16.578.1.12.4.1.4.4",
+                  "value": "431000129"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "use": "official",
+                  "family": "Engelund",
+                  "given": [
+                    "Elena Fos"
+                  ]
+                }
+              ],
+              "address": [
+                {
+                  "use": "home",
+                  "type": "both",
+                  "text": "Virginia Legekontor",
+                  "city": "OSLO",
+                  "postalCode": "0102"
+                }
+              ],
+              "gender": "other"
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:1375307397",
+            "resource": {
+              "resourceType": "Medication",
+              "id": "1375307397",
+              "meta": {
+                "profile": [
+                  "http://ehelse.no/fhir/StructureDefinition/sfm-Medication"
+                ]
+              },
+              "extension": [
+                {
+                  "extension": [
+                    {
+                      "url": "prescriptiongroup",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "urn:oid:2.16.578.1.12.4.1.1.7421",
+                            "code": "B",
+                            "display": "Reseptgruppe B"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "url": "http://hl7.no/fhir/StructureDefinition/no-basis-prescriptiongroup"
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "name",
+                      "valueString": "Pinex Forte Stikkpille 500 mg/30 mg"
+                    },
+                    {
+                      "url": "registreringstype",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://ehelse.no/fhir/CodeSystem/sfm-festregistrationtype",
+                            "code": "3",
+                            "display": "Legemiddelpakning"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "name",
+                          "valueString": "Pinex Forte"
+                        },
+                        {
+                          "url": "packingsize",
+                          "valueString": "10"
+                        },
+                        {
+                          "url": "packingunit",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "urn:oid:2.16.578.1.12.4.1.1.7452",
+                                "code": "stk",
+                                "display": "stykk"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "url": "packinginfoprescription"
+                    }
+                  ],
+                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-medicationdetails"
+                }
+              ],
+              "identifier": [
+                {
+                  "use": "official",
+                  "type": {
+                    "text": "identifier"
+                  },
+                  "value": "487256"
+                }
+              ],
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://ehelse.no/fhir/CodeSystem/FEST",
+                    "code": "487256",
+                    "display": "Pinex Forte Stikkpille 500 mg/30 mg"
+                  },
+                  {
+                    "system": "http://www.whocc.no/atc",
+                    "code": "N02AA59",
+                    "display": "Kodein, kombinasjoner ekskl.  psykoleptika"
+                  }
+                ]
+              },
+              "status": "active",
+              "form": {
+                "coding": [
+                  {
+                    "system": "urn:oid:2.16.578.1.12.4.1.1.7448",
+                    "code": "112",
+                    "display": "Stikkpille"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:f326ce77-b4e9-418c-91b7-45f4900505e3",
+            "resource": {
+              "resourceType": "MedicationStatement",
+              "id": "f326ce77-b4e9-418c-91b7-45f4900505e3",
+              "meta": {
+                "profile": [
+                  "http://ehelse.no/fhir/StructureDefinition/sfm-MedicationStatement"
+                ]
+              },
+              "extension": [
+                {
+                  "extension": [
+                    {
+                      "url": "reseptDate",
+                      "valueDate": "2020-09-04"
+                    },
+                    {
+                      "url": "expirationdate",
+                      "valueDate": "2021-09-04"
+                    },
+                    {
+                      "url": "festUpdate",
+                      "valueDateTime": "2016-12-22T00:49:47+00:00"
+                    },
+                    {
+                      "url": "freecard",
+                      "valueBoolean": false
+                    },
+                    {
+                      "url": "dssn",
+                      "valueString": "Brukes som avtalt"
+                    },
+                    {
+                      "url": "lockedResept",
+                      "valueBoolean": false
+                    },
+                    {
+                      "url": "numberofpackages",
+                      "valueDecimal": 1.0
+                    },
+                    {
+                      "url": "reit",
+                      "valueString": "0"
+                    },
+                    {
+                      "url": "itemgroup",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "urn:oid:2.16.578.1.12.4.1.1.7402",
+                            "code": "L",
+                            "display": "Legemiddel"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "status",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "urn:oid:2.16.578.1.12.4.1.1.7408",
+                                "code": "E",
+                                "display": "Ekspederbar"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "url": "rfstatus"
+                    }
+                  ],
+                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-reseptamendment"
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "status",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://ehelse.no/fhir/CodeSystem/sfm-medicationstatement-registration-status",
+                            "code": "3",
+                            "display": "Godkjent"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "url": "type",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://ehelse.no/fhir/CodeSystem/sfm-performer-roles",
+                            "code": "1",
+                            "display": "Forskrevet av"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "url": "helseperson",
+                      "valueReference": {
+                        "reference": "urn:uuid:431000129"
+                      }
+                    },
+                    {
+                      "url": "timestamp",
+                      "valueDateTime": "2020-09-04T08:07:32+00:00"
+                    }
+                  ],
+                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-regInfo"
+                }
+              ],
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "text": "ReseptId"
+                  },
+                  "value": "1ca1cc25-eb4e-4ffe-b917-9c35879c6ecb"
+                }
+              ],
+              "status": "active",
+              "medicationReference": {
+                "reference": "urn:uuid:1375307397"
+              },
+              "subject": {
+                "reference": "urn:uuid:433c54c2-9516-4f2f-8a78-010c8da44178",
+                "display": "sfm-Patient"
+              },
+              "dosage": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://ehelse.no/fhir/StructureDefinition/sfm-use",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "urn:oid:2.16.578.1.12.4.1.1.9101",
+                            "code": "3",
+                            "display": "Ved behov"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "sequence": 1,
+                  "text": "Brukes som avtalt"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:4744025",
+            "resource": {
+              "resourceType": "Medication",
+              "id": "4744025",
+              "meta": {
+                "profile": [
+                  "http://ehelse.no/fhir/StructureDefinition/sfm-Medication"
+                ]
+              },
+              "extension": [
+                {
+                  "extension": [
+                    {
+                      "url": "prescriptiongroup",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "urn:oid:2.16.578.1.12.4.1.1.7421",
+                            "code": "C",
+                            "display": "Reseptgruppe C"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "url": "http://hl7.no/fhir/StructureDefinition/no-basis-prescriptiongroup"
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "name",
+                      "valueString": "Ibuprofen Tab 400 mg"
+                    },
+                    {
+                      "url": "registreringstype",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://ehelse.no/fhir/CodeSystem/sfm-festregistrationtype",
+                            "code": "1",
+                            "display": "Legemiddelvirkestoff"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-medicationdetails"
+                }
+              ],
+              "identifier": [
+                {
+                  "use": "official",
+                  "type": {
+                    "text": "identifier"
+                  },
+                  "value": "ID_C3DEEC22-B523-4EA0-AFDA-B8085BFC312B"
+                }
+              ],
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://ehelse.no/fhir/CodeSystem/FEST",
+                    "code": "ID_C3DEEC22-B523-4EA0-AFDA-B8085BFC312B",
+                    "display": "Ibuprofen Tab 400 mg"
+                  },
+                  {
+                    "system": "http://www.whocc.no/atc",
+                    "code": "M01AE01",
+                    "display": "Ibuprofen"
+                  }
+                ]
+              },
+              "status": "active",
+              "form": {
+                "coding": [
+                  {
+                    "system": "urn:oid:2.16.578.1.12.4.1.1.7448",
+                    "code": "53",
+                    "display": "Tablett"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:b230684f-beb5-47d5-94a8-fec68e2cedda",
+            "resource": {
+              "resourceType": "MedicationStatement",
+              "id": "b230684f-beb5-47d5-94a8-fec68e2cedda",
+              "meta": {
+                "profile": [
+                  "http://ehelse.no/fhir/StructureDefinition/sfm-MedicationStatement"
+                ]
+              },
+              "extension": [
+                {
+                  "extension": [
+                    {
+                      "url": "reseptDate",
+                      "valueDate": "2020-09-04"
+                    },
+                    {
+                      "url": "expirationdate",
+                      "valueDate": "2021-09-04"
+                    },
+                    {
+                      "url": "festUpdate",
+                      "valueDateTime": "2016-12-22T00:49:47+00:00"
+                    },
+                    {
+                      "url": "freecard",
+                      "valueBoolean": false
+                    },
+                    {
+                      "url": "dssn",
+                      "valueString": "1 tablett 3 ganger daglig"
+                    },
+                    {
+                      "url": "lockedResept",
+                      "valueBoolean": false
+                    },
+                    {
+                      "url": "amount",
+                      "valueQuantity": {
+                        "value": 90.0,
+                        "unit": "stk",
+                        "system": "http://unitsofmeasure.org",
+                        "code": "stk"
+                      }
+                    },
+                    {
+                      "url": "reit",
+                      "valueString": "0"
+                    },
+                    {
+                      "url": "itemgroup",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "urn:oid:2.16.578.1.12.4.1.1.7402",
+                            "code": "L",
+                            "display": "Legemiddel"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "starttime",
+                          "valueDateTime": "2017-01-06T00:00:00+00:00"
+                        },
+                        {
+                          "extension": [
+                            {
+                              "url": "amount",
+                              "valueQuantity": {
+                                "value": 1.0,
+                                "unit": "tablett",
+                                "system": "http://unitsofmeasure.org",
+                                "code": "tablett"
+                              }
+                            },
+                            {
+                              "url": "interval",
+                              "valueCodeableConcept": {
+                                "coding": [
+                                  {
+                                    "system": "urn:oid:2.16.578.1.12.4.1.1.9088",
+                                    "code": "1",
+                                    "display": "Døgn"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "url": "timerange",
+                              "valueCodeableConcept": {
+                                "coding": [
+                                  {
+                                    "system": "urn:oid:2.16.578.1.12.4.1.1.8325",
+                                    "code": "1",
+                                    "display": "Morgen"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "url": "accurate",
+                              "valueBoolean": false
+                            }
+                          ],
+                          "url": "repeatingdosage"
+                        },
+                        {
+                          "extension": [
+                            {
+                              "url": "amount",
+                              "valueQuantity": {
+                                "value": 1.0,
+                                "unit": "tablett",
+                                "system": "http://unitsofmeasure.org",
+                                "code": "tablett"
+                              }
+                            },
+                            {
+                              "url": "interval",
+                              "valueCodeableConcept": {
+                                "coding": [
+                                  {
+                                    "system": "urn:oid:2.16.578.1.12.4.1.1.9088",
+                                    "code": "1",
+                                    "display": "Døgn"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "url": "timerange",
+                              "valueCodeableConcept": {
+                                "coding": [
+                                  {
+                                    "system": "urn:oid:2.16.578.1.12.4.1.1.8325",
+                                    "code": "3",
+                                    "display": "Midt på dagen"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "url": "accurate",
+                              "valueBoolean": false
+                            }
+                          ],
+                          "url": "repeatingdosage"
+                        },
+                        {
+                          "extension": [
+                            {
+                              "url": "amount",
+                              "valueQuantity": {
+                                "value": 1.0,
+                                "unit": "tablett",
+                                "system": "http://unitsofmeasure.org",
+                                "code": "tablett"
+                              }
+                            },
+                            {
+                              "url": "interval",
+                              "valueCodeableConcept": {
+                                "coding": [
+                                  {
+                                    "system": "urn:oid:2.16.578.1.12.4.1.1.9088",
+                                    "code": "1",
+                                    "display": "Døgn"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "url": "timerange",
+                              "valueCodeableConcept": {
+                                "coding": [
+                                  {
+                                    "system": "urn:oid:2.16.578.1.12.4.1.1.8325",
+                                    "code": "5",
+                                    "display": "Kveld"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "url": "accurate",
+                              "valueBoolean": false
+                            }
+                          ],
+                          "url": "repeatingdosage"
+                        }
+                      ],
+                      "url": "ereseptdosing"
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "status",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "urn:oid:2.16.578.1.12.4.1.1.7408",
+                                "code": "E",
+                                "display": "Ekspederbar"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "url": "rfstatus"
+                    }
+                  ],
+                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-reseptamendment"
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "status",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://ehelse.no/fhir/CodeSystem/sfm-medicationstatement-registration-status",
+                            "code": "3",
+                            "display": "Godkjent"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "url": "type",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://ehelse.no/fhir/CodeSystem/sfm-performer-roles",
+                            "code": "1",
+                            "display": "Forskrevet av"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "url": "helseperson",
+                      "valueReference": {
+                        "reference": "urn:uuid:431000129"
+                      }
+                    },
+                    {
+                      "url": "timestamp",
+                      "valueDateTime": "2020-09-04T08:06:17+00:00"
+                    }
+                  ],
+                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-regInfo"
+                }
+              ],
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "text": "ReseptId"
+                  },
+                  "value": "4e05e940-eddb-40fd-8289-37b53e68ea63"
+                }
+              ],
+              "status": "active",
+              "medicationReference": {
+                "reference": "urn:uuid:4744025"
+              },
+              "subject": {
+                "reference": "urn:uuid:433c54c2-9516-4f2f-8a78-010c8da44178",
+                "display": "sfm-Patient"
+              },
+              "dosage": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://ehelse.no/fhir/StructureDefinition/sfm-shortdosage",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "urn:oid:2.16.578.1.12.4.1.1.7478",
+                            "code": "160",
+                            "display": "1x3"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "url": "http://ehelse.no/fhir/StructureDefinition/sfm-use",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "urn:oid:2.16.578.1.12.4.1.1.9101",
+                            "code": "3",
+                            "display": "Ved behov"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "sequence": 1,
+                  "text": "1 tablett 3 ganger daglig"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:db314f66-ce3b-4480-83b5-883d313988e4",
+            "resource": {
+              "resourceType": "MedicationStatement",
+              "id": "db314f66-ce3b-4480-83b5-883d313988e4",
+              "meta": {
+                "profile": [
+                  "http://ehelse.no/fhir/StructureDefinition/sfm-MedicationStatement"
+                ]
+              },
+              "extension": [
+                {
+                  "extension": [
+                    {
+                      "url": "reseptDate",
+                      "valueDate": "2020-09-04"
+                    },
+                    {
+                      "url": "expirationdate",
+                      "valueDate": "2021-09-04"
+                    },
+                    {
+                      "url": "festUpdate",
+                      "valueDateTime": "2016-12-22T00:49:47+00:00"
+                    },
+                    {
+                      "url": "freecard",
+                      "valueBoolean": false
+                    },
+                    {
+                      "url": "dssn",
+                      "valueString": "Brukes som avtalt"
+                    },
+                    {
+                      "url": "lockedResept",
+                      "valueBoolean": false
+                    },
+                    {
+                      "url": "numberofpackages",
+                      "valueDecimal": 1.0
+                    },
+                    {
+                      "url": "reit",
+                      "valueString": "0"
+                    },
+                    {
+                      "url": "itemgroup",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "urn:oid:2.16.578.1.12.4.1.1.7402",
+                            "code": "L",
+                            "display": "Legemiddel"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "status",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "urn:oid:2.16.578.1.12.4.1.1.7408",
+                                "code": "E",
+                                "display": "Ekspederbar"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "url": "rfstatus"
+                    }
+                  ],
+                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-reseptamendment"
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "status",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://ehelse.no/fhir/CodeSystem/sfm-medicationstatement-registration-status",
+                            "code": "3",
+                            "display": "Godkjent"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "url": "type",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://ehelse.no/fhir/CodeSystem/sfm-performer-roles",
+                            "code": "1",
+                            "display": "Forskrevet av"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "url": "helseperson",
+                      "valueReference": {
+                        "reference": "urn:uuid:431000129"
+                      }
+                    },
+                    {
+                      "url": "timestamp",
+                      "valueDateTime": "2020-09-04T08:07:08+00:00"
+                    }
+                  ],
+                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-regInfo"
+                }
+              ],
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "text": "ReseptId"
+                  },
+                  "value": "9dc03dee-646b-481a-8e83-6f113aefe897"
+                }
+              ],
+              "status": "active",
+              "medicationReference": {
+                "reference": "urn:uuid:1375307397"
+              },
+              "subject": {
+                "reference": "urn:uuid:433c54c2-9516-4f2f-8a78-010c8da44178",
+                "display": "sfm-Patient"
+              },
+              "dosage": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://ehelse.no/fhir/StructureDefinition/sfm-use",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "urn:oid:2.16.578.1.12.4.1.1.9101",
+                            "code": "3",
+                            "display": "Ved behov"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "sequence": 1,
+                  "text": "Brukes som avtalt"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:846145446",
+            "resource": {
+              "resourceType": "Medication",
+              "id": "846145446",
+              "meta": {
+                "profile": [
+                  "http://ehelse.no/fhir/StructureDefinition/sfm-Medication"
+                ]
+              },
+              "extension": [
+                {
+                  "extension": [
+                    {
+                      "url": "prescriptiongroup",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "urn:oid:2.16.578.1.12.4.1.1.7421",
+                            "code": "C",
+                            "display": "Reseptgruppe C"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "url": "http://hl7.no/fhir/StructureDefinition/no-basis-prescriptiongroup"
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "name",
+                      "valueString": "Paracetamol/Koffein Tab 500 mg/65 mg"
+                    },
+                    {
+                      "url": "registreringstype",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://ehelse.no/fhir/CodeSystem/sfm-festregistrationtype",
+                            "code": "1",
+                            "display": "Legemiddelvirkestoff"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-medicationdetails"
+                }
+              ],
+              "identifier": [
+                {
+                  "use": "official",
+                  "type": {
+                    "text": "identifier"
+                  },
+                  "value": "ID_71694B5A-86DC-4DB0-9672-59F9567B9FF4"
+                }
+              ],
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://ehelse.no/fhir/CodeSystem/FEST",
+                    "code": "ID_71694B5A-86DC-4DB0-9672-59F9567B9FF4",
+                    "display": "Paracetamol/Koffein Tab 500 mg/65 mg"
+                  },
+                  {
+                    "system": "http://www.whocc.no/atc",
+                    "code": "N02BE51",
+                    "display": "Paracetamol, kombinasjoner ekskl. psykoleptika"
+                  }
+                ]
+              },
+              "status": "active",
+              "form": {
+                "coding": [
+                  {
+                    "system": "urn:oid:2.16.578.1.12.4.1.1.7448",
+                    "code": "53",
+                    "display": "Tablett"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:01b3b34a-362f-4f8f-9938-d1855734aa14",
+            "resource": {
+              "resourceType": "MedicationStatement",
+              "id": "01b3b34a-362f-4f8f-9938-d1855734aa14",
+              "meta": {
+                "profile": [
+                  "http://ehelse.no/fhir/StructureDefinition/sfm-MedicationStatement"
+                ]
+              },
+              "extension": [
+                {
+                  "extension": [
+                    {
+                      "url": "reseptDate",
+                      "valueDate": "2020-06-26"
+                    },
+                    {
+                      "url": "expirationdate",
+                      "valueDate": "2021-05-26"
+                    },
+                    {
+                      "url": "festUpdate",
+                      "valueDateTime": "2020-02-24T09:33:17+00:00"
+                    },
+                    {
+                      "url": "dssn",
+                      "valueString": "2 tabletter morgen daglig"
+                    },
+                    {
+                      "url": "earliestdispence",
+                      "valueDateTime": "2020-06-26T00:00:00+00:00"
+                    },
+                    {
+                      "url": "lockedResept",
+                      "valueBoolean": false
+                    },
+                    {
+                      "url": "amount",
+                      "valueQuantity": {
+                        "value": 183.0,
+                        "unit": "stk",
+                        "system": "http://unitsofmeasure.org",
+                        "code": "stk"
+                      }
+                    },
+                    {
+                      "url": "reit",
+                      "valueString": "3"
+                    },
+                    {
+                      "url": "itemgroup",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "urn:oid:2.16.578.1.12.4.1.1.7402",
+                            "code": "L",
+                            "display": "Legemiddel"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "starttime",
+                          "valueDateTime": "2020-06-26T00:00:00+00:00"
+                        },
+                        {
+                          "extension": [
+                            {
+                              "url": "amount",
+                              "valueQuantity": {
+                                "value": 2.0,
+                                "unit": "tablett",
+                                "system": "http://unitsofmeasure.org",
+                                "code": "tablett"
+                              }
+                            },
+                            {
+                              "url": "interval",
+                              "valueCodeableConcept": {
+                                "coding": [
+                                  {
+                                    "system": "urn:oid:2.16.578.1.12.4.1.1.9088",
+                                    "code": "1",
+                                    "display": "Døgn"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "url": "timerange",
+                              "valueCodeableConcept": {
+                                "coding": [
+                                  {
+                                    "system": "urn:oid:2.16.578.1.12.4.1.1.8325",
+                                    "code": "1",
+                                    "display": "Morgen"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "url": "accurate",
+                              "valueBoolean": false
+                            }
+                          ],
+                          "url": "repeatingdosage"
+                        }
+                      ],
+                      "url": "ereseptdosing"
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "status",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "urn:oid:2.16.578.1.12.4.1.1.7408",
+                                "code": "E",
+                                "display": "Ekspederbar"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "url": "rfstatus"
+                    }
+                  ],
+                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-reseptamendment"
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "status",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://ehelse.no/fhir/CodeSystem/sfm-medicationstatement-registration-status",
+                            "code": "3",
+                            "display": "Godkjent"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "url": "type",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://ehelse.no/fhir/CodeSystem/sfm-performer-roles",
+                            "code": "1",
+                            "display": "Forskrevet av"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "url": "helseperson",
+                      "valueReference": {
+                        "reference": "urn:uuid:1010038"
+                      }
+                    },
+                    {
+                      "url": "timestamp",
+                      "valueDateTime": "2020-06-26T08:13:29.612522+00:00"
+                    }
+                  ],
+                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-regInfo"
+                }
+              ],
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "text": "ReseptId"
+                  },
+                  "value": "aa0e14a7-02bf-4e55-b0b4-193ec42ec946"
+                }
+              ],
+              "status": "active",
+              "medicationReference": {
+                "reference": "urn:uuid:846145446"
+              },
+              "subject": {
+                "reference": "urn:uuid:433c54c2-9516-4f2f-8a78-010c8da44178",
+                "display": "sfm-Patient"
+              },
+              "dosage": [
+                {
+                  "extension": [
+                    {
+                      "extension": [
+                        {
+                          "url": "text",
+                          "valueString": "VED SMERTER"
+                        }
+                      ],
+                      "url": "http://example.org/fhir/StructureDefinition/sfm-application-area"
+                    },
+                    {
+                      "url": "http://ehelse.no/fhir/StructureDefinition/sfm-use",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "urn:oid:2.16.578.1.12.4.1.1.9101",
+                            "code": "1",
+                            "display": "Fast"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "sequence": 1,
+                  "text": "2 tabletter morgen daglig"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:2096460589",
+            "resource": {
+              "resourceType": "Medication",
+              "id": "2096460589",
+              "meta": {
+                "profile": [
+                  "http://ehelse.no/fhir/StructureDefinition/sfm-Medication"
+                ]
+              },
+              "extension": [
+                {
+                  "extension": [
+                    {
+                      "url": "prescriptiongroup",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "urn:oid:2.16.578.1.12.4.1.1.7421",
+                            "code": "C",
+                            "display": "Reseptgruppe C"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "url": "http://hl7.no/fhir/StructureDefinition/no-basis-prescriptiongroup"
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "name",
+                      "valueString": "Apocillin Tab 660 mg"
+                    },
+                    {
+                      "url": "registreringstype",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://ehelse.no/fhir/CodeSystem/sfm-festregistrationtype",
+                            "code": "3",
+                            "display": "Legemiddelpakning"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "name",
+                          "valueString": "Apocillin"
+                        },
+                        {
+                          "url": "packingsize",
+                          "valueString": "20"
+                        },
+                        {
+                          "url": "packingunit",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "urn:oid:2.16.578.1.12.4.1.1.7452",
+                                "code": "stk",
+                                "display": "stykk"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "url": "packinginfoprescription"
+                    }
+                  ],
+                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-medicationdetails"
+                }
+              ],
+              "identifier": [
+                {
+                  "use": "official",
+                  "type": {
+                    "text": "identifier"
+                  },
+                  "value": "589499"
+                }
+              ],
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://ehelse.no/fhir/CodeSystem/FEST",
+                    "code": "589499",
+                    "display": "Apocillin Tab 660 mg"
+                  },
+                  {
+                    "system": "http://www.whocc.no/atc",
+                    "code": "J01CE02",
+                    "display": "Fenoksymetylpenicillin"
+                  }
+                ]
+              },
+              "status": "active",
+              "form": {
+                "coding": [
+                  {
+                    "system": "urn:oid:2.16.578.1.12.4.1.1.7448",
+                    "code": "53",
+                    "display": "Tablett"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:e7dc6523-e305-4cc8-9351-af2c36145c6a",
+            "resource": {
+              "resourceType": "MedicationStatement",
+              "id": "e7dc6523-e305-4cc8-9351-af2c36145c6a",
+              "meta": {
+                "profile": [
+                  "http://ehelse.no/fhir/StructureDefinition/sfm-MedicationStatement"
+                ]
+              },
+              "extension": [
+                {
+                  "extension": [
+                    {
+                      "url": "reseptDate",
+                      "valueDate": "2020-09-04"
+                    },
+                    {
+                      "url": "expirationdate",
+                      "valueDate": "2021-09-04"
+                    },
+                    {
+                      "url": "festUpdate",
+                      "valueDateTime": "2017-01-11T14:16:50+00:00"
+                    },
+                    {
+                      "url": "freecard",
+                      "valueBoolean": false
+                    },
+                    {
+                      "url": "dssn",
+                      "valueString": "2 tabletter morgen, 2 tabletter midt på dagen og 2 tabletter kveld i 2 dager"
+                    },
+                    {
+                      "url": "lockedResept",
+                      "valueBoolean": false
+                    },
+                    {
+                      "url": "numberofpackages",
+                      "valueDecimal": 1.0
+                    },
+                    {
+                      "url": "reit",
+                      "valueString": "0"
+                    },
+                    {
+                      "url": "speciality",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "urn:oid:2.16.578.1.12.4.1.1.7426",
+                            "code": "41",
+                            "display": "Revmatologi"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "url": "itemgroup",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "urn:oid:2.16.578.1.12.4.1.1.7402",
+                            "code": "L",
+                            "display": "Legemiddel"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "starttime",
+                          "valueDateTime": "2017-01-13T00:00:00+00:00"
+                        },
+                        {
+                          "url": "endtime",
+                          "valueDateTime": "2017-01-15T00:00:00+00:00"
+                        },
+                        {
+                          "extension": [
+                            {
+                              "url": "amount",
+                              "valueQuantity": {
+                                "value": 2.0,
+                                "unit": "tablett",
+                                "system": "http://unitsofmeasure.org",
+                                "code": "tablett"
+                              }
+                            },
+                            {
+                              "url": "interval",
+                              "valueCodeableConcept": {
+                                "coding": [
+                                  {
+                                    "system": "urn:oid:2.16.578.1.12.4.1.1.9088",
+                                    "code": "1",
+                                    "display": "Døgn"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "url": "timerange",
+                              "valueCodeableConcept": {
+                                "coding": [
+                                  {
+                                    "system": "urn:oid:2.16.578.1.12.4.1.1.8325",
+                                    "code": "1",
+                                    "display": "Morgen"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "url": "accurate",
+                              "valueBoolean": false
+                            }
+                          ],
+                          "url": "repeatingdosage"
+                        },
+                        {
+                          "extension": [
+                            {
+                              "url": "amount",
+                              "valueQuantity": {
+                                "value": 2.0,
+                                "unit": "tablett",
+                                "system": "http://unitsofmeasure.org",
+                                "code": "tablett"
+                              }
+                            },
+                            {
+                              "url": "interval",
+                              "valueCodeableConcept": {
+                                "coding": [
+                                  {
+                                    "system": "urn:oid:2.16.578.1.12.4.1.1.9088",
+                                    "code": "1",
+                                    "display": "Døgn"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "url": "timerange",
+                              "valueCodeableConcept": {
+                                "coding": [
+                                  {
+                                    "system": "urn:oid:2.16.578.1.12.4.1.1.8325",
+                                    "code": "3",
+                                    "display": "Midt på dagen"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "url": "accurate",
+                              "valueBoolean": false
+                            }
+                          ],
+                          "url": "repeatingdosage"
+                        },
+                        {
+                          "extension": [
+                            {
+                              "url": "amount",
+                              "valueQuantity": {
+                                "value": 2.0,
+                                "unit": "tablett",
+                                "system": "http://unitsofmeasure.org",
+                                "code": "tablett"
+                              }
+                            },
+                            {
+                              "url": "interval",
+                              "valueCodeableConcept": {
+                                "coding": [
+                                  {
+                                    "system": "urn:oid:2.16.578.1.12.4.1.1.9088",
+                                    "code": "1",
+                                    "display": "Døgn"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "url": "timerange",
+                              "valueCodeableConcept": {
+                                "coding": [
+                                  {
+                                    "system": "urn:oid:2.16.578.1.12.4.1.1.8325",
+                                    "code": "5",
+                                    "display": "Kveld"
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "url": "accurate",
+                              "valueBoolean": false
+                            }
+                          ],
+                          "url": "repeatingdosage"
+                        }
+                      ],
+                      "url": "ereseptdosing"
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "status",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "urn:oid:2.16.578.1.12.4.1.1.7408",
+                                "code": "E",
+                                "display": "Ekspederbar"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "url": "rfstatus"
+                    }
+                  ],
+                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-reseptamendment"
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "status",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://ehelse.no/fhir/CodeSystem/sfm-medicationstatement-registration-status",
+                            "code": "3",
+                            "display": "Godkjent"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "url": "type",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://ehelse.no/fhir/CodeSystem/sfm-performer-roles",
+                            "code": "1",
+                            "display": "Forskrevet av"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "url": "helseperson",
+                      "valueReference": {
+                        "reference": "urn:uuid:431000129"
+                      }
+                    },
+                    {
+                      "url": "timestamp",
+                      "valueDateTime": "2020-09-04T08:07:51+00:00"
+                    }
+                  ],
+                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-regInfo"
+                }
+              ],
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "text": "ReseptId"
+                  },
+                  "value": "9998ce22-5613-436a-8110-71bd2e7b0df7"
+                }
+              ],
+              "status": "active",
+              "medicationReference": {
+                "reference": "urn:uuid:2096460589"
+              },
+              "subject": {
+                "reference": "urn:uuid:433c54c2-9516-4f2f-8a78-010c8da44178",
+                "display": "sfm-Patient"
+              },
+              "dosage": [
+                {
+                  "extension": [
+                    {
+                      "extension": [
+                        {
+                          "url": "text",
+                          "valueString": "MOT INFEKSJON"
+                        }
+                      ],
+                      "url": "http://example.org/fhir/StructureDefinition/sfm-application-area"
+                    },
+                    {
+                      "url": "http://ehelse.no/fhir/StructureDefinition/sfm-use",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "urn:oid:2.16.578.1.12.4.1.1.9101",
+                            "code": "2",
+                            "display": "Kur"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "sequence": 1,
+                  "text": "2 tabletter morgen, 2 tabletter midt på dagen og 2 tabletter kveld i 2 dager"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:bee37cd8-48c5-4687-ad27-a3f067447c15",
+            "resource": {
+              "resourceType": "Basic",
+              "id": "bee37cd8-48c5-4687-ad27-a3f067447c15",
+              "meta": {
+                "profile": [
+                  "http://ehelse.no/fhir/StructureDefinition/sfm-BandaPrescription"
+                ]
+              },
+              "extension": [
+                {
+                  "extension": [
+                    {
+                      "url": "productgroup",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "urn:oid:2.16.578.1.12.4.1.1.7403",
+                            "code": "601",
+                            "display": "Næringsmidler ved diverse tilstander"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-reseptdocbanda"
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "reseptDate",
+                      "valueDate": "2020-09-04"
+                    },
+                    {
+                      "url": "expirationdate",
+                      "valueDate": "2021-09-04"
+                    },
+                    {
+                      "url": "festUpdate",
+                      "valueDateTime": "2016-12-22T00:49:47+00:00"
+                    },
+                    {
+                      "url": "helfoapplication",
+                      "valueBoolean": true
+                    },
+                    {
+                      "url": "freecard",
+                      "valueBoolean": false
+                    },
+                    {
+                      "url": "dssn",
+                      "valueString": "Ikke oppgitt"
+                    },
+                    {
+                      "url": "lockedResept",
+                      "valueBoolean": false
+                    },
+                    {
+                      "url": "itemgroup",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "urn:oid:2.16.578.1.12.4.1.1.7402",
+                            "code": "A",
+                            "display": "Annet"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "url": "reimbursmentparagraph",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "urn:oid:2.16.578.1.12.4.1.1.7427",
+                            "code": "601",
+                            "display": "§5-14 §6.1"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "status",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "urn:oid:2.16.578.1.12.4.1.1.7408",
+                                "code": "E",
+                                "display": "Ekspederbar"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "url": "rfstatus"
+                    }
+                  ],
+                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-reseptamendment"
+                }
+              ],
+              "identifier": [
+                {
+                  "use": "official",
+                  "type": {
+                    "text": "reseptId"
+                  },
+                  "value": "5de76b2e-d2d8-49a0-855f-af501667cbc9"
+                }
+              ],
+              "code": {
+                "coding": [
+                  {
+                    "system": "urn:oid:2.16.578.1.12.4.1.1.7402",
+                    "code": "A",
+                    "display": "Annet"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "urn:uuid:433c54c2-9516-4f2f-8a78-010c8da44178",
+                "display": "sfm-Patient"
+              }
             }
           }
         ]
@@ -416,7 +2300,7 @@
     },
     {
       "name": "RFHentetTidspunkt",
-      "valueDateTime": "2020-09-06T13:47:22.155+00:00"
+      "valueDateTime": "2020-09-13T06:21:35.514+00:00"
     },
     {
       "name": "KJFeilkode",

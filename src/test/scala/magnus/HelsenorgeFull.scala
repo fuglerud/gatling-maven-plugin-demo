@@ -55,14 +55,9 @@ class HelsenorgeFull extends Simulation {
     .exec(http(requestName = "startside")
       .get("https://helsenorge.hn.test.nhn.no/")
       .headers(hn)
-      .check(status.is(expected = 200)))*/
-
-    .exec(http(requestName = "koronasjekk")
-      .get("https://helsenorge.hn.test.nhn.no/koronavirus/koronasjekk/")
-      .headers(hn)
       .check(status.is(expected = 200)))
 
-/*
+
     .exec(http(requestName = "startsidefooter")
       .get("https://helsenorge.hn.test.nhn.no/contentapi/internal/v1/footer")
       .headers(hn)
@@ -78,7 +73,7 @@ class HelsenorgeFull extends Simulation {
 
     //.feed(feeder1)
 
-    .exec(http(requestName = "1 "+"${site}")
+    .exec(http(requestName = "1")
       .get("${site}")
       .headers(hn)
       .check(status.is(expected = 200)))
@@ -102,7 +97,7 @@ class HelsenorgeFull extends Simulation {
 
     .pause(1,4)
 
-    .exec(http(requestName = "2 "+"${site}")
+    .exec(http(requestName = "2")
       .get("${site}")
       .headers(hn)
       .check(status.is(expected = 200)))
@@ -121,7 +116,7 @@ class HelsenorgeFull extends Simulation {
 
     //.feed(feeder3)
 
-    .exec(http(requestName = "3 "+"${site}")
+    .exec(http(requestName = "3")
       .get("${site}")
       .headers(hn)
       .check(status.is(expected = 200)))

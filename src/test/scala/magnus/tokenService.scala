@@ -10,24 +10,20 @@ class tokenService extends Simulation  {
     .doNotTrackHeader("1")
     .disableCaching
 
-
   val scn = scenario("TokenService")
 
     .exec(flushCookieJar)
     .exec(flushHttpCache)
 
-    .feed(csv("magnus/01_EPJTicketTestData.csv").circular)
-    .feed(csv("magnus/02_EPJTicketTestData.csv").circular)
-
     .feed(csv("magnus/SFMBasisAPI_QA.csv").circular)
     .feed(csv("magnus/TestdataSFMBasis.csv").circular)
 
-
+    //Systemtoken
       .exec(http("request_access_token")
         .post("https://helseid-sts.test.nhn.no/connect/token")
         .header("Authorization", "Basic Y2ZhOWM4ZmItOGRkNi00ZDdjLWIxNDItNzg2YzNkNzc0ZjY0OiUyQjRTbmdMcHV6Um5zbkk3SjVoQ0xHTVlwcUFTVUJRdjJjUGRrZU01JTJCYUIwZHhSSjlCU3diajJlaSUyRlNCdyUyRkF6VWZkSG81VENWVVpJSW1xcEtOY0RRSUElM0QlM0Q=")
         .formParam("grant_type", "client_credentials")
-        .formParam("client_id", "cfa9c8fb-8dd6-4d7c-b142-786c3d774f64")
+        .formParam("client_id", "a08b983f-d5bc-4bbe-ac0e-25fa1e8c53e7")
         .formParam("client_secret", "%2B4SngLpuzRnsnI7J5hCLGMYpqASUBQv2cPdkeM5%2BaB0dxRJ9BSwbj2ei%2FSBw%2FAzUfdHo5TCVUZIImqpKNcDQIA%3D%3D")
         .formParam("audience", "e-helse/sfm.api/sfm.api")
         .check(regex("access_token\":\"(.*?)\"").saveAs("access_token")))
@@ -37,6 +33,12 @@ class tokenService extends Simulation  {
       println(session("access_token").as[String])
       session})
 /*
+
+//Brukertoken
+
+//et kall her som "lege"? (simulere "åpne browser fra toolet"? Må ha brukertoken.
+
+
     .exec(http("getMedication")
       .post("https://base-fhir.qa.forskrivning.no/Patient/$getMedication")
       .header("Authorization","Bearer ${access_token}")
