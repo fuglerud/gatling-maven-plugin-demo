@@ -1,171 +1,312 @@
 {
-  "Kontakter": [
+  "resourceType": "Parameters",
+  "parameter": [
     {
-      "Type": 1,
-      "Spesifiser": "Nurse",
-      "Navn": "Gaylord Focker",
-      "AdresseLinje1": "NADDERUDVEIEN",
-      "AdresseLinje2": "168",
-      "AdresseLinje3": "Norge",
-      "Telefonnummer": "95240601",
-      "Beskrivelse": "Andre leger enn fastlegen",
-      "Donorkontakt": false,
-      "EndretDato": "2020-09-07T16:52:23",
-      "Versjon": 1,
-      "HarVersjonsnummer": true,
-      "Id": "sK1bDPYc1q89conGXeN2QXQSB4dfD60zuBXYRNxbwcxaCgraT7JjDx5xI22jlyJT",
-      "Kode": "ZvsRmlfujVZ1qMJ7M9iS3w"
+      "name": "medication",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "8672ae9e-8a83-4402-accc-801283ee3802",
+        "meta": {
+          "lastUpdated": "2020-09-22T06:22:20.4911677+00:00",
+          "source": "http://base-fhir.qa.forskrivning.no/Patient/$getMedication",
+          "profile": [
+            "http://ehelse.no/fhir/StructureDefinition/sfm-MedicationBundle"
+          ]
+        },
+        "type": "document",
+        "timestamp": "2020-09-22T06:22:20.4911325+00:00",
+        "total": 3,
+        "link": [
+          {
+            "relation": "self",
+            "url": "http://base-fhir.qa.forskrivning.no/Patient/$getMedication"
+          }
+        ],
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:3dca7d39-b6cc-436e-81e1-1ae813ba3d91",
+            "resource": {
+              "resourceType": "Composition",
+              "id": "3dca7d39-b6cc-436e-81e1-1ae813ba3d91",
+              "meta": {
+                "profile": [
+                  "http://ehelse.no/fhir/StructureDefinition/sfm-MedicationComposition"
+                ]
+              },
+              "identifier": {
+                "use": "official",
+                "value": "469697fe-b44b-4574-a640-921f6035e5fe"
+              },
+              "status": "final",
+              "type": {
+                "coding": [
+                  {
+                    "system": "http://loinc.org",
+                    "code": "11503-0",
+                    "display": "Medical records"
+                  }
+                ]
+              },
+              "subject": {
+                "reference": "urn:uuid:08837789-e764-4c3e-af9f-97e791679271",
+                "display": "sfm-Patient"
+              },
+              "date": "2020-09-22T06:22:20.488019+00:00",
+              "author": [
+                {
+                  "reference": "urn:uuid:1010038",
+                  "display": "sfm-Practitioner"
+                }
+              ],
+              "title": "Medication summary",
+              "confidentiality": "N",
+              "section": [
+                {
+                  "title": "Medication",
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://ehelse.no/fhir/CodeSystem/sfm-section-types",
+                        "code": "sectionMedication",
+                        "display": "List of Medication statements"
+                      }
+                    ]
+                  },
+                  "text": {
+                    "status": "generated",
+                    "div": "<xhtml:div xmlns:xhtml=\"http://www.w3.org/1999/xhtml\"></xhtml:div>"
+                  },
+                  "emptyReason": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/list-empty-reason",
+                        "code": "unavailable",
+                        "display": "Unavailable"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "PllInfo",
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://ehelse.no/fhir/CodeSystem/sfm-section-types",
+                        "code": "sectionPLLinfo",
+                        "display": "PLL Info"
+                      }
+                    ]
+                  },
+                  "text": {
+                    "status": "generated",
+                    "div": "<xhtml:div xmlns:xhtml=\"http://www.w3.org/1999/xhtml\"></xhtml:div>"
+                  },
+                  "emptyReason": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/list-empty-reason",
+                        "code": "unavailable",
+                        "display": "Unavailable"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "Allergies",
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://ehelse.no/fhir/CodeSystem/sfm-section-types",
+                        "code": "sectionAllergies",
+                        "display": "Section allergies"
+                      }
+                    ]
+                  },
+                  "text": {
+                    "status": "generated",
+                    "div": "<xhtml:div xmlns:xhtml=\"http://www.w3.org/1999/xhtml\"></xhtml:div>"
+                  },
+                  "emptyReason": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/list-empty-reason",
+                        "code": "unavailable",
+                        "display": "Unavailable"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "title": "Other Prescriptions",
+                  "code": {
+                    "coding": [
+                      {
+                        "system": "http://ehelse.no/fhir/CodeSystem/sfm-section-types",
+                        "code": "sectionOtherPrescriptions",
+                        "display": "List of non medical prescriptions"
+                      }
+                    ]
+                  },
+                  "text": {
+                    "status": "generated",
+                    "div": "<xhtml:div xmlns:xhtml=\"http://www.w3.org/1999/xhtml\"></xhtml:div>"
+                  },
+                  "emptyReason": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/list-empty-reason",
+                        "code": "unavailable",
+                        "display": "Unavailable"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:08837789-e764-4c3e-af9f-97e791679271",
+            "resource": {
+              "resourceType": "Patient",
+              "id": "08837789-e764-4c3e-af9f-97e791679271",
+              "meta": {
+                "profile": [
+                  "http://ehelse.no/fhir/StructureDefinition/sfm-Patient"
+                ]
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "system": "urn:oid:2.16.578.1.12.4.1.4.1",
+                  "value": "02020558515"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "family": "Iversen",
+                  "given": [
+                    "Marcus"
+                  ]
+                }
+              ],
+              "gender": "male",
+              "address": [
+                {
+                  "use": "home",
+                  "type": "physical",
+                  "text": "Testveien 10",
+                  "city": "Oslo",
+                  "postalCode": "1234"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:1010038",
+            "resource": {
+              "resourceType": "Practitioner",
+              "id": "1010038",
+              "meta": {
+                "profile": [
+                  "http://ehelse.no/fhir/StructureDefinition/sfm-Practitioner"
+                ]
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.no/fhir/NamingSystem/HPR",
+                        "code": "HPR-nummer"
+                      }
+                    ]
+                  },
+                  "system": "urn:oid:2.16.578.1.12.4.1.4.4",
+                  "value": "1010038"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.no/fhir/StructureDefinition/no-basis-middlename",
+                      "valueString": "Psa"
+                    }
+                  ],
+                  "use": "official",
+                  "family": "Visjon",
+                  "given": [
+                    "Bjørn"
+                  ]
+                }
+              ],
+              "gender": "male",
+              "birthDate": "1983-12-08"
+            }
+          }
+        ]
+      }
     },
     {
-      "Type": 1,
-      "Spesifiser": "Lege",
-      "Navn": "Marianne Braaten",
-      "AdresseLinje1": "NADDERUDVEIEN",
-      "AdresseLinje2": "168",
-      "AdresseLinje3": "Norge",
-      "Telefonnummer": "95240601",
-      "Beskrivelse": "Andre leger enn fastlegen",
-      "Donorkontakt": false,
-      "EndretDato": "2020-09-07T16:14:22",
-      "Versjon": 1,
-      "HarVersjonsnummer": true,
-      "Id": "jobthIFZ_or2i67-CKZgXFRKqQnAS92fjUOU5-E6ERzGiqWOhlkFnlVEu247p4KF",
-      "Kode": "ZvsRmlfujVZ1qMJ7M9iS3w"
+      "name": "RFHentetTidspunkt",
+      "valueDateTime": "2020-09-22T06:22:18.2534403+00:00"
     },
     {
-      "Type": 1,
-      "Spesifiser": "Lege",
-      "Navn": "Nikolai Braaten",
-      "AdresseLinje1": "NADDERUDVEIEN",
-      "AdresseLinje2": "168",
-      "AdresseLinje3": "Norge",
-      "Telefonnummer": "95240601",
-      "Beskrivelse": "Andre leger enn fastlegen",
-      "Donorkontakt": false,
-      "EndretDato": "2020-09-07T17:26:06",
-      "Versjon": 1,
-      "HarVersjonsnummer": true,
-      "Id": "zdudQN-1ZVaFis0OmEzhWZeDULaJxBKTxZUNHzbF2bdrNUp_QSMavO74E90_CXim",
-      "Kode": "ZvsRmlfujVZ1qMJ7M9iS3w"
+      "name": "KJFeilkode",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://ehelse.no/fhir/CodeSystem/sfm-kj-rf-error-code",
+            "code": "5"
+          }
+        ],
+        "text": "Ingen rettighet til KJ oppslag"
+      }
     },
     {
-      "Type": 1,
-      "Spesifiser": "Lege",
-      "Navn": "Nikolai Braaten",
-      "AdresseLinje1": "NADDERUDVEIEN",
-      "AdresseLinje2": "168",
-      "AdresseLinje3": "Norge",
-      "Telefonnummer": "95240601",
-      "Beskrivelse": "Andre leger enn fastlegen",
-      "Donorkontakt": false,
-      "EndretDato": "2020-09-07T17:02:36",
-      "Versjon": 1,
-      "HarVersjonsnummer": true,
-      "Id": "F8KoJkrB6bIBM2Wl6BUhSrx1O7Mpp66ILLGIKMG5qfuu8N5-3iRg3Mzr8DRhzxjr",
-      "Kode": "ZvsRmlfujVZ1qMJ7M9iS3w"
+      "name": "RFM96Feilkode",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "urn:oid:2.16.578.1.12.4.1.1.7419",
+            "code": "50",
+            "display": "Databasefeil."
+          }
+        ],
+        "text": "Databasefeil."
+      }
     },
     {
-      "Type": 1,
-      "Spesifiser": "Lege",
-      "Navn": "Nikolai Braaten",
-      "AdresseLinje1": "NADDERUDVEIEN",
-      "AdresseLinje2": "168",
-      "AdresseLinje3": "Norge",
-      "Telefonnummer": "95240601",
-      "Beskrivelse": "Andre leger enn fastlegen",
-      "Donorkontakt": false,
-      "EndretDato": "2020-09-07T16:19:21",
-      "Versjon": 1,
-      "HarVersjonsnummer": true,
-      "Id": "_A68Qz_sDiqqiBYgiQAX2L683LyXsAdZGuflK7h4jIMd2Y3NtjTeje5cGvI0Nz_6",
-      "Kode": "ZvsRmlfujVZ1qMJ7M9iS3w"
+      "name": "RFM912Feilkode",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "urn:oid:2.16.578.1.12.4.1.1.7419",
+            "code": "50",
+            "display": "Databasefeil."
+          }
+        ],
+        "text": "Databasefeil."
+      }
     },
     {
-      "Type": 1,
-      "Spesifiser": "Lege",
-      "Navn": "Nikolai Braaten",
-      "AdresseLinje1": "NADDERUDVEIEN",
-      "AdresseLinje2": "168",
-      "AdresseLinje3": "Norge",
-      "Telefonnummer": "95240601",
-      "Beskrivelse": "Andre leger enn fastlegen",
-      "Donorkontakt": false,
-      "EndretDato": "2020-09-07T17:02:15",
-      "Versjon": 1,
-      "HarVersjonsnummer": true,
-      "Id": "DUJ0klSJTYpLcPWyBOPT_h6_JoOFfy_8EewHk5RgPhmYJ9O3gJFtidVS_5goGg8P",
-      "Kode": "ZvsRmlfujVZ1qMJ7M9iS3w"
+      "name": "KJHarLegemidler",
+      "valueBoolean": false
     },
     {
-      "Type": 1,
-      "Spesifiser": "Lege",
-      "Navn": "Nikolai Braaten",
-      "AdresseLinje1": "NADDERUDVEIEN",
-      "AdresseLinje2": "168",
-      "AdresseLinje3": "Norge",
-      "Telefonnummer": "95240601",
-      "Beskrivelse": "Andre leger enn fastlegen",
-      "Donorkontakt": false,
-      "EndretDato": "2020-09-07T17:03:11",
-      "Versjon": 1,
-      "HarVersjonsnummer": true,
-      "Id": "1fZAraFwNAiUOpGyQOyJAfZnY8JYRQWobhaKWImm1KmXfRTU68ZGRhcyIoo5Obry",
-      "Kode": "ZvsRmlfujVZ1qMJ7M9iS3w"
+      "name": "KJHarLaste",
+      "valueBoolean": false
     },
     {
-      "Type": 1,
-      "Spesifiser": "Lege",
-      "Navn": "Nikolai Braaten",
-      "AdresseLinje1": "NADDERUDVEIEN",
-      "AdresseLinje2": "168",
-      "AdresseLinje3": "Norge",
-      "Telefonnummer": "95240601",
-      "Beskrivelse": "Andre leger enn fastlegen",
-      "Donorkontakt": false,
-      "EndretDato": "2020-09-07T17:34:16",
-      "Versjon": 1,
-      "HarVersjonsnummer": true,
-      "Id": "Dl2aN1FkKz95zfRA2bzShqhtHRtDwfOzyjkM6DszULwFNi-zSQgQ3bE4fzwfdrHM",
-      "Kode": "ZvsRmlfujVZ1qMJ7M9iS3w"
+      "name": "RFHarLaste",
+      "valueBoolean": false
     },
     {
-      "Type": 1,
-      "Spesifiser": "Lege",
-      "Navn": "Nikolai Braaten",
-      "AdresseLinje1": "NADDERUDVEIEN",
-      "AdresseLinje2": "168",
-      "AdresseLinje3": "Norge",
-      "Telefonnummer": "95240601",
-      "Beskrivelse": "Andre leger enn fastlegen",
-      "Donorkontakt": false,
-      "EndretDato": "2020-09-07T16:59:23",
-      "Versjon": 1,
-      "HarVersjonsnummer": true,
-      "Id": "WsXYhtCXBCMFyfRtzDOfrAWVP530TwKawNMfz6JqN2V5sG9_GSDFAUZ7tt5mz8XF",
-      "Kode": "ZvsRmlfujVZ1qMJ7M9iS3w"
-    },
-    {
-      "Type": 1,
-      "Spesifiser": "Lege",
-      "Navn": "Nikolai Fuglerud",
-      "AdresseLinje1": "NADDERUDVEIEN",
-      "AdresseLinje2": "168",
-      "AdresseLinje3": "Norge",
-      "Telefonnummer": "95240601",
-      "Beskrivelse": "Andre leger enn fastlegen",
-      "Donorkontakt": false,
-      "EndretDato": "2020-09-07T17:52:26",
-      "Versjon": 1,
-      "HarVersjonsnummer": true,
-      "Id": "LEbpPzDNn0ugQiyhNhGJeXLWpqY6SiozOk1LkGGSv7MFFEo4TrqdlaHQ8lvj9xUz",
-      "Kode": "ZvsRmlfujVZ1qMJ7M9iS3w"
+      "name": "RFPasientreservasjon",
+      "valueBoolean": false
     }
-  ],
-  "TotaltAntall": 10,
-  "MaksAntall": 10,
-  "StatusCode": 200,
-  "InformationMessage": null,
-  "WarningMessage": null,
-  "ErrorMessage": null,
-  "RedirectUrl": null
+  ]
 }
