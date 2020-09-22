@@ -59,7 +59,8 @@ class SFMBasisAPISimulation extends Simulation {
       .body(ElFileBody("magnus/SendMedication_request.json"))
       .check(status.is(200)))*/
 
-  /* val selectedProfile = System.getProperty("selectedProfile") match {
+
+   val selectedProfile = System.getProperty("selectedProfile") match {
    case "profile1" => scn.inject(atOnceUsers(1))
    case "profile2" => scn.inject(rampUsersPerSec(1) to 150 during (15 minutes),constantUsersPerSec(150) during(48 hours))
    case "profile3" => scn.inject(constantUsersPerSec(4) during(30))
@@ -68,15 +69,16 @@ class SFMBasisAPISimulation extends Simulation {
    case "profile6" => scn.inject(incrementUsersPerSec(5).times(5).eachLevelLasting(10).separatedByRampsLasting(10).startingFrom(10))
    case "profile7" => scn.inject(rampUsersPerSec(1) to 15 during (3 minutes),constantUsersPerSec(15) during(5 minutes))
    case "profile8" => scn.inject(constantUsersPerSec(1) during(1481))
- }*/
+ }
+
+}
 
 
-  setUp(scn.inject(atOnceUsers(2))).protocols(httpProtocol)
+  //setUp(scn.inject(atOnceUsers(2))).protocols(httpProtocol)
   //setUp(scn.inject(rampUsersPerSec(1) to 5 during (30),constantUsersPerSec(5) during(60))).protocols(httpProtocol)
   //setUp(scn.inject(constantUsersPerSec(4) during(30))).protocols(httpProtocol)
   //setUp(scn.inject(rampConcurrentUsers(5) to(200) during(120))).protocols(httpProtocol)
   //setUp(scn.inject(constantConcurrentUsers(10) during (120), rampConcurrentUsers(10) to (100) during (120))).protocols(httpProtocol)
   //setUp(scn.inject(incrementUsersPerSec(5).times(5).eachLevelLasting(10).separatedByRampsLasting(10).startingFrom(10))).protocols(httpProtocol)
 
-
-}
+//}
