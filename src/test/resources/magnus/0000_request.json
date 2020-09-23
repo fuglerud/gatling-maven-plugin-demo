@@ -47,6 +47,10 @@
           }
         ]
       }
+    },
+    {
+      "name": "SamtykkeKjernejournal",
+      "valueCode": "HPMOTTATTSAMTYKKE"
     }
   ]
 }

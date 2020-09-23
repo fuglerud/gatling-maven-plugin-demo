@@ -1,0 +1,66 @@
+{
+  "resourceType": "Parameters",
+  "parameter": [
+    {
+      "name": "patient",
+      "resource": {
+        "resourceType": "Patient",
+        "meta": {
+          "profile": [
+            "http://ehelse.no/fhir/StructureDefinition/sfm-Patient"
+          ]
+        },
+        "identifier": [
+          {
+            "use": "official",
+            "system": "urn:oid:2.16.578.1.12.4.1.4.1",
+            "value": "26039211202"
+          }
+        ],
+        "active": true,
+        "name":[
+          {
+            "extension":[
+              {
+                "url": "http://hl7.no/fhir/StructureDefinition/no-basis-middlename",
+                "valueString": "Alma"
+              }
+            ],
+            "use": "official",
+            "family": "Borg",
+            "given": [
+              "Amalie"
+            ]
+          }
+        ],
+        "gender": "female",
+        "address":[
+          {
+            "use": "work",
+            "type": "both",
+            "text": "Sæther Street 85",
+            "city": "Oslo",
+            "district": "Asker",
+            "postalCode": "6001"
+          }
+        ]
+      }
+    },
+    {
+      "name": "historyTimestamp",
+      "valueDateTime": "2000-03-02T02:02:02.000Z"
+    },
+    {
+      "name": "SamtykkeKjernejournal",
+      "valueCode": "HPAKUTT"
+    },
+    {
+      "name": "SamtykkeSperretLegemidler",
+      "valueCode": "HPAKUTT"
+    },
+    {
+      "name": "SamtykkeLasteResepter",
+      "valueCode": "HPAKUTT"
+    }
+  ]
+}

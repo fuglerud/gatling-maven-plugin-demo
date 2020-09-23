@@ -172,6 +172,6 @@ class HnKjSimulation extends Simulation{
 
 
         //setUp(scn.inject(atOnceUsers(2))).protocols(httpProtocol)
-        setUp(scn.inject(constantUsersPerSec(1) during(9350))).protocols(httpProtocol)
+        setUp(scn.inject(constantUsersPerSec(4) during(30))).protocols(httpProtocol)
 
     }

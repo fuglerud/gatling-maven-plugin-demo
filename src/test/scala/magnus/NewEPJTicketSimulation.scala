@@ -40,31 +40,31 @@ class NewEPJTicketSimulation extends Simulation{
       println(session("access_token").as[String])
       session})
 
+  /*
+      .exec(http("request_epj_ticket")
+       //.post("https://api.qa2.kjernejournal-test.no:8000/v1/helseindikator/")
+        .post("https://api.st1.kjernejournal-test.no:8000/v1/helseindikator/")
+        .header("Authorization", "${authorizationHeader}")
+        .headers(headers_0)
+        .body(ElFileBody("magnus/epj_ticket_request.json"))
+        .check(regex("ticket\" : \"(.*?)\"").saveAs("epj_ticket")))
 
-    .exec(http("request_epj_ticket")
-     //.post("https://api.qa2.kjernejournal-test.no:8000/v1/helseindikator/")
-      .post("https://api.st1.kjernejournal-test.no:8000/v1/helseindikator/")
-      .header("Authorization", "${authorizationHeader}")
-      .headers(headers_0)
-      .body(ElFileBody("magnus/epj_ticket_request.json"))
-      .check(regex("ticket\" : \"(.*?)\"").saveAs("epj_ticket")))
+      .exec(session=>{
+        println("epj_ticket:")
+        println(session("epj_ticket").as[String])
+        session})
 
-    .exec(session=>{
-      println("epj_ticket:")
-      println(session("epj_ticket").as[String])
-      session})
 
-/*
 
-  //POST https://qa1.kjernejournal-test.no/hpp-webapp/api/labresult/N2E1ODYyMDMtODM2Mi00NjdiLWIyMDAtZjliZTIyYmM0Zjk0/metadata HTTP/1.1
-  //Host: qa1.kjernejournal-test.no
+    //POST https://qa1.kjernejournal-test.no/hpp-webapp/api/labresult/N2E1ODYyMDMtODM2Mi00NjdiLWIyMDAtZjliZTIyYmM0Zjk0/metadata HTTP/1.1
+    //Host: qa1.kjernejournal-test.no
 
-    .exec(http("request_labresult")
-      .post("https://st1.kjernejournal-test.no/hpp-webapp/api/labresult/")
-      .header("Authorization", "${authorizationHeader}")
-      .headers(headers_0))
+      .exec(http("request_labresult")
+        .post("https://st1.kjernejournal-test.no/hpp-webapp/api/labresult/")
+        .header("Authorization", "${authorizationHeader}")
+        .headers(headers_0))
 
-  */
+    */
 
   setUp(scn.inject(atOnceUsers(1))).protocols(httpProtocol)
 
