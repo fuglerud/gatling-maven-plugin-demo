@@ -5,16 +5,16 @@
       "name": "medication",
       "resource": {
         "resourceType": "Bundle",
-        "id": "8672ae9e-8a83-4402-accc-801283ee3802",
+        "id": "37128590-9d8c-443e-adba-0e9ac36f17b0",
         "meta": {
-          "lastUpdated": "2020-09-22T06:22:20.4911677+00:00",
+          "lastUpdated": "2020-09-23T20:50:51.0053426+00:00",
           "source": "http://base-fhir.qa.forskrivning.no/Patient/$getMedication",
           "profile": [
             "http://ehelse.no/fhir/StructureDefinition/sfm-MedicationBundle"
           ]
         },
         "type": "document",
-        "timestamp": "2020-09-22T06:22:20.4911325+00:00",
+        "timestamp": "2020-09-23T20:50:51.0053235+00:00",
         "total": 3,
         "link": [
           {
@@ -24,10 +24,10 @@
         ],
         "entry": [
           {
-            "fullUrl": "urn:uuid:3dca7d39-b6cc-436e-81e1-1ae813ba3d91",
+            "fullUrl": "urn:uuid:12488c3d-7b11-48a7-bcc6-a4b32c0317c1",
             "resource": {
               "resourceType": "Composition",
-              "id": "3dca7d39-b6cc-436e-81e1-1ae813ba3d91",
+              "id": "12488c3d-7b11-48a7-bcc6-a4b32c0317c1",
               "meta": {
                 "profile": [
                   "http://ehelse.no/fhir/StructureDefinition/sfm-MedicationComposition"
@@ -35,7 +35,7 @@
               },
               "identifier": {
                 "use": "official",
-                "value": "469697fe-b44b-4574-a640-921f6035e5fe"
+                "value": "b9f34a5b-bd28-4188-96db-297fc8bc492e"
               },
               "status": "final",
               "type": {
@@ -48,10 +48,10 @@
                 ]
               },
               "subject": {
-                "reference": "urn:uuid:08837789-e764-4c3e-af9f-97e791679271",
+                "reference": "urn:uuid:95e6bc0e-d803-4137-a3b0-a00e469adf93",
                 "display": "sfm-Patient"
               },
-              "date": "2020-09-22T06:22:20.488019+00:00",
+              "date": "2020-09-23T20:50:51.0034247+00:00",
               "author": [
                 {
                   "reference": "urn:uuid:1010038",
@@ -74,16 +74,17 @@
                   },
                   "text": {
                     "status": "generated",
-                    "div": "<xhtml:div xmlns:xhtml=\"http://www.w3.org/1999/xhtml\"></xhtml:div>"
+                    "div": "<xhtml:div xmlns:xhtml=\"http://www.w3.org/1999/xhtml\">Nil Known</xhtml:div>"
                   },
                   "emptyReason": {
                     "coding": [
                       {
                         "system": "http://terminology.hl7.org/CodeSystem/list-empty-reason",
-                        "code": "unavailable",
-                        "display": "Unavailable"
+                        "code": "nilknown",
+                        "display": "Nil Known"
                       }
-                    ]
+                    ],
+                    "text": "Nil Known"
                   }
                 },
                 {
@@ -99,16 +100,17 @@
                   },
                   "text": {
                     "status": "generated",
-                    "div": "<xhtml:div xmlns:xhtml=\"http://www.w3.org/1999/xhtml\"></xhtml:div>"
+                    "div": "<xhtml:div xmlns:xhtml=\"http://www.w3.org/1999/xhtml\">Nil Known</xhtml:div>"
                   },
                   "emptyReason": {
                     "coding": [
                       {
                         "system": "http://terminology.hl7.org/CodeSystem/list-empty-reason",
-                        "code": "unavailable",
-                        "display": "Unavailable"
+                        "code": "nilknown",
+                        "display": "Nil Known"
                       }
-                    ]
+                    ],
+                    "text": "Nil Known"
                   }
                 },
                 {
@@ -124,16 +126,17 @@
                   },
                   "text": {
                     "status": "generated",
-                    "div": "<xhtml:div xmlns:xhtml=\"http://www.w3.org/1999/xhtml\"></xhtml:div>"
+                    "div": "<xhtml:div xmlns:xhtml=\"http://www.w3.org/1999/xhtml\">Nil Known</xhtml:div>"
                   },
                   "emptyReason": {
                     "coding": [
                       {
                         "system": "http://terminology.hl7.org/CodeSystem/list-empty-reason",
-                        "code": "unavailable",
-                        "display": "Unavailable"
+                        "code": "nilknown",
+                        "display": "Nil Known"
                       }
-                    ]
+                    ],
+                    "text": "Nil Known"
                   }
                 },
                 {
@@ -149,26 +152,27 @@
                   },
                   "text": {
                     "status": "generated",
-                    "div": "<xhtml:div xmlns:xhtml=\"http://www.w3.org/1999/xhtml\"></xhtml:div>"
+                    "div": "<xhtml:div xmlns:xhtml=\"http://www.w3.org/1999/xhtml\">Nil Known</xhtml:div>"
                   },
                   "emptyReason": {
                     "coding": [
                       {
                         "system": "http://terminology.hl7.org/CodeSystem/list-empty-reason",
-                        "code": "unavailable",
-                        "display": "Unavailable"
+                        "code": "nilknown",
+                        "display": "Nil Known"
                       }
-                    ]
+                    ],
+                    "text": "Nil Known"
                   }
                 }
               ]
             }
           },
           {
-            "fullUrl": "urn:uuid:08837789-e764-4c3e-af9f-97e791679271",
+            "fullUrl": "urn:uuid:95e6bc0e-d803-4137-a3b0-a00e469adf93",
             "resource": {
               "resourceType": "Patient",
-              "id": "08837789-e764-4c3e-af9f-97e791679271",
+              "id": "95e6bc0e-d803-4137-a3b0-a00e469adf93",
               "meta": {
                 "profile": [
                   "http://ehelse.no/fhir/StructureDefinition/sfm-Patient"
@@ -178,7 +182,7 @@
                 {
                   "use": "official",
                   "system": "urn:oid:2.16.578.1.12.4.1.4.1",
-                  "value": "02020558515"
+                  "value": "22110056781"
                 }
               ],
               "active": true,
@@ -251,8 +255,12 @@
       }
     },
     {
+      "name": "KJHentetTidspunkt",
+      "valueDateTime": "2020-09-23T20:50:50.949+00:00"
+    },
+    {
       "name": "RFHentetTidspunkt",
-      "valueDateTime": "2020-09-22T06:22:18.2534403+00:00"
+      "valueDateTime": "2020-09-23T20:50:50.245+00:00"
     },
     {
       "name": "KJFeilkode",
@@ -260,10 +268,10 @@
         "coding": [
           {
             "system": "http://ehelse.no/fhir/CodeSystem/sfm-kj-rf-error-code",
-            "code": "5"
+            "code": "0"
           }
         ],
-        "text": "Ingen rettighet til KJ oppslag"
+        "text": "OK"
       }
     },
     {
@@ -271,12 +279,11 @@
       "valueCodeableConcept": {
         "coding": [
           {
-            "system": "urn:oid:2.16.578.1.12.4.1.1.7419",
-            "code": "50",
-            "display": "Databasefeil."
+            "system": "http://ehelse.no/fhir/CodeSystem/sfm-kj-rf-error-code",
+            "code": "0"
           }
         ],
-        "text": "Databasefeil."
+        "text": "OK"
       }
     },
     {
@@ -284,12 +291,11 @@
       "valueCodeableConcept": {
         "coding": [
           {
-            "system": "urn:oid:2.16.578.1.12.4.1.1.7419",
-            "code": "50",
-            "display": "Databasefeil."
+            "system": "http://ehelse.no/fhir/CodeSystem/sfm-kj-rf-error-code",
+            "code": "0"
           }
         ],
-        "text": "Databasefeil."
+        "text": "OK"
       }
     },
     {
