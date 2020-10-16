@@ -5,16 +5,16 @@
       "name": "medication",
       "resource": {
         "resourceType": "Bundle",
-        "id": "cb9fb69f-92df-4ffb-91f4-d52d40e48e2a",
+        "id": "aa0bf086-4645-4b0a-8883-8ce6bb0b5ca5",
         "meta": {
-          "lastUpdated": "2020-09-23T17:01:28.3723583+00:00",
+          "lastUpdated": "2020-09-22T11:16:04.4772931+00:00",
           "source": "http://base-fhir.qa.forskrivning.no/Patient/$getMedication",
           "profile": [
             "http://ehelse.no/fhir/StructureDefinition/sfm-MedicationBundle"
           ]
         },
         "type": "document",
-        "timestamp": "2020-09-23T17:01:28.3723419+00:00",
+        "timestamp": "2020-09-22T11:16:04.4772592+00:00",
         "total": 3,
         "link": [
           {
@@ -24,10 +24,10 @@
         ],
         "entry": [
           {
-            "fullUrl": "urn:uuid:d7799d03-b19e-4bd3-9be6-8a6ed8808cd3",
+            "fullUrl": "urn:uuid:d43e2478-0f88-4a0e-9e85-25069d4c9fae",
             "resource": {
               "resourceType": "Composition",
-              "id": "d7799d03-b19e-4bd3-9be6-8a6ed8808cd3",
+              "id": "d43e2478-0f88-4a0e-9e85-25069d4c9fae",
               "meta": {
                 "profile": [
                   "http://ehelse.no/fhir/StructureDefinition/sfm-MedicationComposition"
@@ -35,7 +35,7 @@
               },
               "identifier": {
                 "use": "official",
-                "value": "3e34cb27-c463-4497-82eb-6ff19c065506"
+                "value": "06b187d5-930e-469c-9f11-da88e56568c4"
               },
               "status": "final",
               "type": {
@@ -48,13 +48,13 @@
                 ]
               },
               "subject": {
-                "reference": "urn:uuid:331ade12-d52a-4f72-b3c8-e10c2ab769a7",
+                "reference": "urn:uuid:72ab34e9-b09a-4d55-ac9f-80ee4a8d69d1",
                 "display": "sfm-Patient"
               },
-              "date": "2020-09-23T17:01:28.3704234+00:00",
+              "date": "2020-09-22T11:16:04.4743749+00:00",
               "author": [
                 {
-                  "reference": "urn:uuid:431002790",
+                  "reference": "urn:uuid:1010038",
                   "display": "sfm-Practitioner"
                 }
               ],
@@ -165,10 +165,10 @@
             }
           },
           {
-            "fullUrl": "urn:uuid:331ade12-d52a-4f72-b3c8-e10c2ab769a7",
+            "fullUrl": "urn:uuid:72ab34e9-b09a-4d55-ac9f-80ee4a8d69d1",
             "resource": {
               "resourceType": "Patient",
-              "id": "331ade12-d52a-4f72-b3c8-e10c2ab769a7",
+              "id": "72ab34e9-b09a-4d55-ac9f-80ee4a8d69d1",
               "meta": {
                 "profile": [
                   "http://ehelse.no/fhir/StructureDefinition/sfm-Patient"
@@ -178,15 +178,15 @@
                 {
                   "use": "official",
                   "system": "urn:oid:2.16.578.1.12.4.1.4.1",
-                  "value": "06115222749"
+                  "value": "22110056781"
                 }
               ],
               "active": true,
               "name": [
                 {
-                  "family": "Christoffersen",
+                  "family": "Iversen",
                   "given": [
-                    "Kristian John"
+                    "Marcus"
                   ]
                 }
               ],
@@ -203,10 +203,10 @@
             }
           },
           {
-            "fullUrl": "urn:uuid:431002790",
+            "fullUrl": "urn:uuid:1010038",
             "resource": {
               "resourceType": "Practitioner",
-              "id": "431002790",
+              "id": "1010038",
               "meta": {
                 "profile": [
                   "http://ehelse.no/fhir/StructureDefinition/sfm-Practitioner"
@@ -224,7 +224,7 @@
                     ]
                   },
                   "system": "urn:oid:2.16.578.1.12.4.1.4.4",
-                  "value": "431002790"
+                  "value": "1010038"
                 }
               ],
               "active": true,
@@ -233,18 +233,18 @@
                   "extension": [
                     {
                       "url": "http://hl7.no/fhir/StructureDefinition/no-basis-middlename",
-                      "valueString": "Fos"
+                      "valueString": "Psa"
                     }
                   ],
                   "use": "official",
-                  "family": "Minde",
+                  "family": "Visjon",
                   "given": [
-                    "Bengt"
+                    "Bjørn"
                   ]
                 }
               ],
               "gender": "male",
-              "birthDate": "1991-06-24"
+              "birthDate": "1983-12-08"
             }
           }
         ]
@@ -252,7 +252,7 @@
     },
     {
       "name": "RFHentetTidspunkt",
-      "valueDateTime": "2020-09-23T17:01:28.326+00:00"
+      "valueDateTime": "2020-09-22T11:16:04.407+00:00"
     },
     {
       "name": "KJFeilkode",
@@ -283,11 +283,12 @@
       "valueCodeableConcept": {
         "coding": [
           {
-            "system": "http://ehelse.no/fhir/CodeSystem/sfm-kj-rf-error-code",
-            "code": "0"
+            "system": "urn:oid:2.16.578.1.12.4.1.1.7419",
+            "code": "50",
+            "display": "Databasefeil."
           }
         ],
-        "text": "OK"
+        "text": "Databasefeil."
       }
     },
     {
