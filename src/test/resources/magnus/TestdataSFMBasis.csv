@@ -22,7 +22,6 @@ identifier,given,family,gender,use,type,text,city,postalCode
 15115220427,Nora,Bjørdal,female,home,physical,Testveien 10,Oslo,1234
 15115294226,Christiane Wenche,Steine Dammen,female,home,physical,Testveien 10,Oslo,1234
 15115296903,Arve,Nguyen,male,home,physical,Testveien 10,Oslo,1234
-16115217139,Alf Odd Roger,Rønningen,male,home,physical,Testveien 10,Oslo,1234
 16115238896,Bjørg Grethe,Risdal,female,home,physical,Testveien 10,Oslo,1234
 16115291622,Isabell,Mathisen,female,home,physical,Testveien 10,Oslo,1234
 16115294427,Marius,Kristensen,male,home,physical,Testveien 10,Oslo,1234
@@ -43,7 +42,6 @@ identifier,given,family,gender,use,type,text,city,postalCode
 08115244168,Anton,Venås,male,home,physical,Testveien 10,Oslo,1234
 08115248775,Rune,Halvorsen,male,home,physical,Testveien 10,Oslo,1234
 08115290240,Thomas,Olsen,male,home,physical,Testveien 10,Oslo,1234
-09117771927,Trond,Løvås Larssen,male,home,physical,Testveien 10,Oslo,1234
 09117774055,Sofia Tove,Stava,female,home,physical,Testveien 10,Oslo,1234
 10117752068,Jenny,Skarstad,female,home,physical,Testveien 10,Oslo,1234
 10117770406,Elin,Finstad,female,home,physical,Testveien 10,Oslo,1234
