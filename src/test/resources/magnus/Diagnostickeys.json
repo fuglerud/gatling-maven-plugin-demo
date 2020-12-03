@@ -1,0 +1,102 @@
+{
+  "keys": [
+    {
+      "daysSinceOnsetOfSymptoms": -1,
+      "key": "igwvx/Bq2qXvFYB1ebfvEA==",
+      "rollingStart": "2020-11-24T00:00:00+00:00",
+      "rollingDuration": "1.00:00:00",
+      "transmissionRiskLevel": 4
+    },
+    {
+      "daysSinceOnsetOfSymptoms": -2,
+      "key": "eNJqQ8aZBtTq/yEVcogpoQ==",
+      "rollingStart": "2020-11-23T00:00:00+00:00",
+      "rollingDuration": "1.00:00:00",
+      "transmissionRiskLevel": 3
+    },
+    {
+      "daysSinceOnsetOfSymptoms": -3,
+      "key": "xpd3951ecn2y0hGDhk3cVw==",
+      "rollingStart": "2020-11-22T00:00:00+00:00",
+      "rollingDuration": "1.00:00:00",
+      "transmissionRiskLevel": 2
+    },
+    {
+      "daysSinceOnsetOfSymptoms": -4,
+      "key": "9LZPKAit7w+5rLaTvDyJ3Q==",
+      "rollingStart": "2020-11-21T00:00:00+00:00",
+      "rollingDuration": "1.00:00:00",
+      "transmissionRiskLevel": 1
+    },
+    {
+      "daysSinceOnsetOfSymptoms": -5,
+      "key": "l63Dyyi5uxzobaX/RWISXQ==",
+      "rollingStart": "2020-11-20T00:00:00+00:00",
+      "rollingDuration": "1.00:00:00",
+      "transmissionRiskLevel": 1
+    },
+    {
+      "daysSinceOnsetOfSymptoms": -6,
+      "key": "330w7rpPAdgjs7izyMB8VA==",
+      "rollingStart": "2020-11-19T00:00:00+00:00",
+      "rollingDuration": "1.00:00:00",
+      "transmissionRiskLevel": 1
+    },
+    {
+      "daysSinceOnsetOfSymptoms": -7,
+      "key": "DmWzCva3tOlkRnCjIh7Ipg==",
+      "rollingStart": "2020-11-18T00:00:00+00:00",
+      "rollingDuration": "1.00:00:00",
+      "transmissionRiskLevel": 1
+    },
+    {
+      "daysSinceOnsetOfSymptoms": -8,
+      "key": "7LUKNmwKB2S1kTeE5Xi4/w==",
+      "rollingStart": "2020-11-17T00:00:00+00:00",
+      "rollingDuration": "1.00:00:00",
+      "transmissionRiskLevel": 1
+    },
+    {
+      "daysSinceOnsetOfSymptoms": -9,
+      "key": "Kejllpwn9+goYb6Q9ik+tA==",
+      "rollingStart": "2020-11-16T00:00:00+00:00",
+      "rollingDuration": "1.00:00:00",
+      "transmissionRiskLevel": 1
+    },
+    {
+      "daysSinceOnsetOfSymptoms": -10,
+      "key": "L2iVka6kkjONEWmvB28ocw==",
+      "rollingStart": "2020-11-15T00:00:00+00:00",
+      "rollingDuration": "1.00:00:00",
+      "transmissionRiskLevel": 1
+    },
+    {
+      "daysSinceOnsetOfSymptoms": -11,
+      "key": "OT+W5++7NUB3/cZuwkWm0Q==",
+      "rollingStart": "2020-11-14T00:00:00+00:00",
+      "rollingDuration": "1.00:00:00",
+      "transmissionRiskLevel": 1
+    },
+    {
+      "daysSinceOnsetOfSymptoms": -12,
+      "key": "RH5WoCiXYjmX3K2+Q8Togg==",
+      "rollingStart": "2020-11-13T00:00:00+00:00",
+      "rollingDuration": "1.00:00:00",
+      "transmissionRiskLevel": 1
+    },
+    {
+      "daysSinceOnsetOfSymptoms": -13,
+      "key": "MZrBT9luk0ShwpoY3q5G4w==",
+      "rollingStart": "2020-11-12T00:00:00+00:00",
+      "rollingDuration": "1.00:00:00",
+      "transmissionRiskLevel": 1
+    }
+  ],
+  "regions": [
+    "no"
+  ],
+  "visitedCountries": [],
+  "appPackageName": "no.fhi.smittestopp-exposure-notification",
+  "platform": "iOS",
+  "padding": "HiVny0Qf9k6A1dVJsXF9pD3Jo5TMH/rOz3tuj6IRSdQ=6c9qF4W29TrMILBkbeaKq+7bgFEXjm6uiadgBFtecQs=0BpLp/C58M0GL9kJ2bEx1ZnNeniKg7eSEwd7NsIir4c=Fp9SE334Lp4YA23VWSp7yRlSTZRzNni30ItaRg+DaUY=2KLra6YlaLwaOS1bodIwImQcMtAmlk7kqNrMnu66M8E=PIgQPTh8PaVYhE7qXgpRsKwx7zepGoqmkmIbra8ZNHg=or0chbPCT/Vx0NaH6V6pBfzk9p/641GnGsiGzvvpH5s=Y/oWWEJqKWKCwAWMlFfY2Ir0Ib4CD1ZU/v77TtToPsI=GDrcdahWKdHKYJregJMCC2MXaglCW+xEl0bEp8BG1ek=MCxVjH2VHG1RvwNAYG5aPXV23YY0ZgmPo7IJfiPkgzY=GPVHvx9yCk8jkwk4nbwW1SF9fUAnPlZ2guK39JCjbmc=BwxAE70eSyIgvGY5inyC5GTvuLq2rbnZS5fFXmzwaoQ=2MyOe7LRrAAWTIey0Izm+2gA86vZKHb8gu6nFfOnIvg=8QTwFeDITaaxYvWxlUd4uMfJTq8Uzr69gpDtLIJ32h0=Nrt0Q+HrFcIiLTC1CazmDbwTvh8z6mD8byBOa5Gzwe0=gTbgl3VuRf5hr7X++KjwBqHkAjhxwt1lApORu4A1Cg0=TICXqdvIaobVtMZgtA6qJZnTmQ2Ke4jhX3LLVfcwT2M=5/MTYhQAmaxHTQ2T3zsp9znTd76RMjlePU8WCFDle4U=7rEGQ53+t13rqbXrmUKTzOIGymsMrjyXbRoNjSpMnW0="
+}
