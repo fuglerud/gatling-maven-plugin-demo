@@ -66,7 +66,7 @@ class SmitteStopp_ALL extends Simulation {
 
 
 
-  setUp(SCN_SmitteStopp.inject(atOnceUsers(1))).protocols(httpProtocol)
+  setUp(SCN_SmitteStopp.inject(atOnceUsers(3))).protocols(httpProtocol)
 
 
 }
