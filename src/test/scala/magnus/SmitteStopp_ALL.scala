@@ -59,10 +59,10 @@ class SmitteStopp_ALL extends Simulation {
   val SCN_SmitteStopp: ScenarioBuilder = scenario("SmitteStopp")
     //.feed(feeder)
 
-    //.exec(getConfiguration)
+    .exec(getConfiguration)
     //  .exec(diagnostickeys.body(ElFileBody("bodies/smittestopp/diagnostickeys.json")))
-   // .exec(getKeys)
-    .exec(postLogs.body(ElFileBody("magnus/logMessages.json")))
+    .exec(getKeys)
+    //.exec(postLogs.body(ElFileBody("magnus/logMessages.json")))
 
 
 
