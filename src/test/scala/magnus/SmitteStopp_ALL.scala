@@ -82,7 +82,7 @@ class SmitteStopp_ALL extends Simulation {
     .exec(flushHttpCache)
 
     .exec(getConfiguration)
-    .exec(getConfiguration2)
+    //.exec(getConfiguration2)
     //  .exec(diagnostickeys.body(ElFileBody("bodies/smittestopp/diagnostickeys.json")))
     //.exec(getKeys)
     //.exec(postLogs.body(ElFileBody("magnus/logMessages.json")))
