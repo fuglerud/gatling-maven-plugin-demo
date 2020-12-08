@@ -61,8 +61,6 @@ class SmitteStopp_ALL extends Simulation {
     .headers(header_get)
     .check(status is 200)
 
-  //https://qa-be-op.ss2np.fhi.no/api/v3/diagnostickeys/2020-12-07_1_no.zip
-
   val getKeys: HttpRequestBuilder = http("GetKeys_").get("https://qa-be-op.ss2np.fhi.no/api/v3/diagnostickeys/2020-12-07_1_no.zip")
     .headers(header_get)
     .check(status is 200)
