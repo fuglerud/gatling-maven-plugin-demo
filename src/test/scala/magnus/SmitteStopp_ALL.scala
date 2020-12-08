@@ -26,7 +26,8 @@ class SmitteStopp_ALL extends Simulation {
     "User-Agent" -> "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:48.0) Gecko/20100101 Firefox/48.0",
     "Accept" -> "application/zip",
     "Accept-Language" -> "fr,en-US;q=0.7,en;q=",
-    "Accept-Encoding" -> "gzip, deflate"
+    "Accept-Encoding" -> "gzip, deflate",
+    "Connection" -> "close"
   )
 
   val header_post = Map(
