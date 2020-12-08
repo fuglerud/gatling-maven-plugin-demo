@@ -26,7 +26,7 @@ class SmitteStopp_ALL extends Simulation {
     "authorization_mobile" -> "24jRFidazK",
     "User-Agent" -> "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:48.0) Gecko/20100101 Firefox/48.0",
     "Accept" -> "*/*",
-    "Cache-Control"->"no-cache",
+    "Cache-Control"->"no-cache, no-store",
     //"Accept-Language" -> "fr,en-US;q=0.7,en;q=",
     "Accept-Encoding" -> "gzip, deflate",
     "Connection" -> "close"
