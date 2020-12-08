@@ -45,6 +45,10 @@ class SmitteStopp_ALL extends Simulation {
     .headers(header_get)
     .check(status is 200)
 
+  val getConfiguration2: HttpRequestBuilder = http("GetConfiguration").get("https://qa-be-op.ss2np.fhi.no/api/v3/diagnostickeys/exposureconfiguration")
+    .headers(header_get)
+    .check(status is 200)
+
   //https://qa-be-op.ss2np.fhi.no/api/v3/diagnostickeys/2020-12-07_1_no.zip
 
   val getKeys: HttpRequestBuilder = http("GetKeys_").get("https://qa-be-op.ss2np.fhi.no/api/v3/diagnostickeys/2020-12-07_1_no.zip")
@@ -63,6 +67,7 @@ class SmitteStopp_ALL extends Simulation {
     //.feed(feeder)
 
     .exec(getConfiguration)
+    .exec(getConfiguration2)
     //  .exec(diagnostickeys.body(ElFileBody("bodies/smittestopp/diagnostickeys.json")))
     //.exec(getKeys)
     //.exec(postLogs.body(ElFileBody("magnus/logMessages.json")))
