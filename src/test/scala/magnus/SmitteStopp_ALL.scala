@@ -21,11 +21,13 @@ class SmitteStopp_ALL extends Simulation {
     .userAgentHeader("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36")
 
   val header_get = Map(
-    "Content-Type" -> "application/json",
+    //"Content-Type" -> "application/json",
+    "Content-Type" -> "text/html",
     "authorization_mobile" -> "24jRFidazK",
     "User-Agent" -> "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:48.0) Gecko/20100101 Firefox/48.0",
-    "Accept" -> "application/zip",
-    "Accept-Language" -> "fr,en-US;q=0.7,en;q=",
+    "Accept" -> "*/*",
+    "Cache-Control"->"no-cache",
+    //"Accept-Language" -> "fr,en-US;q=0.7,en;q=",
     "Accept-Encoding" -> "gzip, deflate",
     "Connection" -> "close"
   )
@@ -75,6 +77,9 @@ class SmitteStopp_ALL extends Simulation {
 
   val SCN_SmitteStopp: ScenarioBuilder = scenario("SmitteStopp")
     //.feed(feeder)
+
+    .exec(flushCookieJar)
+    .exec(flushHttpCache)
 
     .exec(getConfiguration)
     .exec(getConfiguration2)
