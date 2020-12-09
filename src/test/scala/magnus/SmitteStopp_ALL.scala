@@ -21,13 +21,13 @@ class SmitteStopp_ALL extends Simulation {
     .userAgentHeader("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.117 Safari/537.36")
 
   val header_get = Map(
-    //"Content-Type" -> "application/json",
+    "Content-Type" -> "application/json",
     "Content-Type" -> "text/html",
     "authorization_mobile" -> "24jRFidazK",
     "User-Agent" -> "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:48.0) Gecko/20100101 Firefox/48.0",
     "Accept" -> "*/*",
     "Cache-Control"->"no-cache, no-store",
-    //"Accept-Language" -> "fr,en-US;q=0.7,en;q=",
+    "Accept-Language" -> "fr,en-US;q=0.7,en;q=",
     "Accept-Encoding" -> "gzip, deflate",
     "Connection" -> "close"
   )
@@ -77,12 +77,12 @@ class SmitteStopp_ALL extends Simulation {
 
 
 
-  //setUp(SCN_SmitteStopp.inject(atOnceUsers(1))).protocols(httpProtocol)
+  setUp(SCN_SmitteStopp.inject(atOnceUsers(1))).protocols(httpProtocol)
 
   //setUp(SCN_SmitteStopp.inject(rampUsersPerSec(10) to 208 during (10 minutes),constantUsersPerSec(208) during(5 minutes)).protocols(httpProtocol))
   //setUp(SCN_SmitteStopp.inject(rampUsersPerSec(10) to 417 during (10 minutes),constantUsersPerSec(417) during(5 minutes)).protocols(httpProtocol))
   //setUp(SCN_SmitteStopp.inject(rampUsersPerSec(10) to 833 during (10 minutes),constantUsersPerSec(833) during(5 minutes)).protocols(httpProtocol))
-  setUp(SCN_SmitteStopp.inject(rampUsersPerSec(10) to 1111 during (10 minutes),constantUsersPerSec(1111) during(5 minutes)).protocols(httpProtocol))
+  //setUp(SCN_SmitteStopp.inject(rampUsersPerSec(10) to 1111 during (10 minutes),constantUsersPerSec(1111) during(5 minutes)).protocols(httpProtocol))
 
   //scn.inject(rampUsersPerSec(10) to 208 during (10 minutes),constantUsersPerSec(208) during(5 minutes))
 
