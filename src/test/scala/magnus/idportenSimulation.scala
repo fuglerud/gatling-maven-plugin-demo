@@ -34,7 +34,7 @@ class idportenSimulation extends Simulation{
       .get("/")
       .check(status.is(200)))
 
-  setUp(scn.inject(atOnceUsers(1))).protocols(httpProtocol)
+  //setUp(scn.inject(atOnceUsers(1))).protocols(httpProtocol)
 
 
   //setUp(scn.inject(rampUsersPerSec(10) to 208 during (10 minutes),constantUsersPerSec(208) during(5 minutes)).protocols(httpProtocol))
