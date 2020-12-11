@@ -38,7 +38,7 @@ class idportenSimulation extends Simulation{
 
 
   //setUp(scn.inject(rampUsersPerSec(10) to 208 during (10 minutes),constantUsersPerSec(208) during(5 minutes)).protocols(httpProtocol))
-  //setUp(scn.inject(rampUsersPerSec(10) to 417 during (10 minutes),constantUsersPerSec(417) during(5 minutes)).protocols(httpProtocol))
+  setUp(scn.inject(rampUsersPerSec(1) to 10 during (2 minutes),constantUsersPerSec(10) during(5 minutes)).protocols(httpProtocol))
   //setUp(scn.inject(rampUsersPerSec(10) to 833 during (10 minutes),constantUsersPerSec(833) during(5 minutes)).protocols(httpProtocol))
   //setUp(scn.inject(rampUsersPerSec(1) to 10 during (10 minutes),constantUsersPerSec(10) during(5 minutes)).protocols(httpProtocol))
 
