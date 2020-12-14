@@ -59,7 +59,7 @@ class SmitteStopp_ALL extends Simulation {
     .check(status is 200)*/
 
   //PROD
-  val getKeys: HttpRequestBuilder = http("GetKeys_").get("https://be-op.ss2.fhi.no/api/v3/diagnostickeys/2020-12-07_2_no.zip")
+  val getKeys: HttpRequestBuilder = http("GetKeys").get("https://be-op.ss2.fhi.no/api/v3/diagnostickeys/2020-12-07_2_no.zip")
     .headers(header_get)
     .check(status is 200)
 
@@ -84,10 +84,10 @@ class SmitteStopp_ALL extends Simulation {
 
 
 
-  //setUp(SCN_SmitteStopp.inject(atOnceUsers(1))).protocols(httpProtocol)
+  setUp(SCN_SmitteStopp.inject(atOnceUsers(1))).protocols(httpProtocol)
 
   //setUp(SCN_SmitteStopp.inject(rampUsersPerSec(10) to 208 during (10 minutes),constantUsersPerSec(208) during(5 minutes)).protocols(httpProtocol))
-  setUp(SCN_SmitteStopp.inject(rampUsersPerSec(10) to 417 during (10 minutes),constantUsersPerSec(417) during(5 minutes)).protocols(httpProtocol))
+  //setUp(SCN_SmitteStopp.inject(rampUsersPerSec(10) to 417 during (10 minutes),constantUsersPerSec(417) during(5 minutes)).protocols(httpProtocol))
   //setUp(SCN_SmitteStopp.inject(rampUsersPerSec(10) to 833 during (10 minutes),constantUsersPerSec(833) during(5 minutes)).protocols(httpProtocol))
   //setUp(SCN_SmitteStopp.inject(rampUsersPerSec(10) to 1111 during (10 minutes),constantUsersPerSec(1111) during(5 minutes)).protocols(httpProtocol))
 
