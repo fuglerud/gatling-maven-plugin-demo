@@ -73,7 +73,7 @@ class JMeter extends Simulation  {
       .formParam("SelectedPortalId", "PatientPortal")
       .formParam("submitButton", "select")
       .formParam("IsSelectingInstallation", "True")
-      .formParam("SelectedEnvironmentId", "ffad58fd-a86f-4122-8541-42a82f719fe8%Glittertind testlegekontor (Fastlege)")
+      .formParam("SelectedEnvironmentId", "ffad58fd-a86f-4122-8541-42a82f719fe8#Glittertind testlegekontor (Fastlege)")
       .formParam("__RequestVerificationToken", "${requestVerificationToken2}"))
 
 
