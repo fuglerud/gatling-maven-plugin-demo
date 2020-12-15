@@ -34,8 +34,27 @@ class JMeter extends Simulation  {
     "Sec-Fetch-Dest" -> "document",
     "Origin"->"https://epj.qa.forskrivning.no")
 
+  val headers_4 = Map("Accept" -> "application/json, text/plain, */*")
 
+  val headers_5 = Map(
+    "Accept" -> "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+    "Origin" -> "https://epj.qa.forskrivning.no",
+    "Upgrade-Insecure-Requests" -> "1")
 
+  val headers_6 = Map(
+    "Access-Control-Request-Headers" -> "authorization,x-requested-with",
+    "Access-Control-Request-Method" -> "POST",
+    "Origin" -> "https://client.qa.forskrivning.no")
+
+  val headers_7 = Map(
+    "Access-Control-Request-Headers" -> "access-control-allow-origin,authorization,cache-control,content-type,expires,pragma",
+    "Access-Control-Request-Method" -> "GET",
+    "Origin" -> "https://client.qa.forskrivning.no")
+
+  val uri1 = "https://client.qa.forskrivning.no/version.json"
+  val uri2 = "https://epj.qa.forskrivning.no"
+  val uri3 = "https://notify.bugsnag.com"
+  val uri5 = "https://sessions.bugsnag.com"
 
   val scn = scenario("JMeterSimulation")
 
@@ -76,7 +95,18 @@ class JMeter extends Simulation  {
       .formParam("SelectedEnvironmentId", "ffad58fd-a86f-4122-8541-42a82f719fe8#Glittertind testlegekontor (Fastlege)")
       .formParam("__RequestVerificationToken", "${requestVerificationToken2}"))
 
-
+    .exec(http("LoadClientAsync")
+      .post(uri2 + "/Patient/LoadClientAsync")
+      .headers(headers_5)
+      .formParam("OnBehalfOf", "")
+      .formParam("ShowAllergies", "true")
+      .formParam("SelectedTicket", "54688c89-e7d2-4662-a054-f24daabafa50")
+      .formParam("SelectedEnvironment", "Glittertind testlegekontor (Fastlege)")
+      .formParam("ApiEndpoint", "https://server.qa.forskrivning.no")
+      .formParam("HelseIdClientId", "ffad58fd-a86f-4122-8541-42a82f719fe8")
+      .formParam("submitButton", "open")
+      .formParam("__RequestVerificationToken", "${requestVerificationToken2}")
+      .formParam("ShowAllergies", "false"))
 
 
 

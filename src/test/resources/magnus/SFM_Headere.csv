@@ -1,0 +1,2 @@
+BASE_URL_1,BASE_URL_2,BASE_URL_3,BASE_URL_4,BASE_URL_5,Patient_Ticket,access_token
+epj.test1.forskrivning.no,helseid-sts.test.nhn.no,hid-testidp.azurewebsites.net,client.test1.forskrivning.no,server.test1.forskrivning.no,test PT,test AT
