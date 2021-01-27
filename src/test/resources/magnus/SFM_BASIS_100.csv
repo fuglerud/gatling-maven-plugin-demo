@@ -3,12 +3,14 @@ identifier,given,family,gender,use,type,text,city,postalCode
 11115218532,John, Weiseth,male,home,physical,Testveien 10,Oslo,1234
 14115224914,Aleksander Espen, Pedersen,male,home,physical,Testveien 10,Oslo,1234
 06105295098,Eline, Jensen,female,home,physical,Testveien 10,Oslo,1234
+04017854793,Rolf, Mathias Bratland,male,home,physical,Testveien 10,Oslo,1234,
 11115294875,Henrik, Bergan,male,home,physical,Testveien 10,Oslo,1234
 08115296435,Leander, Ali,male,home,physical,Testveien 10,Oslo,1234
 09115214966,Jakob, Larsen,male,home,physical,Testveien 10,Oslo,1234
 09115249689,Bjørg, Strand,female,home,physical,Testveien 10,Oslo,1234
 11115292279,Rebecca Kine, Evensen,female,home,physical,Testveien 10,Oslo,1234
 12115218733,Bjørn, Vold,male,home,physical,Testveien 10,Oslo,1234
+12115221394,Jürgen, Braathen,male,home,physical,Testveien 10,Oslo,1234
 12115228615,Julie, Moen,female,home,physical,Testveien 10,Oslo,1234
 12115239471,Tina, Johansen,female,home,physical,Testveien 10,Oslo,1234
 12115244548,Terje, Kraft,male,home,physical,Testveien 10,Oslo,1234
@@ -18,10 +20,14 @@ identifier,given,family,gender,use,type,text,city,postalCode
 14115235266,Mona Åse, Kleven,female,home,physical,Testveien 10,Oslo,1234
 15115210979,Ørjan Ståle, Skår,male,home,physical,Testveien 10,Oslo,1234
 15115213692,Heidi, Jensen Fagerhaug,female,home,physical,Testveien 10,Oslo,1234
+15115215946,Alexander, Tuft Nygård,male,home,physical,Testveien 10,Oslo,1234
+15115220427,Nora, Bjørdal,female,home,physical,Testveien 10,Oslo,1234
+15115294226,Christiane Wenche, Steine Dammen,female,home,physical,Testveien 10,Oslo,1234
 15115296903,Arve, Nguyen,male,home,physical,Testveien 10,Oslo,1234
 16115217139,Alf Odd Roger, Rønningen,male,home,physical,Testveien 10,Oslo,1234
 16115291622,Isabell, Mathisen,female,home,physical,Testveien 10,Oslo,1234
 16115294427,Marius, Kristensen,male,home,physical,Testveien 10,Oslo,1234
+23125216560,Kjersti, Haukaas,female,home,physical,Testveien 10,Oslo,1234
 24125215382,Jon, Myrhaug,male,home,physical,Testveien 10,Oslo,1234
 24125221323,Christian Amund, Løberg,male,home,physical,Testveien 10,Oslo,1234
 24125290740,Peder, Wolden,male,home,physical,Testveien 10,Oslo,1234
@@ -36,14 +42,49 @@ identifier,given,family,gender,use,type,text,city,postalCode
 08115238621,Ingeborg Mette, Sørbø,female,home,physical,Testveien 10,Oslo,1234
 08115244168,Anton, Venås,male,home,physical,Testveien 10,Oslo,1234
 08115290240,Thomas, Olsen,male,home,physical,Testveien 10,Oslo,1234
+09117771927,Trond, Løvås Larssen,male,home,physical,Testveien 10,Oslo,1234
+09117774055,Sofia Tove, Stava,female,home,physical,Testveien 10,Oslo,1234
 10117752068,Jenny, Skarstad,female,home,physical,Testveien 10,Oslo,1234
+10117770406,Elin, Finstad,female,home,physical,Testveien 10,Oslo,1234
+10117773391,Jens, Trøen,male,home,physical,Testveien 10,Oslo,1234
+11117752854,Ellen Tordis, Hansen,female,home,physical,Testveien 10,Oslo,1234
+13117773803,Annie, Bjørnestad Løvold,female,home,physical,Testveien 10,Oslo,1234
 14117774040,Cathrine, Moen,female,home,physical,Testveien 10,Oslo,1234
+17117760901,Cato, Johannesen Nordheim,male,home,physical,Testveien 10,Oslo,1234
+18117762013,Randi Rita, Lehne,female,home,physical,Testveien 10,Oslo,1234
+18117763079,Maren Jessica, Madsen,female,home,physical,Testveien 10,Oslo,1234
 19117751972,Marcus Rune, Syversen Buer,male,home,physical,Testveien 10,Oslo,1234
+19117770438,Kine Lee, Nordeide,female,home,physical,Testveien 10,Oslo,1234
+20117773443,Ingeborg Gerd, Myhre Heggheim,female,home,physical,Testveien 10,Oslo,1234
+21117760372,Vladimir Dagfinn, Holtet,male,home,physical,Testveien 10,Oslo,1234
 21117761085,Eli, Ahmed,female,home,physical,Testveien 10,Oslo,1234
+21117761832,Kristin, Sandanger,female,home,physical,Testveien 10,Oslo,1234
+21117772265,Mari, Birkedal,female,home,physical,Testveien 10,Oslo,1234
+21117772427,Else Ragnhild, Mathisen,female,home,physical,Testveien 10,Oslo,1234
+23117752399,Samuel, Berg Schjølberg,male,home,physical,Testveien 10,Oslo,1234
+23117754480,Ruth Mette, Oppedal,female,home,physical,Testveien 10,Oslo,1234
+24117761092,Tonje, Abdi,female,home,physical,Testveien 10,Oslo,1234
+28117753087,Inger, Enoksen,female,home,physical,Testveien 10,Oslo,1234
+29117770670,Yngvild Edel, Engvik Johansen,female,home,physical,Testveien 10,Oslo,1234
+30117752867,Eli, Linnerud,female,home,physical,Testveien 10,Oslo,1234
+02127774253,Ingrid Else, Hansen Eide,female,home,physical,Testveien 10,Oslo,1234
 03127774454,Linda Lykke, Haugsvær,female,home,physical,Testveien 10,Oslo,1234
+04127750284,Marthe, Vik,female,home,physical,Testveien 10,Oslo,1234
 04127750365,Frank, Eikeland,male,home,physical,Testveien 10,Oslo,1234
+04127753674,Jenny, Lauritsen,female,home,physical,Testveien 10,Oslo,1234
+04127773861,Helga, Johnsen,female,home,physical,Testveien 10,Oslo,1234
 06127750252,Camilla Jeanette, Brynildsen,female,home,physical,Testveien 10,Oslo,1234
+06127750414,Mari, Landmark,female,home,physical,Testveien 10,Oslo,1234
+06127773678,Astri Liv, Johnsen,female,home,physical,Testveien 10,Oslo,1234
+07127772570,Odd Olav, Rønning,male,home,physical,Testveien 10,Oslo,1234
+07127773011,Liv, Nore,female,home,physical,Testveien 10,Oslo,1234
+08127773646,Margrete, Jakobsen Henriksen,female,home,physical,Testveien 10,Oslo,1234
 09127752785,Rafal, Johansen Larsen,male,home,physical,Testveien 10,Oslo,1234
+09127762748,Pål, Eira,male,home,physical,Testveien 10,Oslo,1234
 10127751264,Anders, Jørgensen,male,home,physical,Testveien 10,Oslo,1234
+10127773462,Camilla, Nilsen,female,home,physical,Testveien 10,Oslo,1234
 11127753476,Synnøve Ragnhild, Elfrid Tveit Nygaard,female,home,physical,Testveien 10,Oslo,1234
+11127753980,Eirik, Johannes Braseth,male,home,physical,Testveien 10,Oslo,1234
 12127762927,Karsten, Tallaksen,male,home,physical,Testveien 10,Oslo,1234
+04017862664,Rachel, Hansen,female,home,physical,Testveien 10,Oslo,1234
+04017870292,Mette, Ødegård Johannessen,female,home,physical,Testveien 10,Oslo,1234

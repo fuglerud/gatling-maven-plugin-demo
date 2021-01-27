@@ -3,7 +3,7 @@ package magnus
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
 
-class cms extends Simulation  {
+class CICDKJ extends Simulation{
 
   val httpProtocol = http
     .baseUrl("https://helseid-sts.test.nhn.no")
@@ -14,11 +14,13 @@ class cms extends Simulation  {
 
   val headers_token = Map("Content-Type" -> "application/json")
 
-
+  val headers_access_token = Map(
+    "Content-Type"->"application/json;charset=UTF-8",
+    "Authorization"->"Bearer ${access_token}")
 
   val scn = scenario("pung")
 
-    .exec(http("request_access_token")
+ /*   .exec(http("request_access_token")
       .post("/connect/token")
       .header("Authorization", "Basic Y2ZhOWM4ZmItOGRkNi00ZDdjLWIxNDItNzg2YzNkNzc0ZjY0OiUyQjRTbmdMcHV6Um5zbkk3SjVoQ0xHTVlwcUFTVUJRdjJjUGRrZU01JTJCYUIwZHhSSjlCU3diajJlaSUyRlNCdyUyRkF6VWZkSG81VENWVVpJSW1xcEtOY0RRSUElM0QlM0Q=")
       .formParam("grant_type", "client_credentials")
@@ -28,9 +30,22 @@ class cms extends Simulation  {
       .check(regex("access_token\":\"(.*?)\"").saveAs("access_token")))
 
     .exec {session =>
-          println(session("access_token").as[String])
-          session}
+      println(session("access_token").as[String])
+      session}
 
+    .exec(http("request_ticket")
+      .post("https://api.qa1.kjernejournal-test.no:8000/v1/helseindikator/")
+      .header("Authorization", "Basic Y2ZhOWM4ZmItOGRkNi00ZDdjLWIxNDItNzg2YzNkNzc0ZjY0OiUyQjRTbmdMcHV6Um5zbkk3SjVoQ0xHTVlwcUFTVUJRdjJjUGRrZU01JTJCYUIwZHhSSjlCU3diajJlaSUyRlNCdyUyRkF6VWZkSG81VENWVVpJSW1xcEtOY0RRSUElM0QlM0Q=")
+      .headers(headers_access_token)
+      .body(ElFileBody("magnus/epj_ticket_request.json"))
+      .check(regex("ticket\" : \"(.*?)\"").transform(rawTicketValue => java.net.URLEncoder.encode(rawTicketValue, "UTF-8")).saveAs("ticket")))*/
+
+    /*.exec(http("request_ticket")
+      .post("https://api.qa1.kjernejournal-test.no:8000/v1/helseindikator/")
+      .header("Authorization", "Basic Y2ZhOWM4ZmItOGRkNi00ZDdjLWIxNDItNzg2YzNkNzc0ZjY0OiUyQjRTbmdMcHV6Um5zbkk3SjVoQ0xHTVlwcUFTVUJRdjJjUGRrZU01JTJCYUIwZHhSSjlCU3diajJlaSUyRlNCdyUyRkF6VWZkSG81VENWVVpJSW1xcEtOY0RRSUElM0QlM0Q=")
+      .headers(headers_access_token)
+      .body(ElFileBody("magnus/epj_ticket_request.json"))
+      .check(regex("ticket\" : \"(.*?)\"").transform(rawTicketValue => java.net.URLEncoder.encode(rawTicketValue, "UTF-8")).saveAs("ticket")))*/
 
 
   setUp(scn.inject(atOnceUsers(1))).protocols(httpProtocol)
