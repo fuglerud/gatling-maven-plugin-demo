@@ -35,8 +35,6 @@ class SFMBasisAPISimulation extends Simulation {
     pw
   }
 
-
-
   val writer1: PrintWriter = {
     val fos = new java.io.FileOutputStream("official.txt")
     new java.io.PrintWriter(fos, true)}
@@ -66,35 +64,16 @@ class SFMBasisAPISimulation extends Simulation {
     .feed(csv("magnus/SFM_BASIS_100.csv").random)
 
 
-
-
  /* .exec(http("practitioner")
      // .get("/Practitioner/${rekvirent}")
     .get("/Practitioner/018b0501-8815-4ff3-bdb6-6ec3d9cceacc")
       .check(status.is(200))
-      //.check(jsonPath("$..id").is("${rekvirent}"))
-  )*/
+      //.check(jsonPath("$..id").is("${rekvirent}")))*/
 
     /*.exec(http("organization")
       .get("/Organization?name=${organizationname}")
       .check(status.is(200))
       .check(jsonPath("$..resource.id").is("${organizationid}")))*/
-
-    //http://base-fhir.qa.forskrivning.no/Person?identifier=04017870292&_format=json"
-
-
-   /* .exec(http("organization")
-      .get("/Organization/${org}")
-      .check(status.is(200))
-      .check(jsonPath("$..id").is("${org}"))
-    )*/
-
-
-   /* .exec(http("Person")
-      .get("/Person/")
-      .queryParam("active", "true")
-      .check(status.is(200))
-    )*/
 
 
 
@@ -105,12 +84,12 @@ class SFMBasisAPISimulation extends Simulation {
       .check(jsonPath("$..name").is("medication"))
       .check(jsonPath("$..[?(@.name==\"RFM912Feilkode\")].valueCodeableConcept.text").is("OK"))
       .check(jsonPath("$..[?(@.name==\"RFM96Feilkode\")].valueCodeableConcept.text").is("OK"))
-      .check(jsonPath("$..[?(@.name==\"KJFeilkode\")].valueCodeableConcept.text").is("OK"))
+      //.check(jsonPath("$..[?(@.name==\"KJFeilkode\")].valueCodeableConcept.text").is("OK"))
       //.check(jsonPath("$..[?(@.use==\"official\")].value").saveAs("official"))
       //.check(jsonPath("$..*").saveAs( "RESPONSE_DATA")).asJson
-    //.check(jsonPath("$..[?(@.name==\"KJFeilkode\")].valueCodeableConcept.text").saveAs("KJFeilkode"))
-    //.check(jsonPath("$..[?(@.name==\"RFM912Feilkode\")].valueCodeableConcept.text").saveAs("RFM912Feilkode"))
-    //.check(jsonPath("$..[?(@.name==\"RFM96Feilkode\")].valueCodeableConcept.text").saveAs("RFM96Feilkode"))
+      //.check(jsonPath("$..[?(@.name==\"KJFeilkode\")].valueCodeableConcept.text").saveAs("KJFeilkode"))
+      //.check(jsonPath("$..[?(@.name==\"RFM912Feilkode\")].valueCodeableConcept.text").saveAs("RFM912Feilkode"))
+      //.check(jsonPath("$..[?(@.name==\"RFM96Feilkode\")].valueCodeableConcept.text").saveAs("RFM96Feilkode"))
       //.check(jsonPath("$..*").ofType[Map[String, Any]].saveAs("myJson"))
   )
 
@@ -119,8 +98,7 @@ class SFMBasisAPISimulation extends Simulation {
      println(session("KJFeilkode").as[String])
      session})*/
 
-/*
-    .exec((session: io.gatling.core.session.Session) => {
+     /*.exec((session: io.gatling.core.session.Session) => {
       if (session.status == OK) {
         val newJson = json.JSONObject.equals("RESPONSE_DATA")
         newJson.equals("relatesTo", Seq(Map("code" -> "replaces")))
@@ -128,13 +106,19 @@ class SFMBasisAPISimulation extends Simulation {
         println(session("newJson").as[String])
       }
       session
-    })
-*/
+    })*/
 
 
     .exec((session: io.gatling.core.session.Session) => {
       if (session.status == KO) {
         writer3.println(session.attributes("legeFNR"))
+      }
+      session
+    })
+
+    .exec((session: io.gatling.core.session.Session) => {
+      if (session.status == KO) {
+        writer4.println(session.attributes("identifier"))
       }
       session
     })
@@ -171,33 +155,23 @@ class SFMBasisAPISimulation extends Simulation {
       session
     })*/
 
-
-
-//.pause(3)
-
-
+       //.pause(3)
 
          //""""relatesTo":[{"code": "replaces","targetIdentifier":{"use": "official","value": "3720076a-b74c-4781-af4b-9e3f567f8457"}}]"""
 
 
 
-/*
-    .exec(http("sendMedication")
+      /*.exec(http("sendMedication")
       .post("/Patient/$sendMedication")
       .body(ElFileBody("magnus/SendMedication_request_2021.json"))
       //.body(ElFileBody("magnus/sendRequest.json")).asJson
-      .check(status.is(200)))
-
-*/
-
-
-
+      .check(status.is(200)))*/
 
 
 
   //setUp(scn.inject(atOnceUsers(1))).protocols(httpProtocol)
   //setUp(scn.inject(rampUsersPerSec(1) to 3 during (30),constantUsersPerSec(3) during(240))).protocols(httpProtocol)
-  setUp(scn.inject(constantUsersPerSec(1) during(100))).protocols(httpProtocol)
+  setUp(scn.inject(constantUsersPerSec(1) during(20))).protocols(httpProtocol)
   //setUp(scn.inject(rampConcurrentUsers(1) to(5) during(240))).protocols(httpProtocol)
   //setUp(scn.inject(constantConcurrentUsers(1) during (60), rampConcurrentUsers(1) to (10) during (60))).protocols(httpProtocol)
   //setUp(scn.inject(incrementUsersPerSec(2).times(4).eachLevelLasting(30).separatedByRampsLasting(10).startingFrom(1))).protocols(httpProtocol)

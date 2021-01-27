@@ -135,7 +135,8 @@ class KubtestSimulation extends Simulation {
 
     .exec(http("oversikt")
       .get("/hpp-webapp/api/legemidler/${uuid}/oversikt")
-      .headers(headers_1))
+      .headers(headers_1)
+      .check(jsonPath("$..legemiddelHistorikk").exists))
 
 
   setUp(scn.inject(atOnceUsers(1))).protocols(httpProtocol)

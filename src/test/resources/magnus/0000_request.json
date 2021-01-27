@@ -17,40 +17,8 @@
             "value": "${identifier}"
           }
         ],
-        "active": true,
-        "name": [
-          {
-            "family": "${family}",
-            "given": [
-              "${given}"
-            ]
-          }
-        ],
-        "gender": "${gender}",
-        "address": [
-          {
-            "use": "${use}",
-            "type": "${type}",
-            "text": "${text}",
-            "city": "${city}",
-            "postalCode": "${postalCode}"
-          }
-        ],
-        "gender": "${gender}",
-        "address": [
-          {
-            "use": "home",
-            "type": "physical",
-            "text": "Testveien 10",
-            "city": "Oslo",
-            "postalCode": "1234"
-          }
-        ]
+        "active": true
       }
-    },
-    {
-      "name": "SamtykkeKjernejournal",
-      "valueCode": "HPMOTTATTSAMTYKKE"
     }
   ]
 }
