@@ -44,24 +44,27 @@ class SFMBasisAPISimulation extends Simulation {
     new java.io.PrintWriter(fos, true)}
 
   val writer3: PrintWriter = {
-    val fos = new java.io.FileOutputStream("feiledeLeger.txt")
+    val fos = new java.io.FileOutputStream("OKLeger.txt")
     new java.io.PrintWriter(fos, true)}
 
   val writer4: PrintWriter = {
-    val fos = new java.io.FileOutputStream("feiledePasienter.txt")
+    val fos = new java.io.FileOutputStream("pasienter_feiler.txt")
     new java.io.PrintWriter(fos, true)}
 
   val writer5: PrintWriter = {
     val fos = new java.io.FileOutputStream("feilkoder.txt")
     new java.io.PrintWriter(fos, true)}
 
+
+  private val failureStatus: Int = 500
+
   val scn = scenario("SFMBasisAPISimulation")
 
     .exec(flushCookieJar)
     .exec(flushHttpCache)
 
-    .feed(csv("magnus/Tokens.csv").random)
-    .feed(csv("magnus/SFM_BASIS_100.csv").random)
+    .feed(csv("magnus/Tokens.csv").circular)
+    .feed(csv("magnus/SFM_BASIS_100.csv").circular)
 
 
  /* .exec(http("practitioner")
@@ -109,12 +112,12 @@ class SFMBasisAPISimulation extends Simulation {
     })*/
 
 
-    .exec((session: io.gatling.core.session.Session) => {
-      if (session.status == KO) {
+    /*.exec((session: io.gatling.core.session.Session) => {
+      if (session.status == OK) {
         writer3.println(session.attributes("legeFNR"))
       }
       session
-    })
+    })*/
 
     .exec((session: io.gatling.core.session.Session) => {
       if (session.status == KO) {
@@ -170,8 +173,8 @@ class SFMBasisAPISimulation extends Simulation {
 
 
   //setUp(scn.inject(atOnceUsers(1))).protocols(httpProtocol)
-  //setUp(scn.inject(rampUsersPerSec(1) to 3 during (30),constantUsersPerSec(3) during(240))).protocols(httpProtocol)
-  setUp(scn.inject(constantUsersPerSec(1) during(20))).protocols(httpProtocol)
+  //setUp(scn.inject(rampUsersPerSec(1) to 3 during (30),constantUsersPerSec(3) during(120))).protocols(httpProtocol)
+  setUp(scn.inject(constantUsersPerSec(1) during(390))).protocols(httpProtocol)
   //setUp(scn.inject(rampConcurrentUsers(1) to(5) during(240))).protocols(httpProtocol)
   //setUp(scn.inject(constantConcurrentUsers(1) during (60), rampConcurrentUsers(1) to (10) during (60))).protocols(httpProtocol)
   //setUp(scn.inject(incrementUsersPerSec(2).times(4).eachLevelLasting(30).separatedByRampsLasting(10).startingFrom(1))).protocols(httpProtocol)

@@ -7,7 +7,7 @@ class KubtestSimulation extends Simulation {
 
   val httpProtocol = http
     .baseUrl("https://kubtest.kj.nhn.no")
-    .inferHtmlResources()
+    .inferHtmlResources(BlackList(""".*\.js""", """.*\.css""", """.*\.gif""", """.*\.jpeg""", """.*\.jpg""", """.*\.ico""", """.*\.woff""", """.*\.woff2""", """.*\.(t|o)tf""", """.*\.png""", """.*detectportal\.firefox\.com.*"""), WhiteList())
     .acceptHeader("application/json, text/javascript, */*; q=0.01")
     .acceptEncodingHeader("gzip, deflate")
     .acceptLanguageHeader("nb-NO,nb;q=0.9,no-NO;q=0.8,no;q=0.6,nn-NO;q=0.5,nn;q=0.4,en-US;q=0.3,en;q=0.1")
@@ -67,7 +67,7 @@ class KubtestSimulation extends Simulation {
       .get("/innlogging-webapp/api/driftsmelding/nyeDriftsmeldinger")
       .headers(headers_5))
 
-    .exec(http("mock")
+    .exec(http("mockinnlogging")
       .get("/innlogging-webapp/mock/Innlogging/login?nin=05085600143&resource_url=https%3A%2F%2Fkubtest.kj.nhn.no%2Fhpp-webapp")
       .headers(headers_0)
       .check(regex("name='state' value='(.*?)' />").saveAs("state"))
@@ -133,11 +133,12 @@ class KubtestSimulation extends Simulation {
       .headers(headers_CsrfToken)
       .body(ElFileBody("magnus/hentSperretModulStatus.json")))
 
-    .exec(http("oversikt")
+    .exec(http("oversiktlegemidler")
       .get("/hpp-webapp/api/legemidler/${uuid}/oversikt")
       .headers(headers_1)
       .check(jsonPath("$..legemiddelHistorikk").exists))
 
 
   setUp(scn.inject(atOnceUsers(1))).protocols(httpProtocol)
+  //setUp(scn.inject(constantUsersPerSec(1) during(20))).protocols(httpProtocol)
 }
