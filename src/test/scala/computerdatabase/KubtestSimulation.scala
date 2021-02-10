@@ -5,14 +5,20 @@ import io.gatling.http.Predef.{http, _}
 
 class KubtestSimulation extends Simulation {
 
+ // val httpProtocol = http
+   // .baseUrl("https://kubtest.kj.nhn.no")
+    //.inferHtmlResources(BlackList(""".*\.js""", """.*\.css""", """.*\.gif""", """.*\.jpeg""", """.*\.jpg""", """.*\.ico""", """.*\.woff""", """.*\.woff2""", """.*\.(t|o)tf""", """.*\.png""", """.*detectportal\.firefox\.com.*"""), WhiteList())
+   // .acceptHeader("application/json, text/javascript, */*; q=0.01")
+   // .acceptEncodingHeader("gzip, deflate")
+   // .acceptLanguageHeader("nb-NO,nb;q=0.9,no-NO;q=0.8,no;q=0.6,nn-NO;q=0.5,nn;q=0.4,en-US;q=0.3,en;q=0.1")
+  // .doNotTrackHeader("1")
+   // .userAgentHeader("Mozilla/5.0 (Macintosh; Intel Mac OS X 10.16; rv:84.0) Gecko/20100101 Firefox/84.0")
+
   val httpProtocol = http
+    //val httpProtocol = http.proxy(Proxy("proxy.drift.nhn.no", 8080))
+    .proxy(Proxy("proxy.drift.nhn.no", 8080))
+    .noProxyFor("kubtest.kj.nhn.no")
     .baseUrl("https://kubtest.kj.nhn.no")
-    .inferHtmlResources(BlackList(""".*\.js""", """.*\.css""", """.*\.gif""", """.*\.jpeg""", """.*\.jpg""", """.*\.ico""", """.*\.woff""", """.*\.woff2""", """.*\.(t|o)tf""", """.*\.png""", """.*detectportal\.firefox\.com.*"""), WhiteList())
-    .acceptHeader("application/json, text/javascript, */*; q=0.01")
-    .acceptEncodingHeader("gzip, deflate")
-    .acceptLanguageHeader("nb-NO,nb;q=0.9,no-NO;q=0.8,no;q=0.6,nn-NO;q=0.5,nn;q=0.4,en-US;q=0.3,en;q=0.1")
-    .doNotTrackHeader("1")
-    .userAgentHeader("Mozilla/5.0 (Macintosh; Intel Mac OS X 10.16; rv:84.0) Gecko/20100101 Firefox/84.0")
 
   val headers_0 = Map(
     "Accept" -> "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
@@ -55,19 +61,19 @@ class KubtestSimulation extends Simulation {
 
     .feed(csv("magnus/kubtest_fnr.csv").circular)
 
-    .exec(http("index")
+    .exec(http("¤ index")
       .get("/innlogging-webapp/index.html")
       .headers(headers_0))
 
-    .exec(http("users")
+    .exec(http("¤ users")
       .get("/innlogging-webapp/mock/Innlogging/users")
       .headers(headers_5))
 
-    .exec(http("nyeDriftsmeldinger")
+    .exec(http("¤ nyeDriftsmeldinger")
       .get("/innlogging-webapp/api/driftsmelding/nyeDriftsmeldinger")
       .headers(headers_5))
 
-    .exec(http("mockinnlogging")
+    .exec(http("¤ mockinnlogging")
       .get("/innlogging-webapp/mock/Innlogging/login?nin=05085600143&resource_url=https%3A%2F%2Fkubtest.kj.nhn.no%2Fhpp-webapp")
       .headers(headers_0)
       .check(regex("name='state' value='(.*?)' />").saveAs("state"))
@@ -85,34 +91,34 @@ class KubtestSimulation extends Simulation {
         .formParam("session_state", "${session_state}")
         .check(xpath(".//INPUT[@TYPE=\"HIDDEN\" and @NAME=\"jwt\"]/@VALUE").saveAs("jwt"))))
 
-    .exec(http("hpp-webapp_m_jwt")
+    .exec(http("¤ hpp-webapp_m_jwt")
       .post("/hpp-webapp")
       .headers(headers_12)
       .formParam("jwt", "${jwt}"))
 
-    .exec(http("hentMetadataHppBruker1")
+    .exec(http("¤ hentMetadataHppBruker1")
       .get("/hpp-webapp/api/hentMetadataHppBruker")
       .headers(headers_1)
       .check(jsonPath("$.csrfToken").saveAs("csrfToken")))
 
-    .exec(http("hentBrukergruppeValg")
+    .exec(http("¤ hentBrukergruppeValg")
       .get("/hpp-webapp/api/autorisasjonsprosess/hentBrukergruppevalg")
       .headers(headers_1))
 
-    .exec(http("velgBrukergruppe")
+    .exec(http("¤ velgBrukergruppe")
       .post("/hpp-webapp/api/autorisasjonsprosess/velgBrukergruppe")
       .headers(headers_CsrfToken)
       .body(ElFileBody("magnus/velgBrukergruppe.json")))
 
-    .exec(http("hentMetadataHppBruker2")
+    .exec(http("¤ hentMetadataHppBruker2")
       .get("/hpp-webapp/api/hentMetadataHppBruker")
       .headers(headers_1))
 
-    .exec(http("nyeDriftsmeldinger")
+    .exec(http("¤ nyeDriftsmeldinger")
       .get("/hpp-webapp/api/driftsmelding/nyeDriftsmeldinger")
       .headers(headers_1))
 
-    .exec(http("personsok/sok")
+    .exec(http("¤ personsok/sok")
       .post("/hpp-webapp/api/personsok/sok")
       .headers(headers_CsrfToken)
       .body(ElFileBody("magnus/sokPasient.json"))
@@ -123,17 +129,17 @@ class KubtestSimulation extends Simulation {
       .check(jsonPath("$.erReservertDoed").saveAs("erReservertDoed"))
       .check(jsonPath("$.erDiskret").saveAs("erDiskret")))
 
-    .exec(http("settSamtykke")
+    .exec(http("¤ settSamtykke")
       .post("/hpp-webapp/api/personsok/settSamtykke")
       .headers(headers_CsrfToken)
       .body(ElFileBody("magnus/settSamtykke.json")))
 
-    .exec(http("hentSperretModulStatus")
+    .exec(http("¤ hentSperretModulStatus")
       .post("/hpp-webapp/api/sperrePlakat/hentSperretModulStatus/")
       .headers(headers_CsrfToken)
       .body(ElFileBody("magnus/hentSperretModulStatus.json")))
 
-    .exec(http("oversiktlegemidler")
+    .exec(http("¤ oversiktlegemidler")
       .get("/hpp-webapp/api/legemidler/${uuid}/oversikt")
       .headers(headers_1)
       .check(jsonPath("$..legemiddelHistorikk").exists))
