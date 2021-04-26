@@ -19,6 +19,10 @@
         ],
         "active": true
       }
+    },
+    {
+      "name": "SamtykkeKjernejournal",
+      "valueCode": "HPAKUTT"
     }
   ]
 }

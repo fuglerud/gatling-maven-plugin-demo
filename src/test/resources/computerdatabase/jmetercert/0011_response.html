@@ -1,0 +1,29 @@
+<!doctype html>
+<html ng-csp="" lang="en">
+<head>
+  <!-- Angular does not allow the app to change it response header, a requirement to be able to use "report-uri" allowing the app to receive errors on what is rejected by the CSP. 
+       With Angular V11 it should be possible to add a "report-uri" property to the meta. Until then, finding rejections from CSP will need to rely on what Chrome reports in inspect mode. 
+
+       The policy should be adjusted as the app changes and as security requires. Currently it allows the app to connect to any source, through the '*' in connect-src.
+       This should rather point to the instance of SFM.Server and Datashare that the EPJ is using, and can be changed as the app evolves.
+
+       To remove "unsafe-line" from "style-src", the stylesheet "angular-csp.css" needs to be manually included in the header. 
+
+       Note!!! SFM.Server has its own CSP that will be returned to the angular client, not to be confused with the Angluar CSP. When browsing the header in Chrome inspect you will see the
+       SFM.Server CSP in requests to SFM.Server.
+
+  -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; connect-src 'self' *; font-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; script-src 'self'; ">
+
+  <base href="/">
+  <title>SFM</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Cache-Control" content="no-store"/>
+<link rel="stylesheet" href="styles.b83ff6942713f512fabb.css"></head>
+<body>
+  <app-root></app-root>
+<script src="runtime.b5587e90f093839891f2.js" defer></script><script src="polyfills.9ff8a9e3ca313829efd3.js" defer></script><script src="main.4b4221ebc07a824ca7ae.js" defer></script></body>
+</html>

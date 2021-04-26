@@ -1,0 +1,198 @@
+﻿{
+  "BA_PRIMARY_BUTTON": {
+    "SAVING": "Lagrer"
+  },
+  "GENERAL": {
+    "YOU_MUST_FILL_IN": "Du må fylle inn",
+    "UPDATED": "Oppdatert",
+    "YES": "Ja",
+    "NO": "Nei",
+    "SAVE": "Lagre",
+    "CANCEL": "Avbryt",
+    "NO_RESULTS": "Ingen resultater",
+    "CHANGE": "Bytt"
+  },
+  "BM_USER_INFO": {
+    "LINE_LEGACIES": "Line Legassen",
+    "DATE_OF_BIRTHDAY": "Fødselsnummer",
+    "HPR_NUMBER": "HPR-nummer",
+    "DOCTOR": "Lege",
+    "AUTHORIZATION": "Autorisasjon",
+    "SPECIALTIES": "Spesialiteter",
+    "REQUISITION_RIGHTS": "Rekvisisjonsretter",
+    "ADDITIONAL_COMPETENCIES": "Tilleggskompetanser",
+    "INFORMATION_OBTAINED_FROM_HPR": "Informasjon hentet fra HPR"
+  },
+  "BM_USER_RIGHTS": {
+    "LOCAL": "Lokalt",
+    "USER_RIGHTS_ON_BEHALF_OF_THE_BUSINESS": "Rettigheter til bruker på vegne av virksomheten",
+    "APPROVE_PRESCRIPTION": "Godkjenne forskrivning",
+    "CREATE_DRAFTS": "Opprette utkast",
+    "DOUBLE_SIGNERS_DRAFTED_ON_PRESCRIPTION": "Dobbeltsignere utkast på forskrivning",
+    "RENEW_PRESCRIPTION_ON_BEHALF_OF_REQUESTER": "Fornye resept på vegne av rekvirent",
+    "APPROVE_LIB": "Godkjenne behandlinger og resepter",
+    "CREATE_LIB_DRAFT": "Opprette LIB utkast",
+    "DOUBLE_SIGN_LIB": "Dobbeltsignere LIB",
+    "APPROVE_DRUG_REACTION": "Godkjenn legemiddelreaksjon",
+    "CREATE_A_DRUG_REACTION_DRAFT": "Opprett utkast på legemiddelreaksjon",
+    "DOUBLE_DESIGNS_DRUG_REACTION": "Dobbeltsigner legemiddelreaksjon",
+    "LOOKUP_KJ_WITHOUT_CONSENT": "Oppslag i kejerne journal uten samtykke",
+    "PERFORM_DRUG_REVIEW": "Utføre legemiddelgjennomgang",
+    "DELETE_PRESCRIPTION_ENTRY_IN_LIB_AND_CRITICAL_DRUG_RESPONSE": "Slette behandling/resept/kritisk legemiddelreaksjon",
+    "CONFIGURE_YOUR_OWN_BUSINESS": "Konfigurere egen virksomhet",
+    "CREATE_AND_EDIT_PRESCRIPTION_TEMPLATES_IN_YOUR_BUSINESS": "Opprette og redigere forskrivningsmaler i virksomheten",
+    "CREATE_AND_EDIT_PRESCRIPTIVE_PROTOCOLS_IN_THE_BUSINESS": "Opprette og redigere forskrivningsprotokoller i virksomheten",
+    "CREATE_AND_EDIT_BUSINESS_CARD_DOSES": "Opprette og redigere virksomhetsspesifikke kortdoser",
+    "CREATE_AND_EDIT_LOCAL_MEDICINES_IN_THE_BUSINESS": "Opprette og redigere lokale legemidler",
+    "CREATE_REPORT_TO_HELFO": "Opprette rapport til Helfo",
+    "CREATE_REPORT_TO_COUNTY_GOVERNOR": "Opprette rapport til Fylkesmann",
+    "CREATE_REPORT_BASED_ON_NOTIFICATION_SLV": "Opprette rapport basert på varsel SLV",
+    "ACCESS_TO_READ_DELETE_HISTORY": "Tilgang til å lese slettelogg",
+    "TRANSPARENCY_LOG_ACCESS": "Innsyn i slettelogg",
+    "MANAGE_USERS_IN_THE_BUSINESS": "Administrere brukere i virksomheten",
+    "MESSAGE_LOG": "Meldingslogg",
+    "MERGE_PATIENTS_INTO_THE_BUSINESS": "Slå sammen pasienter i virksomheten",
+    "RESET_USER_RIGHTS": "Tilbakestille brukerrettightetene",
+    "RESET_USER_RIGHTS_CONFIRMATION": "Dette vil sette brukerrettighetene tilbake det som er satt som default for helsepersonellkategorien. Vil du foresette?"
+  },
+  "BM_USER_SETTINGS": {
+    "SETTINGS": "Instillinger",
+    "PREFERENCES_IN_SFM": "Preferanser i SFM",
+    "ALWAYS_CREATE_PRESCRIPTIONS_WHEN_PRESCRIBING": "Alltid opprette resept ved opprettelse av ny behandling?",
+    "BENEFITS_CODE_REFUND": "Kodeverk for stønad (refusjon)",
+    "ICPC_2": "ICPC-2",
+    "ICD10": "ICD10",
+    "DO_YOU_WANT_TO_START_THE_PATIENT_S_DRUG_LIST": "Ønsker du å starte pasientens legemiddelliste (PLL)?",
+    "NOTIFICATIONS": "Varsler",
+    "MUST_SHOW_INTERACTION_ALERTS_AT_THE_LOWEST_LEVEL": "Vise interaksjonsvarsler på laveste nivå?",
+    "RIGHTS_AND_RESPONSIBILITIES": "Rettighetter og ansvar",
+    "DO_YOU_HAVE_GENERAL_RIGHTS_TO_LOOK_UP_THE_CORE_JOURNAL": "Har du generelle rettigheter til å slå opp i Kjernejournal?",
+    "DO_YOU_HAVE_PHARMACEUTICAL_RESPONSIBILITY_IN_THE_BUSINESS": "Har du legemiddelansvar i virksomheten?"
+  },
+  "BO_REGISTER_ACTIVE_INGREDIENT": {
+    "ACTIVE_SUBSTANCE": "Virkestoff",
+    "ACTIVE_SUBSTANCE_NAME": "Virkestoffnavn",
+    "STRENGTH": "Styrke",
+    "UNIT": "Enhet"
+  },
+  "BO_USER_INFO_SETTINGS": {
+    "RIGHTS": "Rettigheter"
+  },
+  "BO_PRECAUTIONS_OPTIONS": {
+    "PRECAUTIONS_ON_INTAKE": "Forholdsregler ved inntak",
+    "RECOMMENDED_PRECAUTIONS_FROM_FEST": "Anbefalte forholdsregler fra FEST"
+  },
+  "BO_REEVALUATION": {
+    "ADD_A_REVIEW_DATE": "Legg til revurderingsdato",
+    "REVIEW_DATE": "Revurderingsdato",
+    "LOCAL_MESSAGE_ON_REASSESSMENT": "Lokal beskjed ved revurdering",
+    "ADD_A_REVIEW_DATE_MESSAGE": "Dato og merknad for revurdering legges inn i oppgavelisten i din EPJ."
+  },
+  "BA_DROPDOWN": {
+    "BTN_TEXT": "Valg i nedtrekkslisten"
+  },
+  "BA_ORIGINAL_VALUE": {
+    "OPEN_INFO": "Vis mindre",
+    "NOT_OPEN_INFO": "Vis mer"
+  },
+  "BM_COMBO_BOX": {
+    "YOU_HAVE_TO_CHOOSE": "Du må velge",
+    "THIS_IS_NOT_A_VALID_ALTERNATIVE": "Dette er ikke et gyldig alternativ"
+  },
+  "BM_DATEPICKER": {
+    "THIS_IS_NOT_A_VALID_DATE": "Dette er ikke en gyldig dato.",
+    "YOU_MUST_SELECT_ONE_DATE": "Du må velge en dato."
+  },
+  "BO_MULTI_SELECTION_MODAL": {
+    "CHANGE_TYPE_OF_ITEM": "Bytte vare?",
+    "CHANGE_TYPE_OF_ITEM_CONFIRM": "Er du sikker på at du vil bytte vare? Valgene du har gjort vil ikke bli lagret."
+  },
+  "LIB_STATE_PIPE": {
+    "ACTIVE": "Aktiv",
+    "READY": "Klar",
+    "NEW": "Ny",
+    "CHANGED": "Endret",
+    "DRAFT": "Utkast"
+  },
+  "LOOKUP_STATUS_OVERVIEW_PIPE": {
+    "LAST_UPDATED": "Sist oppdatert",
+    "PARTIALLY_UPDATED": "Delvis oppdatert",
+    "NOT_UPDATED": "Ikke oppdatert"
+  },
+  "MARKETING_LICENSE_STATE_PIPE": {
+    "NOT_MARKETING_AUTHORIZATION": "ikke markedsføringstillatelse",
+    "NOT_SOURCED_FROM_FEST": "ikke hentet fra FEST"
+  },
+  "MESSAGE_LOG_TYPE_PIPE": {
+    "PRESCRIPTION_M1": "Resept (M1)",
+    "PRESCRIPTION_Lib": "Lib",
+    "PAPER_RECIPE_M1": "Papirresept (M1)",
+    "RESEPT_STATUS": "Reseptstatus",
+    "DISPENSE_INFORMATION": "Utleveringsinformasjon",
+    "OBTAINING_REFERENCE_NUMBER_M4_1_COMBINED": "Innhenting av referansenummer (M4.1,M4.2)",
+    "OBTAINING_REFERENCE_NUMBER_M4_1": "Forespørsel om referansenummer (M4.1)",
+    "OBTAINING_REFERENCE_NUMBER_M4_2": "Referansenummer (M4.2)",
+    "RECALL_OF_PRESCRIPTION_M5": "Tilbakekalling av resept (M5)",
+    "RECALL_OF_PRESCRIPTION_M5_2": "Kvittering for tilbakekalling (M5.2)",
+    "RECALL_OF_PRESCRIPTION_M7": "Slettet resept i Reseptformidleren (M7)",
+    "DELIVERY_M6": "Utleveringsrapport til rekvirent (M6)",
+    "DELIVERY_M8": "Utleveringsrapport til fastlege (M8)",
+    "PLL_M25_1": "Pasientens legemiddelliste (PLL), lege (M25.1)",
+    "PLL_M25_2": "Spørremelding fra apotek (M25.2)",
+    "PLL_M25_3": "Multidosepakking (M25.3)",
+    "MULTIDOSE_REGISTRATION_M27_1_COMBINED": "Multidose på-/avmelding (M27.1,M27.2)",
+    "MULTIDOSE_REGISTRATION_M27_1": "Registrering av multidose apotek/multidoseansvarlig lege (M27.1)",
+    "MULTIDOSE_REGISTRATION_M27_2": "Svar registrering av multidose apotek/multidoseansvarlig lege (M27.2)",
+    "APPLICATION_FOR_HELFO_M2": "Søknad om individuell refusjon (M2)",
+    "APPLICATION_FOR_SLV": "Søknad til SLV",
+    "APPLICATION_ANSWER_FOR_SLV": "Søknadssvar fra legemiddelverket (M15)",
+    "LOOKUP_FOR_KJ": "Oppslag i KJ",
+    "LOOKUP_FOR_RF_M9_5_COMBINED": "Innhenting av resepter (M9.5,M9.6)",
+    "LOOKUP_FOR_RF_M9_5": "Forespørsel om resepter på pasient (M9.5)",
+    "LOOKUP_FOR_RF_M9_6": "Reseptliste til rekvirent (M9.6)",
+    "LOOKUP_FOR_RF_M9_7_COMBINED": "Utleveringer på resept (M9.7.M9.8)",
+    "LOOKUP_FOR_RF_M9_7": "Forespørsel om utleveringer på resept (M9.7)",
+    "LOOKUP_FOR_RF_M9_8": "Utleveringer på resept (M9.8)",
+    "LOOKUP_FOR_RF_M9_11_COMBINED": "Innhenting av pasientens legemiddelliste (M9.11,9.12)",
+    "LOOKUP_FOR_RF_M9_11": "Forespørsel om pasientens legemiddelliste (M9.11)",
+    "LOOKUP_FOR_RF_M9_12": "Nedlasting av pasientens legemiddelliste (M9.12)",
+    "SUBSCRIPTION_REGISTRATION_M24_1_COMBINED": "Abonnementsregistrering (M24.1,M24.2)",
+    "SUBSCRIPTION_REGISTRATION_M24_1": "Abonnementsregistrering (M24.1)",
+    "SUBSCRIPTION_REGISTRATION_M24_2": "Svar på abonnementsregistrering (M24.2)",
+    "ADVERSE_MESSAGE": "Bivirkningsmelding",
+    "FEST_UPDATE": "Festoppdatering",
+    "APPREC": "Apprec",
+    "LOCAL_APPLICATION": "Vedtak om individuell stønad (Lokalt registrert vedtak)"
+  },
+  "MESSAGE_LOG_STATUS_PIPE": {
+    "DELIVERED" : "Levert",
+    "FAILED" : "Feilet",
+    "RECEIVED" : "Mottatt",
+    "LIMITED" : "Begrenset",
+    "PARTIALLY_DELIVERED" : "Delvis levert",
+    "PRINTED" : "Skrevet ut",
+    "OTHER" : "Annet",
+    "LOCAL" : "Lokal"
+  },
+  "REIMBURSEMENT_PARAGRAPH_PIPE": {
+    "H_PRESCRIPTIONS": "H-resepter"
+  },
+  "ERROR_MESSAGE_SERVICE": {
+    "YOU_MUST_FILL_IN": "Du må fylle inn {{useName}}.",
+    "TOO_MANY_CHARACTERS": "For mange tegn. Du har skrevet {{curLength}} / {{maxLength}} tegn.",
+    "NO_LONGER_EXISTS": "Du må velge et annet {{useName}} fordi dette {{useName}} ikke finnes lenger"
+  },
+  "UTILS_SERVICE": {
+    "AVAILABLE": "Tilgjengelig",
+    "BRAND_PRESCRIBING": "Merkevareforskrivning",
+    "LAST_DELIVERED": "Sist utlevert",
+    "LOCKED_PRESCRIPTION": "Låst resept!",
+    "GUARDIAN_ACCESS_RESERVATION": "Vær varsom i samtale med pasient dersom forelder eller verge er tilstede.",
+    "FIXED": "Fast",
+    "AS_NEEDED": "Behov",
+    "TREATMENT": "Kur",
+    "E_PRESCRIPTIONS": "e-Resept",
+    "PAPER_PRESCRIPTION": "Papirresept",
+    "VACCINE": "Vaksine"
+  }
+}

@@ -74,6 +74,7 @@ class JMeter extends Simulation  {
       .headers(headers_2)
       .formParam("SelectedPortalId", "PatientPortal")
       .formParam("submitButton", "select")
+      .formParam("SelectedPortalId", "")
       .formParam("IsSelectingInstallation", "False")
       .formParam("SelectedEnvironmentId", "")
       .formParam("__RequestVerificationToken", "${requestVerificationToken1}")
@@ -94,6 +95,7 @@ class JMeter extends Simulation  {
       .formParam("IsSelectingInstallation", "True")
       .formParam("SelectedEnvironmentId", "ffad58fd-a86f-4122-8541-42a82f719fe8#Glittertind testlegekontor (Fastlege)")
       .formParam("__RequestVerificationToken", "${requestVerificationToken2}"))
+
 
     .exec(http("LoadClientAsync")
       .post(uri2 + "/Patient/LoadClientAsync")

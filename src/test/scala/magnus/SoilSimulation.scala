@@ -99,6 +99,7 @@ class SoilSimulation extends Simulation {
     val uri3 = "https://server.qa.forskrivning.no"
     val uri4 = "https://sessions.bugsnag.com"
     val uri5 = "https://helseid-sts.test.nhn.no"
+	  //val uri5 = "https://helseid-sts.qa.nhn.no/"
     val uri6 = "https://hid-testidp.azurewebsites.net/Account/Login"
 
 	val scn = scenario("SoilSimulation")
@@ -170,7 +171,7 @@ class SoilSimulation extends Simulation {
 			.check(xpath(".//input[@type=\"hidden\" and @name=\"scope\"]/@value").saveAs("scope"))
 			.check(xpath(".//input[@type=\"hidden\" and @name=\"code\"]/@value").saveAs("code"))
 			.check(regex("name='id_token' value='(.*?)' />").saveAs("id_token"))
-			.resources(http("request_7")
+			.resources(http("request_signin-testidp-oidc")
 			.post(uri5 + "/signin-testidp-oidc")
 			.headers(headers_6)
 			.formParam("code", "${code}")

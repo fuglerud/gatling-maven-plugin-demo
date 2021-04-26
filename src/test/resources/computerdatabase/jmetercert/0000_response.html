@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Web EPJ emulator</title>
+    <link rel="stylesheet" href="/lib/twitter-bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/lib/select2/css/select2.min.css" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+    
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand mr-auto py-0" href="#">Web EPJ emulator</a>
+    <ul class="navbar-nav">
+        <form class="form-inline" method="POST" action="/">
+                <li class="nav-item active">
+                    <div class="form-group">
+                        <label class="mx-2 py-0" for="SelectedPortalId">Select Portal:</label>
+                      
+                        <select class="custom-select custom-select-sm py-0" data-searchable="true" id="SelectedPortalId" name="SelectedPortalId">
+                        <option value="PatientPortal">Patient Portal</option>
+<option value="EnterprisePortal">Enterprise Portal</option>
+<option value="HealthcarePortal">Health Personnel Portal</option>
+<option value="ServiceProvider">Service Provider Portal</option>
+</select>
+                    </div>
+                </li>
+            <button class="btn btn-md btn-outline-secondary mx-2 py-0" type="submit" name="submitButton" value="select">Select</button>
+            <input type="hidden" value="" id="SelectedPortalId" name="SelectedPortalId" />
+            <input type="hidden" value="False" data-val="true" data-val-required="The IsSelectingInstallation field is required." id="IsSelectingInstallation" name="IsSelectingInstallation" />
+            <input type="hidden" value="" id="SelectedEnvironmentId" name="SelectedEnvironmentId" />
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8DnOQbtIxW5HnCTA54D95ZqjMgAuC-zikpbKMucNyUz3zF4uI7sbuGoLbRoa7cYYtggziZoP_aLZ37EEYlXMLaqTt6RpQCHCgnS-rwR8H2wf7xMKkK2zBFOtGh6RxdEyNTJseo-BsshHwW7L-v_nPag" /></form>
+    </ul>
+</nav>
+    <script src="/lib/jquery/jquery.min.js"></script>
+    <script src="/lib/twitter-bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="/lib/select2/js/select2.full.min.js"></script>
+    <script src="/js/site.js?v=86-8P34PLFhGx0tEe5UP1RatwOQXj1EINGmWeyiptHE"></script>
+    
+</body>
+</html>

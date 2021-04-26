@@ -14,8 +14,8 @@ class KubtestSimulation extends Simulation {
   // .doNotTrackHeader("1")
    // .userAgentHeader("Mozilla/5.0 (Macintosh; Intel Mac OS X 10.16; rv:84.0) Gecko/20100101 Firefox/84.0")
 
-  val httpProtocol = http
-    //val httpProtocol = http.proxy(Proxy("proxy.drift.nhn.no", 8080))
+
+    val httpProtocol = http.proxy(Proxy("proxy.drift.nhn.no", 8080))
     .proxy(Proxy("proxy.drift.nhn.no", 8080))
     .noProxyFor("kubtest.kj.nhn.no")
     .baseUrl("https://kubtest.kj.nhn.no")

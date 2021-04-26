@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Web EPJ emulator</title>
+    <link rel="stylesheet" href="/lib/twitter-bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/lib/select2/css/select2.min.css" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+    
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand mr-auto py-0" href="#">Web EPJ emulator</a>
+    <ul class="navbar-nav">
+        <form class="form-inline" method="POST" action="/">
+                <li class="nav-item active">
+                    <div class="form-group mx-2">
+                        <label class="mx-2 py-0" for="SelectedHelseIdEnvironment">SelectedHelseIdEnvironment</label>
+                        <select id="ddlHelseAuthEnvironment" class="custom-select custom-select-sm py-0" data-searchable="true" name="SelectedHelseIdEnvironment">
+                        <option selected="selected" value="046045e6-538d-4607-8000-3cc74887658b_https://helseid-int-sts.test.nhn.no">https://helseid-int-sts.test.nhn.no</option>
+<option value="6842b79e-43ae-4915-9600-55631de237a7_https://helseid-sts.test.nhn.no">https://helseid-sts.test.nhn.no</option>
+</select>
+                    </div>
+                </li>
+                <li class="nav-item active">
+                    <div class="form-group mx-2">
+                        <label class="mx-2 py-0" for="SelectedEnvironmentId">Select Installation:</label>
+                        <select id="ddlSelectedEnvironment" class="custom-select custom-select-sm py-0" data-searchable="true" name="SelectedEnvironmentId">
+                        <option value="sfm-stresstest-985752796#Haugesund &#xD8;yelegesenter AS">Haugesund &#xD8;yelegesenter AS</option>
+<option value="sfm-stresstest-100187620#APERTURE TEST LEGEKONTOR">APERTURE TEST LEGEKONTOR</option>
+<option value="sfm-stresstest-981830075#Jordal Amfi Legekontor">Jordal Amfi Legekontor</option>
+<option value="sfm-stresstest-971476168#Asker Hudlegekontor">Asker Hudlegekontor</option>
+<option value="sfm-stresstest-981765230#Kragsgata">Kragsgata</option>
+<option value="sfm-stresstest-100200716#Athene legekontor Helsedirektoratet">Athene legekontor Helsedirektoratet</option>
+<option value="sfm-stresstest-990339872#Atlas medica as">Atlas medica as</option>
+<option value="sfm-stresstest-990788960#CITY LEGESENTER">CITY LEGESENTER</option>
+<option value="sfm-stresstest-921715315#Nordvestklinikk">Nordvestklinikk</option>
+<option value="sfm-stresstest-989240358#Lege Helge E. N&#xE6;ss AS">Lege Helge E. N&#xE6;ss AS</option>
+<option value="sfm-stresstest-971318686#Hudlegekontoret i Larvik">Hudlegekontoret i Larvik</option>
+<option value="sfm-stresstest-981852532#Gamlebyen Fysikalske Institutt">Gamlebyen Fysikalske Institutt</option>
+<option value="sfm-stresstest-992610050#Birgitt Haugeberg - Gynekologpraksis">Birgitt Haugeberg - Gynekologpraksis</option>
+<option value="sfm-stresstest-914878233#Birkemo Fysikalske AS">Birkemo Fysikalske AS</option>
+<option value="sfm-stresstest-977561205#Bislett &#xD8;yelegesenter">Bislett &#xD8;yelegesenter</option>
+<option value="sfm-stresstest-991252762#Legene p&#xE5; St.Hanshaugen">Legene p&#xE5; St.Hanshaugen</option>
+<option value="sfm-stresstest-984632789#Vadmyra Legekontor">Vadmyra Legekontor</option>
+<option value="sfm-stresstest-981851285#Marnardal legesenter">Marnardal legesenter</option>
+<option value="sfm-stresstest-974579812#Bjugn legekontor">Bjugn legekontor</option>
+<option value="sfm-stresstest-988660124#Bellevue Legesenter">Bellevue Legesenter</option>
+<option value="sfm-stresstest-981760646#Borgen Legesenter">Borgen Legesenter</option>
+<option value="sfm-stresstest-989427423#Torget Medisinske Senter">Torget Medisinske Senter</option>
+<option value="sfm-stresstest-971493291#Brattlikollen Legesenter">Brattlikollen Legesenter</option>
+<option value="sfm-stresstest-881740702#Kommunelegekontoret p&#xE5; Rena">Kommunelegekontoret p&#xE5; Rena</option>
+<option value="sfm-stresstest-994864939#Jan Glas&#xF8;">Jan Glas&#xF8;</option>
+<option value="sfm-stresstest-893142592#Da Vinci Klinikken">Da Vinci Klinikken</option>
+<option value="sfm-stresstest-980656624#S&#xF8;rlandsparken &#xD8;re-Nese-Hals">S&#xF8;rlandsparken &#xD8;re-Nese-Hals</option>
+<option value="sfm-stresstest-990275947#Legekontor Dr. &#xD8;sthus">Legekontor Dr. &#xD8;sthus</option>
+<option value="sfm-stresstest-100128519#DOC@A1 Legekontor">DOC@A1 Legekontor</option>
+<option value="sfm-stresstest-977366658#Oslogynekologene">Oslogynekologene</option>
+<option value="sfm-stresstest-980003051#Bod&#xF8; Gynekologiske Klinikk">Bod&#xF8; Gynekologiske Klinikk</option>
+<option value="sfm-stresstest-984097603#Dr Thomas Karlsson">Dr Thomas Karlsson</option>
+<option value="sfm-stresstest-882307182#Dr&#xF8;bak legesenter">Dr&#xF8;bak legesenter</option>
+<option value="sfm-stresstest-981732529#Eiker Fysioterapi">Eiker Fysioterapi</option>
+<option value="sfm-stresstest-971490845#Ellingsrud Fysikalske Institutt">Ellingsrud Fysikalske Institutt</option>
+<option value="sfm-stresstest-981781988#Storgata legekontor">Storgata legekontor</option>
+<option value="sfm-stresstest-971128054#Havstein Klinikken">Havstein Klinikken</option>
+<option value="sfm-stresstest-976672836#Fitjar Legesenter">Fitjar Legesenter</option>
+<option value="0d1f3bc6-e1d0-4d3b-a056-34d16478ddfe#Storjuvtinden PLO institusjon (Plo)">Storjuvtinden PLO institusjon (Plo)</option>
+<option value="fb46973d-3fd4-43d3-aca2-acd1ca0e540f#Styggeh&#xF8; spesialistene (Specialist)">Styggeh&#xF8; spesialistene (Specialist)</option>
+<option value="ffad58fd-a86f-4122-8541-42a82f719fe8#Glittertind testlegekontor (Fastlege)">Glittertind testlegekontor (Fastlege)</option>
+</select>
+                    </div>
+                </li>
+            <button class="btn btn-md btn-outline-secondary mx-2 py-0" type="submit" name="submitButton" value="select">Select</button>
+            <input type="hidden" value="PatientPortal" id="SelectedPortalId" name="SelectedPortalId" />
+            <input type="hidden" value="True" data-val="true" data-val-required="The IsSelectingInstallation field is required." id="IsSelectingInstallation" name="IsSelectingInstallation" />
+            <input type="hidden" value="" id="SelectedEnvironmentId" name="SelectedEnvironmentId" />
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8DnOQbtIxW5HnCTA54D95ZpPL6Tr2lbuSCm8OXG5Agf3w3CePBAW03_PB0L5psJhTBsgXnYx-Cw-SRsyrBYDUAtdkWk-BFSWkcKiM71VZ5Rv724I9WgJYvbdV97ffALXDH7lecENS29l5tzOVNTBlqU" /></form>
+    </ul>
+</nav>
+    <script src="/lib/jquery/jquery.min.js"></script>
+    <script src="/lib/twitter-bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="/lib/select2/js/select2.full.min.js"></script>
+    <script src="/js/site.js?v=86-8P34PLFhGx0tEe5UP1RatwOQXj1EINGmWeyiptHE"></script>
+    
+</body>
+</html>
