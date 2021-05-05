@@ -5,29 +5,29 @@
       "name": "medication",
       "resource": {
         "resourceType": "Bundle",
-        "id": "74c4402f-c0b8-41e2-9aec-204574ee8f9b",
+        "id": "c11dbac9-11fb-46bb-b0af-708b0ec09cd3",
         "meta": {
-          "lastUpdated": "2021-01-26T16:13:55.9674698+00:00",
-          "source": "http://base-fhir.qa.forskrivning.no/Patient/$getMedication",
+          "lastUpdated": "2021-05-03T10:02:46.1045586+02:00",
+          "source": "http://base-fhir.test2.forskrivning.no/Patient/$getMedication",
           "profile": [
             "http://ehelse.no/fhir/StructureDefinition/sfm-MedicationBundle"
           ]
         },
         "type": "document",
-        "timestamp": "2021-01-26T16:13:55.9674403+00:00",
-        "total": 23,
+        "timestamp": "2021-05-03T10:02:46.1045453+02:00",
+        "total": 15,
         "link": [
           {
             "relation": "self",
-            "url": "http://base-fhir.qa.forskrivning.no/Patient/$getMedication"
+            "url": "http://base-fhir.test2.forskrivning.no/Patient/$getMedication"
           }
         ],
         "entry": [
           {
-            "fullUrl": "urn:uuid:30cdcf8f-9644-4cd9-9fa9-8ee3a39bf8b9",
+            "fullUrl": "urn:uuid:a78e48b6-fbca-4032-b6e1-f2ab8f98637c",
             "resource": {
               "resourceType": "Composition",
-              "id": "c4b3ddc7-c9f0-40bf-942a-cabff6c87cdc",
+              "id": "5cc3e91e-c0e7-4976-b1d3-d3e50211efd5",
               "meta": {
                 "profile": [
                   "http://ehelse.no/fhir/StructureDefinition/sfm-MedicationComposition"
@@ -35,7 +35,7 @@
               },
               "identifier": {
                 "use": "official",
-                "value": "4726dd43-197e-4e53-a799-be704e23d6a3"
+                "value": "d65ea678-494c-410b-b9ac-2b13ae409df4"
               },
               "status": "final",
               "type": {
@@ -48,14 +48,14 @@
                 ]
               },
               "subject": {
-                "reference": "urn:uuid:8eb984f6-24cf-4e6f-a103-0c79994b398e",
-                "display": "Peder Wolden"
+                "reference": "urn:uuid:1b645c31-3818-49fd-accc-3fc609ba67ae",
+                "display": ""
               },
-              "date": "2021-01-26T16:13:55.6953678+00:00",
+              "date": "2021-05-03",
               "author": [
                 {
-                  "reference": "urn:uuid:f94e5c3c-3f67-45ce-9af1-fad34931e9cd",
-                  "display": "Bengt Fos Mo, HPR: 6165222"
+                  "reference": "urn:uuid:15f542c0-59fe-4d66-b067-fb95574e1359",
+                  "display": "Bjørn Psa Visjon, HPR: 1010038"
                 }
               ],
               "title": "Medication summary",
@@ -78,40 +78,24 @@
                   },
                   "entry": [
                     {
-                      "reference": "urn:uuid:bcc8d7fb-542c-4867-8236-5c93f77775b5",
-                      "display": "Simvastatin Tab 20 mg"
+                      "reference": "urn:uuid:2cf43132-2d2a-493c-887a-30c66a061203",
+                      "display": "Mianserin Tab 10 mg"
                     },
                     {
-                      "reference": "urn:uuid:e46801d4-511e-4c79-b633-9b52f9867766",
-                      "display": "Krystallfiolett NAF Liniment 0,5 %"
+                      "reference": "urn:uuid:60403cf5-a3e6-48a4-8c6f-a0410bf7cf90",
+                      "display": "Lioresal Tab 10 mg"
                     },
                     {
-                      "reference": "urn:uuid:49c04966-063b-4651-b77c-5421baa0bf7c",
-                      "display": "Nexium Enterotab 20 mg"
+                      "reference": "urn:uuid:52a23dda-49ce-4993-8938-50518998f4a6",
+                      "display": "Nexium Enterotab 40 mg"
                     },
                     {
-                      "reference": "urn:uuid:0b98060c-b2b8-434c-9b3f-efd3b065ecb3",
-                      "display": "Enbrel Inj væske 25 mg/sprøyte"
+                      "reference": "urn:uuid:37360a0e-7d70-49cf-8311-746d695b8125",
+                      "display": "Ibux Gel 50 mg/g"
                     },
                     {
-                      "reference": "urn:uuid:ff5b0d17-8555-495c-8cde-3162e15f260d",
-                      "display": "Simvastatin Tab 20 mg"
-                    },
-                    {
-                      "reference": "urn:uuid:aee7d1ba-7a21-45b7-af33-6aa3ea6b85fe",
-                      "display": "Cetirizin Sandoz Tab 10 mg"
-                    },
-                    {
-                      "reference": "urn:uuid:5295e72a-b944-44fc-b9a8-57f31ee4af85",
-                      "display": "Paracetamol Smeltetab 250 mg"
-                    },
-                    {
-                      "reference": "urn:uuid:d606f265-5b29-4e51-b94f-64825cb1c084",
-                      "display": "Ibuprofen Tab 400 mg"
-                    },
-                    {
-                      "reference": "urn:uuid:6b68a4fd-60db-488e-aee0-4a161abc834b",
-                      "display": "Enalapril Sandoz Tab 5 mg"
+                      "reference": "urn:uuid:f61b9f48-b77d-4125-959e-423f8b998019",
+                      "display": "Zyrtec Tab 10 mg"
                     }
                   ]
                 },
@@ -178,23 +162,26 @@
                   },
                   "text": {
                     "status": "generated",
-                    "div": "<xhtml:div xmlns:xhtml=\"http://www.w3.org/1999/xhtml\">List of non medical prescriptions</xhtml:div>"
+                    "div": "<xhtml:div xmlns:xhtml=\"http://www.w3.org/1999/xhtml\"></xhtml:div>"
                   },
-                  "entry": [
-                    {
-                      "reference": "urn:uuid:879d8ce3-1555-4398-8330-9bccd734aa31",
-                      "display": "sfm-BandaPrescription"
-                    }
-                  ]
+                  "emptyReason": {
+                    "coding": [
+                      {
+                        "system": "http://terminology.hl7.org/CodeSystem/list-empty-reason",
+                        "code": "unavailable",
+                        "display": "Unavailable"
+                      }
+                    ]
+                  }
                 }
               ]
             }
           },
           {
-            "fullUrl": "urn:uuid:8eb984f6-24cf-4e6f-a103-0c79994b398e",
+            "fullUrl": "urn:uuid:1b645c31-3818-49fd-accc-3fc609ba67ae",
             "resource": {
               "resourceType": "Patient",
-              "id": "1965344116",
+              "id": "903840684",
               "meta": {
                 "profile": [
                   "http://ehelse.no/fhir/StructureDefinition/sfm-Patient"
@@ -204,35 +191,17 @@
                 {
                   "use": "official",
                   "system": "urn:oid:2.16.578.1.12.4.1.4.1",
-                  "value": "24125290740"
+                  "value": "05064092458"
                 }
               ],
-              "active": true,
-              "name": [
-                {
-                  "family": "Wolden",
-                  "given": [
-                    "Peder"
-                  ]
-                }
-              ],
-              "gender": "male",
-              "address": [
-                {
-                  "use": "home",
-                  "type": "physical",
-                  "text": "Testveien 10",
-                  "city": "Oslo",
-                  "postalCode": "1234"
-                }
-              ]
+              "active": true
             }
           },
           {
-            "fullUrl": "urn:uuid:b99410f2-1960-4890-81a8-3e35f868e36e",
+            "fullUrl": "urn:uuid:516e6947-f7ef-4cb5-b964-fe1c1ce722a2",
             "resource": {
               "resourceType": "Practitioner",
-              "id": "134316204",
+              "id": "1611488566",
               "meta": {
                 "profile": [
                   "http://ehelse.no/fhir/StructureDefinition/sfm-Practitioner"
@@ -250,36 +219,27 @@
                     ]
                   },
                   "system": "urn:oid:2.16.578.1.12.4.1.4.4",
-                  "value": "431000129"
+                  "value": "2127296"
                 }
               ],
               "active": true,
               "name": [
                 {
                   "use": "official",
-                  "family": "Engelund",
+                  "family": "Pettersen",
                   "given": [
-                    "Elena Fos"
+                    "Knut"
                   ]
                 }
               ],
-              "address": [
-                {
-                  "use": "home",
-                  "type": "both",
-                  "text": "Virginia Legekontor",
-                  "city": "OSLO",
-                  "postalCode": "0102"
-                }
-              ],
-              "gender": "other"
+              "gender": "male"
             }
           },
           {
-            "fullUrl": "urn:uuid:dded805b-0356-4b6d-bd88-516d4c362946",
+            "fullUrl": "urn:uuid:c4c71913-8636-4849-908b-eab1ab0bea52",
             "resource": {
               "resourceType": "Medication",
-              "id": "315556923",
+              "id": "1837817049",
               "meta": {
                 "profile": [
                   "http://ehelse.no/fhir/StructureDefinition/sfm-Medication"
@@ -327,20 +287,20 @@
                   "type": {
                     "text": "identifier"
                   },
-                  "value": "ID_22634FA9-D516-4D15-9982-5439DD4B118D"
+                  "value": "ID_477D3E6A-FD6B-4675-8852-D2D38B32261F"
                 }
               ],
               "code": {
                 "coding": [
                   {
                     "system": "http://ehelse.no/fhir/CodeSystem/FEST",
-                    "code": "ID_22634FA9-D516-4D15-9982-5439DD4B118D",
-                    "display": "Simvastatin Tab 20 mg"
+                    "code": "ID_477D3E6A-FD6B-4675-8852-D2D38B32261F",
+                    "display": "Mianserin Tab 10 mg"
                   },
                   {
                     "system": "http://www.whocc.no/atc",
-                    "code": "C10AA01",
-                    "display": "Simvastatin"
+                    "code": "N06AX03",
+                    "display": "Mianserin"
                   }
                 ]
               },
@@ -357,10 +317,10 @@
             }
           },
           {
-            "fullUrl": "urn:uuid:bcc8d7fb-542c-4867-8236-5c93f77775b5",
+            "fullUrl": "urn:uuid:2cf43132-2d2a-493c-887a-30c66a061203",
             "resource": {
               "resourceType": "MedicationStatement",
-              "id": "1945905138",
+              "id": "1023091282",
               "meta": {
                 "profile": [
                   "http://ehelse.no/fhir/StructureDefinition/sfm-MedicationStatement"
@@ -371,23 +331,19 @@
                   "extension": [
                     {
                       "url": "reseptDate",
-                      "valueDate": "2020-09-23"
+                      "valueDate": "2021-04-21"
                     },
                     {
                       "url": "expirationdate",
-                      "valueDate": "2021-09-23"
+                      "valueDate": "2022-04-21"
                     },
                     {
                       "url": "festUpdate",
-                      "valueDateTime": "2017-01-11T14:16:50+00:00"
-                    },
-                    {
-                      "url": "freecard",
-                      "valueBoolean": false
+                      "valueDateTime": "2021-04-09T00:47:17+00:00"
                     },
                     {
                       "url": "dssn",
-                      "valueString": "1 tablett kveld"
+                      "valueString": "2 tablett ved sengetid"
                     },
                     {
                       "url": "lockedResept",
@@ -396,37 +352,13 @@
                     {
                       "url": "amount",
                       "valueQuantity": {
-                        "value": 92.0,
+                        "value": 183.0,
                         "unit": "stk"
                       }
                     },
                     {
                       "url": "reit",
                       "valueString": "3"
-                    },
-                    {
-                      "url": "speciality",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "urn:oid:2.16.578.1.12.4.1.1.7426",
-                            "code": "41",
-                            "display": "Revmatologi"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "url": "speciality",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "urn:oid:2.16.578.1.12.4.1.1.7426",
-                            "code": "41",
-                            "display": "Revmatologi"
-                          }
-                        ]
-                      }
                     },
                     {
                       "url": "itemgroup",
@@ -441,55 +373,30 @@
                       }
                     },
                     {
-                      "url": "reimbursementcode",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "2.16.578.1.12.4.1.1.7434",
-                            "code": "-26",
-                            "display": "Etablert aterosklerotisk sykdom (sekundærprevensjon)"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "url": "reimbursmentparagraph",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "urn:oid:2.16.578.1.12.4.1.1.7427",
-                            "code": "200",
-                            "display": "§5-14 §2"
-                          }
-                        ]
-                      }
-                    },
-                    {
                       "extension": [
                         {
                           "url": "starttime",
-                          "valueDateTime": "2017-01-13T00:00:00+00:00"
+                          "valueDate": "2021-04-21"
                         },
                         {
                           "extension": [
                             {
                               "url": "amount",
                               "valueQuantity": {
-                                "value": 1.0,
+                                "value": 2.0,
                                 "unit": "tablett"
                               }
                             },
                             {
                               "url": "interval",
-                              "valueCodeableConcept": {
-                                "coding": [
-                                  {
-                                    "system": "urn:oid:2.16.578.1.12.4.1.1.9088",
-                                    "code": "1",
-                                    "display": "Døgn"
-                                  }
-                                ]
+                              "valueQuantity": {
+                                "value": 1.0,
+                                "unit": "Døgn"
                               }
+                            },
+                            {
+                              "url": "accurate",
+                              "valueBoolean": false
                             },
                             {
                               "url": "timerange",
@@ -502,10 +409,6 @@
                                   }
                                 ]
                               }
-                            },
-                            {
-                              "url": "accurate",
-                              "valueBoolean": false
                             }
                           ],
                           "url": "repeatingdosage"
@@ -562,29 +465,25 @@
                     {
                       "url": "helseperson",
                       "valueReference": {
-                        "reference": "urn:uuid:b99410f2-1960-4890-81a8-3e35f868e36e",
-                        "identifier": {
-                          "use": "official",
-                          "type": {
-                            "coding": [
-                              {
-                                "system": "http://hl7.no/fhir/NamingSystem/HPR",
-                                "code": "HPR-nummer"
-                              }
-                            ]
-                          },
-                          "system": "urn:oid:2.16.578.1.12.4.1.4.4",
-                          "value": "431000129"
-                        },
-                        "display": "Elena Fos Engelund, HPR: 431000129"
+                        "reference": "urn:uuid:516e6947-f7ef-4cb5-b964-fe1c1ce722a2",
+                        "display": "Knut Pettersen, HPR: 2127296"
                       }
                     },
                     {
                       "url": "timestamp",
-                      "valueDateTime": "2020-09-23T14:37:24+00:00"
+                      "valueDateTime": "2021-04-21T10:08:07.6214923+02:00"
                     }
                   ],
                   "url": "http://ehelse.no/fhir/StructureDefinition/sfm-regInfo"
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "genericSubstitutionAccepted",
+                      "valueBoolean": true
+                    }
+                  ],
+                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-generic-substitution"
                 },
                 {
                   "extension": [
@@ -602,17 +501,17 @@
                   "type": {
                     "text": "ReseptId"
                   },
-                  "value": "ca0a3f00-562f-4c35-bdd0-1e7a481e03ab"
+                  "value": "00331e65-b03f-4f0f-b69b-1b9f195dabc3"
                 }
               ],
               "status": "active",
               "medicationReference": {
-                "reference": "urn:uuid:dded805b-0356-4b6d-bd88-516d4c362946",
-                "display": "Simvastatin Tab 20 mg"
+                "reference": "urn:uuid:c4c71913-8636-4849-908b-eab1ab0bea52",
+                "display": "Mianserin Tab 10 mg"
               },
               "subject": {
-                "reference": "urn:uuid:8eb984f6-24cf-4e6f-a103-0c79994b398e",
-                "display": "Peder Wolden"
+                "reference": "urn:uuid:1b645c31-3818-49fd-accc-3fc609ba67ae",
+                "display": ""
               },
               "dosage": [
                 {
@@ -621,7 +520,7 @@
                       "extension": [
                         {
                           "url": "text",
-                          "valueString": "KOLESTEROLSENKENDE"
+                          "valueString": "ASTMAMEDISIN"
                         }
                       ],
                       "url": "http://ehelse.no/fhir/StructureDefinition/sfm-application-area"
@@ -632,8 +531,8 @@
                         "coding": [
                           {
                             "system": "urn:oid:2.16.578.1.12.4.1.1.7478",
-                            "code": "21",
-                            "display": "0+0+1"
+                            "code": "5620",
+                            "display": "0+0+0+2 ved sengetid"
                           }
                         ]
                       }
@@ -652,16 +551,16 @@
                     }
                   ],
                   "sequence": 1,
-                  "text": "1 tablett kveld"
+                  "text": "2 tablett ved sengetid"
                 }
               ]
             }
           },
           {
-            "fullUrl": "urn:uuid:26785bea-9c6c-49eb-80a5-fd4d42156a3a",
+            "fullUrl": "urn:uuid:0cb2c13a-b27a-4143-8af1-4667051dc91b",
             "resource": {
               "resourceType": "Medication",
-              "id": "84239874",
+              "id": "836020857",
               "meta": {
                 "profile": [
                   "http://ehelse.no/fhir/StructureDefinition/sfm-Medication"
@@ -676,8 +575,8 @@
                         "coding": [
                           {
                             "system": "urn:oid:2.16.578.1.12.4.1.1.7421",
-                            "code": "F",
-                            "display": "Reseptgruppe F"
+                            "code": "C",
+                            "display": "Reseptgruppe C"
                           }
                         ]
                       }
@@ -703,11 +602,11 @@
                       "extension": [
                         {
                           "url": "name",
-                          "valueString": "Krystallfiolett NAF"
+                          "valueString": "Lioresal"
                         },
                         {
                           "url": "packingsize",
-                          "valueString": "60"
+                          "valueString": "50"
                         },
                         {
                           "url": "packingunit",
@@ -715,8 +614,8 @@
                             "coding": [
                               {
                                 "system": "urn:oid:2.16.578.1.12.4.1.1.7452",
-                                "code": "ml",
-                                "display": "milliliter"
+                                "code": "stk",
+                                "display": "stykk"
                               }
                             ]
                           }
@@ -734,20 +633,20 @@
                   "type": {
                     "text": "identifier"
                   },
-                  "value": "327973"
+                  "value": "448670"
                 }
               ],
               "code": {
                 "coding": [
                   {
                     "system": "http://ehelse.no/fhir/CodeSystem/FEST",
-                    "code": "327973",
-                    "display": "Krystallfiolett NAF Liniment 0,5 %"
+                    "code": "448670",
+                    "display": "Lioresal Tab 10 mg"
                   },
                   {
                     "system": "http://www.whocc.no/atc",
-                    "code": "D01AE02",
-                    "display": "Metylrosanilin"
+                    "code": "M03BX01",
+                    "display": "Baklofen"
                   }
                 ]
               },
@@ -756,18 +655,38 @@
                 "coding": [
                   {
                     "system": "urn:oid:2.16.578.1.12.4.1.1.7448",
-                    "code": "66",
-                    "display": "Liniment"
+                    "code": "53",
+                    "display": "Tablett"
+                  }
+                ]
+              },
+              "amount": {
+                "extension": [
+                  {
+                    "extension": [
+                      {
+                        "url": "quantity",
+                        "valueQuantity": {
+                          "value": 50.0,
+                          "unit": "stk"
+                        }
+                      },
+                      {
+                        "url": "amounttext",
+                        "valueString": "50 stk"
+                      }
+                    ],
+                    "url": "http://ehelse.no/fhir/StructureDefinition/sfm-amountText"
                   }
                 ]
               }
             }
           },
           {
-            "fullUrl": "urn:uuid:e46801d4-511e-4c79-b633-9b52f9867766",
+            "fullUrl": "urn:uuid:60403cf5-a3e6-48a4-8c6f-a0410bf7cf90",
             "resource": {
               "resourceType": "MedicationStatement",
-              "id": "2069674769",
+              "id": "1480736419",
               "meta": {
                 "profile": [
                   "http://ehelse.no/fhir/StructureDefinition/sfm-MedicationStatement"
@@ -778,23 +697,19 @@
                   "extension": [
                     {
                       "url": "reseptDate",
-                      "valueDate": "2020-09-23"
+                      "valueDate": "2021-04-21"
                     },
                     {
                       "url": "expirationdate",
-                      "valueDate": "2021-09-23"
+                      "valueDate": "2022-04-21"
                     },
                     {
                       "url": "festUpdate",
-                      "valueDateTime": "2016-10-07T01:00:27+00:00"
-                    },
-                    {
-                      "url": "freecard",
-                      "valueBoolean": false
+                      "valueDateTime": "2021-04-09T00:47:17+00:00"
                     },
                     {
                       "url": "dssn",
-                      "valueString": "pensles"
+                      "valueString": "2 tablett morgen 2 tablett ettermiddag 2 tablett kveld"
                     },
                     {
                       "url": "lockedResept",
@@ -802,35 +717,11 @@
                     },
                     {
                       "url": "numberofpackages",
-                      "valueDecimal": 1.0
+                      "valueDecimal": 11.0
                     },
                     {
                       "url": "reit",
-                      "valueString": "0"
-                    },
-                    {
-                      "url": "speciality",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "urn:oid:2.16.578.1.12.4.1.1.7426",
-                            "code": "190",
-                            "display": "Indremedisin"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "url": "speciality",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "urn:oid:2.16.578.1.12.4.1.1.7426",
-                            "code": "190",
-                            "display": "Indremedisin"
-                          }
-                        ]
-                      }
+                      "valueString": "3"
                     },
                     {
                       "url": "itemgroup",
@@ -846,6 +737,124 @@
                     },
                     {
                       "extension": [
+                        {
+                          "url": "starttime",
+                          "valueDate": "2021-04-21"
+                        },
+                        {
+                          "extension": [
+                            {
+                              "url": "amount",
+                              "valueQuantity": {
+                                "value": 2.0,
+                                "unit": "tablett"
+                              }
+                            },
+                            {
+                              "url": "interval",
+                              "valueQuantity": {
+                                "value": 1.0,
+                                "unit": "Døgn"
+                              }
+                            },
+                            {
+                              "url": "accurate",
+                              "valueBoolean": false
+                            },
+                            {
+                              "url": "timerange",
+                              "valueCodeableConcept": {
+                                "coding": [
+                                  {
+                                    "system": "urn:oid:2.16.578.1.12.4.1.1.8325",
+                                    "code": "1",
+                                    "display": "Morgen"
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          "url": "repeatingdosage"
+                        },
+                        {
+                          "extension": [
+                            {
+                              "url": "amount",
+                              "valueQuantity": {
+                                "value": 2.0,
+                                "unit": "tablett"
+                              }
+                            },
+                            {
+                              "url": "interval",
+                              "valueQuantity": {
+                                "value": 1.0,
+                                "unit": "Døgn"
+                              }
+                            },
+                            {
+                              "url": "accurate",
+                              "valueBoolean": false
+                            },
+                            {
+                              "url": "timerange",
+                              "valueCodeableConcept": {
+                                "coding": [
+                                  {
+                                    "system": "urn:oid:2.16.578.1.12.4.1.1.8325",
+                                    "code": "4",
+                                    "display": "Ettermiddag"
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          "url": "repeatingdosage"
+                        },
+                        {
+                          "extension": [
+                            {
+                              "url": "amount",
+                              "valueQuantity": {
+                                "value": 2.0,
+                                "unit": "tablett"
+                              }
+                            },
+                            {
+                              "url": "interval",
+                              "valueQuantity": {
+                                "value": 1.0,
+                                "unit": "Døgn"
+                              }
+                            },
+                            {
+                              "url": "accurate",
+                              "valueBoolean": false
+                            },
+                            {
+                              "url": "timerange",
+                              "valueCodeableConcept": {
+                                "coding": [
+                                  {
+                                    "system": "urn:oid:2.16.578.1.12.4.1.1.8325",
+                                    "code": "5",
+                                    "display": "Kveld"
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          "url": "repeatingdosage"
+                        }
+                      ],
+                      "url": "ereseptdosing"
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "nameDispenser",
+                          "valueString": "Testapotek Monier"
+                        },
                         {
                           "url": "status",
                           "valueCodeableConcept": {
@@ -863,6 +872,38 @@
                     }
                   ],
                   "url": "http://ehelse.no/fhir/StructureDefinition/sfm-reseptamendment"
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "pakningsstr",
+                      "valueQuantity": {
+                        "value": 50.0,
+                        "unit": "stk"
+                      }
+                    },
+                    {
+                      "url": "varenummer",
+                      "valueString": "448670"
+                    },
+                    {
+                      "url": "varenavn",
+                      "valueString": "Lioresal Tab 10 mg"
+                    },
+                    {
+                      "url": "antallpkntotalt",
+                      "valueDecimal": 11.0
+                    },
+                    {
+                      "url": "antallpknsiste",
+                      "valueDecimal": 11.0
+                    },
+                    {
+                      "url": "sistutlevert",
+                      "valueDateTime": "2021-04-21T00:00:00+00:00"
+                    }
+                  ],
+                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-deliverysummary"
                 },
                 {
                   "extension": [
@@ -893,29 +934,34 @@
                     {
                       "url": "helseperson",
                       "valueReference": {
-                        "reference": "urn:uuid:b99410f2-1960-4890-81a8-3e35f868e36e",
-                        "identifier": {
-                          "use": "official",
-                          "type": {
-                            "coding": [
-                              {
-                                "system": "http://hl7.no/fhir/NamingSystem/HPR",
-                                "code": "HPR-nummer"
-                              }
-                            ]
-                          },
-                          "system": "urn:oid:2.16.578.1.12.4.1.4.4",
-                          "value": "431000129"
-                        },
-                        "display": "Elena Fos Engelund, HPR: 431000129"
+                        "reference": "urn:uuid:516e6947-f7ef-4cb5-b964-fe1c1ce722a2",
+                        "display": "Knut Pettersen, HPR: 2127296"
                       }
                     },
                     {
                       "url": "timestamp",
-                      "valueDateTime": "2020-09-23T14:37:22+00:00"
+                      "valueDateTime": "2021-04-21T10:08:07.6474909+02:00"
                     }
                   ],
                   "url": "http://ehelse.no/fhir/StructureDefinition/sfm-regInfo"
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "genericSubstitutionAccepted",
+                      "valueBoolean": true
+                    }
+                  ],
+                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-generic-substitution"
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "nocombination",
+                      "valueBoolean": false
+                    }
+                  ],
+                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-administration"
                 }
               ],
               "identifier": [
@@ -924,17 +970,17 @@
                   "type": {
                     "text": "ReseptId"
                   },
-                  "value": "e5bc355f-6cf3-4cc3-8d88-eeb4cbb11dae"
+                  "value": "12983077-64f6-4355-badb-1b9f195db608"
                 }
               ],
               "status": "active",
               "medicationReference": {
-                "reference": "urn:uuid:26785bea-9c6c-49eb-80a5-fd4d42156a3a",
-                "display": "Krystallfiolett NAF Liniment 0,5 %"
+                "reference": "urn:uuid:0cb2c13a-b27a-4143-8af1-4667051dc91b",
+                "display": "Lioresal Tab 10 mg"
               },
               "subject": {
-                "reference": "urn:uuid:8eb984f6-24cf-4e6f-a103-0c79994b398e",
-                "display": "Peder Wolden"
+                "reference": "urn:uuid:1b645c31-3818-49fd-accc-3fc609ba67ae",
+                "display": ""
               },
               "dosage": [
                 {
@@ -943,10 +989,22 @@
                       "extension": [
                         {
                           "url": "text",
-                          "valueString": "MOT ASTMA"
+                          "valueString": "MOT MUSKELSMERTER"
                         }
                       ],
                       "url": "http://ehelse.no/fhir/StructureDefinition/sfm-application-area"
+                    },
+                    {
+                      "url": "http://ehelse.no/fhir/StructureDefinition/sfm-shortdosage",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "urn:oid:2.16.578.1.12.4.1.1.7478",
+                            "code": "5642",
+                            "display": "2+0+2+2"
+                          }
+                        ]
+                      }
                     },
                     {
                       "url": "http://ehelse.no/fhir/StructureDefinition/sfm-use",
@@ -954,24 +1012,24 @@
                         "coding": [
                           {
                             "system": "urn:oid:2.16.578.1.12.4.1.1.9101",
-                            "code": "2",
-                            "display": "Kur"
+                            "code": "1",
+                            "display": "Fast"
                           }
                         ]
                       }
                     }
                   ],
                   "sequence": 1,
-                  "text": "pensles"
+                  "text": "2 tablett morgen 2 tablett ettermiddag 2 tablett kveld"
                 }
               ]
             }
           },
           {
-            "fullUrl": "urn:uuid:38115403-e85a-43cc-aa47-20339c4337c1",
+            "fullUrl": "urn:uuid:0a054b2d-af9a-4797-8564-436ab60fd302",
             "resource": {
               "resourceType": "Medication",
-              "id": "56019655",
+              "id": "1313695051",
               "meta": {
                 "profile": [
                   "http://ehelse.no/fhir/StructureDefinition/sfm-Medication"
@@ -1023,15 +1081,15 @@
                   "type": {
                     "text": "identifier"
                   },
-                  "value": "ID_7E00CE2C-BACB-46F6-91CD-64D3C512C1AA"
+                  "value": "ID_DD89C034-4724-4FBD-97D7-2765C5B73A8D"
                 }
               ],
               "code": {
                 "coding": [
                   {
                     "system": "http://ehelse.no/fhir/CodeSystem/FEST",
-                    "code": "ID_7E00CE2C-BACB-46F6-91CD-64D3C512C1AA",
-                    "display": "Nexium Enterotab 20 mg"
+                    "code": "ID_DD89C034-4724-4FBD-97D7-2765C5B73A8D",
+                    "display": "Nexium Enterotab 40 mg"
                   },
                   {
                     "system": "http://www.whocc.no/atc",
@@ -1053,10 +1111,10 @@
             }
           },
           {
-            "fullUrl": "urn:uuid:49c04966-063b-4651-b77c-5421baa0bf7c",
+            "fullUrl": "urn:uuid:52a23dda-49ce-4993-8938-50518998f4a6",
             "resource": {
               "resourceType": "MedicationStatement",
-              "id": "664487921",
+              "id": "687570991",
               "meta": {
                 "profile": [
                   "http://ehelse.no/fhir/StructureDefinition/sfm-MedicationStatement"
@@ -1067,19 +1125,15 @@
                   "extension": [
                     {
                       "url": "reseptDate",
-                      "valueDate": "2020-09-23"
+                      "valueDate": "2021-04-21"
                     },
                     {
                       "url": "expirationdate",
-                      "valueDate": "2021-09-23"
+                      "valueDate": "2022-04-21"
                     },
                     {
                       "url": "festUpdate",
-                      "valueDateTime": "2016-12-22T00:49:47+00:00"
-                    },
-                    {
-                      "url": "freecard",
-                      "valueBoolean": false
+                      "valueDateTime": "2021-04-09T00:47:17+00:00"
                     },
                     {
                       "url": "dssn",
@@ -1116,7 +1170,7 @@
                       "extension": [
                         {
                           "url": "starttime",
-                          "valueDateTime": "2017-01-06T00:00:00+00:00"
+                          "valueDate": "2021-04-21"
                         },
                         {
                           "extension": [
@@ -1129,15 +1183,14 @@
                             },
                             {
                               "url": "interval",
-                              "valueCodeableConcept": {
-                                "coding": [
-                                  {
-                                    "system": "urn:oid:2.16.578.1.12.4.1.1.9088",
-                                    "code": "1",
-                                    "display": "Døgn"
-                                  }
-                                ]
+                              "valueQuantity": {
+                                "value": 1.0,
+                                "unit": "Døgn"
                               }
+                            },
+                            {
+                              "url": "accurate",
+                              "valueBoolean": false
                             },
                             {
                               "url": "timerange",
@@ -1150,10 +1203,6 @@
                                   }
                                 ]
                               }
-                            },
-                            {
-                              "url": "accurate",
-                              "valueBoolean": false
                             }
                           ],
                           "url": "repeatingdosage"
@@ -1210,29 +1259,25 @@
                     {
                       "url": "helseperson",
                       "valueReference": {
-                        "reference": "urn:uuid:b99410f2-1960-4890-81a8-3e35f868e36e",
-                        "identifier": {
-                          "use": "official",
-                          "type": {
-                            "coding": [
-                              {
-                                "system": "http://hl7.no/fhir/NamingSystem/HPR",
-                                "code": "HPR-nummer"
-                              }
-                            ]
-                          },
-                          "system": "urn:oid:2.16.578.1.12.4.1.4.4",
-                          "value": "431000129"
-                        },
-                        "display": "Elena Fos Engelund, HPR: 431000129"
+                        "reference": "urn:uuid:516e6947-f7ef-4cb5-b964-fe1c1ce722a2",
+                        "display": "Knut Pettersen, HPR: 2127296"
                       }
                     },
                     {
                       "url": "timestamp",
-                      "valueDateTime": "2020-09-23T14:37:26+00:00"
+                      "valueDateTime": "2021-04-21T10:23:21.7950023+02:00"
                     }
                   ],
                   "url": "http://ehelse.no/fhir/StructureDefinition/sfm-regInfo"
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "genericSubstitutionAccepted",
+                      "valueBoolean": true
+                    }
+                  ],
+                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-generic-substitution"
                 },
                 {
                   "extension": [
@@ -1250,646 +1295,17 @@
                   "type": {
                     "text": "ReseptId"
                   },
-                  "value": "c9544de5-f503-49fb-ac73-fc8b7bb4851c"
+                  "value": "19f56b98-d75c-4e73-a983-1b9f1ee017e9"
                 }
               ],
               "status": "active",
               "medicationReference": {
-                "reference": "urn:uuid:38115403-e85a-43cc-aa47-20339c4337c1",
-                "display": "Nexium Enterotab 20 mg"
+                "reference": "urn:uuid:0a054b2d-af9a-4797-8564-436ab60fd302",
+                "display": "Nexium Enterotab 40 mg"
               },
               "subject": {
-                "reference": "urn:uuid:8eb984f6-24cf-4e6f-a103-0c79994b398e",
-                "display": "Peder Wolden"
-              },
-              "dosage": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://ehelse.no/fhir/StructureDefinition/sfm-shortdosage",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "urn:oid:2.16.578.1.12.4.1.1.7478",
-                            "code": "195",
-                            "display": "1+0+0"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "url": "http://ehelse.no/fhir/StructureDefinition/sfm-use",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "urn:oid:2.16.578.1.12.4.1.1.9101",
-                            "code": "1",
-                            "display": "Fast"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "sequence": 1,
-                  "text": "1 tablett morgen"
-                }
-              ]
-            }
-          },
-          {
-            "fullUrl": "urn:uuid:ba24f038-82af-401b-9413-00db42d73e9c",
-            "resource": {
-              "resourceType": "Medication",
-              "id": "803392123",
-              "meta": {
-                "profile": [
-                  "http://ehelse.no/fhir/StructureDefinition/sfm-Medication"
-                ]
-              },
-              "extension": [
-                {
-                  "extension": [
-                    {
-                      "url": "prescriptiongroup",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "urn:oid:2.16.578.1.12.4.1.1.7421",
-                            "code": "C",
-                            "display": "Reseptgruppe C"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "url": "http://hl7.no/fhir/StructureDefinition/no-basis-prescriptiongroup"
-                },
-                {
-                  "extension": [
-                    {
-                      "url": "registreringstype",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://ehelse.no/fhir/CodeSystem/sfm-festregistrationtype",
-                            "code": "3",
-                            "display": "Legemiddelpakning"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "extension": [
-                        {
-                          "url": "name",
-                          "valueString": "Enbrel"
-                        },
-                        {
-                          "url": "packingsize",
-                          "valueString": "4 x 0.5"
-                        },
-                        {
-                          "url": "packingunit",
-                          "valueCodeableConcept": {
-                            "coding": [
-                              {
-                                "system": "urn:oid:2.16.578.1.12.4.1.1.7452",
-                                "code": "ml",
-                                "display": "milliliter"
-                              }
-                            ]
-                          }
-                        }
-                      ],
-                      "url": "packinginfoprescription"
-                    }
-                  ],
-                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-medicationdetails"
-                }
-              ],
-              "identifier": [
-                {
-                  "use": "official",
-                  "type": {
-                    "text": "identifier"
-                  },
-                  "value": "047042"
-                }
-              ],
-              "code": {
-                "coding": [
-                  {
-                    "system": "http://ehelse.no/fhir/CodeSystem/FEST",
-                    "code": "047042",
-                    "display": "Enbrel Inj væske 25 mg/sprøyte"
-                  },
-                  {
-                    "system": "http://www.whocc.no/atc",
-                    "code": "L04AB01",
-                    "display": "Etanercept"
-                  }
-                ]
-              },
-              "status": "active",
-              "form": {
-                "coding": [
-                  {
-                    "system": "urn:oid:2.16.578.1.12.4.1.1.7448",
-                    "code": "101",
-                    "display": "Injeksjonsvæske"
-                  }
-                ]
-              }
-            }
-          },
-          {
-            "fullUrl": "urn:uuid:0b98060c-b2b8-434c-9b3f-efd3b065ecb3",
-            "resource": {
-              "resourceType": "MedicationStatement",
-              "id": "789252960",
-              "meta": {
-                "profile": [
-                  "http://ehelse.no/fhir/StructureDefinition/sfm-MedicationStatement"
-                ]
-              },
-              "extension": [
-                {
-                  "extension": [
-                    {
-                      "url": "reseptDate",
-                      "valueDate": "2020-09-23"
-                    },
-                    {
-                      "url": "expirationdate",
-                      "valueDate": "2021-09-23"
-                    },
-                    {
-                      "url": "festUpdate",
-                      "valueDateTime": "2017-01-11T14:16:50+00:00"
-                    },
-                    {
-                      "url": "freecard",
-                      "valueBoolean": false
-                    },
-                    {
-                      "url": "dssn",
-                      "valueString": "1 sprøyte settes subkutant 2 ganger i uken"
-                    },
-                    {
-                      "url": "lockedResept",
-                      "valueBoolean": false
-                    },
-                    {
-                      "url": "numberofpackages",
-                      "valueDecimal": 1.0
-                    },
-                    {
-                      "url": "reit",
-                      "valueString": "0"
-                    },
-                    {
-                      "url": "speciality",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "urn:oid:2.16.578.1.12.4.1.1.7426",
-                            "code": "41",
-                            "display": "Revmatologi"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "url": "speciality",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "urn:oid:2.16.578.1.12.4.1.1.7426",
-                            "code": "41",
-                            "display": "Revmatologi"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "url": "itemgroup",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "urn:oid:2.16.578.1.12.4.1.1.7402",
-                            "code": "L",
-                            "display": "Legemiddel"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "url": "reimbursementcode",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "2.16.578.1.12.4.1.1.7110",
-                            "code": "M0529",
-                            "display": "Revmatoid vaskulit i uspesifisert lokalisasjon"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "url": "reimbursmentparagraph",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "urn:oid:2.16.578.1.12.4.1.1.7427",
-                            "code": "950",
-                            "display": "H-resept"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "extension": [
-                        {
-                          "url": "status",
-                          "valueCodeableConcept": {
-                            "coding": [
-                              {
-                                "system": "urn:oid:2.16.578.1.12.4.1.1.7408",
-                                "code": "E",
-                                "display": "Ekspederbar"
-                              }
-                            ]
-                          }
-                        }
-                      ],
-                      "url": "rfstatus"
-                    }
-                  ],
-                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-reseptamendment"
-                },
-                {
-                  "extension": [
-                    {
-                      "url": "status",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://ehelse.no/fhir/CodeSystem/sfm-medicationstatement-registration-status",
-                            "code": "3",
-                            "display": "Godkjent"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "url": "type",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://ehelse.no/fhir/CodeSystem/sfm-performer-roles",
-                            "code": "1",
-                            "display": "Forskrevet av"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "url": "helseperson",
-                      "valueReference": {
-                        "reference": "urn:uuid:b99410f2-1960-4890-81a8-3e35f868e36e",
-                        "identifier": {
-                          "use": "official",
-                          "type": {
-                            "coding": [
-                              {
-                                "system": "http://hl7.no/fhir/NamingSystem/HPR",
-                                "code": "HPR-nummer"
-                              }
-                            ]
-                          },
-                          "system": "urn:oid:2.16.578.1.12.4.1.4.4",
-                          "value": "431000129"
-                        },
-                        "display": "Elena Fos Engelund, HPR: 431000129"
-                      }
-                    },
-                    {
-                      "url": "timestamp",
-                      "valueDateTime": "2020-09-23T14:37:23+00:00"
-                    }
-                  ],
-                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-regInfo"
-                }
-              ],
-              "identifier": [
-                {
-                  "use": "usual",
-                  "type": {
-                    "text": "ReseptId"
-                  },
-                  "value": "9cd984e3-6cf3-43b8-b3fb-0019cd178203"
-                }
-              ],
-              "status": "active",
-              "medicationReference": {
-                "reference": "urn:uuid:ba24f038-82af-401b-9413-00db42d73e9c",
-                "display": "Enbrel Inj væske 25 mg/sprøyte"
-              },
-              "subject": {
-                "reference": "urn:uuid:8eb984f6-24cf-4e6f-a103-0c79994b398e",
-                "display": "Peder Wolden"
-              },
-              "dosage": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://ehelse.no/fhir/StructureDefinition/sfm-shortdosage",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "urn:oid:2.16.578.1.12.4.1.1.7478",
-                            "code": "5457",
-                            "display": "1 sc 2 ganger pr. uke"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "url": "http://ehelse.no/fhir/StructureDefinition/sfm-use",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "urn:oid:2.16.578.1.12.4.1.1.9101",
-                            "code": "1",
-                            "display": "Fast"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "sequence": 1,
-                  "text": "1 sprøyte settes subkutant 2 ganger i uken"
-                }
-              ]
-            }
-          },
-          {
-            "fullUrl": "urn:uuid:ff5b0d17-8555-495c-8cde-3162e15f260d",
-            "resource": {
-              "resourceType": "MedicationStatement",
-              "id": "1497771174",
-              "meta": {
-                "profile": [
-                  "http://ehelse.no/fhir/StructureDefinition/sfm-MedicationStatement"
-                ]
-              },
-              "extension": [
-                {
-                  "extension": [
-                    {
-                      "url": "reseptDate",
-                      "valueDate": "2020-09-23"
-                    },
-                    {
-                      "url": "expirationdate",
-                      "valueDate": "2021-09-23"
-                    },
-                    {
-                      "url": "festUpdate",
-                      "valueDateTime": "2017-01-11T14:16:50+00:00"
-                    },
-                    {
-                      "url": "freecard",
-                      "valueBoolean": false
-                    },
-                    {
-                      "url": "dssn",
-                      "valueString": "1 tablett kveld"
-                    },
-                    {
-                      "url": "lockedResept",
-                      "valueBoolean": false
-                    },
-                    {
-                      "url": "amount",
-                      "valueQuantity": {
-                        "value": 92.0,
-                        "unit": "stk"
-                      }
-                    },
-                    {
-                      "url": "reit",
-                      "valueString": "3"
-                    },
-                    {
-                      "url": "speciality",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "urn:oid:2.16.578.1.12.4.1.1.7426",
-                            "code": "41",
-                            "display": "Revmatologi"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "url": "speciality",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "urn:oid:2.16.578.1.12.4.1.1.7426",
-                            "code": "41",
-                            "display": "Revmatologi"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "url": "itemgroup",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "urn:oid:2.16.578.1.12.4.1.1.7402",
-                            "code": "L",
-                            "display": "Legemiddel"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "url": "reimbursementcode",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "2.16.578.1.12.4.1.1.7434",
-                            "code": "-26",
-                            "display": "Etablert aterosklerotisk sykdom (sekundærprevensjon)"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "url": "reimbursmentparagraph",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "urn:oid:2.16.578.1.12.4.1.1.7427",
-                            "code": "200",
-                            "display": "§5-14 §2"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "extension": [
-                        {
-                          "url": "starttime",
-                          "valueDateTime": "2017-01-13T00:00:00+00:00"
-                        },
-                        {
-                          "extension": [
-                            {
-                              "url": "amount",
-                              "valueQuantity": {
-                                "value": 1.0,
-                                "unit": "tablett"
-                              }
-                            },
-                            {
-                              "url": "interval",
-                              "valueCodeableConcept": {
-                                "coding": [
-                                  {
-                                    "system": "urn:oid:2.16.578.1.12.4.1.1.9088",
-                                    "code": "1",
-                                    "display": "Døgn"
-                                  }
-                                ]
-                              }
-                            },
-                            {
-                              "url": "timerange",
-                              "valueCodeableConcept": {
-                                "coding": [
-                                  {
-                                    "system": "urn:oid:2.16.578.1.12.4.1.1.8325",
-                                    "code": "5",
-                                    "display": "Kveld"
-                                  }
-                                ]
-                              }
-                            },
-                            {
-                              "url": "accurate",
-                              "valueBoolean": false
-                            }
-                          ],
-                          "url": "repeatingdosage"
-                        }
-                      ],
-                      "url": "ereseptdosing"
-                    },
-                    {
-                      "extension": [
-                        {
-                          "url": "status",
-                          "valueCodeableConcept": {
-                            "coding": [
-                              {
-                                "system": "urn:oid:2.16.578.1.12.4.1.1.7408",
-                                "code": "E",
-                                "display": "Ekspederbar"
-                              }
-                            ]
-                          }
-                        }
-                      ],
-                      "url": "rfstatus"
-                    }
-                  ],
-                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-reseptamendment"
-                },
-                {
-                  "extension": [
-                    {
-                      "url": "status",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://ehelse.no/fhir/CodeSystem/sfm-medicationstatement-registration-status",
-                            "code": "3",
-                            "display": "Godkjent"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "url": "type",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://ehelse.no/fhir/CodeSystem/sfm-performer-roles",
-                            "code": "1",
-                            "display": "Forskrevet av"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "url": "helseperson",
-                      "valueReference": {
-                        "reference": "urn:uuid:b99410f2-1960-4890-81a8-3e35f868e36e",
-                        "identifier": {
-                          "use": "official",
-                          "type": {
-                            "coding": [
-                              {
-                                "system": "http://hl7.no/fhir/NamingSystem/HPR",
-                                "code": "HPR-nummer"
-                              }
-                            ]
-                          },
-                          "system": "urn:oid:2.16.578.1.12.4.1.4.4",
-                          "value": "431000129"
-                        },
-                        "display": "Elena Fos Engelund, HPR: 431000129"
-                      }
-                    },
-                    {
-                      "url": "timestamp",
-                      "valueDateTime": "2020-09-23T14:37:27+00:00"
-                    }
-                  ],
-                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-regInfo"
-                },
-                {
-                  "extension": [
-                    {
-                      "url": "nocombination",
-                      "valueBoolean": false
-                    }
-                  ],
-                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-administration"
-                }
-              ],
-              "identifier": [
-                {
-                  "use": "usual",
-                  "type": {
-                    "text": "ReseptId"
-                  },
-                  "value": "12610778-937b-4f80-821f-4f87fc0fed5e"
-                }
-              ],
-              "status": "active",
-              "medicationReference": {
-                "reference": "urn:uuid:dded805b-0356-4b6d-bd88-516d4c362946",
-                "display": "Simvastatin Tab 20 mg"
-              },
-              "subject": {
-                "reference": "urn:uuid:8eb984f6-24cf-4e6f-a103-0c79994b398e",
-                "display": "Peder Wolden"
+                "reference": "urn:uuid:1b645c31-3818-49fd-accc-3fc609ba67ae",
+                "display": ""
               },
               "dosage": [
                 {
@@ -1898,1331 +1314,7 @@
                       "extension": [
                         {
                           "url": "text",
-                          "valueString": "KOLESTEROLSENKENDE"
-                        }
-                      ],
-                      "url": "http://ehelse.no/fhir/StructureDefinition/sfm-application-area"
-                    },
-                    {
-                      "url": "http://ehelse.no/fhir/StructureDefinition/sfm-shortdosage",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "urn:oid:2.16.578.1.12.4.1.1.7478",
-                            "code": "21",
-                            "display": "0+0+1"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "url": "http://ehelse.no/fhir/StructureDefinition/sfm-use",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "urn:oid:2.16.578.1.12.4.1.1.9101",
-                            "code": "1",
-                            "display": "Fast"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "sequence": 1,
-                  "text": "1 tablett kveld"
-                }
-              ]
-            }
-          },
-          {
-            "fullUrl": "urn:uuid:8e0a5b0d-513b-49e1-84e8-886fe4e6a1e0",
-            "resource": {
-              "resourceType": "Medication",
-              "id": "1809759351",
-              "meta": {
-                "profile": [
-                  "http://ehelse.no/fhir/StructureDefinition/sfm-Medication"
-                ]
-              },
-              "extension": [
-                {
-                  "extension": [
-                    {
-                      "url": "prescriptiongroup",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "urn:oid:2.16.578.1.12.4.1.1.7421",
-                            "code": "CF",
-                            "display": "Reseptgruppe CF"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "url": "http://hl7.no/fhir/StructureDefinition/no-basis-prescriptiongroup"
-                },
-                {
-                  "extension": [
-                    {
-                      "url": "registreringstype",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://ehelse.no/fhir/CodeSystem/sfm-festregistrationtype",
-                            "code": "2",
-                            "display": "Legemiddelmerkevare"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "url": "name",
-                      "valueString": "Cetirizin Sandoz"
-                    }
-                  ],
-                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-medicationdetails"
-                }
-              ],
-              "identifier": [
-                {
-                  "use": "official",
-                  "type": {
-                    "text": "identifier"
-                  },
-                  "value": "ID_BD24E2B3-BD91-43D9-A8B4-A843F272CE2F"
-                }
-              ],
-              "code": {
-                "coding": [
-                  {
-                    "system": "http://ehelse.no/fhir/CodeSystem/FEST",
-                    "code": "ID_BD24E2B3-BD91-43D9-A8B4-A843F272CE2F",
-                    "display": "Cetirizin Sandoz Tab 10 mg"
-                  },
-                  {
-                    "system": "http://www.whocc.no/atc",
-                    "code": "R06AE07",
-                    "display": "Cetirizin"
-                  }
-                ]
-              },
-              "status": "active",
-              "form": {
-                "coding": [
-                  {
-                    "system": "urn:oid:2.16.578.1.12.4.1.1.7448",
-                    "code": "53",
-                    "display": "Tablett"
-                  }
-                ]
-              }
-            }
-          },
-          {
-            "fullUrl": "urn:uuid:aee7d1ba-7a21-45b7-af33-6aa3ea6b85fe",
-            "resource": {
-              "resourceType": "MedicationStatement",
-              "id": "208492184",
-              "meta": {
-                "profile": [
-                  "http://ehelse.no/fhir/StructureDefinition/sfm-MedicationStatement"
-                ]
-              },
-              "extension": [
-                {
-                  "extension": [
-                    {
-                      "url": "reseptDate",
-                      "valueDate": "2020-09-23"
-                    },
-                    {
-                      "url": "expirationdate",
-                      "valueDate": "2021-09-23"
-                    },
-                    {
-                      "url": "festUpdate",
-                      "valueDateTime": "2016-12-22T00:49:47+00:00"
-                    },
-                    {
-                      "url": "freecard",
-                      "valueBoolean": false
-                    },
-                    {
-                      "url": "dssn",
-                      "valueString": "1 tablett morgen"
-                    },
-                    {
-                      "url": "lockedResept",
-                      "valueBoolean": false
-                    },
-                    {
-                      "url": "amount",
-                      "valueQuantity": {
-                        "value": 92.0,
-                        "unit": "stk"
-                      }
-                    },
-                    {
-                      "url": "reit",
-                      "valueString": "3"
-                    },
-                    {
-                      "url": "itemgroup",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "urn:oid:2.16.578.1.12.4.1.1.7402",
-                            "code": "L",
-                            "display": "Legemiddel"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "url": "reimbursementcode",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "2.16.578.1.12.4.1.1.7170",
-                            "code": "F71",
-                            "display": "Allergisk konjunktivitt"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "url": "reimbursmentparagraph",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "urn:oid:2.16.578.1.12.4.1.1.7427",
-                            "code": "200",
-                            "display": "§5-14 §2"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "extension": [
-                        {
-                          "url": "starttime",
-                          "valueDateTime": "2017-01-12T00:00:00+00:00"
-                        },
-                        {
-                          "extension": [
-                            {
-                              "url": "amount",
-                              "valueQuantity": {
-                                "value": 1.0,
-                                "unit": "tablett"
-                              }
-                            },
-                            {
-                              "url": "interval",
-                              "valueCodeableConcept": {
-                                "coding": [
-                                  {
-                                    "system": "urn:oid:2.16.578.1.12.4.1.1.9088",
-                                    "code": "1",
-                                    "display": "Døgn"
-                                  }
-                                ]
-                              }
-                            },
-                            {
-                              "url": "timerange",
-                              "valueCodeableConcept": {
-                                "coding": [
-                                  {
-                                    "system": "urn:oid:2.16.578.1.12.4.1.1.8325",
-                                    "code": "1",
-                                    "display": "Morgen"
-                                  }
-                                ]
-                              }
-                            },
-                            {
-                              "url": "accurate",
-                              "valueBoolean": false
-                            }
-                          ],
-                          "url": "repeatingdosage"
-                        }
-                      ],
-                      "url": "ereseptdosing"
-                    },
-                    {
-                      "extension": [
-                        {
-                          "url": "status",
-                          "valueCodeableConcept": {
-                            "coding": [
-                              {
-                                "system": "urn:oid:2.16.578.1.12.4.1.1.7408",
-                                "code": "E",
-                                "display": "Ekspederbar"
-                              }
-                            ]
-                          }
-                        }
-                      ],
-                      "url": "rfstatus"
-                    }
-                  ],
-                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-reseptamendment"
-                },
-                {
-                  "extension": [
-                    {
-                      "url": "status",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://ehelse.no/fhir/CodeSystem/sfm-medicationstatement-registration-status",
-                            "code": "3",
-                            "display": "Godkjent"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "url": "type",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://ehelse.no/fhir/CodeSystem/sfm-performer-roles",
-                            "code": "1",
-                            "display": "Forskrevet av"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "url": "helseperson",
-                      "valueReference": {
-                        "reference": "urn:uuid:b99410f2-1960-4890-81a8-3e35f868e36e",
-                        "identifier": {
-                          "use": "official",
-                          "type": {
-                            "coding": [
-                              {
-                                "system": "http://hl7.no/fhir/NamingSystem/HPR",
-                                "code": "HPR-nummer"
-                              }
-                            ]
-                          },
-                          "system": "urn:oid:2.16.578.1.12.4.1.4.4",
-                          "value": "431000129"
-                        },
-                        "display": "Elena Fos Engelund, HPR: 431000129"
-                      }
-                    },
-                    {
-                      "url": "timestamp",
-                      "valueDateTime": "2020-09-23T14:37:22+00:00"
-                    }
-                  ],
-                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-regInfo"
-                },
-                {
-                  "extension": [
-                    {
-                      "url": "nocombination",
-                      "valueBoolean": false
-                    }
-                  ],
-                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-administration"
-                }
-              ],
-              "identifier": [
-                {
-                  "use": "usual",
-                  "type": {
-                    "text": "ReseptId"
-                  },
-                  "value": "68ac6183-a016-4464-b4eb-d0f843b8f0a1"
-                }
-              ],
-              "status": "active",
-              "medicationReference": {
-                "reference": "urn:uuid:8e0a5b0d-513b-49e1-84e8-886fe4e6a1e0",
-                "display": "Cetirizin Sandoz Tab 10 mg"
-              },
-              "subject": {
-                "reference": "urn:uuid:8eb984f6-24cf-4e6f-a103-0c79994b398e",
-                "display": "Peder Wolden"
-              },
-              "dosage": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://ehelse.no/fhir/StructureDefinition/sfm-shortdosage",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "urn:oid:2.16.578.1.12.4.1.1.7478",
-                            "code": "195",
-                            "display": "1+0+0"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "url": "http://ehelse.no/fhir/StructureDefinition/sfm-use",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "urn:oid:2.16.578.1.12.4.1.1.9101",
-                            "code": "1",
-                            "display": "Fast"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "sequence": 1,
-                  "text": "1 tablett morgen"
-                }
-              ]
-            }
-          },
-          {
-            "fullUrl": "urn:uuid:4e69b4f8-1d37-4d00-8be5-4a38c2bc69d3",
-            "resource": {
-              "resourceType": "Medication",
-              "id": "2026634719",
-              "meta": {
-                "profile": [
-                  "http://ehelse.no/fhir/StructureDefinition/sfm-Medication"
-                ]
-              },
-              "extension": [
-                {
-                  "extension": [
-                    {
-                      "url": "prescriptiongroup",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "urn:oid:2.16.578.1.12.4.1.1.7421",
-                            "code": "C",
-                            "display": "Reseptgruppe C"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "url": "http://hl7.no/fhir/StructureDefinition/no-basis-prescriptiongroup"
-                },
-                {
-                  "extension": [
-                    {
-                      "url": "registreringstype",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://ehelse.no/fhir/CodeSystem/sfm-festregistrationtype",
-                            "code": "1",
-                            "display": "Legemiddelvirkestoff"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-medicationdetails"
-                }
-              ],
-              "identifier": [
-                {
-                  "use": "official",
-                  "type": {
-                    "text": "identifier"
-                  },
-                  "value": "ID_9FEB6606-537F-4DC4-9514-6DE4DB1D2336"
-                }
-              ],
-              "code": {
-                "coding": [
-                  {
-                    "system": "http://ehelse.no/fhir/CodeSystem/FEST",
-                    "code": "ID_9FEB6606-537F-4DC4-9514-6DE4DB1D2336",
-                    "display": "Paracetamol Smeltetab 250 mg"
-                  },
-                  {
-                    "system": "http://www.whocc.no/atc",
-                    "code": "N02BE01",
-                    "display": "Paracetamol"
-                  }
-                ]
-              },
-              "status": "active",
-              "form": {
-                "coding": [
-                  {
-                    "system": "urn:oid:2.16.578.1.12.4.1.1.7448",
-                    "code": "48",
-                    "display": "Smeltetablett"
-                  }
-                ]
-              }
-            }
-          },
-          {
-            "fullUrl": "urn:uuid:5295e72a-b944-44fc-b9a8-57f31ee4af85",
-            "resource": {
-              "resourceType": "MedicationStatement",
-              "id": "10249002",
-              "meta": {
-                "profile": [
-                  "http://ehelse.no/fhir/StructureDefinition/sfm-MedicationStatement"
-                ]
-              },
-              "extension": [
-                {
-                  "extension": [
-                    {
-                      "url": "reseptDate",
-                      "valueDate": "2020-09-23"
-                    },
-                    {
-                      "url": "expirationdate",
-                      "valueDate": "2021-09-23"
-                    },
-                    {
-                      "url": "festUpdate",
-                      "valueDateTime": "2020-08-10T00:47:06+00:00"
-                    },
-                    {
-                      "url": "dssn",
-                      "valueString": "1 tablett inntil 3 ganger daglig"
-                    },
-                    {
-                      "url": "lockedResept",
-                      "valueBoolean": false
-                    },
-                    {
-                      "url": "amount",
-                      "valueQuantity": {
-                        "value": 5.0,
-                        "unit": "stk"
-                      }
-                    },
-                    {
-                      "url": "reit",
-                      "valueString": "3"
-                    },
-                    {
-                      "url": "itemgroup",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "urn:oid:2.16.578.1.12.4.1.1.7402",
-                            "code": "L",
-                            "display": "Legemiddel"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "extension": [
-                        {
-                          "url": "status",
-                          "valueCodeableConcept": {
-                            "coding": [
-                              {
-                                "system": "urn:oid:2.16.578.1.12.4.1.1.7408",
-                                "code": "E",
-                                "display": "Ekspederbar"
-                              }
-                            ]
-                          }
-                        }
-                      ],
-                      "url": "rfstatus"
-                    }
-                  ],
-                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-reseptamendment"
-                },
-                {
-                  "extension": [
-                    {
-                      "url": "status",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://ehelse.no/fhir/CodeSystem/sfm-medicationstatement-registration-status",
-                            "code": "3",
-                            "display": "Godkjent"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "url": "type",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://ehelse.no/fhir/CodeSystem/sfm-performer-roles",
-                            "code": "1",
-                            "display": "Forskrevet av"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "url": "helseperson",
-                      "valueReference": {
-                        "reference": "urn:uuid:b99410f2-1960-4890-81a8-3e35f868e36e",
-                        "identifier": {
-                          "use": "official",
-                          "type": {
-                            "coding": [
-                              {
-                                "system": "http://hl7.no/fhir/NamingSystem/HPR",
-                                "code": "HPR-nummer"
-                              }
-                            ]
-                          },
-                          "system": "urn:oid:2.16.578.1.12.4.1.4.4",
-                          "value": "431000129"
-                        },
-                        "display": "Elena Fos Engelund, HPR: 431000129"
-                      }
-                    },
-                    {
-                      "url": "timestamp",
-                      "valueDateTime": "2020-09-23T14:37:25+00:00"
-                    }
-                  ],
-                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-regInfo"
-                }
-              ],
-              "identifier": [
-                {
-                  "use": "usual",
-                  "type": {
-                    "text": "ReseptId"
-                  },
-                  "value": "7a3ea96c-8226-4d06-a1e2-770218c9f004"
-                }
-              ],
-              "status": "active",
-              "medicationReference": {
-                "reference": "urn:uuid:4e69b4f8-1d37-4d00-8be5-4a38c2bc69d3",
-                "display": "Paracetamol Smeltetab 250 mg"
-              },
-              "subject": {
-                "reference": "urn:uuid:8eb984f6-24cf-4e6f-a103-0c79994b398e",
-                "display": "Peder Wolden"
-              },
-              "dosage": [
-                {
-                  "extension": [
-                    {
-                      "extension": [
-                        {
-                          "url": "text",
-                          "valueString": "TEST"
-                        }
-                      ],
-                      "url": "http://ehelse.no/fhir/StructureDefinition/sfm-application-area"
-                    },
-                    {
-                      "url": "http://ehelse.no/fhir/StructureDefinition/sfm-shortdosage",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "urn:oid:2.16.578.1.12.4.1.1.7478",
-                            "code": "79",
-                            "display": "1 inntil x3"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "url": "http://ehelse.no/fhir/StructureDefinition/sfm-use",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "urn:oid:2.16.578.1.12.4.1.1.9101",
-                            "code": "3",
-                            "display": "Ved behov"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "sequence": 1,
-                  "text": "1 tablett inntil 3 ganger daglig"
-                }
-              ]
-            }
-          },
-          {
-            "fullUrl": "urn:uuid:6134bfe8-046a-400c-abbc-50407ec0f396",
-            "resource": {
-              "resourceType": "Medication",
-              "id": "1092596881",
-              "meta": {
-                "profile": [
-                  "http://ehelse.no/fhir/StructureDefinition/sfm-Medication"
-                ]
-              },
-              "extension": [
-                {
-                  "extension": [
-                    {
-                      "url": "prescriptiongroup",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "urn:oid:2.16.578.1.12.4.1.1.7421",
-                            "code": "C",
-                            "display": "Reseptgruppe C"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "url": "http://hl7.no/fhir/StructureDefinition/no-basis-prescriptiongroup"
-                },
-                {
-                  "extension": [
-                    {
-                      "url": "registreringstype",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://ehelse.no/fhir/CodeSystem/sfm-festregistrationtype",
-                            "code": "1",
-                            "display": "Legemiddelvirkestoff"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-medicationdetails"
-                }
-              ],
-              "identifier": [
-                {
-                  "use": "official",
-                  "type": {
-                    "text": "identifier"
-                  },
-                  "value": "ID_C3DEEC22-B523-4EA0-AFDA-B8085BFC312B"
-                }
-              ],
-              "code": {
-                "coding": [
-                  {
-                    "system": "http://ehelse.no/fhir/CodeSystem/FEST",
-                    "code": "ID_C3DEEC22-B523-4EA0-AFDA-B8085BFC312B",
-                    "display": "Ibuprofen Tab 400 mg"
-                  },
-                  {
-                    "system": "http://www.whocc.no/atc",
-                    "code": "M01AE01",
-                    "display": "Ibuprofen"
-                  }
-                ]
-              },
-              "status": "active",
-              "form": {
-                "coding": [
-                  {
-                    "system": "urn:oid:2.16.578.1.12.4.1.1.7448",
-                    "code": "53",
-                    "display": "Tablett"
-                  }
-                ]
-              }
-            }
-          },
-          {
-            "fullUrl": "urn:uuid:d606f265-5b29-4e51-b94f-64825cb1c084",
-            "resource": {
-              "resourceType": "MedicationStatement",
-              "id": "899081618",
-              "meta": {
-                "profile": [
-                  "http://ehelse.no/fhir/StructureDefinition/sfm-MedicationStatement"
-                ]
-              },
-              "extension": [
-                {
-                  "extension": [
-                    {
-                      "url": "reseptDate",
-                      "valueDate": "2020-09-23"
-                    },
-                    {
-                      "url": "expirationdate",
-                      "valueDate": "2021-09-23"
-                    },
-                    {
-                      "url": "festUpdate",
-                      "valueDateTime": "2016-12-22T00:49:47+00:00"
-                    },
-                    {
-                      "url": "freecard",
-                      "valueBoolean": false
-                    },
-                    {
-                      "url": "dssn",
-                      "valueString": "1 tablett 3 ganger daglig"
-                    },
-                    {
-                      "url": "lockedResept",
-                      "valueBoolean": false
-                    },
-                    {
-                      "url": "amount",
-                      "valueQuantity": {
-                        "value": 90.0,
-                        "unit": "stk"
-                      }
-                    },
-                    {
-                      "url": "reit",
-                      "valueString": "0"
-                    },
-                    {
-                      "url": "itemgroup",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "urn:oid:2.16.578.1.12.4.1.1.7402",
-                            "code": "L",
-                            "display": "Legemiddel"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "extension": [
-                        {
-                          "url": "starttime",
-                          "valueDateTime": "2017-01-06T00:00:00+00:00"
-                        },
-                        {
-                          "extension": [
-                            {
-                              "url": "amount",
-                              "valueQuantity": {
-                                "value": 1.0,
-                                "unit": "tablett"
-                              }
-                            },
-                            {
-                              "url": "interval",
-                              "valueCodeableConcept": {
-                                "coding": [
-                                  {
-                                    "system": "urn:oid:2.16.578.1.12.4.1.1.9088",
-                                    "code": "1",
-                                    "display": "Døgn"
-                                  }
-                                ]
-                              }
-                            },
-                            {
-                              "url": "timerange",
-                              "valueCodeableConcept": {
-                                "coding": [
-                                  {
-                                    "system": "urn:oid:2.16.578.1.12.4.1.1.8325",
-                                    "code": "1",
-                                    "display": "Morgen"
-                                  }
-                                ]
-                              }
-                            },
-                            {
-                              "url": "accurate",
-                              "valueBoolean": false
-                            }
-                          ],
-                          "url": "repeatingdosage"
-                        },
-                        {
-                          "extension": [
-                            {
-                              "url": "amount",
-                              "valueQuantity": {
-                                "value": 1.0,
-                                "unit": "tablett"
-                              }
-                            },
-                            {
-                              "url": "interval",
-                              "valueCodeableConcept": {
-                                "coding": [
-                                  {
-                                    "system": "urn:oid:2.16.578.1.12.4.1.1.9088",
-                                    "code": "1",
-                                    "display": "Døgn"
-                                  }
-                                ]
-                              }
-                            },
-                            {
-                              "url": "timerange",
-                              "valueCodeableConcept": {
-                                "coding": [
-                                  {
-                                    "system": "urn:oid:2.16.578.1.12.4.1.1.8325",
-                                    "code": "3",
-                                    "display": "Midt på dagen"
-                                  }
-                                ]
-                              }
-                            },
-                            {
-                              "url": "accurate",
-                              "valueBoolean": false
-                            }
-                          ],
-                          "url": "repeatingdosage"
-                        },
-                        {
-                          "extension": [
-                            {
-                              "url": "amount",
-                              "valueQuantity": {
-                                "value": 1.0,
-                                "unit": "tablett"
-                              }
-                            },
-                            {
-                              "url": "interval",
-                              "valueCodeableConcept": {
-                                "coding": [
-                                  {
-                                    "system": "urn:oid:2.16.578.1.12.4.1.1.9088",
-                                    "code": "1",
-                                    "display": "Døgn"
-                                  }
-                                ]
-                              }
-                            },
-                            {
-                              "url": "timerange",
-                              "valueCodeableConcept": {
-                                "coding": [
-                                  {
-                                    "system": "urn:oid:2.16.578.1.12.4.1.1.8325",
-                                    "code": "5",
-                                    "display": "Kveld"
-                                  }
-                                ]
-                              }
-                            },
-                            {
-                              "url": "accurate",
-                              "valueBoolean": false
-                            }
-                          ],
-                          "url": "repeatingdosage"
-                        }
-                      ],
-                      "url": "ereseptdosing"
-                    },
-                    {
-                      "extension": [
-                        {
-                          "url": "status",
-                          "valueCodeableConcept": {
-                            "coding": [
-                              {
-                                "system": "urn:oid:2.16.578.1.12.4.1.1.7408",
-                                "code": "E",
-                                "display": "Ekspederbar"
-                              }
-                            ]
-                          }
-                        }
-                      ],
-                      "url": "rfstatus"
-                    }
-                  ],
-                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-reseptamendment"
-                },
-                {
-                  "extension": [
-                    {
-                      "url": "status",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://ehelse.no/fhir/CodeSystem/sfm-medicationstatement-registration-status",
-                            "code": "3",
-                            "display": "Godkjent"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "url": "type",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://ehelse.no/fhir/CodeSystem/sfm-performer-roles",
-                            "code": "1",
-                            "display": "Forskrevet av"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "url": "helseperson",
-                      "valueReference": {
-                        "reference": "urn:uuid:b99410f2-1960-4890-81a8-3e35f868e36e",
-                        "identifier": {
-                          "use": "official",
-                          "type": {
-                            "coding": [
-                              {
-                                "system": "http://hl7.no/fhir/NamingSystem/HPR",
-                                "code": "HPR-nummer"
-                              }
-                            ]
-                          },
-                          "system": "urn:oid:2.16.578.1.12.4.1.4.4",
-                          "value": "431000129"
-                        },
-                        "display": "Elena Fos Engelund, HPR: 431000129"
-                      }
-                    },
-                    {
-                      "url": "timestamp",
-                      "valueDateTime": "2020-09-23T14:37:24+00:00"
-                    }
-                  ],
-                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-regInfo"
-                },
-                {
-                  "extension": [
-                    {
-                      "url": "nocombination",
-                      "valueBoolean": false
-                    }
-                  ],
-                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-administration"
-                }
-              ],
-              "identifier": [
-                {
-                  "use": "usual",
-                  "type": {
-                    "text": "ReseptId"
-                  },
-                  "value": "bb95035e-fb66-4354-86a6-f2f581aeb238"
-                }
-              ],
-              "status": "active",
-              "medicationReference": {
-                "reference": "urn:uuid:6134bfe8-046a-400c-abbc-50407ec0f396",
-                "display": "Ibuprofen Tab 400 mg"
-              },
-              "subject": {
-                "reference": "urn:uuid:8eb984f6-24cf-4e6f-a103-0c79994b398e",
-                "display": "Peder Wolden"
-              },
-              "dosage": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://ehelse.no/fhir/StructureDefinition/sfm-shortdosage",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "urn:oid:2.16.578.1.12.4.1.1.7478",
-                            "code": "160",
-                            "display": "1x3"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "url": "http://ehelse.no/fhir/StructureDefinition/sfm-use",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "urn:oid:2.16.578.1.12.4.1.1.9101",
-                            "code": "3",
-                            "display": "Ved behov"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "sequence": 1,
-                  "text": "1 tablett 3 ganger daglig"
-                }
-              ]
-            }
-          },
-          {
-            "fullUrl": "urn:uuid:a7f6c472-c683-48de-abb7-f024965cfbaa",
-            "resource": {
-              "resourceType": "Medication",
-              "id": "1222903832",
-              "meta": {
-                "profile": [
-                  "http://ehelse.no/fhir/StructureDefinition/sfm-Medication"
-                ]
-              },
-              "extension": [
-                {
-                  "extension": [
-                    {
-                      "url": "prescriptiongroup",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "urn:oid:2.16.578.1.12.4.1.1.7421",
-                            "code": "C",
-                            "display": "Reseptgruppe C"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "url": "http://hl7.no/fhir/StructureDefinition/no-basis-prescriptiongroup"
-                },
-                {
-                  "extension": [
-                    {
-                      "url": "registreringstype",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://ehelse.no/fhir/CodeSystem/sfm-festregistrationtype",
-                            "code": "3",
-                            "display": "Legemiddelpakning"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "extension": [
-                        {
-                          "url": "name",
-                          "valueString": "Enalapril Sandoz"
-                        },
-                        {
-                          "url": "packingsize",
-                          "valueString": "100"
-                        },
-                        {
-                          "url": "packingunit",
-                          "valueCodeableConcept": {
-                            "coding": [
-                              {
-                                "system": "urn:oid:2.16.578.1.12.4.1.1.7452",
-                                "code": "stk",
-                                "display": "stykk"
-                              }
-                            ]
-                          }
-                        }
-                      ],
-                      "url": "packinginfoprescription"
-                    }
-                  ],
-                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-medicationdetails"
-                }
-              ],
-              "identifier": [
-                {
-                  "use": "official",
-                  "type": {
-                    "text": "identifier"
-                  },
-                  "value": "457760"
-                }
-              ],
-              "code": {
-                "coding": [
-                  {
-                    "system": "http://ehelse.no/fhir/CodeSystem/FEST",
-                    "code": "457760",
-                    "display": "Enalapril Sandoz Tab 5 mg"
-                  },
-                  {
-                    "system": "http://www.whocc.no/atc",
-                    "code": "C09AA02",
-                    "display": "Enalapril"
-                  }
-                ]
-              },
-              "status": "active",
-              "form": {
-                "coding": [
-                  {
-                    "system": "urn:oid:2.16.578.1.12.4.1.1.7448",
-                    "code": "53",
-                    "display": "Tablett"
-                  }
-                ]
-              }
-            }
-          },
-          {
-            "fullUrl": "urn:uuid:6b68a4fd-60db-488e-aee0-4a161abc834b",
-            "resource": {
-              "resourceType": "MedicationStatement",
-              "id": "1166614257",
-              "meta": {
-                "profile": [
-                  "http://ehelse.no/fhir/StructureDefinition/sfm-MedicationStatement"
-                ]
-              },
-              "extension": [
-                {
-                  "extension": [
-                    {
-                      "url": "reseptDate",
-                      "valueDate": "2020-09-23"
-                    },
-                    {
-                      "url": "expirationdate",
-                      "valueDate": "2021-09-23"
-                    },
-                    {
-                      "url": "festUpdate",
-                      "valueDateTime": "2020-08-10T00:47:06+00:00"
-                    },
-                    {
-                      "url": "dssn",
-                      "valueString": "1 tablett morgen"
-                    },
-                    {
-                      "url": "lockedResept",
-                      "valueBoolean": false
-                    },
-                    {
-                      "url": "numberofpackages",
-                      "valueDecimal": 1.0
-                    },
-                    {
-                      "url": "reit",
-                      "valueString": "3"
-                    },
-                    {
-                      "url": "itemgroup",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "urn:oid:2.16.578.1.12.4.1.1.7402",
-                            "code": "L",
-                            "display": "Legemiddel"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "extension": [
-                        {
-                          "url": "status",
-                          "valueCodeableConcept": {
-                            "coding": [
-                              {
-                                "system": "urn:oid:2.16.578.1.12.4.1.1.7408",
-                                "code": "E",
-                                "display": "Ekspederbar"
-                              }
-                            ]
-                          }
-                        }
-                      ],
-                      "url": "rfstatus"
-                    }
-                  ],
-                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-reseptamendment"
-                },
-                {
-                  "extension": [
-                    {
-                      "url": "status",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://ehelse.no/fhir/CodeSystem/sfm-medicationstatement-registration-status",
-                            "code": "3",
-                            "display": "Godkjent"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "url": "type",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://ehelse.no/fhir/CodeSystem/sfm-performer-roles",
-                            "code": "1",
-                            "display": "Forskrevet av"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "url": "helseperson",
-                      "valueReference": {
-                        "reference": "urn:uuid:b99410f2-1960-4890-81a8-3e35f868e36e",
-                        "identifier": {
-                          "use": "official",
-                          "type": {
-                            "coding": [
-                              {
-                                "system": "http://hl7.no/fhir/NamingSystem/HPR",
-                                "code": "HPR-nummer"
-                              }
-                            ]
-                          },
-                          "system": "urn:oid:2.16.578.1.12.4.1.4.4",
-                          "value": "431000129"
-                        },
-                        "display": "Elena Fos Engelund, HPR: 431000129"
-                      }
-                    },
-                    {
-                      "url": "timestamp",
-                      "valueDateTime": "2020-09-23T14:37:25+00:00"
-                    }
-                  ],
-                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-regInfo"
-                }
-              ],
-              "identifier": [
-                {
-                  "use": "usual",
-                  "type": {
-                    "text": "ReseptId"
-                  },
-                  "value": "46294042-02cd-419d-b963-10f342498df4"
-                }
-              ],
-              "status": "active",
-              "medicationReference": {
-                "reference": "urn:uuid:a7f6c472-c683-48de-abb7-f024965cfbaa",
-                "display": "Enalapril Sandoz Tab 5 mg"
-              },
-              "subject": {
-                "reference": "urn:uuid:8eb984f6-24cf-4e6f-a103-0c79994b398e",
-                "display": "Peder Wolden"
-              },
-              "dosage": [
-                {
-                  "extension": [
-                    {
-                      "extension": [
-                        {
-                          "url": "text",
-                          "valueString": "TEST"
+                          "valueString": "MOT REFLUKSØSOFAGITT"
                         }
                       ],
                       "url": "http://ehelse.no/fhir/StructureDefinition/sfm-application-area"
@@ -3259,98 +1351,171 @@
             }
           },
           {
-            "fullUrl": "urn:uuid:8fb94721-d9fe-4efa-859f-6aa1eead3e1d",
+            "fullUrl": "urn:uuid:f3f8409c-6ecf-4605-80ad-50df39cd3e26",
             "resource": {
-              "resourceType": "PractitionerRole",
-              "id": "1083916529",
+              "resourceType": "Medication",
+              "id": "1540235614",
               "meta": {
                 "profile": [
-                  "http://ehelse.no/fhir/StructureDefinition/sfm-PractitionerRole"
-                ]
-              },
-              "practitioner": {
-                "reference": "urn:uuid:b99410f2-1960-4890-81a8-3e35f868e36e",
-                "identifier": {
-                  "use": "official",
-                  "type": {
-                    "coding": [
-                      {
-                        "system": "http://hl7.no/fhir/NamingSystem/HPR",
-                        "code": "HPR-nummer"
-                      }
-                    ]
-                  },
-                  "system": "urn:oid:2.16.578.1.12.4.1.4.4",
-                  "value": "431000129"
-                },
-                "display": "Elena Fos Engelund, HPR: 431000129"
-              },
-              "code": [
-                {
-                  "coding": [
-                    {
-                      "system": "urn:oid:2.16.578.1.12.4.1.1.7490",
-                      "code": "R",
-                      "display": "Rekvirent"
-                    }
-                  ]
-                }
-              ]
-            }
-          },
-          {
-            "fullUrl": "urn:uuid:879d8ce3-1555-4398-8330-9bccd734aa31",
-            "resource": {
-              "resourceType": "Basic",
-              "id": "ddb92014-2808-4c6b-a1b3-52529b981148",
-              "meta": {
-                "profile": [
-                  "http://ehelse.no/fhir/StructureDefinition/sfm-BandaPrescription"
+                  "http://ehelse.no/fhir/StructureDefinition/sfm-Medication"
                 ]
               },
               "extension": [
                 {
                   "extension": [
                     {
-                      "url": "productgroup",
+                      "url": "prescriptiongroup",
                       "valueCodeableConcept": {
                         "coding": [
                           {
-                            "system": "urn:oid:2.16.578.1.12.4.1.1.7403",
-                            "code": "501",
-                            "display": "Forbruksmateriell ved inkontinens"
+                            "system": "urn:oid:2.16.578.1.12.4.1.1.7421",
+                            "code": "F",
+                            "display": "Reseptgruppe F"
                           }
                         ]
                       }
                     }
                   ],
-                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-reseptdocbanda"
+                  "url": "http://hl7.no/fhir/StructureDefinition/no-basis-prescriptiongroup"
                 },
                 {
                   "extension": [
                     {
+                      "url": "registreringstype",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://ehelse.no/fhir/CodeSystem/sfm-festregistrationtype",
+                            "code": "3",
+                            "display": "Legemiddelpakning"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "name",
+                          "valueString": "Ibux"
+                        },
+                        {
+                          "url": "packingsize",
+                          "valueString": "50"
+                        },
+                        {
+                          "url": "packingunit",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "urn:oid:2.16.578.1.12.4.1.1.7452",
+                                "code": "g",
+                                "display": "gram"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "url": "packinginfoprescription"
+                    }
+                  ],
+                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-medicationdetails"
+                }
+              ],
+              "identifier": [
+                {
+                  "use": "official",
+                  "type": {
+                    "text": "identifier"
+                  },
+                  "value": "003900"
+                }
+              ],
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://ehelse.no/fhir/CodeSystem/FEST",
+                    "code": "003900",
+                    "display": "Ibux Gel 50 mg/g"
+                  },
+                  {
+                    "system": "http://www.whocc.no/atc",
+                    "code": "M02AA13",
+                    "display": "Ibuprofen"
+                  }
+                ]
+              },
+              "status": "active",
+              "form": {
+                "coding": [
+                  {
+                    "system": "urn:oid:2.16.578.1.12.4.1.1.7448",
+                    "code": "29",
+                    "display": "Gel"
+                  }
+                ]
+              },
+              "amount": {
+                "extension": [
+                  {
+                    "extension": [
+                      {
+                        "url": "quantity",
+                        "valueQuantity": {
+                          "value": 50.0,
+                          "unit": "g"
+                        }
+                      },
+                      {
+                        "url": "amounttext",
+                        "valueString": "50 g"
+                      }
+                    ],
+                    "url": "http://ehelse.no/fhir/StructureDefinition/sfm-amountText"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:37360a0e-7d70-49cf-8311-746d695b8125",
+            "resource": {
+              "resourceType": "MedicationStatement",
+              "id": "442948871",
+              "meta": {
+                "profile": [
+                  "http://ehelse.no/fhir/StructureDefinition/sfm-MedicationStatement"
+                ]
+              },
+              "extension": [
+                {
+                  "extension": [
+                    {
                       "url": "reseptDate",
-                      "valueDate": "2020-09-23"
+                      "valueDate": "2021-04-21"
                     },
                     {
                       "url": "expirationdate",
-                      "valueDate": "2021-09-23"
+                      "valueDate": "2022-04-21"
                     },
                     {
                       "url": "festUpdate",
-                      "valueDateTime": "2016-12-22T00:49:47+00:00"
-                    },
-                    {
-                      "url": "freecard",
-                      "valueBoolean": false
+                      "valueDateTime": "2021-04-09T00:47:17+00:00"
                     },
                     {
                       "url": "dssn",
-                      "valueString": "Ikke oppgitt"
+                      "valueString": "Masseres inn i smertefullt hudområde inntil 3 ganger daglig"
                     },
                     {
                       "url": "lockedResept",
                       "valueBoolean": false
+                    },
+                    {
+                      "url": "numberofpackages",
+                      "valueDecimal": 1.0
+                    },
+                    {
+                      "url": "reit",
+                      "valueString": "0"
                     },
                     {
                       "url": "itemgroup",
@@ -3358,26 +1523,18 @@
                         "coding": [
                           {
                             "system": "urn:oid:2.16.578.1.12.4.1.1.7402",
-                            "code": "A",
-                            "display": "Annet"
-                          }
-                        ]
-                      }
-                    },
-                    {
-                      "url": "reimbursmentparagraph",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "urn:oid:2.16.578.1.12.4.1.1.7427",
-                            "code": "501",
-                            "display": "§5-14 §5.1"
+                            "code": "L",
+                            "display": "Legemiddel"
                           }
                         ]
                       }
                     },
                     {
                       "extension": [
+                        {
+                          "url": "nameDispenser",
+                          "valueString": "Testapotek Monier"
+                        },
                         {
                           "url": "status",
                           "valueCodeableConcept": {
@@ -3395,41 +1552,155 @@
                     }
                   ],
                   "url": "http://ehelse.no/fhir/StructureDefinition/sfm-reseptamendment"
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "pakningsstr",
+                      "valueQuantity": {
+                        "value": 50.0,
+                        "unit": "g"
+                      }
+                    },
+                    {
+                      "url": "varenummer",
+                      "valueString": "003900"
+                    },
+                    {
+                      "url": "varenavn",
+                      "valueString": "Ibux Gel 50 mg/g"
+                    },
+                    {
+                      "url": "antallpkntotalt",
+                      "valueDecimal": 1.0
+                    },
+                    {
+                      "url": "antallpknsiste",
+                      "valueDecimal": 1.0
+                    },
+                    {
+                      "url": "sistutlevert",
+                      "valueDateTime": "2021-04-21T00:00:00+00:00"
+                    }
+                  ],
+                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-deliverysummary"
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "status",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://ehelse.no/fhir/CodeSystem/sfm-medicationstatement-registration-status",
+                            "code": "3",
+                            "display": "Godkjent"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "url": "type",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://ehelse.no/fhir/CodeSystem/sfm-performer-roles",
+                            "code": "1",
+                            "display": "Forskrevet av"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "url": "helseperson",
+                      "valueReference": {
+                        "reference": "urn:uuid:516e6947-f7ef-4cb5-b964-fe1c1ce722a2",
+                        "display": "Knut Pettersen, HPR: 2127296"
+                      }
+                    },
+                    {
+                      "url": "timestamp",
+                      "valueDateTime": "2021-04-21T10:08:07.6714938+02:00"
+                    }
+                  ],
+                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-regInfo"
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "genericSubstitutionAccepted",
+                      "valueBoolean": true
+                    }
+                  ],
+                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-generic-substitution"
                 }
               ],
               "identifier": [
                 {
-                  "use": "official",
+                  "use": "usual",
                   "type": {
-                    "text": "reseptId"
+                    "text": "ReseptId"
                   },
-                  "value": "75dea40d-5854-4b0d-8590-74971f770368"
+                  "value": "bf638d31-bfa7-4876-a92e-1b9f195dbf83"
                 }
               ],
-              "code": {
-                "coding": [
-                  {
-                    "system": "urn:oid:2.16.578.1.12.4.1.1.7402",
-                    "code": "A",
-                    "display": "Annet"
-                  }
-                ]
+              "status": "active",
+              "medicationReference": {
+                "reference": "urn:uuid:f3f8409c-6ecf-4605-80ad-50df39cd3e26",
+                "display": "Ibux Gel 50 mg/g"
               },
               "subject": {
-                "reference": "urn:uuid:8eb984f6-24cf-4e6f-a103-0c79994b398e",
-                "display": "Peder Wolden"
+                "reference": "urn:uuid:1b645c31-3818-49fd-accc-3fc609ba67ae",
+                "display": ""
               },
-              "author": {
-                "reference": "urn:uuid:8fb94721-d9fe-4efa-859f-6aa1eead3e1d",
-                "display": "Elena Fos Engelund, HPR: 431000129, R:Rekvirent"
-              }
+              "dosage": [
+                {
+                  "extension": [
+                    {
+                      "extension": [
+                        {
+                          "url": "text",
+                          "valueString": "ALLERGIMEDISIN"
+                        }
+                      ],
+                      "url": "http://ehelse.no/fhir/StructureDefinition/sfm-application-area"
+                    },
+                    {
+                      "url": "http://ehelse.no/fhir/StructureDefinition/sfm-shortdosage",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "urn:oid:2.16.578.1.12.4.1.1.7478",
+                            "code": "81",
+                            "display": "1 inntil x3 Masseres inn i smertefullt hudområde"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "url": "http://ehelse.no/fhir/StructureDefinition/sfm-use",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "urn:oid:2.16.578.1.12.4.1.1.9101",
+                            "code": "1",
+                            "display": "Fast"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "sequence": 1,
+                  "text": "Masseres inn i smertefullt hudområde inntil 3 ganger daglig"
+                }
+              ]
             }
           },
           {
-            "fullUrl": "urn:uuid:f94e5c3c-3f67-45ce-9af1-fad34931e9cd",
+            "fullUrl": "urn:uuid:596b89a2-ce00-4846-87fb-2e6bc0a97ea0",
             "resource": {
               "resourceType": "Practitioner",
-              "id": "1755663353",
+              "id": "1497000932",
               "meta": {
                 "profile": [
                   "http://ehelse.no/fhir/StructureDefinition/sfm-Practitioner"
@@ -3447,7 +1718,7 @@
                     ]
                   },
                   "system": "urn:oid:2.16.578.1.12.4.1.4.4",
-                  "value": "6165222"
+                  "value": "222200082"
                 }
               ],
               "active": true,
@@ -3456,18 +1727,392 @@
                   "extension": [
                     {
                       "url": "http://hl7.no/fhir/StructureDefinition/no-basis-middlename",
-                      "valueString": "Fos"
+                      "valueString": "Psa"
                     }
                   ],
                   "use": "official",
-                  "family": "Mo",
+                  "family": "Ulven",
                   "given": [
-                    "Bengt"
+                    "Vivi"
+                  ]
+                }
+              ],
+              "gender": "female"
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:13198d07-4020-42ad-928a-88e90d2d8dc0",
+            "resource": {
+              "resourceType": "Medication",
+              "id": "1212652757",
+              "meta": {
+                "profile": [
+                  "http://ehelse.no/fhir/StructureDefinition/sfm-Medication"
+                ]
+              },
+              "extension": [
+                {
+                  "extension": [
+                    {
+                      "url": "prescriptiongroup",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "urn:oid:2.16.578.1.12.4.1.1.7421",
+                            "code": "F",
+                            "display": "Reseptgruppe F"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "url": "http://hl7.no/fhir/StructureDefinition/no-basis-prescriptiongroup"
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "registreringstype",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://ehelse.no/fhir/CodeSystem/sfm-festregistrationtype",
+                            "code": "3",
+                            "display": "Legemiddelpakning"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "name",
+                          "valueString": "Zyrtec"
+                        },
+                        {
+                          "url": "packingsize",
+                          "valueString": "30"
+                        },
+                        {
+                          "url": "packingunit",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "urn:oid:2.16.578.1.12.4.1.1.7452",
+                                "code": "stk",
+                                "display": "stykk"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "url": "packinginfoprescription"
+                    }
+                  ],
+                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-medicationdetails"
+                }
+              ],
+              "identifier": [
+                {
+                  "use": "official",
+                  "type": {
+                    "text": "identifier"
+                  },
+                  "value": "024101"
+                }
+              ],
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://ehelse.no/fhir/CodeSystem/FEST",
+                    "code": "024101",
+                    "display": "Zyrtec Tab 10 mg"
+                  },
+                  {
+                    "system": "http://www.whocc.no/atc",
+                    "code": "R06AE07",
+                    "display": "Cetirizin"
+                  }
+                ]
+              },
+              "status": "active",
+              "form": {
+                "coding": [
+                  {
+                    "system": "urn:oid:2.16.578.1.12.4.1.1.7448",
+                    "code": "53",
+                    "display": "Tablett"
+                  }
+                ]
+              },
+              "amount": {
+                "extension": [
+                  {
+                    "extension": [
+                      {
+                        "url": "quantity",
+                        "valueQuantity": {
+                          "value": 30.0,
+                          "unit": "stk"
+                        }
+                      },
+                      {
+                        "url": "amounttext",
+                        "valueString": "30 stk"
+                      }
+                    ],
+                    "url": "http://ehelse.no/fhir/StructureDefinition/sfm-amountText"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:f61b9f48-b77d-4125-959e-423f8b998019",
+            "resource": {
+              "resourceType": "MedicationStatement",
+              "id": "835983265",
+              "meta": {
+                "profile": [
+                  "http://ehelse.no/fhir/StructureDefinition/sfm-MedicationStatement"
+                ]
+              },
+              "extension": [
+                {
+                  "extension": [
+                    {
+                      "url": "reseptDate",
+                      "valueDate": "2021-04-21"
+                    },
+                    {
+                      "url": "expirationdate",
+                      "valueDate": "2022-04-21"
+                    },
+                    {
+                      "url": "festUpdate",
+                      "valueDateTime": "2020-12-23T01:47:29+00:00"
+                    },
+                    {
+                      "url": "dssn",
+                      "valueString": "1 tablett morgen"
+                    },
+                    {
+                      "url": "numberofpackages",
+                      "valueDecimal": 1.0
+                    },
+                    {
+                      "url": "reit",
+                      "valueString": "0"
+                    },
+                    {
+                      "url": "itemgroup",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "urn:oid:2.16.578.1.12.4.1.1.7402",
+                            "code": "L",
+                            "display": "Legemiddel"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "nameDispenser",
+                          "valueString": "Testapotek Monier"
+                        },
+                        {
+                          "url": "status",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "urn:oid:2.16.578.1.12.4.1.1.7408",
+                                "code": "E",
+                                "display": "Ekspederbar"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "url": "rfstatus"
+                    }
+                  ],
+                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-reseptamendment"
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "pakningsstr",
+                      "valueQuantity": {
+                        "value": 30.0,
+                        "unit": "stk"
+                      }
+                    },
+                    {
+                      "url": "varenummer",
+                      "valueString": "024101"
+                    },
+                    {
+                      "url": "varenavn",
+                      "valueString": "Zyrtec Tab 10 mg"
+                    },
+                    {
+                      "url": "antallpkntotalt",
+                      "valueDecimal": 1.0
+                    },
+                    {
+                      "url": "antallpknsiste",
+                      "valueDecimal": 1.0
+                    },
+                    {
+                      "url": "sistutlevert",
+                      "valueDateTime": "2021-04-21T00:00:00+00:00"
+                    }
+                  ],
+                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-deliverysummary"
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "status",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://ehelse.no/fhir/CodeSystem/sfm-medicationstatement-registration-status",
+                            "code": "3",
+                            "display": "Godkjent"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "url": "type",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://ehelse.no/fhir/CodeSystem/sfm-performer-roles",
+                            "code": "1",
+                            "display": "Forskrevet av"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "url": "helseperson",
+                      "valueReference": {
+                        "reference": "urn:uuid:596b89a2-ce00-4846-87fb-2e6bc0a97ea0",
+                        "display": "Vivi Psa Ulven, HPR: 222200082"
+                      }
+                    },
+                    {
+                      "url": "timestamp",
+                      "valueDateTime": "2021-04-21T10:09:35.7061648+02:00"
+                    }
+                  ],
+                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-regInfo"
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "genericSubstitutionAccepted",
+                      "valueBoolean": true
+                    }
+                  ],
+                  "url": "http://ehelse.no/fhir/StructureDefinition/sfm-generic-substitution"
+                }
+              ],
+              "identifier": [
+                {
+                  "use": "usual",
+                  "type": {
+                    "text": "ReseptId"
+                  },
+                  "value": "719dc44a-2c55-47ee-8cb1-52763abed28f"
+                }
+              ],
+              "status": "active",
+              "medicationReference": {
+                "reference": "urn:uuid:13198d07-4020-42ad-928a-88e90d2d8dc0",
+                "display": "Zyrtec Tab 10 mg"
+              },
+              "subject": {
+                "reference": "urn:uuid:1b645c31-3818-49fd-accc-3fc609ba67ae",
+                "display": ""
+              },
+              "dosage": [
+                {
+                  "extension": [
+                    {
+                      "extension": [
+                        {
+                          "url": "text",
+                          "valueString": "MOT ALLERGI"
+                        }
+                      ],
+                      "url": "http://ehelse.no/fhir/StructureDefinition/sfm-application-area"
+                    },
+                    {
+                      "url": "http://ehelse.no/fhir/StructureDefinition/sfm-use",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "urn:oid:2.16.578.1.12.4.1.1.9101",
+                            "code": "1",
+                            "display": "Fast"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "sequence": 1,
+                  "text": "1 tablett morgen"
+                }
+              ]
+            }
+          },
+          {
+            "fullUrl": "urn:uuid:15f542c0-59fe-4d66-b067-fb95574e1359",
+            "resource": {
+              "resourceType": "Practitioner",
+              "id": "700916221",
+              "meta": {
+                "profile": [
+                  "http://ehelse.no/fhir/StructureDefinition/sfm-Practitioner"
+                ]
+              },
+              "identifier": [
+                {
+                  "use": "official",
+                  "type": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.no/fhir/NamingSystem/HPR",
+                        "code": "HPR-nummer"
+                      }
+                    ]
+                  },
+                  "system": "urn:oid:2.16.578.1.12.4.1.4.4",
+                  "value": "1010038"
+                }
+              ],
+              "active": true,
+              "name": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.no/fhir/StructureDefinition/no-basis-middlename",
+                      "valueString": "Psa"
+                    }
+                  ],
+                  "use": "official",
+                  "family": "Visjon",
+                  "given": [
+                    "Bjørn"
                   ]
                 }
               ],
               "gender": "male",
-              "birthDate": "1986-12-12"
+              "birthDate": "1983-12-08"
             }
           }
         ]
@@ -3475,11 +2120,11 @@
     },
     {
       "name": "KJHentetTidspunkt",
-      "valueDateTime": "0001-01-01T00:00:00+00:00"
+      "valueDateTime": "2021-05-03T10:02:46.0838725+02:00"
     },
     {
       "name": "RFHentetTidspunkt",
-      "valueDateTime": "2021-01-26T16:13:55.194+00:00"
+      "valueDateTime": "2021-05-03T10:02:45.987+02:00"
     },
     {
       "name": "KJFeilkode",
@@ -3487,7 +2132,7 @@
         "coding": [
           {
             "system": "http://ehelse.no/fhir/CodeSystem/sfm-kj-rf-error-code",
-            "code": "KJF-000308"
+            "code": "SFM-KJRF-CommCriticalFail"
           }
         ]
       }
@@ -3522,14 +2167,6 @@
     },
     {
       "name": "KJHarLaste",
-      "valueBoolean": false
-    },
-    {
-      "name": "RFHarLaste",
-      "valueBoolean": false
-    },
-    {
-      "name": "RFPasientreservasjon",
       "valueBoolean": false
     }
   ]

@@ -25,8 +25,9 @@ object LoginRequest_SfmGui {
 
 
       .exec(http("loggInn")
-        .post("https://server.qa.forskrivning.no/api/Login")
+        //.post("https://server.qa.forskrivning.no/api/Login")
         //.post("https://server.staging.sfm.cloud/api/Login")
+        .post("https://server.test2.forskrivning.no/api/Login")
         .headers(headers_1)
         .body(StringBody("""t7+pB0i9UFCt0e4hLPrRjO+YAIVJzuPLCWEmd1yAdjLBNES1lEsL7XLNMo4oJis1ZXeT7ZbqYWPYdlN65LXWAA=="""))
         .check(headerRegex("Set-Cookie", "(?s).*__Host-sfm_session=([^;]*).*").saveAs("Cookie")))

@@ -15,7 +15,7 @@ object OppdaterRequest_SfmGui {
 
   //feed(csv("data/pid.csv").circular)
 
-    repeat(4) {
+    repeat(10) {
 
       feed(csv("data/pid.csv").circular)
 
@@ -27,11 +27,14 @@ object OppdaterRequest_SfmGui {
 
 
       .exec(http("prescriptions")
-        .get("https://server.qa.forskrivning.no/api/Prescriptions")
+        //.get("https://server.qa.forskrivning.no/api/Prescriptions")
         //.get("https://server.staging.sfm.cloud/api/Prescriptions")
+        .get("https://server.test2.forskrivning.no/api/Prescriptions")
         .headers(headers_2)
         .queryParam("PatientTicket","${PatientTicket}")
         .check(jsonPath("$.libItems").exists))
+
+        .pace(5)
 
     }
 }
