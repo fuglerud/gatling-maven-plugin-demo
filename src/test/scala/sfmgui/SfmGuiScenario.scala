@@ -14,6 +14,7 @@ object SfmGuiScenario {
   def function6: ChainBuilder = {exec(grp_lagreresept)}
   def function7: ChainBuilder = {exec(grp_sendlegemiddel)}
   def function8: ChainBuilder = {exec(grp_settpinkode)}
+  def function9: ChainBuilder = {exec(grp_korrespondanselogg)}
 
 
   /* val scn_gui: ScenarioBuilder = scenario("random").repeat(1) {
@@ -30,7 +31,7 @@ object SfmGuiScenario {
 
   val scn_gui: ScenarioBuilder = scenario("random").repeat(1) {
     randomSwitch(
-    100.0 -> function2)}
+    100.0 -> function9)}
 
   val SCN_SFMGUI = scenario("SFM GUI")
     .exec(scn_gui)

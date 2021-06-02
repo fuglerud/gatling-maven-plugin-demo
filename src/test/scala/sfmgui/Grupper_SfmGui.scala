@@ -46,4 +46,9 @@ object Grupper_SfmGui{
       .exec(SettPinKodeRequest_SfmGui.settpinkode)
       .exec(LogoutRequest_SfmGui.loggav)}
 
+  val grp_korrespondanselogg: ChainBuilder = group("Hent korrespondanselogg") {
+    exec(LoginRequest_SfmGui.login)
+      .exec(KorrespondanseloggRequest_SfmGui.hentKorrespondanselogg)
+      .exec(LogoutRequest_SfmGui.loggav)}
+
 }

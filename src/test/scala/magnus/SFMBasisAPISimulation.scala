@@ -1,13 +1,16 @@
 package magnus
 
+import io.gatling.commons.stats._
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
+
+import java.io.PrintWriter
 
 class SFMBasisAPISimulation extends Simulation {
 
   val httpProtocol = http
-    .baseUrl("https://base-fhir.test.sfm.cloud")//Thula
-    //.baseUrl("https://base-fhir.qa.forskrivning.no")
+    //.baseUrl("https://base-fhir.test.sfm.cloud")//Thula
+    .baseUrl("https://base-fhir.qa.forskrivning.no")
     //.baseUrl("https://base-fhir.test2.forskrivning.no")
     .inferHtmlResources()
     .acceptHeader("application/json")
@@ -15,15 +18,15 @@ class SFMBasisAPISimulation extends Simulation {
     .acceptEncodingHeader("gzip, deflate")
     .acceptLanguageHeader("en-US,en;q=0.5")
     //.authorizationHeader("Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IkI0Q0FFNDUyQzhCNkE4OTNCNkE4NDBBQzhDODRGQjA3MEE0MjZFNDEiLCJ4NXQiOiJ0TXJrVXNpMnFKTzJxRUNzaklUN0J3cENia0UiLCJ0eXAiOiJKV1QifQ.eyJuYmYiOjE2MjAwMzY1NTEsImV4cCI6MTc3NzcxNjU1MSwiaXNzIjoiaHR0cHM6Ly9oZWxzZWlkLXN0cy50ZXN0Lm5obi5ubyIsImF1ZCI6ImUtaGVsc2U6c2ZtLmFwaSIsImNsaWVudF9pZCI6ImEwOGI5ODNmLWQ1YmMtNGJiZS1hYzBlLTI1ZmExZThjNTNlNyIsImhlbHNlaWQ6Ly9jbGFpbXMvY2xpZW50L2tqL29yZ25yIjoiOTk5OTQ0NzA2IiwiaGVsc2VpZDovL2NsYWltcy9jbGllbnQvZWMvY29tbW9uX25hbWUiOiJVcmFub3N0aW5kZW4gdGVzdHN5a2VodXMiLCJoZWxzZWlkOi8vY2xhaW1zL2NsaWVudC9lYy9leHAiOjE5MjQ5OTIwMDAsImhlbHNlaWQ6Ly9jbGFpbXMvY2xpZW50L2VjL29yZ25yX3BhcmVudCI6Ijk5OTk0NDcwNiIsImNsaWVudF9hbXIiOiJwcml2YXRlX2tleV9qd3QiLCJzdWIiOiJFYVlyRzRyWnkyc3UvcE5ZclhFNFNlbDdTYkhnenhhK3g5eG9scER4a1c0PSIsImF1dGhfdGltZSI6MTYyMDAzNjU1MSwiaWRwIjoidGVzdGlkcC1vaWRjIiwiaGVsc2VpZDovL2NsYWltcy9pZGVudGl0eS9zZWN1cml0eV9sZXZlbCI6IjQiLCJoZWxzZWlkOi8vY2xhaW1zL2lkZW50aXR5L3BpZCI6IjA4MTI4MzE1OTc4IiwiaGVsc2VpZDovL2NsYWltcy9pZGVudGl0eS9hc3N1cmFuY2VfbGV2ZWwiOiJoaWdoIiwiaGVsc2VpZDovL2NsYWltcy9ocHIvaHByX251bWJlciI6IjEwMTAwMzgiLCJoZWxzZWlkOi8vY2xhaW1zL2NsaWVudC9hbXIiOiJyc2FfcHJpdmF0ZV9rZXkiLCJlLWhlbHNlOnNmbS5hcGkvY2xpZW50L2NsYWltcy9zZm0taWQiOiJhMDhiOTgzZi1kNWJjLTRiYmUtYWMwZS0yNWZhMWU4YzUzZTciLCJqdGkiOiJCRjgxNzczRThERjVCMjgwNDc5RDdFNENCQkJFMTI2QiIsInNpZCI6IjBCMjlGNTY0QjkzRjY3MUMxMDk4OTk5NERBQ0YyMjE0IiwiaWF0IjoxNjIwMDM2NTUxLCJzY29wZSI6WyJvcGVuaWQiLCJwcm9maWxlIiwiaGVsc2VpZDovL3Njb3Blcy9pZGVudGl0eS9waWQiLCJoZWxzZWlkOi8vc2NvcGVzL2lkZW50aXR5L3NlY3VyaXR5X2xldmVsIiwiaGVsc2VpZDovL3Njb3Blcy9ocHIvaHByX251bWJlciIsImUtaGVsc2U6c2ZtLmFwaS9zZm0uYXBpIl0sImFtciI6WyJleHRlcm5hbCJdfQ.dDiiKcjE08SMGt15ohnUnFVeVrTmII0z9idNu6hEybkhYKUQ-FGce1SLqJWI4zpWF_eLMlOBjQZb7DsI7bFjHb1ZNnUF9JjAKHy_I_d7yOeprGBz0kyaZuygrd1gE77E5n0KrEcU6v7BcUSWkh3E38l3NbbTd7z7D8nM37mf-_WD51g-IqspNZkQueqk5xyez-oMt-fi_kiKGwJGmDNb2_tPRVvmhjgCzXfMDw4OTnHsexIxZ4VFhI64yvxX1mkP4pLdvOpzQeFnG02PvWPebsyNYFQ1p5s3cWLe-o6cp0Ta3TXWUEJFJj97EPhwUPY6dtum1uZllT9p1av6cII0tg")
-    //.authorizationHeader("Bearer ${token}")
-    .authorizationHeader("Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IkI0Q0FFNDUyQzhCNkE4OTNCNkE4NDBBQzhDODRGQjA3MEE0MjZFNDEiLCJ4NXQiOiJ0TXJrVXNpMnFKTzJxRUNzaklUN0J3cENia0UiLCJ0eXAiOiJKV1QifQ.eyJuYmYiOjE2MTg0OTE4MjIsImV4cCI6MTc3NjE3MTgyMiwiaXNzIjoiaHR0cHM6Ly9oZWxzZWlkLXN0cy50ZXN0Lm5obi5ubyIsImF1ZCI6ImUtaGVsc2U6c2ZtLmFwaSIsImNsaWVudF9pZCI6ImEwOGI5ODNmLWQ1YmMtNGJiZS1hYzBlLTI1ZmExZThjNTNlNyIsImhlbHNlaWQ6Ly9jbGFpbXMvY2xpZW50L2tqL29yZ25yIjoiOTk5OTQ0NzA2IiwiaGVsc2VpZDovL2NsYWltcy9jbGllbnQvZWMvY29tbW9uX25hbWUiOiJVcmFub3N0aW5kZW4gdGVzdHN5a2VodXMiLCJoZWxzZWlkOi8vY2xhaW1zL2NsaWVudC9lYy9leHAiOjE5MjQ5OTIwMDAsImhlbHNlaWQ6Ly9jbGFpbXMvY2xpZW50L2VjL29yZ25yX3BhcmVudCI6Ijk5OTk0NDcwNiIsImNsaWVudF9hbXIiOiJwcml2YXRlX2tleV9qd3QiLCJzdWIiOiIvemlReHAxUm5ROW5oc3h5TGpSMSt0cExDNlVBRjlWSjQzTWxDTzBCcTdRPSIsImF1dGhfdGltZSI6MTYxODQ5MTgyMCwiaWRwIjoidGVzdGlkcC1vaWRjIiwiaGVsc2VpZDovL2NsYWltcy9pZGVudGl0eS9zZWN1cml0eV9sZXZlbCI6IjQiLCJoZWxzZWlkOi8vY2xhaW1zL2lkZW50aXR5L3BpZCI6IjI0MDY5MTAwMTk0IiwiaGVsc2VpZDovL2NsYWltcy9pZGVudGl0eS9hc3N1cmFuY2VfbGV2ZWwiOiJoaWdoIiwiaGVsc2VpZDovL2NsYWltcy9ocHIvaHByX251bWJlciI6IjQzMTAwMjc5MCIsImhlbHNlaWQ6Ly9jbGFpbXMvY2xpZW50L2FtciI6InJzYV9wcml2YXRlX2tleSIsImUtaGVsc2U6c2ZtLmFwaS9jbGllbnQvY2xhaW1zL3NmbS1pZCI6ImEwOGI5ODNmLWQ1YmMtNGJiZS1hYzBlLTI1ZmExZThjNTNlNyIsImp0aSI6IkY2OThGODBGQ0MyQzMwRkY5MjkyQjJDMzJDQzc2MEE0Iiwic2lkIjoiRkVCREZFNDdGNkRCMUZCMzY0NDE2MTRBRDhCQkRBMUEiLCJpYXQiOjE2MTg0OTE4MjIsInNjb3BlIjpbIm9wZW5pZCIsInByb2ZpbGUiLCJlLWhlbHNlOnNmbS5hcGkvc2ZtLmFwaSIsImhlbHNlaWQ6Ly9zY29wZXMvaWRlbnRpdHkvcGlkIiwiaGVsc2VpZDovL3Njb3Blcy9pZGVudGl0eS9zZWN1cml0eV9sZXZlbCIsImhlbHNlaWQ6Ly9zY29wZXMvaHByL2hwcl9udW1iZXIiXSwiYW1yIjpbImV4dGVybmFsIl19.Zha1kNd6AvuXVQD0UXnTiQ1x4sCa50QUALxe8iumKezFHmz5fUcy9e36aHgC7qdsXmiRssDPDyiMz_HAQJ7VxJPPdZePodK2fxqTEeTkOTL5JlN-WVnn10Z7VT1suMtXpSPv0e5PwNeuE0lEFp4JpbpW4y8ccqojsegcvx4mFMhMO_bxYy3qTKUXwmKRDvMYcwEYQfXpM78AoCUoH4YzT_IojKItDsIJ_SCodxpH7O4eLpARSppPSL4OZx1zr0W5wp4Wk2clWlteIcHq9PM2ykumvMUVX7D5jpwtBS2Sb8brPR61nPQBOq2FkIs1mdmuuDarc5StaT5pgsMl-VYKoA")
+    .authorizationHeader("Bearer ${token}")
+    //.authorizationHeader("Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IkI0Q0FFNDUyQzhCNkE4OTNCNkE4NDBBQzhDODRGQjA3MEE0MjZFNDEiLCJ4NXQiOiJ0TXJrVXNpMnFKTzJxRUNzaklUN0J3cENia0UiLCJ0eXAiOiJKV1QifQ.eyJuYmYiOjE2MTg0OTE4MjIsImV4cCI6MTc3NjE3MTgyMiwiaXNzIjoiaHR0cHM6Ly9oZWxzZWlkLXN0cy50ZXN0Lm5obi5ubyIsImF1ZCI6ImUtaGVsc2U6c2ZtLmFwaSIsImNsaWVudF9pZCI6ImEwOGI5ODNmLWQ1YmMtNGJiZS1hYzBlLTI1ZmExZThjNTNlNyIsImhlbHNlaWQ6Ly9jbGFpbXMvY2xpZW50L2tqL29yZ25yIjoiOTk5OTQ0NzA2IiwiaGVsc2VpZDovL2NsYWltcy9jbGllbnQvZWMvY29tbW9uX25hbWUiOiJVcmFub3N0aW5kZW4gdGVzdHN5a2VodXMiLCJoZWxzZWlkOi8vY2xhaW1zL2NsaWVudC9lYy9leHAiOjE5MjQ5OTIwMDAsImhlbHNlaWQ6Ly9jbGFpbXMvY2xpZW50L2VjL29yZ25yX3BhcmVudCI6Ijk5OTk0NDcwNiIsImNsaWVudF9hbXIiOiJwcml2YXRlX2tleV9qd3QiLCJzdWIiOiIvemlReHAxUm5ROW5oc3h5TGpSMSt0cExDNlVBRjlWSjQzTWxDTzBCcTdRPSIsImF1dGhfdGltZSI6MTYxODQ5MTgyMCwiaWRwIjoidGVzdGlkcC1vaWRjIiwiaGVsc2VpZDovL2NsYWltcy9pZGVudGl0eS9zZWN1cml0eV9sZXZlbCI6IjQiLCJoZWxzZWlkOi8vY2xhaW1zL2lkZW50aXR5L3BpZCI6IjI0MDY5MTAwMTk0IiwiaGVsc2VpZDovL2NsYWltcy9pZGVudGl0eS9hc3N1cmFuY2VfbGV2ZWwiOiJoaWdoIiwiaGVsc2VpZDovL2NsYWltcy9ocHIvaHByX251bWJlciI6IjQzMTAwMjc5MCIsImhlbHNlaWQ6Ly9jbGFpbXMvY2xpZW50L2FtciI6InJzYV9wcml2YXRlX2tleSIsImUtaGVsc2U6c2ZtLmFwaS9jbGllbnQvY2xhaW1zL3NmbS1pZCI6ImEwOGI5ODNmLWQ1YmMtNGJiZS1hYzBlLTI1ZmExZThjNTNlNyIsImp0aSI6IkY2OThGODBGQ0MyQzMwRkY5MjkyQjJDMzJDQzc2MEE0Iiwic2lkIjoiRkVCREZFNDdGNkRCMUZCMzY0NDE2MTRBRDhCQkRBMUEiLCJpYXQiOjE2MTg0OTE4MjIsInNjb3BlIjpbIm9wZW5pZCIsInByb2ZpbGUiLCJlLWhlbHNlOnNmbS5hcGkvc2ZtLmFwaSIsImhlbHNlaWQ6Ly9zY29wZXMvaWRlbnRpdHkvcGlkIiwiaGVsc2VpZDovL3Njb3Blcy9pZGVudGl0eS9zZWN1cml0eV9sZXZlbCIsImhlbHNlaWQ6Ly9zY29wZXMvaHByL2hwcl9udW1iZXIiXSwiYW1yIjpbImV4dGVybmFsIl19.Zha1kNd6AvuXVQD0UXnTiQ1x4sCa50QUALxe8iumKezFHmz5fUcy9e36aHgC7qdsXmiRssDPDyiMz_HAQJ7VxJPPdZePodK2fxqTEeTkOTL5JlN-WVnn10Z7VT1suMtXpSPv0e5PwNeuE0lEFp4JpbpW4y8ccqojsegcvx4mFMhMO_bxYy3qTKUXwmKRDvMYcwEYQfXpM78AoCUoH4YzT_IojKItDsIJ_SCodxpH7O4eLpARSppPSL4OZx1zr0W5wp4Wk2clWlteIcHq9PM2ykumvMUVX7D5jpwtBS2Sb8brPR61nPQBOq2FkIs1mdmuuDarc5StaT5pgsMl-VYKoA")
     .userAgentHeader("Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:75.0) Gecko/20100101 Firefox/75.0")
     .disableCaching
 
 
-  /*val writer1: PrintWriter = {
-    val fos = new java.io.FileOutputStream("sfm_500_feil.txt")
-    new java.io.PrintWriter(fos, true)}*/
+  val writer1: PrintWriter = {
+    val fos = new java.io.FileOutputStream("sfm_vasking.csv")
+    new java.io.PrintWriter(fos, true)}
 
 
 /*
@@ -72,10 +75,10 @@ class SFMBasisAPISimulation extends Simulation {
     .exec(flushCookieJar)
     .exec(flushHttpCache)
 
-    //.feed(csv("magnus/TokensLeger.csv").random)
+    .feed(csv("magnus/TokensLeger.csv").circular)
     //.feed(csv("magnus/SFM_BASIS_100.csv").circular)
     //.feed(csv("magnus/PasienterBasisAPITest2.csv").random)
-    .feed(csv("magnus/thulaPasienter.csv").circular)
+    //.feed(csv("magnus/thulaPasienter.csv").circular)
 
 
  /* .exec(http("practitioner")
@@ -89,10 +92,13 @@ class SFMBasisAPISimulation extends Simulation {
       .check(status.is(200))
       .check(jsonPath("$..resource.id").is("${organizationid}")))*/
 
-  //.repeat(1)
+  //.repeat(180)
   //{
 
-    //feed(csv("magnus/SFM_BASIS_100.csv").circular)
+    //.feed(csv("magnus/SFM_BASIS_100.csv").circular)
+    //.feed(csv("magnus/1001-5000.csv").circular)
+    //.feed(csv("magnus/SFM_BASIS_3000.csv").circular)
+    .feed(csv("magnus/sfm_vasking.csv").circular)
 
     .exec(http("getMedication")
     .post("/Patient/$getMedication")
@@ -110,18 +116,22 @@ class SFMBasisAPISimulation extends Simulation {
       //.check(jsonPath("$..*").ofType[Map[String, Any]].saveAs("myJson"))
   )
 
+     /* .exec(session=>{
+      println("Pasient FNR:")
+      println(session("identifier").as[String])
+      session})*/
 
 
    //.pace(10)
 
   //}
 
-   /* .exec((session: io.gatling.core.session.Session) => {
+    .exec((session: io.gatling.core.session.Session) => {
       if (session.status == KO) {
         writer1.println(session.attributes("identifier"))
       }
       session
-    })*/
+    })
 
 
 
@@ -203,7 +213,7 @@ class SFMBasisAPISimulation extends Simulation {
 
   //setUp(scn.inject(atOnceUsers(1))).protocols(httpProtocol)
   //setUp(scn.inject(rampUsersPerSec(1) to 30 during (30),constantUsersPerSec(30) during(120))).protocols(httpProtocol)
-  setUp(scn.inject(constantUsersPerSec(3) during(60))).protocols(httpProtocol)
+  setUp(scn.inject(constantUsersPerSec(1) during(1))).protocols(httpProtocol)
   //setUp(scn.inject(rampConcurrentUsers(1) to(5) during(240))).protocols(httpProtocol)
   //setUp(scn.inject(constantConcurrentUsers(1) during (60), rampConcurrentUsers(1) to (10) during (60))).protocols(httpProtocol)
   //setUp(scn.inject(incrementUsersPerSec(2).times(4).eachLevelLasting(30).separatedByRampsLasting(10).startingFrom(1))).protocols(httpProtocol)
