@@ -76,7 +76,7 @@ class SFMBasisAPISimulation extends Simulation {
     .exec(flushHttpCache)
 
     .feed(csv("magnus/TokensLeger.csv").circular)
-    //.feed(csv("magnus/SFM_BASIS_100.csv").circular)
+    //.feed(csv("magnus/SFM_BASIS_40000.csv").circular)
     //.feed(csv("magnus/PasienterBasisAPITest2.csv").random)
     //.feed(csv("magnus/thulaPasienter.csv").circular)
 
@@ -92,21 +92,21 @@ class SFMBasisAPISimulation extends Simulation {
       .check(status.is(200))
       .check(jsonPath("$..resource.id").is("${organizationid}")))*/
 
-  //.repeat(180)
-  //{
+  .repeat(720)
+  {
 
-    //.feed(csv("magnus/SFM_BASIS_100.csv").circular)
+    feed(csv("magnus/SFM_BASIS_40000.csv").circular)
     //.feed(csv("magnus/1001-5000.csv").circular)
     //.feed(csv("magnus/SFM_BASIS_3000.csv").circular)
-    .feed(csv("magnus/sfm_vasking.csv").circular)
+    //.feed(csv("magnus/sfm_vasking.csv").circular)
 
     .exec(http("getMedication")
-    .post("/Patient/$getMedication")
-    .body(ElFileBody("magnus/0000_request.json"))
-    .check(status.is(200))
-    .check(jsonPath("$..name").is("medication"))
-    //.check(jsonPath("$..[?(@.name==\"RFM912Feilkode\")].valueCodeableConcept.text").is("OK"))
-    //.check(jsonPath("$..[?(@.name==\"RFM96Feilkode\")].valueCodeableConcept.text").is("OK"))
+      .post("/Patient/$getMedication")
+      .body(ElFileBody("magnus/0000_request.json"))
+      .check(status.is(200))
+      .check(jsonPath("$..name").is("medication"))
+      .check(jsonPath("$..[?(@.name==\"RFM912Feilkode\")].valueCodeableConcept.text").is("OK"))
+      .check(jsonPath("$..[?(@.name==\"RFM96Feilkode\")].valueCodeableConcept.text").is("OK"))
       .check(jsonPath("$..[?(@.name==\"KJFeilkode\")].valueCodeableConcept.text").is("OK"))
       //.check(jsonPath("$..[?(@.use==\"official\")].value").saveAs("official"))
       //.check(jsonPath("$..*").saveAs( "RESPONSE_DATA")).asJson
@@ -122,16 +122,20 @@ class SFMBasisAPISimulation extends Simulation {
       session})*/
 
 
-   //.pace(10)
+   .pace(10)
 
-  //}
 
-    .exec((session: io.gatling.core.session.Session) => {
-      if (session.status == KO) {
-        writer1.println(session.attributes("identifier"))
-      }
-      session
-    })
+
+
+      .exec((session: io.gatling.core.session.Session) => {
+        if (session.status == KO) {
+          writer1.println(session.attributes("identifier"))
+        }
+        session
+      })
+
+  }
+
 
 
 
@@ -209,11 +213,12 @@ class SFMBasisAPISimulation extends Simulation {
       //.body(ElFileBody("magnus/sendRequest.json")).asJson
       .check(status.is(200)))*/
 
+  //7200
+  //14400
 
-
-  //setUp(scn.inject(atOnceUsers(1))).protocols(httpProtocol)
+  setUp(scn.inject(atOnceUsers(1))).protocols(httpProtocol)
   //setUp(scn.inject(rampUsersPerSec(1) to 30 during (30),constantUsersPerSec(30) during(120))).protocols(httpProtocol)
-  setUp(scn.inject(constantUsersPerSec(1) during(1))).protocols(httpProtocol)
+  //setUp(scn.inject(constantUsersPerSec(2) during(1))).protocols(httpProtocol)
   //setUp(scn.inject(rampConcurrentUsers(1) to(5) during(240))).protocols(httpProtocol)
   //setUp(scn.inject(constantConcurrentUsers(1) during (60), rampConcurrentUsers(1) to (10) during (60))).protocols(httpProtocol)
   //setUp(scn.inject(incrementUsersPerSec(2).times(4).eachLevelLasting(30).separatedByRampsLasting(10).startingFrom(1))).protocols(httpProtocol)

@@ -11,7 +11,9 @@ object LagreReseptRequest_SfmGui {
 
   val lagreresept =
 
-    exec(http("patientTicket")
+    feed(csv("data/pid.csv").circular)
+
+    .exec(http("patientTicket")
       .post("/api/PatientTicket")
       .headers(headers_0)
       .body(ElFileBody("bodies/pid.json"))
