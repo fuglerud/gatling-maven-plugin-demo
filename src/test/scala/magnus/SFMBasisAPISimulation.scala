@@ -59,8 +59,6 @@ class SFMBasisAPISimulation extends Simulation {
     val fos = new java.io.FileOutputStream("timestamp.txt")
     new java.io.PrintWriter(fos, true)}*/
 
-
-
 /*
 
   val writer5: PrintWriter = {
@@ -70,7 +68,7 @@ class SFMBasisAPISimulation extends Simulation {
 
   //private val failureStatus: Int = 500
 
-  val scn = scenario("SFMBasisAPISimulation")
+  val scn = scenario("SFMBasisAPISimulationSTEADY")
 
     .exec(flushCookieJar)
     .exec(flushHttpCache)
@@ -100,7 +98,7 @@ class SFMBasisAPISimulation extends Simulation {
     //.feed(csv("magnus/SFM_BASIS_3000.csv").circular)
     //.feed(csv("magnus/sfm_vasking.csv").circular)
 
-    .exec(http("getMedication")
+    .exec(http("getMedicationSTEADY")
       .post("/Patient/$getMedication")
       .body(ElFileBody("magnus/0000_request.json"))
       .check(status.is(200))
@@ -121,11 +119,7 @@ class SFMBasisAPISimulation extends Simulation {
       println(session("identifier").as[String])
       session})*/
 
-
    .pace(10)
-
-
-
 
       .exec((session: io.gatling.core.session.Session) => {
         if (session.status == KO) {
@@ -133,11 +127,7 @@ class SFMBasisAPISimulation extends Simulation {
         }
         session
       })
-
   }
-
-
-
 
    /*.exec(session=>{
      println("KJFeilkode:")
@@ -154,7 +144,6 @@ class SFMBasisAPISimulation extends Simulation {
       session
     })*/
 
-
     /*.exec((session: io.gatling.core.session.Session) => {
       if (session.status == OK) {
         writer3.println(session.attributes("legeFNR"))
@@ -168,8 +157,6 @@ class SFMBasisAPISimulation extends Simulation {
       }
       session
     })*/
-
-
 
     /*.exec(session=>{
       println("official:")
@@ -205,8 +192,6 @@ class SFMBasisAPISimulation extends Simulation {
 
          //""""relatesTo":[{"code": "replaces","targetIdentifier":{"use": "official","value": "3720076a-b74c-4781-af4b-9e3f567f8457"}}]"""
 
-
-
       /*.exec(http("sendMedication")
       .post("/Patient/$sendMedication")
       .body(ElFileBody("magnus/SendMedication_request_2021.json"))
@@ -216,11 +201,44 @@ class SFMBasisAPISimulation extends Simulation {
   //7200
   //14400
 
-  setUp(scn.inject(atOnceUsers(1))).protocols(httpProtocol)
+  //setUp(scn.inject(atOnceUsers(1))).protocols(httpProtocol)
   //setUp(scn.inject(rampUsersPerSec(1) to 30 during (30),constantUsersPerSec(30) during(120))).protocols(httpProtocol)
-  //setUp(scn.inject(constantUsersPerSec(2) during(1))).protocols(httpProtocol)
+  //setUp(scn.inject(constantUsersPerSec(1) during(1))).protocols(httpProtocol)
   //setUp(scn.inject(rampConcurrentUsers(1) to(5) during(240))).protocols(httpProtocol)
   //setUp(scn.inject(constantConcurrentUsers(1) during (60), rampConcurrentUsers(1) to (10) during (60))).protocols(httpProtocol)
   //setUp(scn.inject(incrementUsersPerSec(2).times(4).eachLevelLasting(30).separatedByRampsLasting(10).startingFrom(1))).protocols(httpProtocol)
+  //setUp(scn.inject(rampConcurrentUsers(1) to(1) during(3 minutes), constantConcurrentUsers(3) during (3 seconds), rampConcurrentUsers(3) to(1) during(3 minutes))).protocols(httpProtocol)
+  //setUp(scn.inject(constantUsersPerSec(1) during(1), heavisideUsers(3).during(1)).protocols(httpProtocol))
+  //setUp(scn.inject(constantUsersPerSec(1).during(1.minutes)).throttle(reachRps(3).in(1.seconds), holdFor(3.seconds)).protocols(httpProtocol))
+  //setUp(scn.inject(constantUsersPerSec(1) during(10)).pauses(customPauses(60).protocols(httpProtocol))
+
+
+  val scn2 = scenario("SFMBasisAPISimulationPEAK")
+
+    .exec(flushCookieJar)
+    .exec(flushHttpCache)
+
+    .feed(csv("magnus/TokensLeger.csv").circular)
+
+    .repeat(120)
+    {
+
+    feed(csv("magnus/SFM_BASIS_40000.csv").circular)
+
+    .exec(http("getMedicationPEAK")
+      .post("/Patient/$getMedication")
+      .body(ElFileBody("magnus/0000_request.json"))
+      .check(status.is(200))
+      .check(jsonPath("$..name").is("medication"))
+      .check(jsonPath("$..[?(@.name==\"RFM912Feilkode\")].valueCodeableConcept.text").is("OK"))
+      .check(jsonPath("$..[?(@.name==\"RFM96Feilkode\")].valueCodeableConcept.text").is("OK"))
+      .check(jsonPath("$..[?(@.name==\"KJFeilkode\")].valueCodeableConcept.text").is("OK")))
+
+    .pause(60)
+    }
+
+  setUp(scn.inject(constantUsersPerSec(1) during(1)).protocols(httpProtocol), scn2.inject(constantUsersPerSec(4) during(1))).protocols(httpProtocol)
+
+  //setUp(scn2.inject(constantUsersPerSec(2) during(1))).protocols(httpProtocol)
 
 }
