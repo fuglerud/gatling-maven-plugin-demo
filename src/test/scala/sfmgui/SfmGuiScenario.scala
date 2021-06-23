@@ -31,7 +31,7 @@ object SfmGuiScenario {
 
   val scn_gui: ScenarioBuilder = scenario("random").repeat(1) {
     randomSwitch(
-    100.0 -> function9)}
+    100.0 -> function2)}
 
   val SCN_SFMGUI = scenario("SFM GUI")
     .exec(scn_gui)

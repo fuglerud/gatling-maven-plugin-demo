@@ -90,7 +90,7 @@ class SFMBasisAPISimulation extends Simulation {
       .check(status.is(200))
       .check(jsonPath("$..resource.id").is("${organizationid}")))*/
 
-  .repeat(720)
+  .repeat(26000)
   {
 
     feed(csv("magnus/SFM_BASIS_40000.csv").circular)
@@ -237,8 +237,8 @@ class SFMBasisAPISimulation extends Simulation {
     .pause(60)
     }
 
-  setUp(scn.inject(constantUsersPerSec(1) during(1)).protocols(httpProtocol), scn2.inject(constantUsersPerSec(4) during(1))).protocols(httpProtocol)
+  //setUp(scn.inject(constantUsersPerSec(1) during(1)).protocols(httpProtocol), scn2.inject(constantUsersPerSec(4) during(1))).protocols(httpProtocol)
 
-  //setUp(scn2.inject(constantUsersPerSec(2) during(1))).protocols(httpProtocol)
+  setUp(scn.inject(constantUsersPerSec(1) during(1))).protocols(httpProtocol)
 
 }
