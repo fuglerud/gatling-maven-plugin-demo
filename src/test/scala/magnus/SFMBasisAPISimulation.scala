@@ -220,7 +220,7 @@ class SFMBasisAPISimulation extends Simulation {
 
     .feed(csv("magnus/TokensLeger.csv").circular)
 
-    .repeat(7000)
+    .repeat(14400)
     {
 
     feed(csv("magnus/SFM_BASIS_40000.csv").circular)
