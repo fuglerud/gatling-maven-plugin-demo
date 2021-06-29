@@ -90,7 +90,7 @@ class SFMBasisAPISimulation extends Simulation {
       .check(status.is(200))
       .check(jsonPath("$..resource.id").is("${organizationid}")))*/
 
-  .repeat(26000)
+  .repeat(30)
   {
 
     feed(csv("magnus/SFM_BASIS_40000.csv").circular)
@@ -220,7 +220,7 @@ class SFMBasisAPISimulation extends Simulation {
 
     .feed(csv("magnus/TokensLeger.csv").circular)
 
-    .repeat(120)
+    .repeat(1800)
     {
 
     feed(csv("magnus/SFM_BASIS_40000.csv").circular)
@@ -239,6 +239,22 @@ class SFMBasisAPISimulation extends Simulation {
 
   //setUp(scn.inject(constantUsersPerSec(1) during(1)).protocols(httpProtocol), scn2.inject(constantUsersPerSec(4) during(1))).protocols(httpProtocol)
 
-  setUp(scn.inject(constantUsersPerSec(1) during(1))).protocols(httpProtocol)
+  //setUp(scn.inject(atOnceUsers(1))).protocols(httpProtocol)
+  //setUp(scn.inject(rampUsersPerSec(1) to 30 during (30),constantUsersPerSec(30) during(120))).protocols(httpProtocol)
+  //setUp(scn.inject(constantUsersPerSec(1) during(1))).protocols(httpProtocol)
+  //setUp(scn.inject(rampConcurrentUsers(1) to(5) during(240))).protocols(httpProtocol)
+  //setUp(scn.inject(constantConcurrentUsers(1) during (60), rampConcurrentUsers(1) to (10) during (60))).protocols(httpProtocol)
+  //setUp(scn.inject(incrementUsersPerSec(2).times(4).eachLevelLasting(30).separatedByRampsLasting(10).startingFrom(1))).protocols(httpProtocol)
+  //setUp(scn.inject(rampConcurrentUsers(1) to(1) during(3 minutes), constantConcurrentUsers(3) during (3 seconds), rampConcurrentUsers(3) to(1) during(3 minutes))).protocols(httpProtocol)
+  //setUp(scn.inject(constantUsersPerSec(1) during(1), heavisideUsers(3).during(1)).protocols(httpProtocol))
+  //setUp(scn.inject(constantUsersPerSec(1).during(1.minutes)).throttle(reachRps(3).in(10.seconds), holdFor(10.seconds)).protocols(httpProtocol))
+  //setUp(scn.inject(constantUsersPerSec(1) during(10)).pauses(customPauses(60).protocols(httpProtocol))
+
+  setUp(scn.inject(constantUsersPerSec(6) during(1))).protocols(httpProtocol)
+
+
+    /*setUp(scn.inject(rampConcurrentUsers(0) to(1) during(1 minutes),
+      constantConcurrentUsers(2) during (3 minutes),
+      rampConcurrentUsers(2) to(0) during(1 minutes)).protocols(httpProtocol))*/
 
 }
