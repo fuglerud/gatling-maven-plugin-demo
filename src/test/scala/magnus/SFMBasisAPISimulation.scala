@@ -220,7 +220,7 @@ class SFMBasisAPISimulation extends Simulation {
 
     .feed(csv("magnus/TokensLeger.csv").circular)
 
-    .repeat(14400)
+    .repeat(25)
     {
 
     feed(csv("magnus/SFM_BASIS_40000.csv").circular)
@@ -250,7 +250,7 @@ class SFMBasisAPISimulation extends Simulation {
   //setUp(scn.inject(constantUsersPerSec(1).during(1.minutes)).throttle(reachRps(3).in(10.seconds), holdFor(10.seconds)).protocols(httpProtocol))
   //setUp(scn.inject(constantUsersPerSec(1) during(10)).pauses(customPauses(60).protocols(httpProtocol))
 
-  setUp(scn.inject(constantUsersPerSec(6) during(1))).protocols(httpProtocol)
+  setUp(scn2.inject(constantUsersPerSec(6) during(1))).protocols(httpProtocol)
 
 
     /*setUp(scn.inject(rampConcurrentUsers(0) to(1) during(1 minutes),
